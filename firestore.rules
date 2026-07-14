@@ -16,6 +16,16 @@ service cloud.firestore {
         allow read, write: if isOwner(userId);
       }
 
+      // Opening progress sub-collection under each user
+      match /openingProgress/{variationId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // Endgame progress sub-collection under each user
+      match /endgameProgress/{lessonId} {
+        allow read, write: if isOwner(userId);
+      }
+
       // Custom variations sub-collection under each user
       match /customVariations/{variationId} {
         allow read, write: if isOwner(userId);

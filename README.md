@@ -1,4 +1,4 @@
-# Lotus Chess
+# OE Chess
 
 A modern web application for studying chess openings and endgames through interactive practice, mastery ranks, and spaced repetition.
 

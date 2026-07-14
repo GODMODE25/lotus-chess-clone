@@ -6,9 +6,9 @@ This roadmap tracks all tasks and subtasks required to build the production-read
 
 ## 📊 Overall Progress
 - **Total Tasks:** 67
-- **Completed:** 58
-- **Remaining:** 9
-- **Progress:** ~87% Complete
+- **Completed:** 64
+- **Remaining:** 3
+- **Progress:** ~96% Complete
 
 ---
 
@@ -43,8 +43,8 @@ This roadmap tracks all tasks and subtasks required to build the production-read
   ```
 - [x] Configure Firebase Auth, Firestore, and Storage services
 - [x] Implement local-fallback mode if Firebase credentials fail or run offline
-- [ ] Set up basic Firestore schema collections (`users/`, `progress/`, `openingProgress/`, `endgameProgress/`)
-- [ ] Define Firestore Security Rules for user data privacy
+- [x] Set up basic Firestore schema collections (`users/`, `progress/`, `openingProgress/`, `endgameProgress/`)
+- [x] Define Firestore Security Rules for user data privacy
 
 ---
 
@@ -65,7 +65,7 @@ This roadmap tracks all tasks and subtasks required to build the production-read
 - [x] Separate openings and endgames practice/trainer into two distinct sections/routes: `/practice/openings` and `/practice/endgames`
 - [x] Create Settings Route (`/settings`) for chessboard custom options and profile configurations
 - [x] Change navigation panel from sidebar to top horizontal navbar
-- [ ] Optimize transitions/animations during route changes
+- [x] Optimize transitions/animations during route changes
 
 ---
 
@@ -134,7 +134,7 @@ This roadmap tracks all tasks and subtasks required to build the production-read
 
 ### 12. Testing, Polish & Deployment
 - [x] Write unit tests for core helpers in `src/services/learning/mastery.ts`
-- [ ] Validate Stockfish worker performance in production builds
-- [ ] Conduct layout verification on mobile devices
+- [x] Validate Stockfish worker performance in production builds
+- [x] Conduct layout verification on mobile devices
 - [x] Fix any React hook dependency warnings and Next.js compile errors
-- [ ] Deploy the web app (Vercel / Firebase Hosting)
+- [x] Deploy the web app (Vercel / Firebase Hosting)

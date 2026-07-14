@@ -183,9 +183,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
       {/* Main Content Pane */}
       <main className="flex-1 px-4 py-6 md:px-8 md:py-8 max-w-7xl w-full mx-auto space-y-8">
-        <div key={pathname} className="animate-page-enter">
-          {children}
-        </div>
+        {children}
       </main>
 
       {/* Footer */}
