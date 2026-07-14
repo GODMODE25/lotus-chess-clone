@@ -132,14 +132,6 @@ This roadmap tracks all tasks and subtasks required to build the production-read
 
 ---
 
-### 11. Admin Content & Curation Tools
-- [ ] Create administrative route/view (`/admin`) guarded by admin permissions
-- [ ] Implement form to import PGN strings or FEN setups
-- [ ] Auto-parse PGN into move lists, variation names, and ECO codes using `chess.js`
-- [ ] Save newly curated openings and endgames straight to Firebase Firestore
-
----
-
 ### 12. Testing, Polish & Deployment
 - [x] Write unit tests for core helpers in `src/services/learning/mastery.ts`
 - [ ] Validate Stockfish worker performance in production builds
