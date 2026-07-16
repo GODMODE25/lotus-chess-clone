@@ -1,27 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import "@fontsource/teko/400.css";
+import "@fontsource/teko/500.css";
+import "@fontsource/teko/600.css";
+import "@fontsource/teko/700.css";
+import "@fontsource/source-sans-3/400.css";
+import "@fontsource/source-sans-3/500.css";
+import "@fontsource/source-sans-3/600.css";
+import "@fontsource/source-sans-3/700.css";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "OE Chess | Opening and Endgame Trainer",
-  description: "A modern chess study app for interactive opening and endgame practice with adaptive review.",
-  openGraph: {
-    title: "OE Chess | Opening and Endgame Trainer",
-    description: "Interactive chess learning with spaced repetition, mastery ranks, and browser engine analysis.",
-    type: "website",
-  },
+  title: "OE Chess | Precision Training",
+  description: "A premium high-tech chess laboratory for mastering openings and endgames.",
   icons: {
-    icon: "/favicon.png?v=3",
+    icon: "/favicon.png",
   },
 };
 
@@ -34,11 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased overflow-x-hidden`}
-    >
-      <body className="min-h-full flex flex-col w-full max-w-[100vw] overflow-x-hidden">
+    <html lang="en" className="h-full antialiased dark">
+      <body className="min-h-full flex flex-col bg-background text-foreground font-body">
         <AuthProvider>
           <BoardSettingsProvider>
             {children}

@@ -1,0 +1,87 @@
+---
+name: "[Legacy SG] High-Tech Chess Lab"
+slug: legacy-style-guide-style_f8fef9ee60f0
+modes: [light]
+color:
+  palette:
+    canvas: "#ffffff"
+    ink: "#1a1a1a"
+    ink-2: "#555555"
+    ink-3: "#8a8a8a"
+    line: "#e2e2e2"
+    primary: "#00f0ff"
+    on-primary: "#ffffff"
+    background: "#050507"
+    surface: "#15151b"
+    secondary: "#bd00ff"
+    text-primary: "#ffffff"
+    text-muted: "#94a3b8"
+    border: "rgba(255, 255, 255, 0.1)"
+  semantic:
+    background.canvas: "{color.palette.canvas}"
+    surface.default: "{color.palette.canvas}"
+    surface.raised: "{color.palette.canvas}"
+    text.primary: "{color.palette.ink}"
+    text.secondary: "{color.palette.ink-2}"
+    text.tertiary: "{color.palette.ink-3}"
+    text.link: "{color.palette.primary}"
+    border.default: "{color.palette.line}"
+    border.focus: "{color.palette.primary}"
+    primary.bg: "{color.palette.primary}"
+    primary.fg: "{color.palette.on-primary}"
+typography:
+  family: { primary: "Space Grotesk" }
+  textStyle:
+    heading-lg: { fontFamily: "Space Grotesk", fontSize: "24px", fontWeight: 600, lineHeight: 1.2 }
+    body-md: { fontFamily: "Space Grotesk", fontSize: "15px", fontWeight: 400, lineHeight: 1.5 }
+spacing:
+  container: "2rem"
+  gutter: "1rem"
+radius:
+  card: "0.75rem"
+  button: "0.5rem"
+---
+
+> Migrated from a legacy style guide.
+> The palette above is mapped from the original tokens, which are also preserved below.
+
+## Legacy style-guide tokens
+
+### Colors
+
+- `background`: `#050507`
+- `surface`: `#15151b`
+- `primary`: `#00f0ff`
+- `secondary`: `#bd00ff`
+- `text-primary`: `#ffffff`
+- `text-muted`: `#94a3b8`
+- `border`: `rgba(255, 255, 255, 0.1)`
+
+### Typography
+
+- `heading`: `{"family":"Space Grotesk","size":"2.5rem","url":"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"}`
+- `body`: `{"family":"Inter","size":"1rem","url":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"}`
+
+### Spacing
+
+- `container`: `2rem`
+- `gutter`: `1rem`
+
+### Radius
+
+- `card`: `0.75rem`
+- `button`: `0.5rem`
+
+## Design instructions
+
+### The Vibe: Analytical Precision
+The "High-Tech Chess Lab" aesthetic should feel like a premium military or aerospace command center. Every pixel serves a data-driven purpose. Use deeply dark backgrounds with frosted glass panels (`backdrop-blur-xl`) to create depth.
+
+### Visual Motifs
+- **Bento Grid**: Organize information into a high-density grid of varying cell sizes.
+- **Neon Glows**: Use subtle drop-shadows on active progress arcs and buttons to simulate glowing light on glass.
+- **Precision Charts**: Implement line charts with translucent gradient fills and thin stroke lines.
+- **Monospace Accents**: Use monospaced font weight (from Inter or a secondary mono) for numerical data and Elo ratings to emphasize the "calculating" nature of the app.
+
+### Interactive Elements
+Buttons should have a crisp `#neon-glow` on hover. Navigation items should use `#left-accent` gradient bars to indicate the active section. Progress indicators should use glowing SVG circles for "Opening Mastered" and "Endgame Mastery."

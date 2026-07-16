@@ -3,13 +3,14 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Chess, type Move, type Square } from "chess.js";
 import { Chessboard } from "react-chessboard";
-import { Brain, CheckCircle2, RotateCcw, Lightbulb, XCircle, Sliders, PlayCircle } from "lucide-react";
+import { Brain, CheckCircle2, RotateCcw, Lightbulb, XCircle, Sliders, PlayCircle, Cpu, Activity, Target, Trophy, Zap } from "lucide-react";
 import { getStockfishClient, type StockfishEvaluation } from "@/services/stockfish/client";
 import { useBoardSettings } from "@/features/trainer/BoardSettingsContext";
 import { useAuth } from "@/features/auth/AuthContext";
 import { saveProgressRecord, getProgressRecord } from "@/services/db/progress";
 import { calculateNextReview } from "@/services/learning/mastery";
 import type { EndgameLesson } from "@/types/lotus";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface EndgameTrainerProps {
   lesson: EndgameLesson;
@@ -25,24 +26,23 @@ interface Feedback {
 }
 
 const feedbackStyles: Record<FeedbackTone, string> = {
-  idle: "border-slate-500/20 bg-slate-500/10 text-slate-200",
-  success: "border-emerald-300/20 bg-emerald-300/10 text-emerald-100",
-  error: "border-rose-300/20 bg-rose-300/10 text-rose-100",
-  info: "border-sky-300/20 bg-sky-300/10 text-sky-100",
+  idle: "border-white/10 bg-white/[0.02] text-slate-300",
+  success: "border-primary/20 bg-primary/5 text-primary",
+  error: "border-danger/20 bg-danger/5 text-danger",
+  info: "border-accent/20 bg-accent/5 text-accent",
 };
 
 /** Highlight colour tokens */
-const HIGHLIGHT_SELECTED = { backgroundColor: "rgba(52, 211, 153, 0.35)" };
+const HIGHLIGHT_SELECTED = { backgroundColor: "rgba(0, 204, 204, 0.25)" };
 const HIGHLIGHT_TARGET = {
-  background: "radial-gradient(circle, rgba(52,211,153,0.45) 20%, transparent 20%)",
+  background: "radial-gradient(circle, rgba(0,204,204,0.3) 20%, transparent 20%)",
   borderRadius: "50%",
 };
 const HIGHLIGHT_CAPTURE = {
-  background: "radial-gradient(circle, transparent 50%, rgba(52,211,153,0.45) 50%)",
+  background: "radial-gradient(circle, transparent 50%, rgba(0,204,204,0.3) 50%)",
 };
 
 export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
-  // Use a state for the FEN to force game updates
   const [fen, setFen] = useState(lesson.fen);
   const game = useMemo(() => new Chess(fen), [fen]);
   
@@ -51,7 +51,7 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
   const [hintsUsed, setHintsUsed] = useState(0);
   const [feedback, setFeedback] = useState<Feedback>({
     tone: "idle",
-    title: "Ready",
+    title: "SIMULATION_INITIATED",
     detail: lesson.objective,
   });
   
@@ -65,45 +65,39 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
   const { user } = useAuth();
   const { highlightValidMoves, showNotation, clickToMove, toggleHighlightValidMoves, toggleShowNotation, toggleClickToMove } = useBoardSettings();
 
-  // The user's side is the side to move in the initial FEN
   const initialSide = useMemo(() => new Chess(lesson.fen).turn(), [lesson.fen]);
   const userSideStr = initialSide === "w" ? "white" : "black";
   const isUserTurn = game.turn() === initialSide && status === "playing";
 
-  // Check for game over
   useEffect(() => {
     if (status !== "playing") return;
 
     if (game.isCheckmate()) {
       if (game.turn() !== initialSide) {
-        // Opponent is checkmated
         setStatus("won");
-        setFeedback({ tone: "success", title: "Checkmate!", detail: "You have won the endgame." });
+        setFeedback({ tone: "success", title: "OBJECTIVE_SECURED", detail: "Endgame protocol successfully executed." });
         saveProgress(true);
       } else {
-        // User is checkmated
         setStatus("lost");
-        setFeedback({ tone: "error", title: "Checkmate", detail: "You lost the endgame." });
+        setFeedback({ tone: "error", title: "SYSTEM_BREACHED", detail: "Terminal position reached by opponent." });
         saveProgress(false);
       }
     } else if (game.isDraw() || game.isStalemate() || game.isThreefoldRepetition()) {
       setStatus("drawn");
-      setFeedback({ tone: "error", title: "Draw", detail: "The endgame ended in a draw, which is a failure for this drill." });
+      setFeedback({ tone: "error", title: "SYNC_STALLED", detail: "Neutral parity reached. Drill failure logged." });
       saveProgress(false);
     }
   }, [game, fen, status, initialSide]);
 
-  // Engine's turn
   useEffect(() => {
     if (status !== "playing" || isUserTurn || isEngineThinking) return;
 
     const playEngineMove = async () => {
       setIsEngineThinking(true);
-      setFeedback({ tone: "idle", title: "Engine is thinking...", detail: "Wait for the opponent." });
+      setFeedback({ tone: "idle", title: "ENGINE_SYNCHRONIZING...", detail: "Awaiting calculation cycle." });
       
       try {
         const client = getStockfishClient();
-        // Depth 15 is strong for endgames and fast in WASM
         const result = await client.analyzeFen(game.fen(), 15);
         
         if (result.bestMove) {
@@ -111,28 +105,24 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
           setFen(game.fen());
           setFeedback({
             tone: "idle",
-            title: `Engine played ${move.san}`,
-            detail: "Your turn.",
+            title: `ENGINE_VECTOR: ${move.san}`,
+            detail: "User input required.",
           });
         }
       } catch (err) {
         console.error("Engine play error:", err);
-        setFeedback({ tone: "error", title: "Engine Error", detail: "Could not fetch engine move." });
+        setFeedback({ tone: "error", title: "LINK_ERROR", detail: "Engine stream interrupted." });
       } finally {
         setIsEngineThinking(false);
       }
     };
 
-    playEngineMove();
+    const delay = setTimeout(playEngineMove, 600);
+    return () => clearTimeout(delay);
   }, [isUserTurn, status, fen, game, isEngineThinking]);
 
   const saveProgress = (won: boolean) => {
     if (!user) return;
-    
-    // Calculate a performance score (0-5)
-    // - Base score 5 for a win without hints or mistakes
-    // - Lose 1 point for every mistake, 0.5 for every hint
-    // - 0 if lost or drawn
     let score = won ? 5 : 0;
     if (won) {
       score -= mistakes;
@@ -146,7 +136,6 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
            previousRecord || { lessonId: lesson.id, lessonKind: "endgame" },
            score
          );
-         // Override mistake count for endgame specific logic
          record.mistakeCount = (previousRecord?.mistakeCount ?? 0) + mistakes + (won ? 0 : 1);
          return saveProgressRecord(user.uid, user.isGuest ?? false, record);
       })
@@ -156,21 +145,17 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
   const executeMove = useCallback(
     (sourceSquare: string, targetSquare: string): boolean => {
       if (!isUserTurn) return false;
-
       const trial = new Chess(fen);
       let playedMove: Move | null = null;
-      
       try {
         playedMove = trial.move({ from: sourceSquare, to: targetSquare, promotion: "q" });
       } catch {
         return false;
       }
-
       if (!playedMove) {
-        setFeedback({ tone: "error", title: "Illegal move", detail: "You cannot move there." });
+        setFeedback({ tone: "error", title: "INPUT_REJECTED", detail: "Illegal vector input." });
         return false;
       }
-
       setFen(trial.fen());
       setSelectedSquare(null);
       setHintMove(null);
@@ -187,10 +172,8 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
 
   const handleSquareClick = ({ square, piece }: { square: string; piece: { pieceType: string } | null }) => {
     if (!clickToMove || !isUserTurn) return;
-
     const sq = square as Square;
     const userPrefix = initialSide;
-
     if (selectedSquare) {
       if (selectedSquare === sq) {
         setSelectedSquare(null);
@@ -201,32 +184,22 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
         return;
       }
       const success = executeMove(selectedSquare, sq);
-      if (!success) {
-        setSelectedSquare(null);
-      }
+      if (!success) setSelectedSquare(null);
       return;
     }
-
-    if (piece && piece.pieceType.startsWith(userPrefix)) {
-      setSelectedSquare(sq);
-    }
+    if (piece && piece.pieceType.startsWith(userPrefix)) setSelectedSquare(sq);
   };
 
   const squareStyles = useMemo(() => {
     const styles: Record<string, React.CSSProperties> = {};
-
-    // Hint highlighting
     if (hintMove) {
       const from = hintMove.substring(0, 2);
       const to = hintMove.substring(2, 4);
-      styles[from] = { backgroundColor: "rgba(14, 165, 233, 0.4)" }; // sky-500
-      styles[to] = { backgroundColor: "rgba(14, 165, 233, 0.4)" };
+      styles[from] = { backgroundColor: "rgba(189, 0, 255, 0.4)" };
+      styles[to] = { backgroundColor: "rgba(189, 0, 255, 0.4)" };
     }
-
     if (!selectedSquare || !highlightValidMoves || !clickToMove) return styles;
-
     styles[selectedSquare] = { ...styles[selectedSquare], ...HIGHLIGHT_SELECTED };
-
     const validMoves = game.moves({ square: selectedSquare, verbose: true });
     for (const move of validMoves) {
       const targetPiece = game.get(move.to as Square);
@@ -234,23 +207,21 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
         ? { ...styles[move.to], ...HIGHLIGHT_CAPTURE }
         : { ...styles[move.to], ...HIGHLIGHT_TARGET };
     }
-
     return styles;
   }, [selectedSquare, highlightValidMoves, clickToMove, game, hintMove]);
 
   const handleGetHint = async () => {
     if (!isUserTurn) return;
     setIsHinting(true);
-    
     try {
       const result = await getStockfishClient().analyzeFen(game.fen(), 12);
       if (result.bestMove) {
         setHintMove(result.bestMove);
         setHintsUsed(h => h + 1);
-        setFeedback({ tone: "info", title: "Hint provided", detail: "Stockfish recommends this move." });
+        setFeedback({ tone: "info", title: "SUGGESTED_PROTOCOL", detail: "Neural analysis recommends this path." });
       }
     } catch (error) {
-      setFeedback({ tone: "error", title: "Hint unavailable", detail: "Engine couldn't calculate a hint." });
+      setFeedback({ tone: "error", title: "HINT_UNAVAILABLE", detail: "Analytical cores occupied." });
     } finally {
       setIsHinting(false);
     }
@@ -264,107 +235,94 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
     setHintMove(null);
     setSelectedSquare(null);
     setIsEngineThinking(false);
-    setFeedback({ tone: "idle", title: "Ready", detail: lesson.objective });
+    setFeedback({ tone: "idle", title: "RE_CALIBRATING...", detail: lesson.objective });
   };
 
   return (
-    <section aria-labelledby="endgame-heading" className="rounded-xl border border-white/10 bg-white/[0.045] p-5 lg:p-6">
-      <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-200">Endgame Drill</p>
-          <h2 id="endgame-heading" className="text-xl font-semibold text-white">
+    <section className="glass-card p-6 md:p-8">
+      <div className="mb-8 flex flex-wrap items-end justify-between gap-6">
+        <div className="space-y-1">
+          <div className="flex items-center gap-3 text-primary">
+            <Trophy className="size-4" />
+            <span className="text-[10px] font-bold tracking-[0.4em] uppercase">Endgame_Drill_Node</span>
+          </div>
+          <h2 className="text-4xl font-bold text-white tracking-tighter">
             {lesson.name}
           </h2>
         </div>
 
-        <div className="flex items-center gap-2">
-          {/* Quick Settings Popup Toggle */}
+        <div className="flex items-center gap-3">
           <div className="relative">
-            <button
-              type="button"
+            <motion.button
+              whileHover={{ scale: 1.05 }}
               onClick={() => setShowSettingsPopup(!showSettingsPopup)}
-              aria-label="Board settings"
-              className="inline-flex size-10 items-center justify-center rounded-md border border-white/10 text-slate-200 transition hover:border-white/30 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-emerald-300"
+              className="size-10 flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-slate-400 hover:text-primary transition-all"
             >
-              <Sliders aria-hidden="true" className="size-4" />
-            </button>
-
-            {showSettingsPopup && (
-              <div className="absolute right-0 top-12 z-20 w-64 rounded-xl border border-white/10 bg-[#0c1610]/95 p-4 shadow-xl backdrop-blur-md animate-fade-in">
-                <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-emerald-300">Board Settings</p>
-                <div className="space-y-3">
-                  <label className="flex items-center justify-between cursor-pointer group">
-                    <span className="text-xs text-slate-300 group-hover:text-white transition-colors">Click-to-Move</span>
-                    <button
-                      onClick={toggleClickToMove}
-                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${clickToMove ? "bg-emerald-400" : "bg-slate-600"}`}
-                      role="switch"
-                      aria-checked={clickToMove}
-                    >
-                      <span className={`inline-block size-3.5 rounded-full bg-white shadow-sm transition-transform ${clickToMove ? "translate-x-4" : "translate-x-0.5"}`} />
-                    </button>
-                  </label>
-                  <label className="flex items-center justify-between cursor-pointer group">
-                    <span className="text-xs text-slate-300 group-hover:text-white transition-colors">Highlight Valid Moves</span>
-                    <button
-                      onClick={toggleHighlightValidMoves}
-                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${highlightValidMoves ? "bg-emerald-400" : "bg-slate-600"}`}
-                      role="switch"
-                      aria-checked={highlightValidMoves}
-                    >
-                      <span className={`inline-block size-3.5 rounded-full bg-white shadow-sm transition-transform ${highlightValidMoves ? "translate-x-4" : "translate-x-0.5"}`} />
-                    </button>
-                  </label>
-                  <label className="flex items-center justify-between cursor-pointer group">
-                    <span className="text-xs text-slate-300 group-hover:text-white transition-colors">Board Notation</span>
-                    <button
-                      onClick={toggleShowNotation}
-                      className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${showNotation ? "bg-emerald-400" : "bg-slate-600"}`}
-                      role="switch"
-                      aria-checked={showNotation}
-                    >
-                      <span className={`inline-block size-3.5 rounded-full bg-white shadow-sm transition-transform ${showNotation ? "translate-x-4" : "translate-x-0.5"}`} />
-                    </button>
-                  </label>
-                </div>
-              </div>
-            )}
+              <Sliders className="size-4" />
+            </motion.button>
+            <AnimatePresence>
+              {showSettingsPopup && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                  className="absolute right-0 top-12 z-20 w-64 glass-card bg-black/90 p-5 shadow-neon-strong"
+                >
+                  <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.2em] text-primary">Node_Configs</p>
+                  <div className="space-y-4">
+                    {[
+                      { label: "Click_to_Move", active: clickToMove, toggle: toggleClickToMove },
+                      { label: "Highlight_Vectors", active: highlightValidMoves, toggle: toggleHighlightValidMoves },
+                      { label: "Data_Notation", active: showNotation, toggle: toggleShowNotation },
+                    ].map((cfg) => (
+                      <div key={cfg.label} className="flex items-center justify-between group cursor-pointer" onClick={cfg.toggle}>
+                        <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest group-hover:text-slate-200 transition-colors">{cfg.label}</span>
+                        <div className={`w-8 h-4 rounded-full border border-white/10 transition-colors relative ${cfg.active ? "bg-primary/20" : "bg-white/5"}`}>
+                          <motion.div 
+                            animate={{ x: cfg.active ? 16 : 2 }}
+                            className={`absolute top-0.5 size-2.5 rounded-full ${cfg.active ? "bg-primary shadow-neon" : "bg-slate-700"}`} 
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
-          <button
-            type="button"
+          <motion.button
+            whileHover={{ scale: 1.05 }}
             onClick={resetLesson}
-            aria-label="Reset drill"
-            className="inline-flex size-10 items-center justify-center rounded-md border border-white/10 text-slate-200 transition hover:border-white/30 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-emerald-300"
+            className="size-10 flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-slate-400 hover:text-white transition-all"
           >
-            <RotateCcw aria-hidden="true" className="size-4" />
-          </button>
-          <button
-            type="button"
+            <RotateCcw className="size-4" />
+          </motion.button>
+          
+          <motion.button
+            whileHover={{ scale: 1.02 }}
             onClick={handleGetHint}
             disabled={!isUserTurn || isHinting}
-            aria-label="Get a hint"
-            className="inline-flex h-10 items-center gap-2 rounded-md border border-amber-300/20 bg-amber-300/10 px-3 text-sm font-medium text-amber-200 transition hover:border-amber-300/40 hover:bg-amber-300/15 focus:outline-none focus:ring-2 focus:ring-amber-300 disabled:cursor-not-allowed disabled:opacity-50"
+            className="h-10 px-5 flex items-center gap-3 rounded-lg border border-accent/20 bg-accent/10 text-[10px] font-bold tracking-[0.2em] text-accent uppercase hover:bg-accent/20 transition-all disabled:opacity-50 group"
           >
-            <Lightbulb aria-hidden="true" className="size-4" />
-            {isHinting ? "Thinking..." : "Hint"}
-          </button>
+            <Lightbulb className="size-4 group-hover:scale-110 transition-transform" />
+            {isHinting ? "PROCESSING..." : "GET_HINT"}
+          </motion.button>
         </div>
       </div>
 
-      <div className="grid gap-6 xl:grid-cols-[minmax(280px,520px)_1fr]">
-        <div className="w-full max-w-[520px] justify-self-center xl:justify-self-start relative">
-          <div className="aspect-square overflow-hidden rounded-xl border border-white/10 bg-slate-950 shadow-lg shadow-black/30">
+      <div className="grid gap-10 xl:grid-cols-[minmax(300px,640px)_1fr]">
+        <div className="w-full max-w-[640px] justify-self-center xl:justify-self-start relative">
+          <div className="aspect-square overflow-hidden rounded-2xl border border-white/10 bg-cyber-glass shadow-2xl">
             <Chessboard
               options={{
                 id: "lotus-endgame-trainer",
                 position: fen,
                 boardOrientation: userSideStr,
-                animationDurationInMs: 180,
-                allowDrawingArrows: true,
+                animationDurationInMs: 250,
                 showNotation: showNotation,
-                darkSquareStyle: { backgroundColor: "#446653" },
-                lightSquareStyle: { backgroundColor: "#dbe7cf" },
+                darkSquareStyle: { backgroundColor: "#15151b" },
+                lightSquareStyle: { backgroundColor: "#1e1e26" },
                 boardStyle: { width: "100%", height: "100%" },
                 squareStyles: squareStyles,
                 canDragPiece: ({ piece }) => piece.pieceType.startsWith(initialSide),
@@ -374,100 +332,121 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
             />
           </div>
           
-          {/* Overlay when not playing */}
-          {status !== "playing" && (
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center rounded-xl bg-black/60 backdrop-blur-sm animate-fade-in">
-              <div className="text-center p-6 space-y-4">
-                <div className={`mx-auto flex size-16 items-center justify-center rounded-full ${status === "won" ? "bg-emerald-500/20 text-emerald-400" : "bg-rose-500/20 text-rose-400"}`}>
-                  {status === "won" ? <CheckCircle2 className="size-8" /> : <XCircle className="size-8" />}
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-1">
-                    {status === "won" ? "Checkmate!" : status === "lost" ? "You lost." : "Draw."}
-                  </h3>
-                  <p className="text-sm text-slate-300">
-                    {status === "won" ? "You successfully completed the drill." : "Try again and learn from your mistakes."}
-                  </p>
-                </div>
-                <button
-                  onClick={resetLesson}
-                  className="mt-4 inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-bold text-slate-950 hover:bg-emerald-400 transition-colors"
+          <AnimatePresence>
+            {status !== "playing" && (
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="absolute inset-0 z-20 flex flex-col items-center justify-center rounded-2xl bg-black/80 backdrop-blur-md border border-white/10"
+              >
+                <motion.div 
+                  initial={{ scale: 0.9, y: 20 }}
+                  animate={{ scale: 1, y: 0 }}
+                  className="text-center p-8 space-y-6"
                 >
-                  <RotateCcw className="size-4" />
-                  Retry Drill
-                </button>
-              </div>
-            </div>
-          )}
+                  <div className={`mx-auto flex size-20 items-center justify-center rounded-2xl border ${status === "won" ? "bg-primary/10 border-primary/20 text-primary shadow-neon" : "bg-danger/10 border-danger/20 text-danger"}`}>
+                    {status === "won" ? <CheckCircle2 className="size-10" /> : <XCircle className="size-10" />}
+                  </div>
+                  <div className="space-y-1">
+                    <h3 className="text-4xl font-heading tracking-widest text-white">
+                      {status === "won" ? "SYNCHRONIZED" : status === "lost" ? "LINK_TERMINATED" : "PARITY_REACHED"}
+                    </h3>
+                    <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">
+                      {status === "won" ? "Drill successfully committed to neural vault." : "Optimization failed. Calibration recommended."}
+                    </p>
+                  </div>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={resetLesson}
+                    className="inline-flex items-center gap-3 rounded-xl bg-white text-background px-8 py-4 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-slate-200 transition-colors"
+                  >
+                    <RotateCcw className="size-4" />
+                    BOOT_RETRY_CYCLE
+                  </motion.button>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
-        <div className="space-y-4">
-          <div className={`rounded-xl border p-4 ${feedbackStyles[feedback.tone]}`} role="status">
-            <div className="mb-1 flex items-center gap-2">
-              {feedback.tone === "success" ? (
-                <CheckCircle2 aria-hidden="true" className="size-5" />
-              ) : feedback.tone === "error" ? (
-                <XCircle aria-hidden="true" className="size-5" />
-              ) : feedback.tone === "info" ? (
-                <Lightbulb aria-hidden="true" className="size-5" />
-              ) : (
-                <Brain aria-hidden="true" className="size-5" />
-              )}
-              <p className="font-semibold">{feedback.title}</p>
-            </div>
-            <p className="text-sm opacity-90">{feedback.detail}</p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-3 text-center">
-            <div className="rounded-lg border border-white/10 bg-white/[0.02] p-4">
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-500">Status</p>
-              <p className="font-mono text-lg capitalize text-white">
-                {status === "playing" ? (isUserTurn ? "Your turn" : "Engine thinking") : status}
-              </p>
-            </div>
-            <div className="rounded-lg border border-white/10 bg-white/[0.02] p-4">
-              <p className="text-xs uppercase tracking-[0.16em] text-slate-500">Hints</p>
-              <p className="font-mono text-lg text-white">{hintsUsed}</p>
+        <div className="space-y-6 flex flex-col h-full">
+          <div className={`rounded-xl border-l-4 p-6 flex flex-col justify-between min-h-[120px] transition-all duration-500 ${feedbackStyles[feedback.tone]}`}>
+            <div className="space-y-1">
+              <div className="flex items-center gap-3 mb-2">
+                <Activity className="size-4" />
+                <h4 className="font-heading text-2xl tracking-[0.2em]">{feedback.title}</h4>
+              </div>
+              <p className="text-sm font-medium tracking-tight leading-relaxed opacity-80">{feedback.detail}</p>
             </div>
           </div>
 
-          <div className="rounded-xl border border-white/10 bg-white/[0.02] p-5 space-y-4">
-            <div>
-              <h3 className="mb-1 text-sm font-semibold text-white">Objective</h3>
-              <p className="text-sm text-slate-300">{lesson.objective}</p>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white/[0.02] border border-white/5 rounded-xl p-4 space-y-1 text-center">
+              <div className="flex items-center justify-center gap-2 text-slate-500 mb-2">
+                <Activity className="size-3" />
+                <span className="text-[8px] font-bold uppercase tracking-widest">Node_Status</span>
+              </div>
+              <p className="text-xl font-heading text-white">{status === "playing" ? (isUserTurn ? "ACTIVE" : "CALCULATING") : status.toUpperCase()}</p>
             </div>
+            <div className="bg-white/[0.02] border border-white/5 rounded-xl p-4 space-y-1 text-center">
+              <div className="flex items-center justify-center gap-2 text-accent mb-2">
+                <Zap className="size-3" />
+                <span className="text-[8px] font-bold uppercase tracking-widest text-slate-500">Hint_Usage</span>
+              </div>
+              <p className="text-xl font-heading text-white">{hintsUsed}</p>
+            </div>
+          </div>
+
+          <div className="bg-black/20 border border-white/5 rounded-xl p-6 space-y-6">
             <div>
-              <h3 className="mb-1 text-sm font-semibold text-white">Winning Method</h3>
-              <p className="text-sm text-slate-400 leading-relaxed">{lesson.winningMethod}</p>
+              <h3 className="text-[10px] font-bold text-primary uppercase tracking-[0.3em] mb-2 flex items-center gap-2">
+                <Target className="size-3" />
+                Mission_Parameters
+              </h3>
+              <p className="text-sm font-medium text-slate-300 leading-relaxed">{lesson.objective}</p>
+            </div>
+            
+            <div className="h-px w-full bg-white/5" />
+            
+            <div>
+              <h3 className="text-[10px] font-bold text-accent uppercase tracking-[0.3em] mb-2 flex items-center gap-2">
+                <Activity className="size-3" />
+                Optimal_Protocol
+              </h3>
+              <p className="text-sm text-slate-400 leading-relaxed italic">{lesson.winningMethod}</p>
             </div>
             
             {lesson.commonErrors.length > 0 && (
-              <div>
-                <h3 className="mb-2 text-xs uppercase tracking-wider font-semibold text-amber-300/80">Common Pitfalls</h3>
-                <ul className="list-disc list-inside text-sm text-slate-400 space-y-1">
+              <div className="bg-danger/5 border border-danger/10 rounded-lg p-4">
+                <h3 className="text-[10px] font-bold text-danger uppercase tracking-[0.3em] mb-2">Warning: Known_Vulnerabilities</h3>
+                <ul className="space-y-2">
                   {lesson.commonErrors.map((err, i) => (
-                    <li key={i}>{err}</li>
+                    <li key={i} className="text-xs text-slate-500 flex items-start gap-2">
+                      <div className="size-1 bg-danger/40 rounded-full mt-1.5 shrink-0" />
+                      {err}
+                    </li>
                   ))}
                 </ul>
               </div>
             )}
           </div>
           
-          <div className="rounded-xl border border-white/10 bg-white/[0.02] p-5">
-             <div className="flex items-center gap-2 text-slate-300">
-               <PlayCircle className="size-5 text-emerald-400" />
-               <span className="text-sm font-medium text-white">Move History</span>
+          <div className="bg-black/20 border border-white/5 rounded-xl p-6 flex-1">
+             <div className="flex items-center gap-2 text-slate-500 mb-6">
+               <PlayCircle className="size-4 text-primary" />
+               <span className="text-[10px] font-bold uppercase tracking-[0.3em]">Sequence_Log</span>
              </div>
-             <div className="mt-3 flex flex-wrap gap-2 text-sm">
+             <div className="flex flex-wrap gap-2 max-h-[120px] overflow-y-auto scrollbar-hidden">
                 {game.history().length > 0 ? (
                   game.history().map((san, i) => (
-                    <span key={i} className="font-mono text-slate-300 bg-black/30 px-2 py-1 rounded">
-                      {i % 2 === 0 ? `${Math.floor(i / 2) + 1}. ` : ""}
-                      {san}
-                    </span>
+                    <div key={i} className="flex items-center gap-2 px-3 py-2 rounded-lg border border-white/5 bg-black/40 text-slate-300">
+                      <span className="text-[8px] font-mono opacity-40">{Math.floor(i / 2) + 1}{i % 2 === 0 ? "w" : "b"}</span>
+                      <span className="font-mono text-sm font-bold tracking-tight">{san}</span>
+                    </div>
                   ))
                 ) : (
-                  <span className="text-slate-500 italic">No moves played yet.</span>
+                  <span className="text-[10px] font-bold text-slate-700 uppercase tracking-widest">Awaiting_Initial_Vector...</span>
                 )}
              </div>
           </div>

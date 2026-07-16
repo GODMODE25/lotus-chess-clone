@@ -1,36 +1,75 @@
 "use client";
 
-import React, { useEffect, useState, Suspense } from "react";
+import React, { useEffect, useState, Suspense, useMemo } from "react";
 import Link from "next/link";
-import { Swords, Compass, Lock, ChevronRight, Award, Plus } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Swords, Compass, Lock, ChevronRight, Award, Plus, Target, Shield } from "lucide-react";
 import { getAllWhiteRepertoires, getAllBlackRepertoires } from "@/content/openingsData";
-import { getCustomVariations } from "@/services/db/progress";
+import { getCustomVariations, getProgressRecords } from "@/services/db/progress";
 import { useAuth } from "@/features/auth/AuthContext";
-import type { OpeningVariation } from "@/types/lotus";
+import type { OpeningVariation, ProgressRecord } from "@/types/lotus";
+import { RepertoireCarousel } from "@/features/library/repertoire-carousel";
 
 function OpeningsHubContent() {
   const { user } = useAuth();
+  const router = useRouter();
   const [customVariations, setCustomVariations] = useState<OpeningVariation[]>([]);
+  const [progressRecords, setProgressRecords] = useState<ProgressRecord[]>([]);
   const [loadingCustom, setLoadingCustom] = useState(true);
 
   useEffect(() => {
     if (!user) return;
-    const currentUser = user;
-    async function loadCustom() {
+    async function loadData() {
       try {
-        const list = await getCustomVariations(currentUser.uid, currentUser.isGuest ?? false);
-        setCustomVariations(list);
+        const [custom, records] = await Promise.all([
+          getCustomVariations(user!.uid, user!.isGuest ?? false),
+          getProgressRecords(user!.uid, user!.isGuest ?? false)
+        ]);
+        setCustomVariations(custom);
+        setProgressRecords(records);
       } catch (err) {
-        console.error("Failed to load custom variations:", err);
+        console.error("Failed to load repertoire data:", err);
       } finally {
         setLoadingCustom(false);
       }
     }
-    loadCustom();
+    loadData();
   }, [user]);
 
-  const whiteOpenings = getAllWhiteRepertoires();
-  const blackOpenings = getAllBlackRepertoires();
+  const whiteRepertoires = useMemo(() => {
+    return getAllWhiteRepertoires().map(r => ({
+      ...r,
+      opening: r.name,
+      variation: "Base Repertoire",
+      movesSan: r.baseMoves,
+      tacticalMotifs: [], 
+      side: "white" as const
+    }));
+  }, []);
+
+  const blackRepertoires = useMemo(() => {
+    return getAllBlackRepertoires().map(r => ({
+      ...r,
+      opening: r.name,
+      variation: "Base Repertoire",
+      movesSan: r.baseMoves,
+      tacticalMotifs: [],
+      side: "black" as const
+    }));
+  }, []);
+
+  const dueIds = useMemo(() => {
+    const now = new Date().getTime();
+    return new Set(
+      progressRecords
+        .filter(r => r.lessonKind === "opening" && new Date(r.nextReviewDate).getTime() <= now)
+        .map(r => r.lessonId)
+    );
+  }, [progressRecords]);
+
+  const handleSelect = (item: any) => {
+    router.push(`/practice/openings/${item.id}`);
+  };
 
   return (
     <div className="space-y-10 animate-fade-in">
@@ -48,121 +87,87 @@ function OpeningsHubContent() {
         </p>
       </section>
 
-      {/* Row 1: White Openings */}
-      <section className="space-y-4">
-        <div className="flex items-center gap-2">
-          <span className="size-2 rounded-full bg-white border border-slate-600" />
-          <h2 className="text-lg font-bold text-white tracking-tight">White Openings (Top 10)</h2>
-        </div>
-        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-          {whiteOpenings.map((opening) => (
-            <Link
-              key={opening.id}
-              href={`/practice/openings/${opening.id}`}
-              className="group relative rounded-xl border border-white/5 bg-[#0b120f]/60 hover:bg-[#0b120f]/80 p-5 backdrop-blur-md shadow-md hover:border-emerald-500/20 hover:shadow-emerald-950/20 hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between h-[160px]"
-            >
-              <div className="space-y-1">
-                <div className="flex justify-between items-start">
-                  <span className="text-[10px] font-bold text-emerald-400/80 uppercase tracking-widest">{opening.eco}</span>
-                  <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-slate-900 border border-white/5 uppercase tracking-wider text-slate-400">White</span>
-                </div>
-                <h3 className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors leading-tight pt-1">
-                  {opening.name}
-                </h3>
-                <p className="text-[11px] text-slate-400 line-clamp-2 mt-1 leading-normal font-normal">
-                  {opening.overview}
-                </p>
-              </div>
-              <div className="flex items-center justify-between pt-2 text-[10px] text-slate-500 font-medium">
-                <span>{opening.difficulty === 1 ? "★" : "★".repeat(opening.difficulty)}</span>
-                <span className="flex items-center gap-0.5 text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                  Train <ChevronRight className="size-3" />
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+      {/* Repertoire Sections */}
+      <div className="space-y-20">
+        <RepertoireCarousel 
+          items={whiteRepertoires as any} 
+          dueIds={dueIds}
+          title="Strategic_Initiative" 
+          side="white" 
+          onSelect={handleSelect}
+        />
+        
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-white/5 to-transparent" />
 
-      {/* Row 2: Black Openings */}
-      <section className="space-y-4">
-        <div className="flex items-center gap-2">
-          <span className="size-2 rounded-full bg-slate-950 border border-slate-600" />
-          <h2 className="text-lg font-bold text-white tracking-tight">Black Openings (Top 10)</h2>
-        </div>
-        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-          {blackOpenings.map((opening) => (
-            <Link
-              key={opening.id}
-              href={`/practice/openings/${opening.id}`}
-              className="group relative rounded-xl border border-white/5 bg-[#0b120f]/60 hover:bg-[#0b120f]/80 p-5 backdrop-blur-md shadow-md hover:border-emerald-500/20 hover:shadow-emerald-950/20 hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between h-[160px]"
-            >
-              <div className="space-y-1">
-                <div className="flex justify-between items-start">
-                  <span className="text-[10px] font-bold text-emerald-400/80 uppercase tracking-widest">{opening.eco}</span>
-                  <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-slate-900 border border-white/5 uppercase tracking-wider text-slate-400">Black</span>
-                </div>
-                <h3 className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors leading-tight pt-1">
-                  {opening.name}
-                </h3>
-                <p className="text-[11px] text-slate-400 line-clamp-2 mt-1 leading-normal font-normal">
-                  {opening.overview}
-                </p>
-              </div>
-              <div className="flex items-center justify-between pt-2 text-[10px] text-slate-500 font-medium">
-                <span>{opening.difficulty === 1 ? "★" : "★".repeat(opening.difficulty)}</span>
-                <span className="flex items-center gap-0.5 text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                  Train <ChevronRight className="size-3" />
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+        <RepertoireCarousel 
+          items={blackRepertoires as any} 
+          dueIds={dueIds}
+          title="Reactive_Countermeasures" 
+          side="black" 
+          onSelect={handleSelect}
+        />
+      </div>
 
-      {/* Row 3: Custom Variations */}
-      <section className="space-y-4 pt-2">
-        <div className="flex items-center gap-2">
-          <Award className="size-4.5 text-amber-400" />
-          <h2 className="text-lg font-bold text-white tracking-tight">Custom Variations</h2>
+      {/* Custom Variations - High-Tech Grid */}
+      <section className="space-y-8 pt-10 pb-10">
+        <div className="flex items-center gap-4 px-6">
+          <div className="p-2.5 rounded-xl bg-white/5 border border-amber-500/30">
+            <Award className="size-5 text-amber-400" />
+          </div>
+          <div>
+            <h2 className="text-2xl font-space font-bold uppercase tracking-[0.2em] text-white">
+              Custom_Neural_Paths
+            </h2>
+            <p className="text-[10px] font-mono text-white/30 uppercase tracking-widest mt-1">
+              User Generated Variants: {customVariations.length}
+            </p>
+          </div>
         </div>
         
         {loadingCustom ? (
-          <div className="py-12 text-center text-xs text-slate-500 font-semibold uppercase tracking-wider">
-            Loading variations...
+          <div className="py-12 text-center text-[10px] font-mono text-slate-500 font-bold uppercase tracking-[0.4em]">
+            Syncing_Custom_Nodes...
           </div>
         ) : customVariations.length === 0 ? (
-          <div className="py-12 border border-dashed border-white/5 rounded-2xl text-center text-xs text-slate-500 leading-normal px-4">
-            <Plus className="size-5 mx-auto mb-2 text-slate-600 animate-pulse" />
-            You haven&apos;t saved any custom variations yet.<br />
-            During opening drills, play any stray move and save the line as a custom variation.
+          <div className="mx-6 py-12 border border-dashed border-white/5 rounded-2xl text-center text-xs text-slate-500 leading-normal px-4 bg-white/[0.01]">
+            <Plus className="size-6 mx-auto mb-3 text-slate-700 animate-pulse" />
+            No custom analytical paths detected.<br />
+            Save variations during training to populate this module.
           </div>
         ) : (
-          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 px-4">
             {customVariations.map((variation) => (
               <Link
                 key={variation.id}
                 href={`/practice/openings/train?custom=true&id=${variation.id}`}
-                className="group relative rounded-xl border border-white/5 bg-[#101416]/40 hover:bg-[#101416]/60 p-5 backdrop-blur-md shadow-md hover:border-amber-500/20 hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between h-[140px]"
+                className="glass-panel p-6 rounded-2xl border-white/5 hover:border-amber-500/30 transition-all group overflow-hidden relative corner-accent corner-tr corner-bl"
               >
-                <div className="space-y-1">
+                <div className="relative z-10 space-y-4">
                   <div className="flex justify-between items-start">
-                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-slate-900 border border-white/5 uppercase tracking-wider text-slate-400">{variation.side}</span>
-                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-amber-400/10 border border-amber-400/20 uppercase tracking-wider text-amber-300">Custom</span>
+                    <span className="px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/20 text-[9px] font-mono text-amber-400 font-bold uppercase tracking-widest">
+                      {variation.side}
+                    </span>
+                    <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[9px] font-mono text-white/40 uppercase font-bold">
+                      Custom
+                    </span>
                   </div>
-                  <h3 className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors leading-tight pt-1">
-                    {variation.variation}
-                  </h3>
-                  <p className="text-[10px] text-slate-400 leading-normal mt-1">
-                    Base: {variation.opening}
-                  </p>
+                  <div>
+                    <h3 className="text-lg font-space font-bold text-white group-hover:text-amber-400 transition-colors">
+                      {variation.variation}
+                    </h3>
+                    <p className="text-[10px] font-mono text-white/40 mt-1 uppercase tracking-wider">
+                      Base: {variation.opening}
+                    </p>
+                  </div>
+                  <div className="flex justify-between items-center pt-2">
+                    <span className="text-[9px] font-mono text-white/20 uppercase tracking-widest">{variation.movesSan.length} Ply Recorded</span>
+                    <button className="flex items-center gap-2 text-[10px] font-mono font-bold text-amber-400 uppercase tracking-widest">
+                      Drill Node
+                      <Shield className="size-3" />
+                    </button>
+                  </div>
                 </div>
-                <div className="flex justify-between items-end pt-2 text-[10px] text-slate-500 font-medium">
-                  <span>{variation.movesSan.length} ply</span>
-                  <span className="flex items-center gap-0.5 text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                    Train <ChevronRight className="size-3" />
-                  </span>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/[0.02] to-transparent pointer-events-none" />
               </Link>
             ))}
           </div>

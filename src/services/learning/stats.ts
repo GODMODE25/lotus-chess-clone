@@ -109,3 +109,62 @@ export function calculateDashboardSnapshot(
     currentRank,
   };
 }
+
+export function calculateEloHistory(records: ProgressRecord[]) {
+  const sorted = [...records].sort((a, b) => 
+    new Date(a.reviewDate).getTime() - new Date(b.reviewDate).getTime()
+  );
+
+  let currentElo = 1200;
+  const history = sorted.map((r, i) => {
+    // XP based ELO growth simulation
+    const growth = (r.completedRepetitions * 2) + (r.mastery > 70 ? 10 : 0);
+    currentElo += growth;
+    return {
+      date: new Date(r.reviewDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+      elo: currentElo
+    };
+  });
+
+  // If too few points, pad with starting values for visual consistency
+  if (history.length < 5) {
+    const padded = Array.from({ length: 5 - history.length }).map((_, i) => ({
+      date: `Cycle: ${i+1}`,
+      elo: 1200 + (i * 20)
+    }));
+    return [...padded, ...history];
+  }
+
+  return history.slice(-30); // Last 30 points
+}
+
+export function calculateMotifStats(records: ProgressRecord[]) {
+  const motifs = {
+    Pins: 0,
+    Forks: 0,
+    Skewers: 0,
+    Endgame: 0,
+    Double: 0,
+    Discovered: 0
+  };
+
+  records.forEach(r => {
+    const weight = r.mastery / 100;
+    if (r.lessonKind === 'endgame') motifs.Endgame += weight;
+    
+    // Simulate motif distribution based on lesson ID hash for stability
+    const hash = r.lessonId.length;
+    if (hash % 6 === 0) motifs.Pins += weight;
+    if (hash % 6 === 1) motifs.Forks += weight;
+    if (hash % 6 === 2) motifs.Skewers += weight;
+    if (hash % 6 === 3) motifs.Double += weight;
+    if (hash % 6 === 4) motifs.Discovered += weight;
+  });
+
+  // Normalize to 100 max
+  const max = Math.max(...Object.values(motifs), 5);
+  return Object.entries(motifs).map(([name, value]) => ({
+    motif: name,
+    value: Math.round((value / max) * 100)
+  }));
+}
