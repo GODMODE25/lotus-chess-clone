@@ -1,10 +1,29 @@
 import { Chess } from "chess.js";
+import { curatedOpenings, type CuratedLine } from "@/content/openingsCurated";
 
 export interface RepertoireLine {
   id: string;
   name: string;
   movesSan: string[];
   difficulty: number;
+  // --- NEW FIELDS (progression rework) ---
+  prerequisites?: string[];
+  continuationIds?: string[];
+  masteryLevel?: string;
+  parentVariation?: string;
+  variationName?: string;
+  aliases?: string[];
+  uciMoves?: string[];
+  startingFen?: string;
+  moveDepth?: number;
+  popularity?: number;
+  reviewPriority?: number;
+  estimatedStudyMinutes?: number;
+  masteryXp?: number;
+  strategicIdeas?: string[];
+  conceptIds?: string[];
+  explanation?: string;
+  commonMistakes?: string[];
 }
 
 export interface Repertoire {
@@ -28,7 +47,7 @@ function hashCode(str: string): number {
 }
 
 // Generate exactly 850 unique legal variations for the opening repertoire
-function generateRepertoireLines(openingId: string, baseMoves: string[], difficulty: number): RepertoireLine[] {
+function generateRepertoireLines(openingId: string, baseMoves: string[], difficulty: number, openingName: string): RepertoireLine[] {
   const lines: RepertoireLine[] = [];
   const seenPaths = new Set<string>();
 
@@ -122,21 +141,18 @@ function generateRepertoireLines(openingId: string, baseMoves: string[], difficu
 
     seenPaths.add(pathStr);
 
-    // Build the sub-variation name
-    let levelName = "Beginner Line";
-    if (i >= 150) levelName = `Legend Line #${i - 149}`;
-    else if (i >= 125) levelName = `Master Line #${i - 124}`;
-    else if (i >= 100) levelName = `Expert Line #${i - 99}`;
-    else if (i >= 75) levelName = `Advanced Line #${i - 74}`;
-    else if (i >= 50) levelName = `Intermediate Line #${i - 49}`;
-    else if (i >= 25) levelName = `Novice Line #${i - 24}`;
-    else levelName = `Beginner Line #${i + 1}`;
+    // Build the sub-variation name (improved fallback naming)
+    const tierNames = ["Beginner", "Novice", "Intermediate", "Advanced", "Expert", "Master", "Legend"];
+    const tierIndex = Math.min(6, Math.floor(i / 25)); // 0–6
+    const tierName = tierNames[tierIndex];
+    const levelName = `${openingName} ${tierName} Variation ${(i % 25) + 1}`;
 
     lines.push({
       id: `${openingId}-line-${i + 1}`,
       name: levelName,
       movesSan: [...moves],
       difficulty: i < 100 ? Math.ceil((i + 1) / 25) : 5,
+      masteryLevel: tierName,
     });
   }
 
@@ -324,7 +340,46 @@ export function getRepertoireById(id: string): Repertoire | null {
   if (!raw) return null;
 
   const side = whiteRepertoiresRaw.some((r) => r.id === id) ? "white" : "black";
-  const lines = generateRepertoireLines(raw.id, raw.baseMoves, raw.difficulty);
+
+  // Curated data takes precedence over synthetic generation.
+  const curated = curatedOpenings[id];
+  if (curated) {
+    const lines: RepertoireLine[] = curated.lines.map((line: CuratedLine) => ({
+      id: line.id,
+      name: line.parentVariation && line.parentVariation !== line.variationName
+        ? `${line.parentVariation} — ${line.variationName}`
+        : line.variationName,
+      movesSan: line.sanMoves,
+      difficulty: line.difficulty,
+      prerequisites: line.prerequisites,
+      continuationIds: line.continuationIds,
+      masteryLevel: line.masteryLevel,
+      parentVariation: line.parentVariation,
+      variationName: line.variationName,
+      aliases: line.aliases,
+      uciMoves: line.uciMoves,
+      startingFen: line.startingFen,
+      moveDepth: line.moveDepth,
+      popularity: line.popularity,
+      reviewPriority: line.reviewPriority,
+      estimatedStudyMinutes: line.estimatedStudyMinutes,
+      masteryXp: line.masteryXp,
+      strategicIdeas: line.strategicIdeas,
+      conceptIds: line.conceptIds,
+      explanation: line.explanation,
+    }));
+
+    const repertoire: Repertoire = {
+      ...raw,
+      side,
+      lines,
+    };
+
+    memoizedRepertoires[id] = repertoire;
+    return repertoire;
+  }
+
+  const lines = generateRepertoireLines(raw.id, raw.baseMoves, raw.difficulty, raw.name);
 
   const repertoire: Repertoire = {
     ...raw,

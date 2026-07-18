@@ -1,0 +1,102 @@
+{
+  "openingId": "italian-game",
+  "tier": "Master",
+  "lines": [
+    {
+      "id": "italian-master-modern-slow-a4",
+      "parentVariation": "Giuoco Pianissimo",
+      "openingFamily": "Italian Game",
+      "variationName": "Modern Grandmaster Slow Italian with a4",
+      "aliases": ["Slow Italian Modern Main Line"],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.d3 Nf6 5.O-O d6 6.c3 a5 7.Re1 O-O 8.h3 Be6 9.Bxe6 fxe6 10.Nbd2",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "d3", "Nf6", "O-O", "d6", "c3", "a5", "Re1", "O-O", "h3", "Be6", "Bxe6", "fxe6", "Nbd2"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "d2d3", "g8f6", "e1g1", "d7d6", "c2c3", "a7a6", "f1e1", "e8g8", "h3h3", "c8e6", "c4e6", "f7e6", "b1d2"],
+      "startingFen": "r2q1rk1/1pp3pp/2nppn2/p1b1p3/4P3/2PP1N1P/PP1N1PP1/R1BQR1K1 b - - 1 10",
+      "moveDepth": 18,
+      "difficulty": 4,
+      "popularity": 5,
+      "prerequisites": ["italian-intermediate-pianissimo-d4-break"],
+      "continuationIds": [],
+      "conceptIds": ["development", "pawn-structure", "piece-activity", "space-advantage"],
+      "strategicIdeas": [
+        "White plays the patient a4 advance to lock down the queenside and prepare space control.",
+        "Trading on e6 doubles Black's pawns but opens the f-file; the position is highly strategical.",
+        "White develops slowly via Nbd2-Nf1-Ng3, eyeing f5 and kingside control."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "White playing an early d4 which resolves the tension in Black's favour",
+        "Black playing too passively on the queenside, allowing a4-a5 to squeeze their pieces"
+      ],
+      "explanation": "This slow positional system is the modern grandmaster main line of the Italian. Instead of immediate tactical directness, players engage in a slow manoeuvring battle. Understanding the trade-offs of the Bxe6 structure and the Nbd2-Nf1 knight tour is essential for master-level play.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 4.5,
+      "masteryXp": 90
+    },
+    {
+      "id": "italian-master-hungarian-main",
+      "parentVariation": "Hungarian Defence",
+      "openingFamily": "Italian Game",
+      "variationName": "Hungarian Defence Main Line",
+      "aliases": [],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Be7 4.d4 d6 5.d5 Nb8 6.Bd3 Nf6 7.c4 O-O",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Be7", "d4", "d6", "d5", "Nb8", "Bd3", "Nf6", "c4", "O-O"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8e7", "d2d4", "d7d6", "d4d5", "c6b8", "c4d3", "g8f6", "c2c4", "e1g1"],
+      "startingFen": "rnbq1rk1/ppp1bppp/3p1n2/3Pp3/2P1P3/3B1N2/PP3PPP/RNBQK2R w KQ - 1 8",
+      "moveDepth": 14,
+      "difficulty": 4,
+      "popularity": 3,
+      "prerequisites": ["italian-beginner-hungarian-defence"],
+      "continuationIds": [],
+      "conceptIds": ["space-advantage", "pawn-structure", "development"],
+      "strategicIdeas": [
+        "White gains a massive space advantage by locking the centre with d5.",
+        "Black plays defensively with ...Nb8 and ...Nf6, hoping to strike back at the centre later.",
+        "White plans queenside expansion with c4 and a potential f4 strike on the kingside."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "White playing passively and allowing Black to easily unlock their passive bishop pair",
+        "Black playing too aggressively, creating weaknesses in their own pawn structure"
+      ],
+      "explanation": "In the Hungarian Defence Main Line, White locks the centre with d5 and gains a massive space advantage. The game transitions into a strategic fight where White holds more territory and Black plays defensively. This teaches the importance of managing space advantages.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 3.5,
+      "masteryXp": 90
+    },
+    {
+      "id": "italian-master-two-knights-8be2",
+      "parentVariation": "Two Knights Defence",
+      "openingFamily": "Italian Game",
+      "variationName": "Two Knights Modern Main Line with 8.Be2",
+      "aliases": [],
+      "eco": "C58",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.Ng5 d5 5.exd5 Na5 6.Bb5+ c6 7.dxc6 bxc6 8.Be2 h6 9.Nf3 e4 10.Ne5 Bd6 11.d4 exd3 12.Nxd3 O-O 13.O-O",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "d5", "exd5", "Na5", "Bb5+", "c6", "dxc6", "bxc6", "Be2", "h6", "Nf3", "e4", "Ne5", "Bd6", "d4", "exd3", "Nxd3", "O-O", "O-O"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "g8f6", "g5f6", "d7d5", "e4d5", "c6a5", "c4b5", "c7c6", "d5c6", "b2c6", "b5e2", "h6h6", "f3e5", "e5e4", "e5g4", "f8d6", "d2d4", "e4d3", "e5d3", "e8g8", "e1g1"],
+      "startingFen": "r1bq1rk1/p4pp1/2pb1n1p/n7/8/3N4/PPP1BPPP/RNBQ1RK1 b - - 2 13",
+      "moveDepth": 25,
+      "difficulty": 5,
+      "popularity": 5,
+      "prerequisites": ["italian-advanced-polerio-defence"],
+      "continuationIds": [],
+      "conceptIds": ["initiative", "piece-activity", "central-control", "space-advantage"],
+      "strategicIdeas": [
+        "White retreats the bishop to e2 to avoid tactical targets and keep a solid shield.",
+        "Black has strong compensation for the pawn with active minor pieces and a space advantage.",
+        "White must play extremely carefully to consolidate the extra pawn and neutralise Black's initiative."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "White playing too passively, allowing Black's active pieces to mount a direct mating attack",
+        "Black trying to regain the pawn immediately instead of maintaining the initiative"
+      ],
+      "explanation": "This modern treatment of the Two Knights Polerio Defence with 8.Be2 is the absolute main line at the grandmaster level. By choosing the quiet bishop retreat, White aims to absorb Black's pressure and convert the extra pawn in the endgame. This teaches the highest level of defensive resilience and conversion of small material advantages.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 90
+    }
+  ]
+}

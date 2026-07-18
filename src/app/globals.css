@@ -17,7 +17,7 @@
   --color-foreground: #e2e8f0;
   
   --color-cyber-void: #050507;
-  --color-cyber-glass: rgba(21, 21, 27, 0.4);
+  --color-cyber-glass: rgba(30, 31, 40, 0.75);
   
   --color-primary: #00f0ff; /* Neon Cyan */
   --color-accent: #bd00ff;  /* Pulse Purple */
@@ -61,12 +61,12 @@
 
 @layer components {
   .glass-panel {
-    @apply bg-cyber-glass backdrop-blur-xl border border-white/10 relative;
+    @apply bg-cyber-glass backdrop-blur-xl border border-white/20 relative;
   }
   
   .glass-panel::before {
     content: '';
-    @apply absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent pointer-events-none;
+    @apply absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/25 to-transparent pointer-events-none;
   }
 
   .corner-accent {

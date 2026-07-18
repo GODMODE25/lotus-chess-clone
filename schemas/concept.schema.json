@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "concept.schema.json",
+  "title": "Chess Concepts Database",
+  "description": "Schema for the shared concepts database (concepts.json).",
+  "type": "object",
+  "required": ["concepts"],
+  "properties": {
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "category", "description"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$",
+            "description": "Unique kebab-case concept identifier."
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Human-readable concept name."
+          },
+          "category": {
+            "type": "string",
+            "enum": ["strategic", "tactical", "positional", "endgame", "structural"],
+            "description": "Category of this concept."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 20,
+            "description": "Detailed teaching description of the concept."
+          },
+          "relatedConceptIds": {
+            "type": "array",
+            "items": { "type": "string" },
+            "default": [],
+            "description": "IDs of related concepts."
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "default": [],
+            "description": "Searchable tags."
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

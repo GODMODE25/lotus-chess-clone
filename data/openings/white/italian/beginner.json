@@ -1,0 +1,163 @@
+{
+  "openingId": "italian-game",
+  "tier": "Beginner",
+  "lines": [
+    {
+      "id": "italian-beginner-giuoco-pianissimo-main",
+      "parentVariation": "Giuoco Pianissimo",
+      "openingFamily": "Italian Game",
+      "variationName": "Giuoco Pianissimo Main Setup",
+      "aliases": ["Quiet Italian", "Italian d3 System"],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.d3 Nf6 5.O-O d6",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "d3", "Nf6", "O-O", "d6"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "d2d3", "g8f6", "e1g1", "d7d6"],
+      "startingFen": "r1bqk2r/ppp2ppp/2np1n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQ1RK1 w kq - 0 6",
+      "moveDepth": 10,
+      "difficulty": 1,
+      "popularity": 5,
+      "prerequisites": [],
+      "continuationIds": ["italian-novice-pianissimo-c3"],
+      "conceptIds": ["development", "central-control", "castling", "king-safety"],
+      "strategicIdeas": [
+        "White develops the bishop to c4 targeting f7, the weakest square in Black's camp.",
+        "Playing d3 instead of d4 keeps the position quiet and focuses on slow piece development.",
+        "Castling kingside ensures king safety before committing to a central plan."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Playing d4 too early before completing development",
+        "Neglecting castling to play for an immediate attack"
+      ],
+      "explanation": "The Giuoco Pianissimo (\"very quiet game\") is the most natural way to play the Italian. White develops logically: Bc4 eyes f7, d3 supports the centre without committing to an early fight, and O-O secures the king. This setup is an excellent foundation for beginners to learn sound opening principles before studying sharper lines.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 10
+    },
+    {
+      "id": "italian-beginner-giuoco-pianissimo-nc3",
+      "parentVariation": "Giuoco Pianissimo",
+      "openingFamily": "Italian Game",
+      "variationName": "Giuoco Pianissimo with Nc3",
+      "aliases": [],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.d3 Nf6 5.Nc3",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "d3", "Nf6", "Nc3"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "d2d3", "g8f6", "b1c3"],
+      "startingFen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQK2R b KQkq - 3 5",
+      "moveDepth": 9,
+      "difficulty": 1,
+      "popularity": 4,
+      "prerequisites": ["italian-beginner-giuoco-pianissimo-main"],
+      "continuationIds": [],
+      "conceptIds": ["development", "central-control", "piece-activity"],
+      "strategicIdeas": [
+        "Nc3 develops the knight to its natural square, adding pressure to d5.",
+        "White delays castling by one move to complete minor piece development.",
+        "The knight on c3 supports a future d3-d4 central push."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Playing Nc3 before d3, blocking the c-pawn and limiting future options"
+      ],
+      "explanation": "In this variation White plays Nc3 instead of castling immediately. This is equally valid and leads to a flexible position. The knight on c3 controls d5 and prepares a potential d4 break. Beginners should note that Nc3 does commit the knight — in some lines White prefers Nbd2 to keep c2-c3 available.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 10
+    },
+    {
+      "id": "italian-beginner-two-knights-intro",
+      "parentVariation": "Two Knights Defence",
+      "openingFamily": "Italian Game",
+      "variationName": "Two Knights Defence Introduction",
+      "aliases": ["Two Knights Defense"],
+      "eco": "C55",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "g8f6"],
+      "startingFen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+      "moveDepth": 6,
+      "difficulty": 1,
+      "popularity": 5,
+      "prerequisites": [],
+      "continuationIds": ["italian-novice-two-knights-d4"],
+      "conceptIds": ["development", "tempo", "central-control"],
+      "strategicIdeas": [
+        "Black plays 3...Nf6 instead of 3...Bc5 to immediately counter-attack the e4 pawn.",
+        "This is a more aggressive approach by Black, leading to sharper play.",
+        "White must decide how to handle the attack on e4: defend, advance, or sacrifice."
+      ],
+      "tacticalMotifs": ["fork"],
+      "commonMistakes": [
+        "White panicking and playing e5 too early without preparation"
+      ],
+      "explanation": "The Two Knights Defence (3...Nf6) is Black's most ambitious reply to the Italian. Instead of the quiet Bc5, Black immediately attacks e4. This leads to fundamentally different positions — more tactical, more forcing, and requiring more concrete knowledge. Beginners should first recognise this position and understand that White now has critical choices.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 1.5,
+      "masteryXp": 10
+    },
+    {
+      "id": "italian-beginner-hungarian-defence",
+      "parentVariation": "Hungarian Defence",
+      "openingFamily": "Italian Game",
+      "variationName": "Hungarian Defence",
+      "aliases": ["Hungarian Defense"],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Be7",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Be7"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8e7"],
+      "startingFen": "r1bqk1nr/ppppbppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4",
+      "moveDepth": 6,
+      "difficulty": 1,
+      "popularity": 2,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": ["development", "king-safety"],
+      "strategicIdeas": [
+        "Black plays Be7 instead of the more active Bc5, choosing a solid but passive setup.",
+        "White should play d4 to seize the centre immediately since Black's bishop on e7 doesn't contest d4.",
+        "White gains a natural space advantage with a strong centre."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "White playing too passively with d3 when d4 is clearly stronger against Be7"
+      ],
+      "explanation": "The Hungarian Defence (3...Be7) is a rare, passive reply. Black's bishop on e7 is less active than on c5 and doesn't challenge White's centre. White should respond with 4.d4 to immediately claim central dominance. Beginners should learn to recognise this defence and punish it with active central play.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 1.5,
+      "masteryXp": 10
+    },
+    {
+      "id": "italian-beginner-pianissimo-o-o-o-o",
+      "parentVariation": "Giuoco Pianissimo",
+      "openingFamily": "Italian Game",
+      "variationName": "Giuoco Pianissimo Symmetrical Castling",
+      "aliases": [],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.d3 Nf6 5.O-O O-O",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "d3", "Nf6", "O-O", "O-O"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "d2d3", "g8f6", "e1g1", "e8g8"],
+      "startingFen": "r1bq1rk1/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQ1RK1 w - - 5 6",
+      "moveDepth": 10,
+      "difficulty": 1,
+      "popularity": 5,
+      "prerequisites": ["italian-beginner-giuoco-pianissimo-main"],
+      "continuationIds": ["italian-novice-pianissimo-c3"],
+      "conceptIds": ["development", "castling", "king-safety", "piece-activity"],
+      "strategicIdeas": [
+        "Both sides complete development and castle kingside.",
+        "The position is balanced and flexible — White can choose between c3+d4 or slow Re1+Nbd2 plans.",
+        "This is the most common position in the Giuoco Pianissimo and the starting point for deeper theory."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Failing to have a follow-up plan after both sides castle",
+        "Making random pawn moves instead of preparing a concrete central plan"
+      ],
+      "explanation": "After both sides castle, the Giuoco Pianissimo reaches a critical crossroads. White must decide on a plan: the classical c3+d4 central break, the slow Nbd2-Nf1-Ng3 manoeuvre, or a kingside build-up with Re1 and h3. This position is the foundation upon which all deeper Italian theory is built.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 10
+    }
+  ]
+}

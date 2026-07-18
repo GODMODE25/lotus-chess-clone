@@ -1,0 +1,260 @@
+{
+  "openingId": "italian-game",
+  "tier": "Legend",
+  "lines": [
+    {
+      "id": "italian-legend-bishop-transposition",
+      "parentVariation": "Transpositions",
+      "openingFamily": "Italian Game",
+      "variationName": "Bishop's Opening Transposition to Italian",
+      "aliases": [],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Bc4 Nf6 3.d3 Nc6 4.Nf3 Bc5 5.O-O",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Bc4",
+        "Nf6",
+        "d3",
+        "Nc6",
+        "Nf3",
+        "Bc5",
+        "O-O"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "f1c4",
+        "g8f6",
+        "d2d3",
+        "b8c6",
+        "g1f3",
+        "f8c5",
+        "e1g1"
+      ],
+      "startingFen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQ1RK1 b kq - 4 5",
+      "moveDepth": 9,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "italian-beginner-giuoco-pianissimo-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "castling",
+        "tempo"
+      ],
+      "strategicIdeas": [
+        "White starts with 2.Bc4 (Bishop's Opening) and transposes to the Italian Game.",
+        "Understanding move orders — how the Bishop's Opening and Italian transpose.",
+        "White avoids certain early lines of the Two Knights by choosing this move order."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Failing to recognize the transposition and playing a sub-optimal setup",
+        "Confusing Bishop's Opening theory with different Giuoco Piano lines"
+      ],
+      "explanation": "Transpositions are common in modern opening practice. Choosing 2.Bc4 allows White to avoid lines like the Petroff Defense or early Two Knights complication attempts, before shifting back into the comfortable paths of the Giuoco Pianissimo. This teaches the strategic value of move-order flexibility.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 120
+    },
+    {
+      "id": "italian-legend-fritz-variation",
+      "parentVariation": "Two Knights Defence",
+      "openingFamily": "Italian Game",
+      "variationName": "Two Knights Fritz Variation",
+      "aliases": [
+        "Fritz Variation"
+      ],
+      "eco": "C57",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.Ng5 d5 5.exd5 Nd4 6.c3 b5 7.Bf1 Nxd5 8.Ne4 Qh4 9.Ng3 Bg4 10.f3",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bc4",
+        "Nf6",
+        "Ng5",
+        "d5",
+        "exd5",
+        "Nd4",
+        "c3",
+        "b5",
+        "Bf1",
+        "Nxd5",
+        "g5e4",
+        "d8h4",
+        "e4g3",
+        "c8g4",
+        "f2f3"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1c4",
+        "g8f6",
+        "g5f6",
+        "d7d5",
+        "e4d5",
+        "c6d4",
+        "c2c3",
+        "b7b5",
+        "f1f1",
+        "f6d5",
+        "g5e4",
+        "d8h4",
+        "e4g3",
+        "c8g4",
+        "f2f3"
+      ],
+      "startingFen": "r3kb1r/p1p2ppp/8/1p1np3/3n2bq/2P2PN1/PP1P2PP/RNBQKB1R b KQkq - 0 10",
+      "moveDepth": 19,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "italian-advanced-polerio-defence"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "initiative",
+        "tempo",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black plays 5...Nd4 (Fritz Variation), an aggressive and highly tactical reply.",
+        "White retreats the bishop to f1, creating a highly complex tactical puzzle.",
+        "The resulting positions require precise positional calculation and tactical awareness."
+      ],
+      "tacticalMotifs": [
+        "double-attack",
+        "discovered-attack",
+        "sacrifice"
+      ],
+      "commonMistakes": [
+        "White playing 6.d3? which loses immediate control after ...Nxd5",
+        "Black failing to calculate White's defensive resources after f3"
+      ],
+      "explanation": "The Fritz Variation (5...Nd4) is a rare and highly tactical sideline in the Two Knights. It leads to incredibly sharp positions where White's Bf1 retreat is required to defend, followed by an aggressive kingside fight. This teaches tactical depth, calculation under pressure, and dynamic piece play.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 120
+    },
+    {
+      "id": "italian-legend-endgame-transition",
+      "parentVariation": "Endgame Transitions",
+      "openingFamily": "Italian Game",
+      "variationName": "Italian Game Endgame Transition",
+      "aliases": [],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.d3 Bc5 5.O-O d6 6.c3 a6 7.Bb3 Ba7 8.Re1 O-O 9.h3 h6 10.Nbd2 Be6 11.Bc2 d5 12.exd5 Qxd5 13.Qe2 Bf5 14.Nxe5 Nxe5 15.Qxe5 Rfe8 16.Qxd5 Rxe1+ 17.Nf1 Nxd5",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bc4",
+        "Bc5",
+        "d3",
+        "Nf6",
+        "O-O",
+        "d6",
+        "c3",
+        "a6",
+        "Bb3",
+        "Ba7",
+        "Re1",
+        "O-O",
+        "h3",
+        "h6",
+        "Nbd2",
+        "Be6",
+        "Bc2",
+        "d5",
+        "exd5",
+        "d8d5",
+        "d1e2",
+        "e6f5",
+        "f3e5",
+        "c6e5",
+        "e2e5",
+        "f8e8",
+        "e5d5",
+        "e8e1",
+        "d2f1",
+        "f6d5"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1c4",
+        "f8c5",
+        "d2d3",
+        "g8f6",
+        "e1g1",
+        "d7d6",
+        "c2c3",
+        "a7a6",
+        "c4b3",
+        "c5a7",
+        "f1e1",
+        "e8g8",
+        "h2h3",
+        "h7h6",
+        "b1d2",
+        "c8e6",
+        "b3c2",
+        "d7d5",
+        "e4d5",
+        "d8d5",
+        "d1e2",
+        "e6f5",
+        "f3e5",
+        "c6e5",
+        "e2e5",
+        "f8e8",
+        "e5d5",
+        "e8e1",
+        "d2f1",
+        "f6d5"
+      ],
+      "startingFen": "r5k1/bpp2pp1/p6p/3n1b2/8/2PP3P/PPB2PP1/R1B1rNK1 w - - 0 18",
+      "moveDepth": 34,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "italian-master-modern-slow-a4"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "rook-activity",
+        "pawn-structure",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "A deep theoretical endgame transition line after a queen swap on d5.",
+        "White has traded active pieces to reach a rook endgame where Black's active rook on e1 is a threat.",
+        "White must play precisely to hold the draw and prevent Black's rook from dominating."
+      ],
+      "tacticalMotifs": [
+        "discovered-attack",
+        "pin"
+      ],
+      "commonMistakes": [
+        "White playing passively and allowing Black's active rook to capture kingside pawns",
+        "Black trading rooks prematurely, resolving the tension in White's favour"
+      ],
+      "explanation": "This deep theoretical line demonstrates the transition from opening theory to a complex rook endgame. White must defend against Black's active rook on e1 to secure the draw. This teaches the highest level of endgame defense and conversion of space advantages.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 5.5,
+      "masteryXp": 120
+    }
+  ]
+}

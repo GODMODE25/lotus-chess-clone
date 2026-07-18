@@ -1,0 +1,102 @@
+{
+  "openingId": "italian-game",
+  "tier": "Expert",
+  "lines": [
+    {
+      "id": "italian-expert-evans-accepted",
+      "parentVariation": "Evans Gambit",
+      "openingFamily": "Italian Game",
+      "variationName": "Evans Gambit Accepted Main Line",
+      "aliases": ["Evans Gambit Accepted"],
+      "eco": "C52",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.b4 Bxb4 5.c3 Ba5 6.d4 exd4 7.O-O",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bxb4", "c3", "Ba5", "d4", "exd4", "O-O"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "b2b4", "c5b4", "c2c3", "b4a5", "d2d4", "e5d4", "e1g1"],
+      "startingFen": "r1bqk1nr/pppp1ppp/2n5/b7/2BpP3/2P2N2/P4PPP/RNBQ1RK1 b kq - 1 7",
+      "moveDepth": 13,
+      "difficulty": 4,
+      "popularity": 5,
+      "prerequisites": ["italian-novice-giuoco-piano-c3-nf6"],
+      "continuationIds": [],
+      "conceptIds": ["initiative", "development", "central-control", "exchange-sacrifice"],
+      "strategicIdeas": [
+        "White sacrifices a wing pawn (b4) to gain tempi and build a powerful pawn centre (c3 + d4).",
+        "White's lead in development and open diagonals for the queen and bishops provide long-term attacking chances.",
+        "Black seeks to hold the extra pawn, defend calmly, and castle to safety."
+      ],
+      "tacticalMotifs": ["pin", "discovered-attack", "sacrifice"],
+      "commonMistakes": [
+        "Black playing too passively and allowing White a free kingside pawn storm",
+        "White forcing a direct attack too early instead of completing castling and development"
+      ],
+      "explanation": "The Evans Gambit (4.b4) is one of the most famous attacking weapons in chess history. By giving up a pawn, White secures a broad, powerful centre and clear open lines for the pieces. This line teaches how to play for compensation and develop active initiative.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 70
+    },
+    {
+      "id": "italian-expert-evans-declined",
+      "parentVariation": "Evans Gambit",
+      "openingFamily": "Italian Game",
+      "variationName": "Evans Gambit Declined",
+      "aliases": [],
+      "eco": "C51",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.b4 Bb6 5.a4 a6 6.Nc3 Nf6",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "b4", "Bb6", "a4", "a6", "Nc3", "Nf6"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "b2b4", "c5b6", "a2a4", "a7a6", "b1c3", "g8f6"],
+      "startingFen": "r1bqk2r/1ppp1ppp/pbn2n2/4p3/PPB1P3/2N2N2/2PP1PPP/R1BQK2R w KQkq - 2 7",
+      "moveDepth": 12,
+      "difficulty": 4,
+      "popularity": 4,
+      "prerequisites": ["italian-novice-giuoco-piano-c3-nf6"],
+      "continuationIds": [],
+      "conceptIds": ["development", "pawn-structure", "space-advantage"],
+      "strategicIdeas": [
+        "Black declines the gambit pawn with 4...Bb6, avoiding early sharp complications.",
+        "White gains space on the queenside with a4 and maintains active development.",
+        "The position becomes highly strategic and positional rather than open and tactical."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "White pushing pawns too aggressively on the queenside, creating permanent structural weaknesses",
+        "Black underestimating White's queenside space advantage"
+      ],
+      "explanation": "Declining the Evans Gambit with 4...Bb6 is a solid, pragmatic approach. It leads to quieter, more positional play where White maintains a space advantage on the queenside and Black defends key squares. This line teaches players how to handle space advantages and positional restraint.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 3.5,
+      "masteryXp": 70
+    },
+    {
+      "id": "italian-expert-moeller-attack",
+      "parentVariation": "Giuoco Piano",
+      "openingFamily": "Italian Game",
+      "variationName": "Möller Attack Main Line",
+      "aliases": ["Moeller Attack"],
+      "eco": "C54",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.c3 Nf6 5.d4 exd4 6.cxd4 Bb4+ 7.Bd2 Nxe4 8.Bxb4 Nxb4 9.Bxf7+ Kxf7 10.Qb3+ d5 11.Qxb4 Re8",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "cxd4", "Bb4+", "Bd2", "Nxe4", "Bxb4", "Nxb4", "Bxf7+", "Kxf7", "Qb3+", "d5", "Qxb4", "Re8"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "c2c3", "g8f6", "d2d4", "e5d4", "c3d4", "c5b4", "c1d2", "f6e4", "d2b4", "b8b4", "c4f7", "e8f7", "d1b3", "d7d5", "b3b4", "h8e8"],
+      "startingFen": "r1bqr3/ppp2kpp/8/3p4/1Q1Pn3/5N2/PP3PPP/RN2K2R w KQ - 1 12",
+      "moveDepth": 22,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": ["italian-intermediate-giuoco-piano-d5-equaliser"],
+      "continuationIds": [],
+      "conceptIds": ["initiative", "king-safety", "piece-activity", "pin"],
+      "strategicIdeas": [
+        "White uses the check on b4 to trade light-squared bishops and quickly launch an attack on Black's exposed king.",
+        "By playing Re1, White pinpoints the e4 knight and restricts Black's development.",
+        "The resulting positions require precise positional calculation and tactical awareness."
+      ],
+      "tacticalMotifs": ["pin", "discovered-attack", "double-attack"],
+      "commonMistakes": [
+        "White missing the opportunity to pin the e4 knight with Re1",
+        "Black failing to castle to safety quickly, leading to a quick mating net"
+      ],
+      "explanation": "The Möller Attack is a highly tactical system where White launches a swift attack by trading minor pieces and using Re1 to apply pressure on the pinned e4 knight. This line teaches players how to keep an opponent's king under pressure and manage double attacks.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 70
+    }
+  ]
+}

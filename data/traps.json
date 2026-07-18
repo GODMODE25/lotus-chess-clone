@@ -1,0 +1,56 @@
+{
+  "traps": [
+    {
+      "id": "blackburne-shilling-gambit",
+      "name": "Blackburne Shilling Gambit",
+      "openingId": "italian-game",
+      "description": "After 1.e4 e5 2.Nf3 Nc6 3.Bc4 Nd4!? Black offers a pawn to lure White into a tactical mistake. If White greedily plays 4.Nxe5?, Black replies 4...Qg5! threatening both Qxg2 (attacking Rh1) and Qxe5, winning material.",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nd4", "Nxe5", "Qg5"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "c6d4", "f3e5", "d8g5"],
+      "resultingFen": "r1b1kbnr/pppp1ppp/8/4N1q1/2BnP3/8/PPPP1PPP/RNBQK2R w KQkq - 1 5",
+      "refutation": "White should decline with 4.Nxd4 exd4 5.O-O or 4.O-O, avoiding the trap entirely. After 4.Nxe5? Qg5! White is already in serious trouble.",
+      "warningLabel": "beginner-trap",
+      "severity": "critical",
+      "tags": ["italian", "gambit", "queen-attack", "beginner"]
+    },
+    {
+      "id": "legal-trap",
+      "name": "Légal's Trap",
+      "openingId": "italian-game",
+      "description": "A queen sacrifice trap: after 1.e4 e5 2.Nf3 d6 3.Bc4 Bg4 4.Nc3 g6? 5.Nxe5! Bxd1?? 6.Bxf7+ Ke7 7.Nd5# checkmate. Black's greed in capturing the queen leads to a beautiful smothered-style mate.",
+      "sanMoves": ["e4", "e5", "Nf3", "d6", "Bc4", "Bg4", "Nc3", "g6", "Nxe5", "Bxd1", "Bxf7+", "Ke7", "Nd5#"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "d7d6", "f1c4", "c8g4", "b1c3", "g7g6", "f3e5", "g4d1", "c4f7", "e8e7", "c3d5"],
+      "resultingFen": "rn1q1bnr/ppp1kB1p/3p2p1/3NN3/4P3/8/PPPP1PPP/R1BbK2R b KQ - 2 7",
+      "refutation": "Black should avoid 5...Bxd1?? and instead play 5...dxe5 maintaining material equality. The key mistake is capturing the queen without seeing the mating net.",
+      "warningLabel": "tactical-refutation",
+      "severity": "critical",
+      "tags": ["italian", "queen-sacrifice", "checkmate", "classic"]
+    },
+    {
+      "id": "italian-f7-blunder",
+      "name": "Scholar's Mate Pattern in Italian",
+      "openingId": "italian-game",
+      "description": "A common beginner mistake where Black neglects f7 defence. After 1.e4 e5 2.Nf3 Nc6 3.Bc4 h6? 4.d4 exd4? White can play 5.Nxd4! threatening Bxf7+ followed by Qh5. Black must be vigilant about the f7 square.",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "h6", "d4", "exd4", "Nxd4"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "h7h6", "d2d4", "e5d4", "f3d4"],
+      "resultingFen": "r1bqkbnr/pppp1pp1/2n4p/8/2BNP3/8/PPP2PPP/RNBQK2R b KQkq - 0 5",
+      "refutation": "Black should develop normally with 3...Bc5 or 3...Nf6 instead of wasting a tempo with h6. After 3...h6? the bishop's pressure on f7 becomes dangerous.",
+      "warningLabel": "common-mistake",
+      "severity": "moderate",
+      "tags": ["italian", "f7-weakness", "beginner", "tempo"]
+    },
+    {
+      "id": "noah-ark-trap",
+      "name": "Noah's Ark Trap (Italian Variation)",
+      "openingId": "italian-game",
+      "description": "A positional trap where Black wins White's bishop on c4 using a pawn expansion. In certain Italian Game lines after an exchange on d4, Black plays ...a6 and ...b5, trapping the bishop on the a2–g8 diagonal with no safe retreat.",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "cxd4", "Bb4+", "Bd2", "Bxd2+", "Nbxd2", "d5", "exd5", "Nxd5", "O-O", "O-O", "a3", "a6", "Qb3", "Na5"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "c2c3", "g8f6", "d2d4", "e5d4", "c3d4", "c5b4", "c1d2", "b4d2", "b1d2", "d7d5", "e4d5", "f6d5", "e1g1", "e8g8", "a2a3", "a7a6", "d1b3", "c6a5"],
+      "resultingFen": "r1bq1rk1/1pp2ppp/p7/n2n4/2BP4/PQ3N2/1P1N1PPP/R4RK1 w - - 2 13",
+      "refutation": "White must avoid placing the bishop where it can be trapped. The best approach is to retreat Bd3 or Be2 before Black's b5 expansion gains tempo.",
+      "warningLabel": "positional-trap",
+      "severity": "moderate",
+      "tags": ["italian", "bishop-trap", "pawn-expansion", "positional"]
+    }
+  ]
+}

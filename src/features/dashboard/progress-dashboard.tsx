@@ -89,7 +89,7 @@ export function ProgressDashboard({ snapshot }: ProgressDashboardProps) {
       {/* Hero Section: Progress Overview */}
       <motion.section 
         variants={item}
-        className="col-span-12 lg:col-span-8 glass-panel rounded-3xl overflow-hidden min-h-[520px] flex flex-col group scanline corner-accent corner-tl corner-tr corner-bl corner-br"
+        className="col-span-12 lg:col-span-8 glass-panel rounded-3xl overflow-hidden min-h-[520px] flex flex-col group corner-accent corner-tl corner-tr corner-bl corner-br"
       >
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <img 
@@ -243,16 +243,7 @@ export function ProgressDashboard({ snapshot }: ProgressDashboardProps) {
           </div>
         </div>
 
-        <button 
-          onClick={() => router.push("/library")}
-          className="w-full mt-8 py-4 rounded-2xl bg-primary/5 border border-primary/10 text-primary font-heading font-bold tracking-widest uppercase hover:bg-primary/10 hover:border-primary/30 transition-all group relative overflow-hidden"
-        >
-          <div className="absolute inset-0 scanline opacity-20 pointer-events-none" />
-          <span className="relative z-10 flex items-center justify-center gap-2 text-[10px]">
-            Full Theoretical Report
-            <ChevronRight className="size-4 group-hover:translate-x-1 transition-transform" />
-          </span>
-        </button>
+
       </motion.section>
 
       {/* Elo Progression Chart */}

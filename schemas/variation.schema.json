@@ -1,0 +1,183 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "variation.schema.json",
+  "title": "Variation / Line File",
+  "description": "Schema for a mastery-tier file (e.g. beginner.json) containing training lines for an opening.",
+  "type": "object",
+  "required": ["openingId", "tier", "lines"],
+  "properties": {
+    "openingId": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Must match the parent opening's id."
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["Beginner", "Novice", "Intermediate", "Advanced", "Expert", "Master", "Legend"],
+      "description": "The mastery tier this file represents."
+    },
+    "lines": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/line"
+      },
+      "minItems": 1,
+      "description": "All training lines for this tier."
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "line": {
+      "type": "object",
+      "required": [
+        "id",
+        "parentVariation",
+        "openingFamily",
+        "variationName",
+        "eco",
+        "pgn",
+        "sanMoves",
+        "uciMoves",
+        "startingFen",
+        "moveDepth",
+        "difficulty",
+        "popularity",
+        "conceptIds",
+        "strategicIdeas",
+        "explanation",
+        "masteryXp"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Globally unique kebab-case line ID."
+        },
+        "parentVariation": {
+          "type": "string",
+          "description": "Name of the parent variation this line belongs to."
+        },
+        "openingFamily": {
+          "type": "string",
+          "description": "The opening family (e.g. 'Italian Game')."
+        },
+        "variationName": {
+          "type": "string",
+          "description": "Specific variation name (e.g. 'Giuoco Pianissimo')."
+        },
+        "aliases": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": [],
+          "description": "Alternative names for this variation."
+        },
+        "eco": {
+          "type": "string",
+          "pattern": "^[A-E][0-9]{2}$",
+          "description": "ECO code for this specific line."
+        },
+        "pgn": {
+          "type": "string",
+          "minLength": 3,
+          "description": "Full PGN move text with move numbers."
+        },
+        "sanMoves": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Array of SAN moves in order."
+        },
+        "uciMoves": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-h][1-8][a-h][1-8][qrbn]?$"
+          },
+          "minItems": 1,
+          "description": "Array of UCI moves in order."
+        },
+        "startingFen": {
+          "type": "string",
+          "description": "FEN of the position AFTER all moves are played."
+        },
+        "moveDepth": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Total number of half-moves (plies) in this line."
+        },
+        "difficulty": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Difficulty rating from 1–5."
+        },
+        "popularity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "How commonly this line appears in master practice."
+        },
+        "prerequisites": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": [],
+          "description": "IDs of lines that should be mastered before this one."
+        },
+        "continuationIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": [],
+          "description": "IDs of lines that branch from the end of this one."
+        },
+        "conceptIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "References to concept IDs from concepts.json."
+        },
+        "strategicIdeas": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1,
+          "description": "Prose descriptions of the strategic ideas behind this line."
+        },
+        "tacticalMotifs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": [],
+          "description": "Tactical patterns commonly found in this line."
+        },
+        "commonMistakes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": [],
+          "description": "Frequent errors students make in this line."
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 20,
+          "description": "Teaching explanation shown after the student completes the line."
+        },
+        "reviewPriority": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "default": 3,
+          "description": "Spaced repetition priority (1 = low, 5 = critical)."
+        },
+        "estimatedStudyMinutes": {
+          "type": "number",
+          "minimum": 0.5,
+          "default": 2,
+          "description": "Estimated minutes to study this line."
+        },
+        "masteryXp": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "XP awarded upon mastering this line."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

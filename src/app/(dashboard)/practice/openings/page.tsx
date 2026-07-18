@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Swords, Compass, Lock, ChevronRight, Award, Plus, Target, Shield } from "lucide-react";
 import { getAllWhiteRepertoires, getAllBlackRepertoires } from "@/content/openingsData";
+import { curatedOpenings } from "@/content/openingsCurated";
 import { getCustomVariations, getProgressRecords } from "@/services/db/progress";
 import { useAuth } from "@/features/auth/AuthContext";
 import type { OpeningVariation, ProgressRecord } from "@/types/lotus";
@@ -42,8 +43,9 @@ function OpeningsHubContent() {
       opening: r.name,
       variation: "Base Repertoire",
       movesSan: r.baseMoves,
-      tacticalMotifs: [], 
-      side: "white" as const
+      tacticalMotifs: [],
+      side: "white" as const,
+      curated: Boolean(curatedOpenings[r.id]),
     }));
   }, []);
 
@@ -54,7 +56,8 @@ function OpeningsHubContent() {
       variation: "Base Repertoire",
       movesSan: r.baseMoves,
       tacticalMotifs: [],
-      side: "black" as const
+      side: "black" as const,
+      curated: Boolean(curatedOpenings[r.id]),
     }));
   }, []);
 
@@ -89,21 +92,21 @@ function OpeningsHubContent() {
 
       {/* Repertoire Sections */}
       <div className="space-y-20">
-        <RepertoireCarousel 
-          items={whiteRepertoires as any} 
+        <RepertoireCarousel
+          items={whiteRepertoires as any}
           dueIds={dueIds}
-          title="Strategic_Initiative" 
-          side="white" 
+          title="WHITE_OPENINGS"
+          side="white"
           onSelect={handleSelect}
         />
-        
+
         <div className="h-px w-full bg-gradient-to-r from-transparent via-white/5 to-transparent" />
 
-        <RepertoireCarousel 
-          items={blackRepertoires as any} 
+        <RepertoireCarousel
+          items={blackRepertoires as any}
           dueIds={dueIds}
-          title="Reactive_Countermeasures" 
-          side="black" 
+          title="BLACK_OPENINGS"
+          side="black"
           onSelect={handleSelect}
         />
       </div>
@@ -123,7 +126,7 @@ function OpeningsHubContent() {
             </p>
           </div>
         </div>
-        
+
         {loadingCustom ? (
           <div className="py-12 text-center text-[10px] font-mono text-slate-500 font-bold uppercase tracking-[0.4em]">
             Syncing_Custom_Nodes...

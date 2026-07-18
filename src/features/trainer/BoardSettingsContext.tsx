@@ -5,16 +5,22 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 interface BoardSettings {
   highlightValidMoves: boolean;
   showNotation: boolean;
+  fullBoardNotation: boolean;
   clickToMove: boolean;
+  soundEnabled: boolean;
 }
 
 interface BoardSettingsContextType extends BoardSettings {
   setHighlightValidMoves: (val: boolean) => void;
   setShowNotation: (val: boolean) => void;
+  setFullBoardNotation: (val: boolean) => void;
   setClickToMove: (val: boolean) => void;
+  setSoundEnabled: (val: boolean) => void;
   toggleHighlightValidMoves: () => void;
   toggleShowNotation: () => void;
+  toggleFullBoardNotation: () => void;
   toggleClickToMove: () => void;
+  toggleSound: () => void;
 }
 
 const BoardSettingsContext = createContext<BoardSettingsContextType | undefined>(undefined);
@@ -24,7 +30,9 @@ const LOCAL_STORAGE_KEY = "oe_board_settings";
 const defaultSettings: BoardSettings = {
   highlightValidMoves: true,
   showNotation: true,
+  fullBoardNotation: false,
   clickToMove: true,
+  soundEnabled: true,
 };
 
 export function BoardSettingsProvider({ children }: { children: React.ReactNode }) {
@@ -59,11 +67,15 @@ export function BoardSettingsProvider({ children }: { children: React.ReactNode 
 
   const setHighlightValidMoves = (val: boolean) => updateSetting("highlightValidMoves", val);
   const setShowNotation = (val: boolean) => updateSetting("showNotation", val);
+  const setFullBoardNotation = (val: boolean) => updateSetting("fullBoardNotation", val);
   const setClickToMove = (val: boolean) => updateSetting("clickToMove", val);
+  const setSoundEnabled = (val: boolean) => updateSetting("soundEnabled", val);
 
   const toggleHighlightValidMoves = () => updateSetting("highlightValidMoves", !settings.highlightValidMoves);
   const toggleShowNotation = () => updateSetting("showNotation", !settings.showNotation);
+  const toggleFullBoardNotation = () => updateSetting("fullBoardNotation", !settings.fullBoardNotation);
   const toggleClickToMove = () => updateSetting("clickToMove", !settings.clickToMove);
+  const toggleSound = () => updateSetting("soundEnabled", !settings.soundEnabled);
 
   return (
     <BoardSettingsContext.Provider
@@ -71,10 +83,14 @@ export function BoardSettingsProvider({ children }: { children: React.ReactNode 
         ...settings,
         setHighlightValidMoves,
         setShowNotation,
+        setFullBoardNotation,
         setClickToMove,
+        setSoundEnabled,
         toggleHighlightValidMoves,
         toggleShowNotation,
+        toggleFullBoardNotation,
         toggleClickToMove,
+        toggleSound,
       }}
     >
       {children}

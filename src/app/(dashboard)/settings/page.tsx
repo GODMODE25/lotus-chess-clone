@@ -9,10 +9,14 @@ export default function SettingsPage() {
   const {
     highlightValidMoves,
     showNotation,
+    fullBoardNotation,
     clickToMove,
+    soundEnabled,
     toggleHighlightValidMoves,
     toggleShowNotation,
-    toggleClickToMove
+    toggleFullBoardNotation,
+    toggleClickToMove,
+    toggleSound
   } = useBoardSettings();
 
   const { user } = useAuth();
@@ -102,6 +106,48 @@ export default function SettingsPage() {
                 aria-label={showNotation ? "Hide board notation" : "Show board notation"}
               >
                 {showNotation ? (
+                  <ToggleRight className="size-10 text-emerald-400" />
+                ) : (
+                  <ToggleLeft className="size-10 text-slate-500" />
+                )}
+              </button>
+            </div>
+
+            {/* Full Board Notation */}
+            <div className="flex items-center justify-between p-4 rounded-lg bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors">
+              <div>
+                <p className="text-sm font-semibold text-white">Full Board Notation</p>
+                <p className="text-xs text-slate-400 max-w-[240px] mt-0.5">
+                  Displays the coordinate (e.g. e4) on every square, not just the board edges.
+                </p>
+              </div>
+              <button
+                onClick={toggleFullBoardNotation}
+                className="focus:outline-none"
+                aria-label={fullBoardNotation ? "Disable full board notation" : "Enable full board notation"}
+              >
+                {fullBoardNotation ? (
+                  <ToggleRight className="size-10 text-emerald-400" />
+                ) : (
+                  <ToggleLeft className="size-10 text-slate-500" />
+                )}
+              </button>
+            </div>
+
+            {/* Sound Effects */}
+            <div className="flex items-center justify-between p-4 rounded-lg bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-colors">
+              <div>
+                <p className="text-sm font-semibold text-white">Sound Effects</p>
+                <p className="text-xs text-slate-400 max-w-[240px] mt-0.5">
+                  Plays synthesized tones for moves, correct answers, and game outcomes.
+                </p>
+              </div>
+              <button
+                onClick={toggleSound}
+                className="focus:outline-none"
+                aria-label={soundEnabled ? "Disable sound effects" : "Enable sound effects"}
+              >
+                {soundEnabled ? (
                   <ToggleRight className="size-10 text-emerald-400" />
                 ) : (
                   <ToggleLeft className="size-10 text-slate-500" />

@@ -1,0 +1,102 @@
+{
+  "openingId": "italian-game",
+  "tier": "Advanced",
+  "lines": [
+    {
+      "id": "italian-advanced-fried-liver-main",
+      "parentVariation": "Two Knights Defence",
+      "openingFamily": "Italian Game",
+      "variationName": "Fried Liver Attack Main Line",
+      "aliases": ["Fried Liver", "Fegatello Attack"],
+      "eco": "C57",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.Ng5 d5 5.exd5 Nxd5 6.Nxf7 Kxf7 7.Qf3+ Ke6 8.Nc3 Nb4",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "d5", "exd5", "Nxd5", "Nxf7", "Kxf7", "Qf3+", "Ke6", "Nc3", "Nb4"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "g8f6", "g5f6", "d7d5", "e4d5", "f6d5", "g5f7", "e8f7", "d1f3", "f7e6", "b1c3", "c6b4"],
+      "startingFen": "r1bq1b1r/ppp3pp/4k3/3np3/1nB5/2N2Q2/PPPP1PPP/R1B1K2R w KQ - 4 9",
+      "moveDepth": 16,
+      "difficulty": 4,
+      "popularity": 5,
+      "prerequisites": ["italian-beginner-two-knights-intro"],
+      "continuationIds": [],
+      "conceptIds": ["initiative", "king-safety", "tempo", "piece-activity"],
+      "strategicIdeas": [
+        "White sacrifices a minor piece (Nxf7) to drag Black's king to e6, where it is exposed.",
+        "White applies constant pressure to the pinned d5 knight using Qf3 and Nc3.",
+        "Black defends by supporting the knight with ...Nb4 and ...c6, hoping to survive the storm."
+      ],
+      "tacticalMotifs": ["pin", "double-attack", "sacrifice"],
+      "commonMistakes": [
+        "Black retreating the king to g8 or e8, allowing immediate mate or loss of queen",
+        "White playing too slowly and allowing Black's king to find safety on d6/c7"
+      ],
+      "explanation": "The Fried Liver Attack is one of the most famous tactical lines in chess. By sacrificing a piece on f7, White forces Black's king into the centre. White maintains a fierce attack against the pinned d5 knight. This teaches how to attack an exposed king and apply pressure on pinned pieces.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 50
+    },
+    {
+      "id": "italian-advanced-polerio-defence",
+      "parentVariation": "Two Knights Defence",
+      "openingFamily": "Italian Game",
+      "variationName": "Polerio Defence Main Line",
+      "aliases": ["Two Knights Polerio"],
+      "eco": "C58",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.Ng5 d5 5.exd5 Na5 6.Bb5+ c6 7.dxc6 bxc6 8.Be2 h6 9.Nf3 e4 10.Ne5 Bd6",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "d5", "exd5", "Na5", "Bb5+", "c6", "dxc6", "bxc6", "Be2", "h6", "Nf3", "e4", "Ne5", "Bd6"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "g8f6", "g5f6", "d7d5", "e4d5", "c6a5", "c4b5", "c7c6", "d5c6", "b2c6", "b5e2", "h7h6", "f3e5", "e5e4", "e5g4", "f8d6"],
+      "startingFen": "r1bqk2r/p4pp1/2pb1n1p/n3N3/4p3/8/PPPPBPPP/RNBQK2R w KQkq - 2 11",
+      "moveDepth": 20,
+      "difficulty": 4,
+      "popularity": 5,
+      "prerequisites": ["italian-beginner-two-knights-intro"],
+      "continuationIds": [],
+      "conceptIds": ["initiative", "tempo", "piece-activity", "space-advantage"],
+      "strategicIdeas": [
+        "Black sacrifices a pawn with 5...Na5 to gain the initiative and drive White's pieces back.",
+        "White holds the extra pawn but faces a series of attacking moves from Black's active pieces.",
+        "White must play defensively to consolidate the extra pawn and neutralise the initiative."
+      ],
+      "tacticalMotifs": ["tempo"],
+      "commonMistakes": [
+        "White trying to hold onto the bishop pair with Bb3, which blocks the knight's retreat",
+        "Black playing too passively and allowing White to easily consolidate the extra pawn"
+      ],
+      "explanation": "The Polerio Defence is Black's most reliable reply to 4.Ng5. By sacrificing a pawn, Black gains active piece play and space, pushing White's knight and bishop back. This line teaches how pawn sacrifices can lead to long-term positional compensation.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 50
+    },
+    {
+      "id": "italian-advanced-traxler-counterattack",
+      "parentVariation": "Two Knights Defence",
+      "openingFamily": "Italian Game",
+      "variationName": "Traxler Counterattack Main Line",
+      "aliases": ["Traxler", "Wilkes-Barre Variation"],
+      "eco": "C57",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.Ng5 Bc5 5.Nxf7 Bxf2+ 6.Kxf2 Nxe4+ 7.Kg1",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "Bc5", "Nxf7", "Bxf2+", "Kxf2", "Nxe4+", "Kg1"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "g8f6", "g5f6", "f8c5", "f6f7", "c5f2", "e1f2", "f6e4", "f2g1"],
+      "startingFen": "r1bqk2r/pppp1Npp/2n5/4p3/2B1n3/8/PPPP2PP/RNBQ2KR b kq - 1 7",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": ["italian-beginner-two-knights-intro"],
+      "continuationIds": [],
+      "conceptIds": ["initiative", "king-safety", "tempo", "piece-activity"],
+      "strategicIdeas": [
+        "Black ignores the threat on f7 to mount a direct counterattack against White's king with ...Bc5 and ...Bxf2+.",
+        "White must navigate extremely sharp tactical complications to survive.",
+        "King safety is non-existent for either side; calculation speed is paramount."
+      ],
+      "tacticalMotifs": ["double-attack", "discovered-attack", "sacrifice"],
+      "commonMistakes": [
+        "White playing 6.Kf1? which leads to an immediate loss after ...Qe7",
+        "Black failing to calculate White's king escapes in the endgame"
+      ],
+      "explanation": "The Traxler Counterattack is one of the most wild and double-edged lines in all of chess theory. Black responds to the double attack on f7 by counter-attacking White's own f2 square. White is forced to accept a king walk to survive. This teaches tactical depth, calculation under pressure, and dynamic piece play.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 50
+    }
+  ]
+}

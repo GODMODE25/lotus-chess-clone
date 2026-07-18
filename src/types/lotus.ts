@@ -68,6 +68,18 @@ export interface OpeningVariation {
   modelGames: string[];
   isCustom?: boolean;
   parentId?: string;
+  // --- NEW FIELDS (progression rework) ---
+  prerequisites?: string[];
+  continuationIds?: string[];
+  masteryLevel?: string;
+  aliases?: string[];
+  uciMoves?: string[];
+  startingFen?: string;
+  moveDepth?: number;
+  popularity?: number;
+  reviewPriority?: number;
+  estimatedStudyMinutes?: number;
+  masteryXp?: number;
 }
 
 export interface EndgameLesson {

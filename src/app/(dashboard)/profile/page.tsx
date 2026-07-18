@@ -12,6 +12,7 @@ import {
   Clock,
   TrendingUp,
   Award,
+  LogOut,
 } from "lucide-react";
 import { useAuth } from "@/features/auth/AuthContext";
 import { getProgressRecords } from "@/services/db/progress";
@@ -19,7 +20,7 @@ import { calculateDashboardSnapshot } from "@/services/learning/stats";
 import type { DashboardSnapshot } from "@/types/lotus";
 
 export default function ProfilePage() {
-  const { user } = useAuth();
+  const { user, signOutUser } = useAuth();
   const [snapshot, setSnapshot] = useState<DashboardSnapshot | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -133,6 +134,15 @@ export default function ProfilePage() {
               </span>
             </div>
           </div>
+
+          <button
+            type="button"
+            onClick={() => signOutUser()}
+            className="inline-flex items-center gap-2 self-start rounded-xl border border-rose-500/20 bg-rose-500/5 px-4 py-2.5 text-sm font-semibold text-rose-400 transition-colors hover:bg-rose-500/10 focus:outline-none focus:ring-2 focus:ring-rose-500/40 sm:self-center"
+          >
+            <LogOut className="size-4" />
+            Sign Out
+          </button>
         </div>
       </div>
 

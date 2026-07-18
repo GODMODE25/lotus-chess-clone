@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Chess, type Move, type Square } from "chess.js";
 import { Chessboard } from "react-chessboard";
-import { Brain, CheckCircle2, RotateCcw, Lightbulb, XCircle, Sliders, PlayCircle, Cpu, Activity, Target, Trophy, Zap } from "lucide-react";
+import { Brain, CheckCircle2, RotateCcw, Undo, Lightbulb, XCircle, Sliders, PlayCircle, Cpu, Activity, Target, Trophy, Zap } from "lucide-react";
 import { getStockfishClient, type StockfishEvaluation } from "@/services/stockfish/client";
 import { useBoardSettings } from "@/features/trainer/BoardSettingsContext";
 import { useAuth } from "@/features/auth/AuthContext";
@@ -11,6 +11,7 @@ import { saveProgressRecord, getProgressRecord } from "@/services/db/progress";
 import { calculateNextReview } from "@/services/learning/mastery";
 import type { EndgameLesson } from "@/types/lotus";
 import { motion, AnimatePresence } from "framer-motion";
+import { playMove, playVictory, playDefeat } from "@/lib/sounds";
 
 interface EndgameTrainerProps {
   lesson: EndgameLesson;
@@ -63,7 +64,7 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
   const [showSettingsPopup, setShowSettingsPopup] = useState(false);
 
   const { user } = useAuth();
-  const { highlightValidMoves, showNotation, clickToMove, toggleHighlightValidMoves, toggleShowNotation, toggleClickToMove } = useBoardSettings();
+  const { highlightValidMoves, showNotation, fullBoardNotation, clickToMove, toggleHighlightValidMoves, toggleShowNotation, toggleFullBoardNotation, toggleClickToMove } = useBoardSettings();
 
   const initialSide = useMemo(() => new Chess(lesson.fen).turn(), [lesson.fen]);
   const userSideStr = initialSide === "w" ? "white" : "black";
@@ -76,15 +77,18 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
       if (game.turn() !== initialSide) {
         setStatus("won");
         setFeedback({ tone: "success", title: "OBJECTIVE_SECURED", detail: "Endgame protocol successfully executed." });
+        playVictory();
         saveProgress(true);
       } else {
         setStatus("lost");
         setFeedback({ tone: "error", title: "SYSTEM_BREACHED", detail: "Terminal position reached by opponent." });
+        playDefeat();
         saveProgress(false);
       }
     } else if (game.isDraw() || game.isStalemate() || game.isThreefoldRepetition()) {
       setStatus("drawn");
       setFeedback({ tone: "error", title: "SYNC_STALLED", detail: "Neutral parity reached. Drill failure logged." });
+      playDefeat();
       saveProgress(false);
     }
   }, [game, fen, status, initialSide]);
@@ -159,6 +163,7 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
       setFen(trial.fen());
       setSelectedSquare(null);
       setHintMove(null);
+      playMove();
       return true;
     },
     [fen, isUserTurn],
@@ -238,6 +243,26 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
     setFeedback({ tone: "idle", title: "RE_CALIBRATING...", detail: lesson.objective });
   };
 
+  const handleUndo = () => {
+    const trial = new Chess(fen);
+    const history = trial.history();
+    if (history.length === 0) return;
+
+    // If it's the player's turn, the engine just moved — undo both engine and player moves
+    if (trial.turn() === initialSide) {
+      trial.undo();
+      trial.undo();
+    } else {
+      trial.undo();
+    }
+
+    setFen(trial.fen());
+    setStatus("playing");
+    setSelectedSquare(null);
+    setHintMove(null);
+    setIsEngineThinking(false);
+  };
+
   return (
     <section className="glass-card p-6 md:p-8">
       <div className="mb-8 flex flex-wrap items-end justify-between gap-6">
@@ -274,6 +299,7 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
                       { label: "Click_to_Move", active: clickToMove, toggle: toggleClickToMove },
                       { label: "Highlight_Vectors", active: highlightValidMoves, toggle: toggleHighlightValidMoves },
                       { label: "Data_Notation", active: showNotation, toggle: toggleShowNotation },
+                      { label: "Full_Board_Notation", active: fullBoardNotation, toggle: toggleFullBoardNotation },
                     ].map((cfg) => (
                       <div key={cfg.label} className="flex items-center justify-between group cursor-pointer" onClick={cfg.toggle}>
                         <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest group-hover:text-slate-200 transition-colors">{cfg.label}</span>
@@ -298,7 +324,16 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
           >
             <RotateCcw className="size-4" />
           </motion.button>
-          
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            onClick={handleUndo}
+            disabled={game.history().length === 0 || status !== "playing"}
+            className="size-10 flex items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-slate-400 hover:text-white transition-all disabled:opacity-50"
+          >
+            <Undo className="size-4" />
+          </motion.button>
+
           <motion.button
             whileHover={{ scale: 1.02 }}
             onClick={handleGetHint}
@@ -313,13 +348,14 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
 
       <div className="grid gap-10 xl:grid-cols-[minmax(300px,640px)_1fr]">
         <div className="w-full max-w-[640px] justify-self-center xl:justify-self-start relative">
-          <div className="aspect-square overflow-hidden rounded-2xl border border-white/10 bg-cyber-glass shadow-2xl">
+          <div className="aspect-square overflow-hidden rounded-2xl border border-white/10 bg-cyber-glass shadow-2xl relative">
             <Chessboard
               options={{
                 id: "lotus-endgame-trainer",
                 position: fen,
                 boardOrientation: userSideStr,
-                animationDurationInMs: 250,
+                animationDurationInMs: 0,
+                showAnimations: false,
                 showNotation: showNotation,
                 darkSquareStyle: { backgroundColor: "#15151b" },
                 lightSquareStyle: { backgroundColor: "#1e1e26" },
@@ -330,6 +366,9 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
                 onSquareClick: handleSquareClick,
               }}
             />
+            {fullBoardNotation && (
+              <FullBoardNotationOverlay orientation={userSideStr} />
+            )}
           </div>
           
           <AnimatePresence>
@@ -453,5 +492,33 @@ export function EndgameTrainer({ lesson }: EndgameTrainerProps) {
         </div>
       </div>
     </section>
+  );
+}
+
+/** Renders a subtle coordinate label on every square, respecting board orientation. */
+function FullBoardNotationOverlay({ orientation }: { orientation: "white" | "black" }) {
+  const files = ["a", "b", "c", "d", "e", "f", "g", "h"];
+  const ranks = ["1", "2", "3", "4", "5", "6", "7", "8"];
+
+  const rankOrder = orientation === "white" ? [...ranks].reverse() : [...ranks];
+  const fileOrder = orientation === "white" ? files : [...files].reverse();
+
+  const cells: string[] = [];
+  for (const rank of rankOrder) {
+    for (const file of fileOrder) {
+      cells.push(`${file}${rank}`);
+    }
+  }
+
+  return (
+    <div className="pointer-events-none absolute inset-0 z-10 grid grid-cols-8 grid-rows-8">
+      {cells.map((coord) => (
+        <div key={coord} className="relative">
+          <span className="absolute left-1 top-0.5 text-[9px] font-mono leading-none text-white/30 select-none">
+            {coord}
+          </span>
+        </div>
+      ))}
+    </div>
   );
 }

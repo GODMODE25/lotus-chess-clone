@@ -1,6 +1,6 @@
 import { getApp, getApps, initializeApp, type FirebaseApp, type FirebaseOptions } from "firebase/app";
 import { getAuth, type Auth } from "firebase/auth";
-import { getFirestore, type Firestore } from "firebase/firestore";
+import { initializeFirestore, type Firestore } from "firebase/firestore";
 import { getStorage, type FirebaseStorage } from "firebase/storage";
 
 const firebaseConfig: FirebaseOptions = {
@@ -45,7 +45,7 @@ export function getFirebaseClient(): FirebaseClient {
   return {
     app,
     auth: getAuth(app),
-    db: getFirestore(app),
+    db: initializeFirestore(app, { experimentalAutoDetectLongPolling: true }),
     storage: getStorage(app),
   };
 }

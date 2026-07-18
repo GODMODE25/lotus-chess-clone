@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useAuth } from "@/features/auth/AuthContext";
 import { useRouter, usePathname } from "next/navigation";
 import {
@@ -16,27 +16,48 @@ import {
   UserCircle,
   Activity,
   ChevronRight,
-  Shield,
-  Zap,
-  Hexagon,
-  Cpu
+  Hexagon
 } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSystemStatus } from "@/features/dashboard/useSystemStatus";
+import { getProgressRecords } from "@/services/db/progress";
+import { calculateDashboardSnapshot } from "@/services/learning/stats";
+import type { DashboardSnapshot } from "@/types/lotus";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const { user, loading, signOutUser } = useAuth();
   const router = useRouter();
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [avatarMenuOpen, setAvatarMenuOpen] = useState(false);
+  const avatarButtonRef = useRef<HTMLButtonElement>(null);
   const systemStatus = useSystemStatus();
+  const [snapshot, setSnapshot] = useState<DashboardSnapshot | null>(null);
+  const [snapshotLoading, setSnapshotLoading] = useState(true);
 
   useEffect(() => {
     if (!loading && !user) {
       router.push("/auth");
     }
   }, [user, loading, router]);
+
+  useEffect(() => {
+    if (!user) return;
+    const currentUser = user;
+    async function loadStats() {
+      try {
+        const records = await getProgressRecords(currentUser.uid, currentUser.isGuest ?? false);
+        const snap = calculateDashboardSnapshot(records);
+        setSnapshot(snap);
+      } catch (err) {
+        console.error("Failed to load footer stats:", err);
+      } finally {
+        setSnapshotLoading(false);
+      }
+    }
+    loadStats();
+  }, [user]);
 
   if (loading || !user) {
     return (
@@ -64,7 +85,6 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     { name: "Terminal", href: "/dashboard", icon: LayoutDashboard },
     { name: "Openings", href: "/practice/openings", icon: Swords },
     { name: "Endgames", href: "/practice/endgames", icon: Flame },
-    { name: "Library", href: "/library", icon: BookOpen },
     { name: "Profile", href: "/profile", icon: UserCircle },
     { name: "Settings", href: "/settings", icon: SettingsIcon },
   ];
@@ -72,64 +92,68 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground font-body grid-dots selection:bg-primary/30 selection:text-primary">
       {/* Top Navbar */}
-      <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-black/60 backdrop-blur-xl relative overflow-hidden">
+      <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-black/60 backdrop-blur-xl relative">
         <div className="absolute inset-0 scanline opacity-30 pointer-events-none" />
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex h-20 items-center justify-between">
+          <div className="flex h-20 items-center justify-between relative">
             <div className="flex items-center gap-12">
               <Link href="/dashboard" className="flex items-center gap-4 group">
-                <div className="flex size-10 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-primary shadow-neon group-hover:border-primary/50 transition-all duration-500">
+                <div className="flex size-10 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-primary shadow-neon group-hover:border-primary/50 transition-all duration-500 flex-shrink-0">
                   <Hexagon className="size-5 fill-primary/10" />
                 </div>
-                <div className="hidden sm:block">
-                  <span className="text-xl font-heading font-bold tracking-tight text-white block leading-none uppercase">
+                <div className="hidden sm:flex items-center gap-2">
+                  <span className="text-2xl font-heading font-bold tracking-tight text-white uppercase leading-none">
                     OE <span className="text-primary">Chess Lab</span>
                   </span>
-                  <div className="flex items-center gap-2 mt-1">
-                    <div className="size-1.5 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
-                  </div>
+                  <div className="size-1.5 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.5)] flex-shrink-0" />
                 </div>
               </Link>
-
-              
             </div>
 
-            <div className="flex items-center gap-6">
-              {/* Desktop Nav */}
-              <nav className="hidden xl:flex items-center gap-1" aria-label="Desktop navigation">
-                {navItems.map((item) => {
-                  const Icon = item.icon;
-                  const active = pathname === item.href || pathname.startsWith(item.href + "/");
-                  return (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className={`relative flex items-center gap-2.5 px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-[0.2em] transition-all group ${
-                        active
-                          ? "text-primary"
-                          : "text-slate-500 hover:text-slate-200"
-                      }`}
-                    >
-                      <Icon className={`size-3.5 transition-transform ${active ? "scale-110" : "group-hover:scale-110"}`} />
-                      {item.name}
-                      {active && (
-                        <motion.div 
-                          layoutId="navActive"
-                          className="absolute -bottom-[20px] left-2 right-2 h-0.5 bg-primary shadow-neon"
-                        />
-                      )}
-                    </Link>
-                  );
-                })}
-              </nav>
+            {/* Desktop Nav - Centered */}
+            <nav className="hidden xl:flex absolute left-1/2 -translate-x-1/2 items-center gap-1" aria-label="Desktop navigation">
+              {navItems.map((item) => {
+                const Icon = item.icon;
+                const active = pathname === item.href || pathname.startsWith(item.href + "/");
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className={`relative flex items-center gap-2.5 px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-[0.2em] transition-all group ${
+                      active
+                        ? "text-primary"
+                        : "text-slate-500 hover:text-slate-200"
+                    }`}
+                  >
+                    <Icon className={`size-3.5 transition-transform ${active ? "scale-110" : "group-hover:scale-110"}`} />
+                    {item.name}
+                    {active && (
+                      <motion.div 
+                        layoutId="navActive"
+                        className="absolute -bottom-[20px] left-2 right-2 h-0.5 bg-primary shadow-neon"
+                      />
+                    )}
+                  </Link>
+                );
+              })}
+            </nav>
 
+            <div className="flex items-center gap-6">
               <div className="flex items-center gap-4 border-l border-white/5 pl-6">
                 <div className="text-right hidden sm:block">
                   <p className="text-sm font-heading font-medium text-white">{user.displayName || "Grandmaster Alpha"}</p>
                   <p className="text-[10px] font-mono text-white/40">ID: {user.uid.slice(0, 8).toUpperCase()}-OE-CH</p>
                 </div>
-                <div className="relative group">
-                  <div className="size-12 rounded-full border-2 border-white/10 group-hover:border-primary/50 transition-all overflow-hidden bg-white/5 shadow-inner">
+                <div className="relative">
+                  <button
+                    ref={avatarButtonRef}
+                    type="button"
+                    onClick={() => setAvatarMenuOpen(!avatarMenuOpen)}
+                    aria-haspopup="menu"
+                    aria-expanded={avatarMenuOpen}
+                    aria-label="Account menu"
+                    className="relative block size-12 rounded-full border-2 border-white/10 hover:border-primary/50 transition-all overflow-hidden bg-white/5 shadow-inner focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
                     {user.photoURL ? (
                       <img src={user.photoURL} alt={user.displayName || "Avatar"} className="size-full object-cover" />
                     ) : (
@@ -137,8 +161,59 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                         <User className="size-6" />
                       </div>
                     )}
-                  </div>
-                  <div className="absolute -bottom-0.5 -right-0.5 size-3.5 rounded-full bg-primary border-2 border-background shadow-neon" />
+                    <div className="absolute -bottom-0.5 -right-0.5 size-3.5 rounded-full bg-primary border-2 border-background shadow-neon" />
+                  </button>
+
+                  <AnimatePresence>
+                    {avatarMenuOpen && (
+                      <>
+                        <div
+                          className="fixed inset-0 z-[100]"
+                          onClick={() => setAvatarMenuOpen(false)}
+                          aria-hidden="true"
+                        />
+                        <motion.div
+                          initial={{ opacity: 0, y: -8, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: -8, scale: 0.95 }}
+                          transition={{ duration: 0.15 }}
+                          role="menu"
+                          style={
+                            avatarButtonRef.current
+                              ? {
+                                  position: "fixed",
+                                  top: avatarButtonRef.current.getBoundingClientRect().bottom + 4,
+                                  right: window.innerWidth - avatarButtonRef.current.getBoundingClientRect().right,
+                                }
+                              : undefined
+                          }
+                          className="z-[101] w-48 rounded-xl border border-white/10 bg-cyber-glass p-2 shadow-2xl backdrop-blur-2xl"
+                        >
+                          <Link
+                            href="/profile"
+                            role="menuitem"
+                            onClick={() => setAvatarMenuOpen(false)}
+                            className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+                          >
+                            <UserCircle className="size-4 text-primary" />
+                            Profile
+                          </Link>
+                          <button
+                            type="button"
+                            role="menuitem"
+                            onClick={() => {
+                              setAvatarMenuOpen(false);
+                              signOutUser();
+                            }}
+                            className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-rose-400 transition-colors hover:bg-rose-500/10"
+                          >
+                            <LogOut className="size-4" />
+                            Logout
+                          </button>
+                        </motion.div>
+                      </>
+                    )}
+                  </AnimatePresence>
                 </div>
               </div>
 
@@ -239,45 +314,52 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <footer className="mt-auto border-t border-white/5 bg-black/40 backdrop-blur-md relative overflow-hidden">
         <div className="absolute inset-0 scanline opacity-10 pointer-events-none" />
         <div className="max-w-[1600px] mx-auto py-10 px-4 sm:px-8 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10">
-            <div className="space-y-3">
-              <p className="text-[10px] font-mono text-white/30 uppercase tracking-[0.2em]">Engine Power</p>
-              <div className="flex items-center gap-3">
-                <div className="w-full h-1.5 rounded-full bg-white/5 overflow-hidden border border-white/5 p-[1px]">
-                  <motion.div 
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+            {/* Legend Progress (replaces Engine Power) */}
+            <div className="space-y-1.5 min-w-[110px]">
+              <p className="text-[9px] font-mono text-white/30 uppercase tracking-[0.15em]">Legend Progress</p>
+              <div className="flex items-center gap-2">
+                <div className="flex-1 h-1 rounded-full bg-white/5 overflow-hidden">
+                  <motion.div
                     initial={{ width: 0 }}
-                    animate={{ width: "85%" }}
-                    className="h-full bg-primary shadow-neon" 
+                    animate={{ width: `${snapshotLoading ? 0 : snapshot?.legendProgress ?? 0}%` }}
+                    className="h-full bg-primary/80"
                   />
                 </div>
-                <span className="text-xs font-mono text-primary font-bold">85%</span>
+                <span className="text-[11px] font-mono text-primary/80 font-bold w-8 text-right">
+                  {snapshotLoading ? "--" : `${snapshot?.legendProgress ?? 0}%`}
+                </span>
               </div>
             </div>
 
-            <div className="space-y-1">
-              <p className="text-[10px] font-mono text-white/30 uppercase tracking-[0.2em]">Accuracy</p>
-              <p className="text-2xl font-heading font-bold text-white tracking-tight">98.2<span className="text-xs text-white/30 ml-1 font-mono">%</span></p>
+            {/* Accuracy */}
+            <div className="space-y-1 min-w-[70px] text-center">
+              <p className="text-[9px] font-mono text-white/30 uppercase tracking-[0.15em]">Accuracy</p>
+              <p className="text-sm font-heading font-bold text-white/90 tracking-tight">
+                {snapshotLoading ? "--" : <>{snapshot?.accuracy ?? 0}<span className="text-[10px] text-white/30 ml-0.5 font-mono">%</span></>}
+              </p>
             </div>
 
-            <div className="space-y-1">
-              <p className="text-[10px] font-mono text-white/30 uppercase tracking-[0.2em]">Puzzles Solved</p>
-              <p className="text-2xl font-heading font-bold text-white tracking-tight">14,209</p>
+            {/* Lessons Completed (replaces Puzzles Solved) */}
+            <div className="space-y-1 min-w-[90px] text-center">
+              <p className="text-[9px] font-mono text-white/30 uppercase tracking-[0.15em]">Lessons Done</p>
+              <p className="text-sm font-heading font-bold text-white/90 tracking-tight">
+                {snapshotLoading ? "--" : (snapshot?.lessonsCompleted ?? 0).toLocaleString()}
+              </p>
             </div>
 
-            <div className="space-y-1">
-              <p className="text-[10px] font-mono text-white/30 uppercase tracking-[0.2em]">Engine Nodes</p>
-              <p className="text-2xl font-heading font-bold text-accent tracking-tight">{systemStatus.nodes}</p>
+            {/* Engine Nodes - real via useSystemStatus */}
+            <div className="space-y-1 min-w-[90px] text-center">
+              <p className="text-[9px] font-mono text-white/30 uppercase tracking-[0.15em]">Engine Nodes</p>
+              <p className="text-sm font-heading font-bold text-accent/80 tracking-tight">{systemStatus.nodes}</p>
             </div>
 
-            <div className="space-y-1">
-              <p className="text-[10px] font-mono text-white/30 uppercase tracking-[0.2em]">Session Time</p>
-              <p className="text-2xl font-heading font-bold text-white tracking-tight">04:22:15</p>
-            </div>
-
-            <div className="flex items-center justify-end">
-              <button className="px-6 py-2 rounded-xl bg-white/5 border border-white/10 text-[10px] font-heading font-bold tracking-widest uppercase hover:bg-white/10 hover:border-white/20 transition-all text-white/70 hover:text-white">
-                System Reboot
-              </button>
+            {/* Study Time (replaces Session Time) */}
+            <div className="space-y-1 min-w-[80px] text-center">
+              <p className="text-[9px] font-mono text-white/30 uppercase tracking-[0.15em]">Study Time</p>
+              <p className="text-sm font-heading font-bold text-white/90 tracking-tight">
+                {snapshotLoading ? "--" : `${snapshot?.studiedMinutes ?? 0} min`}
+              </p>
             </div>
           </div>
           

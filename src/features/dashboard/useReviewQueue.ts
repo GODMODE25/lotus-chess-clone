@@ -2,6 +2,8 @@ import { useState, useEffect, useCallback } from "react";
 import { useAuth } from "@/features/auth/AuthContext";
 import { getProgressRecords, getCustomVariations } from "@/services/db/progress";
 import { whiteRepertoiresRaw, blackRepertoiresRaw } from "@/content/openingsData";
+import { curatedOpenings } from "@/content/openingsCurated";
+import { getLineDisplayName } from "@/services/learning/progression";
 import { getEndgameLessonById } from "@/content/endgamesData";
 import type { ReviewItem, ProgressRecord, OpeningVariation } from "@/types/lotus";
 
@@ -73,21 +75,32 @@ function mapToReviewItem(record: ProgressRecord, customVars: OpeningVariation[])
       };
     }
 
-    // 2. Standard variation: ruy-lopez-line-15
+    // 2. Curated variation: italian-beginner-giuoco-pianissimo-main
+    for (const curated of Object.values(curatedOpenings)) {
+      const line = curated.lines.find((l) => l.id === record.lessonId);
+      if (line) {
+        return {
+          id: record.lessonId,
+          title: curated.metadata.name,
+          subtitle: getLineDisplayName(line),
+          lessonKind: "opening",
+          rank: record.rank,
+          confidence: record.confidence,
+          dueLabel: getDueLabel(record.nextReviewDate),
+        };
+      }
+    }
+
+    // 3. Standard synthetic variation: ruy-lopez-line-15
     const match = record.lessonId.match(/^([a-z-]+)-line-(\d+)$/);
     if (match) {
       const repId = match[1];
       const lineIndex = parseInt(match[2], 10) - 1;
       const rawRep = [...whiteRepertoiresRaw, ...blackRepertoiresRaw].find(r => r.id === repId);
       if (rawRep) {
-        let levelName = `Line #${lineIndex + 1}`;
-        if (lineIndex >= 150) levelName = `Legend Line #${lineIndex - 149}`;
-        else if (lineIndex >= 125) levelName = `Master Line #${lineIndex - 124}`;
-        else if (lineIndex >= 100) levelName = `Expert Line #${lineIndex - 99}`;
-        else if (lineIndex >= 75) levelName = `Advanced Line #${lineIndex - 74}`;
-        else if (lineIndex >= 50) levelName = `Intermediate Line #${lineIndex - 49}`;
-        else if (lineIndex >= 25) levelName = `Novice Line #${lineIndex - 24}`;
-        else levelName = `Beginner Line #${lineIndex + 1}`;
+        const tierNames = ["Beginner", "Novice", "Intermediate", "Advanced", "Expert", "Master", "Legend"];
+        const tierIndex = Math.min(6, Math.floor(lineIndex / 25));
+        const levelName = `${rawRep.name} ${tierNames[tierIndex]} Variation ${(lineIndex % 25) + 1}`;
 
         return {
           id: record.lessonId,

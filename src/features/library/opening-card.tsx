@@ -9,6 +9,7 @@ interface OpeningCardProps {
   opening: OpeningVariation;
   isActive: boolean;
   isDue?: boolean;
+  curated?: boolean;
   onClick: () => void;
   style?: React.CSSProperties;
 }
@@ -16,7 +17,7 @@ interface OpeningCardProps {
 /**
  * Premium Opening Card featuring a variation snapshot and tactical technical data.
  */
-export function OpeningCard({ opening, isActive, isDue, onClick, style }: OpeningCardProps) {
+export function OpeningCard({ opening, isActive, isDue, curated, onClick, style }: OpeningCardProps) {
   return (
     <motion.div
       layout
@@ -55,7 +56,12 @@ export function OpeningCard({ opening, isActive, isDue, onClick, style }: Openin
                 {opening.variation}
               </p>
             </div>
-            <div className="flex flex-col items-end shrink-0">
+            <div className="flex flex-col items-end shrink-0 gap-1">
+              {curated && (
+                <span className="px-2 py-1 rounded bg-primary/10 border border-primary/20 text-[10px] font-mono text-primary font-bold uppercase tracking-widest">
+                  Curated
+                </span>
+              )}
               <span className="px-2 py-1 rounded bg-cyan-500/10 border border-cyan-500/20 text-[10px] font-mono text-cyan-400 font-bold">
                 {opening.eco}
               </span>

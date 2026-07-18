@@ -33,6 +33,46 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+/**
+ * Translates raw Firebase auth error codes into user-friendly messages.
+ * Network failures (auth/network-request-failed) are the most common on
+ * restricted/flaky connections and get a clear, actionable message.
+ */
+function friendlyAuthError(err: unknown): string {
+  const code =
+    typeof err === "object" && err !== null && "code" in err
+      ? String((err as { code: unknown }).code)
+      : "";
+  const rawMessage =
+    typeof err === "object" && err !== null && "message" in err
+      ? String((err as { message: unknown }).message)
+      : "";
+
+  switch (code) {
+    case "auth/network-request-failed":
+      return "Network error: couldn't reach the authentication server. Check your internet connection (or any firewall / VPN / ad-blocker) and try again.";
+    case "auth/too-many-requests":
+      return "Too many attempts. Please wait a moment and try again.";
+    case "auth/popup-blocked":
+      return "The sign-in popup was blocked by your browser. Allow popups for this site and try again.";
+    case "auth/popup-closed-by-user":
+    case "auth/cancelled-popup-request":
+      return "The sign-in popup was closed before completing. Please try again.";
+    case "auth/invalid-credential":
+    case "auth/wrong-password":
+    case "auth/user-not-found":
+      return "Invalid email or password. Please try again.";
+    case "auth/email-already-in-use":
+      return "An account with this email already exists. Try signing in instead.";
+    case "auth/invalid-email":
+      return "That email address doesn't look valid.";
+    case "auth/weak-password":
+      return "Password is too weak. Use at least 6 characters.";
+    default:
+      return rawMessage || "An authentication error occurred. Please try again.";
+  }
+}
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<UserSession | null>(null);
   const [loading, setLoading] = useState(true);
@@ -95,8 +135,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       await signInWithPopup(auth, provider);
       // Remove any guest user from localStorage
       localStorage.removeItem("oe_guest_user");
-    } catch (err: any) {
-      setError(err.message || "Failed to sign in with Google");
+    } catch (err: unknown) {
+      setError(friendlyAuthError(err));
       setLoading(false);
       throw err;
     }
@@ -109,8 +149,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const { auth } = getFirebaseClient();
       await signInWithEmailAndPassword(auth, email, pass);
       localStorage.removeItem("oe_guest_user");
-    } catch (err: any) {
-      setError(err.message || "Failed to sign in with Email");
+    } catch (err: unknown) {
+      setError(friendlyAuthError(err));
       setLoading(false);
       throw err;
     }
@@ -123,8 +163,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const { auth } = getFirebaseClient();
       await createUserWithEmailAndPassword(auth, email, pass);
       localStorage.removeItem("oe_guest_user");
-    } catch (err: any) {
-      setError(err.message || "Failed to sign up");
+    } catch (err: unknown) {
+      setError(friendlyAuthError(err));
       setLoading(false);
       throw err;
     }

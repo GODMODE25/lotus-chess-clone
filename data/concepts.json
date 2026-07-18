@@ -1,0 +1,204 @@
+{
+  "concepts": [
+    {
+      "id": "development",
+      "name": "Development",
+      "category": "strategic",
+      "description": "Moving pieces from their starting squares to active squares as quickly as possible. Rapid development creates threats and controls key squares early in the game.",
+      "relatedConceptIds": ["central-control", "piece-activity"],
+      "tags": ["opening", "tempo", "initiative"]
+    },
+    {
+      "id": "central-control",
+      "name": "Central Control",
+      "category": "strategic",
+      "description": "Occupying or controlling the central squares (e4, d4, e5, d5) with pawns and pieces. Central control provides mobility, flexibility, and the ability to shift attacks to either flank.",
+      "relatedConceptIds": ["development", "pawn-structure"],
+      "tags": ["opening", "middlegame", "pawns"]
+    },
+    {
+      "id": "open-files",
+      "name": "Open Files",
+      "category": "positional",
+      "description": "A file with no pawns of either colour. Rooks and queens gain maximum activity on open files, especially when aimed at the opponent's back rank or weak pawns.",
+      "relatedConceptIds": ["rook-activity", "semi-open-file"],
+      "tags": ["middlegame", "rooks", "structure"]
+    },
+    {
+      "id": "semi-open-file",
+      "name": "Semi-Open File",
+      "category": "positional",
+      "description": "A file containing only the opponent's pawn(s). Semi-open files are natural homes for rooks to apply pressure against the opponent's pawn structure.",
+      "relatedConceptIds": ["open-files", "rook-activity"],
+      "tags": ["middlegame", "rooks", "pressure"]
+    },
+    {
+      "id": "weak-squares",
+      "name": "Weak Squares",
+      "category": "positional",
+      "description": "Squares that can no longer be defended by pawns, making them ideal outposts for enemy pieces. Recognizing and exploiting weak squares is a hallmark of positional play.",
+      "relatedConceptIds": ["outpost", "pawn-structure"],
+      "tags": ["positional", "knights", "strategy"]
+    },
+    {
+      "id": "outpost",
+      "name": "Outpost",
+      "category": "positional",
+      "description": "A square on the fourth, fifth, or sixth rank that is protected by a friendly pawn and cannot be attacked by enemy pawns. Knights are especially powerful on outposts.",
+      "relatedConceptIds": ["weak-squares", "knight-manoeuvre"],
+      "tags": ["positional", "knights", "advanced"]
+    },
+    {
+      "id": "minority-attack",
+      "name": "Minority Attack",
+      "category": "strategic",
+      "description": "Advancing pawns on the side where you have fewer pawns to create weaknesses in the opponent's pawn majority. A classic strategy in the Queen's Gambit Declined and Carlsbad structures.",
+      "relatedConceptIds": ["pawn-structure", "queenside-play"],
+      "tags": ["middlegame", "pawns", "strategy"]
+    },
+    {
+      "id": "isolated-queens-pawn",
+      "name": "Isolated Queen's Pawn",
+      "category": "structural",
+      "description": "A d-pawn with no friendly pawns on the adjacent c- and e-files. The IQP grants dynamic piece activity and central space but can become a weakness in endgames.",
+      "relatedConceptIds": ["pawn-structure", "central-control"],
+      "tags": ["structure", "middlegame", "endgame"]
+    },
+    {
+      "id": "hanging-pawns",
+      "name": "Hanging Pawns",
+      "category": "structural",
+      "description": "A pair of adjacent pawns on the fourth rank (typically c4+d4 or c5+d5) with no pawns on adjacent files. They control space but can be targets if immobilised.",
+      "relatedConceptIds": ["pawn-structure", "central-control"],
+      "tags": ["structure", "middlegame", "dynamic"]
+    },
+    {
+      "id": "fianchetto",
+      "name": "Fianchetto",
+      "category": "strategic",
+      "description": "Developing a bishop to g2 or b2 (or g7/b7 for Black) after advancing the g- or b-pawn one square. The fianchettoed bishop controls a long diagonal and supports central play from the flank.",
+      "relatedConceptIds": ["bishop-pair", "diagonal-control"],
+      "tags": ["opening", "bishops", "hypermodern"]
+    },
+    {
+      "id": "kingside-expansion",
+      "name": "Kingside Expansion",
+      "category": "strategic",
+      "description": "Advancing pawns on the kingside (f, g, h files) to gain space and create attacking chances against the enemy king. Must be timed carefully to avoid weakening one's own king.",
+      "relatedConceptIds": ["pawn-storm", "king-safety"],
+      "tags": ["attack", "pawns", "middlegame"]
+    },
+    {
+      "id": "exchange-sacrifice",
+      "name": "Exchange Sacrifice",
+      "category": "tactical",
+      "description": "Deliberately giving up a rook for a minor piece (bishop or knight) to gain positional compensation such as a strong outpost, pawn structure advantage, or attacking chances.",
+      "relatedConceptIds": ["positional-sacrifice", "piece-activity"],
+      "tags": ["tactical", "sacrifice", "advanced"]
+    },
+    {
+      "id": "piece-activity",
+      "name": "Piece Activity",
+      "category": "positional",
+      "description": "The principle that active, well-placed pieces are more valuable than passive ones. Improving piece activity is often more important than material considerations.",
+      "relatedConceptIds": ["development", "outpost"],
+      "tags": ["positional", "strategy", "general"]
+    },
+    {
+      "id": "king-safety",
+      "name": "King Safety",
+      "category": "strategic",
+      "description": "Keeping the king protected, typically by castling early and maintaining a solid pawn shield. Neglecting king safety invites tactical attacks and mating threats.",
+      "relatedConceptIds": ["castling", "pawn-shield"],
+      "tags": ["safety", "opening", "middlegame"]
+    },
+    {
+      "id": "pawn-structure",
+      "name": "Pawn Structure",
+      "category": "structural",
+      "description": "The arrangement of pawns on the board, which dictates the character of the position: where pieces belong, which files to open, and whether the game is open or closed.",
+      "relatedConceptIds": ["isolated-queens-pawn", "hanging-pawns", "central-control"],
+      "tags": ["structure", "fundamental", "strategy"]
+    },
+    {
+      "id": "castling",
+      "name": "Castling",
+      "category": "strategic",
+      "description": "A special king move that simultaneously improves king safety and connects the rooks. Castling kingside (O-O) is more common; queenside (O-O-O) is often associated with aggressive play.",
+      "relatedConceptIds": ["king-safety", "rook-activity"],
+      "tags": ["opening", "safety", "fundamental"]
+    },
+    {
+      "id": "tempo",
+      "name": "Tempo",
+      "category": "tactical",
+      "description": "A unit of time in chess measured in moves. Gaining a tempo means achieving a useful result (like developing a piece) while forcing the opponent to waste a move. Losing tempi in the opening can be fatal.",
+      "relatedConceptIds": ["development", "initiative"],
+      "tags": ["opening", "tactical", "time"]
+    },
+    {
+      "id": "initiative",
+      "name": "Initiative",
+      "category": "strategic",
+      "description": "The ability to create threats and dictate the pace of the game. The player with the initiative forces the opponent to react rather than execute their own plans.",
+      "relatedConceptIds": ["tempo", "development", "piece-activity"],
+      "tags": ["strategic", "attacking", "dynamic"]
+    },
+    {
+      "id": "pawn-storm",
+      "name": "Pawn Storm",
+      "category": "tactical",
+      "description": "Rapidly advancing pawns toward the opponent's king to open lines and create mating attacks. Often seen when players castle on opposite sides.",
+      "relatedConceptIds": ["kingside-expansion", "opposite-side-castling"],
+      "tags": ["attack", "pawns", "tactical"]
+    },
+    {
+      "id": "bishop-pair",
+      "name": "Bishop Pair",
+      "category": "positional",
+      "description": "Having both bishops when the opponent has traded one or both. The bishop pair is especially powerful in open positions, where the long-range bishops can dominate.",
+      "relatedConceptIds": ["fianchetto", "piece-activity"],
+      "tags": ["bishops", "positional", "advantage"]
+    },
+    {
+      "id": "pin",
+      "name": "Pin",
+      "category": "tactical",
+      "description": "A tactical motif where a piece is immobilised because moving it would expose a more valuable piece behind it to capture. Absolute pins (against the king) prevent the pinned piece from moving at all.",
+      "relatedConceptIds": ["tactical-motif", "piece-activity"],
+      "tags": ["tactical", "pins", "fundamental"]
+    },
+    {
+      "id": "fork",
+      "name": "Fork",
+      "category": "tactical",
+      "description": "A tactic where a single piece attacks two or more enemy pieces simultaneously. Knight forks are especially common and dangerous due to the knight's unique movement.",
+      "relatedConceptIds": ["tactical-motif", "double-attack"],
+      "tags": ["tactical", "knights", "fundamental"]
+    },
+    {
+      "id": "discovered-attack",
+      "name": "Discovered Attack",
+      "category": "tactical",
+      "description": "An attack revealed when a piece moves out of the way of another piece's line of attack. Discovered checks are especially powerful as they give the moving piece a free move.",
+      "relatedConceptIds": ["tactical-motif", "tempo"],
+      "tags": ["tactical", "intermediate", "attack"]
+    },
+    {
+      "id": "rook-activity",
+      "name": "Rook Activity",
+      "category": "positional",
+      "description": "Placing rooks on open or semi-open files, or on the seventh rank, where they exert maximum influence. Active rooks are crucial for converting advantages in the middlegame and endgame.",
+      "relatedConceptIds": ["open-files", "semi-open-file"],
+      "tags": ["rooks", "positional", "endgame"]
+    },
+    {
+      "id": "space-advantage",
+      "name": "Space Advantage",
+      "category": "positional",
+      "description": "Controlling more territory on the board by advancing pawns beyond the fourth rank. A space advantage gives pieces more room to manoeuvre and restricts the opponent's options.",
+      "relatedConceptIds": ["central-control", "pawn-structure"],
+      "tags": ["positional", "strategy", "pawns"]
+    }
+  ]
+}

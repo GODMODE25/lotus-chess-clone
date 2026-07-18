@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Chess, type Move, type Square } from "chess.js";
 import { Chessboard } from "react-chessboard";
-import { Brain, CheckCircle2, RotateCcw, Search, XCircle, Sliders, Activity, Cpu } from "lucide-react";
+import { Brain, CheckCircle2, RotateCcw, Search, XCircle, Sliders, Activity, Cpu, Trophy, Lock, ArrowRight } from "lucide-react";
 import { getStockfishClient, type StockfishEvaluation } from "@/services/stockfish/client";
 import { useBoardSettings } from "@/features/trainer/BoardSettingsContext";
 import { useAuth } from "@/features/auth/AuthContext";
@@ -12,9 +12,18 @@ import { calculateNextReview } from "@/services/learning/mastery";
 import type { OpeningVariation } from "@/types/lotus";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import { playMove, playCorrect, playIncorrect, playComplete } from "@/lib/sounds";
 
 interface OpeningTrainerProps {
   lesson: OpeningVariation;
+  // --- NEW PROPS (progression rework) ---
+  isLineUnlocked?: boolean;
+  onLineComplete?: (result: { masteryXp: number; mistakes: number; score: number }) => void;
+  onNextLine?: () => void;
+  onReplay?: () => void;
+  onBackToLevels?: () => void;
+  hasNextLine?: boolean;
+  nextLineLockReason?: string;
 }
 
 type FeedbackTone = "idle" | "success" | "error" | "info";
@@ -35,18 +44,28 @@ const HIGHLIGHT_CAPTURE = {
   background: "radial-gradient(circle, transparent 50%, rgba(0,240,255,0.3) 50%)",
 };
 
-export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
+export function OpeningTrainer({
+  lesson,
+  isLineUnlocked: _isLineUnlocked,
+  onLineComplete,
+  onNextLine,
+  onReplay,
+  onBackToLevels,
+  hasNextLine,
+  nextLineLockReason,
+}: OpeningTrainerProps) {
   const [currentPly, setCurrentPly] = useState(0);
   const [mistakes, setMistakes] = useState(0);
   const [feedback, setFeedback] = useState<Feedback>({
     tone: "idle",
     title: "Ready",
-    detail: lesson.pgn,
+    detail: lesson.overview,
   });
   const [analysis, setAnalysis] = useState<StockfishEvaluation | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [selectedSquare, setSelectedSquare] = useState<Square | null>(null);
   const [showSettingsPopup, setShowSettingsPopup] = useState(false);
+  const [showCompletion, setShowCompletion] = useState(false);
 
   // Custom Variation States
   const [fen, setFen] = useState(new Chess().fen());
@@ -58,7 +77,7 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
   const [isEngineThinking, setIsEngineThinking] = useState(false);
 
   const { user } = useAuth();
-  const { highlightValidMoves, showNotation, clickToMove, toggleHighlightValidMoves, toggleShowNotation, toggleClickToMove } = useBoardSettings();
+  const { highlightValidMoves, showNotation, fullBoardNotation, clickToMove, toggleHighlightValidMoves, toggleShowNotation, toggleFullBoardNotation, toggleClickToMove } = useBoardSettings();
 
   const game = useMemo(() => new Chess(fen), [fen]);
   const expectedSan = lesson.movesSan[currentPly] ?? null;
@@ -83,7 +102,7 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
     setFeedback({
       tone: "idle",
       title: "Ready",
-      detail: lesson.pgn,
+      detail: lesson.overview,
     });
   }, [lesson]);
 
@@ -205,6 +224,7 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
       }
 
       if (isDeviated) {
+        playMove();
         setFen(trial.fen());
         setPlayedMoves((prev) => [...prev, playedMove!.san]);
         setFeedback({
@@ -217,6 +237,7 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
       }
 
       if (!expectedSan) {
+        playMove();
         setIsDeviated(true);
         setFen(trial.fen());
         setPlayedMoves((prev) => [...prev, playedMove!.san]);
@@ -236,6 +257,7 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
         (expectedMove.promotion ?? "") === (playedMove.promotion ?? "");
 
       if (!isCorrect) {
+        playIncorrect();
         setMistakes(m => m + 1);
         setIsDeviated(true);
         setFen(trial.fen());
@@ -252,6 +274,7 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
       const nextPly = currentPly + 1;
       const isLineComplete = nextPly >= lesson.movesSan.length;
 
+      playCorrect();
       setFen(trial.fen());
       setPlayedMoves((prev) => [...prev, playedMove!.san]);
       setCurrentPly(nextPly);
@@ -259,6 +282,7 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
       setSelectedSquare(null);
 
       if (isLineComplete && user) {
+        playComplete();
         const score = mistakes === 0 ? 5 : mistakes === 1 ? 4 : mistakes <= 3 ? 3 : 2;
         getProgressRecord(user.uid, user.isGuest ?? false, lesson.id)
           .then((previousRecord) => {
@@ -269,6 +293,16 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
              return saveProgressRecord(user.uid, user.isGuest ?? false, record);
           })
           .catch(console.error);
+
+        // Fire the gamification completion callback (preserving existing sound calls above).
+        if (onLineComplete) {
+          onLineComplete({
+            masteryXp: lesson.masteryXp ?? 0,
+            mistakes,
+            score,
+          });
+        }
+        setShowCompletion(true);
       }
 
       setFeedback({
@@ -394,7 +428,7 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
   };
 
   return (
-    <section aria-labelledby="trainer-heading" className="glass-panel rounded-3xl p-8 lg:p-10 corner-accent corner-tl corner-tr corner-bl corner-br scanline shadow-2xl">
+    <section aria-labelledby="trainer-heading" className="glass-panel rounded-3xl p-8 lg:p-10 corner-accent corner-tl corner-tr corner-bl corner-br shadow-2xl">
       <div className="mb-10 flex flex-wrap items-center justify-between gap-6">
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-mono tracking-widest uppercase mb-2">
@@ -429,7 +463,8 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
                     {[
                       { label: "Click-to-Move", active: clickToMove, toggle: toggleClickToMove },
                       { label: "Highlight Targets", active: highlightValidMoves, toggle: toggleHighlightValidMoves },
-                      { label: "Board Notation", active: showNotation, toggle: toggleShowNotation }
+                      { label: "Board Notation", active: showNotation, toggle: toggleShowNotation },
+                      { label: "Full Board Notation", active: fullBoardNotation, toggle: toggleFullBoardNotation }
                     ].map(setting => (
                       <button 
                         key={setting.label}
@@ -483,7 +518,8 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
                 id: "oe-opening-trainer",
                 position: fen,
                 boardOrientation: lesson.side,
-                animationDurationInMs: 200,
+                animationDurationInMs: 0,
+                showAnimations: false,
                 allowDrawingArrows: true,
                 showNotation: showNotation,
                 darkSquareStyle: { backgroundColor: "#15151b" },
@@ -495,6 +531,9 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
                 onSquareClick: handleSquareClick,
               }}
             />
+            {fullBoardNotation && (
+              <FullBoardNotationOverlay orientation={lesson.side} />
+            )}
           </div>
         </div>
 
@@ -505,7 +544,7 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
             feedback.tone === 'error' ? "border-rose-500/20 bg-rose-500/5 text-rose-100" :
             "border-white/10 bg-white/5 text-white/70"
           )} role="status">
-            {feedback.tone === 'idle' && <div className="absolute inset-0 scanline opacity-10 pointer-events-none" />}
+            {feedback.tone === 'idle' && null}
             <div className="mb-2 flex items-center gap-3">
               {feedback.tone === "success" ? (
                 <CheckCircle2 aria-hidden="true" className="size-5 text-emerald-400" />
@@ -537,20 +576,18 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
               {isDeviated ? "Custom_Node_Sequence" : "Standard_Theoretical_Line"}
             </h3>
             <div className="flex flex-wrap gap-2">
-              {(isDeviated ? playedMoves : lesson.movesSan).map((move, index) => (
+              {(isDeviated ? playedMoves : lesson.movesSan.slice(0, currentPly + 1)).map((move, index) => (
                 <span
                   key={`${move}-${index}`}
                   className={cn(
                     "rounded-md border px-3 py-2 font-mono text-[10px] transition-all duration-300",
                     isDeviated || index < currentPly
                       ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400"
-                      : index === currentPly
-                        ? "border-primary/40 bg-primary/10 text-primary shadow-neon"
-                        : "border-white/5 text-white/20"
+                      : "border-primary/40 bg-primary/10 text-primary shadow-neon animate-pulse"
                   )}
                 >
                   {index % 2 === 0 ? `${Math.floor(index / 2) + 1}. ` : ""}
-                  {move}
+                  {isDeviated || index < currentPly ? move : "?"}
                 </span>
               ))}
               {isDeviated && !game.isGameOver() && (
@@ -588,7 +625,124 @@ export function OpeningTrainer({ lesson }: OpeningTrainerProps) {
           )}
         </div>
       </div>
+
+      {/* Completion gamification overlay */}
+      <AnimatePresence>
+        {showCompletion && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ type: "spring", stiffness: 260, damping: 22 }}
+              className="w-full max-w-md rounded-3xl border border-emerald-400/30 bg-[#0b1713]/95 p-8 shadow-2xl text-center"
+            >
+              <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-emerald-400/10 border border-emerald-400/30">
+                <Trophy className="size-8 text-emerald-400" />
+              </div>
+              <h3 className="text-2xl font-heading font-bold text-white uppercase tracking-tight">
+                Line Complete
+              </h3>
+              <p className="mt-1 text-sm text-emerald-300/80 font-mono">
+                {lesson.variation}
+              </p>
+
+              <div className="mt-6 grid grid-cols-3 gap-3">
+                <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
+                  <p className="text-[9px] font-mono uppercase tracking-[0.2em] text-white/30 mb-1">XP</p>
+                  <p className="font-heading text-xl text-amber-300">{lesson.masteryXp ?? 0}</p>
+                </div>
+                <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
+                  <p className="text-[9px] font-mono uppercase tracking-[0.2em] text-white/30 mb-1">Mastery</p>
+                  <p className="font-heading text-xl text-emerald-400">{Math.min(100, mistakes === 0 ? 100 : Math.max(50, 100 - mistakes * 15))}%</p>
+                </div>
+                <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3">
+                  <p className="text-[9px] font-mono uppercase tracking-[0.2em] text-white/30 mb-1">Mistakes</p>
+                  <p className="font-heading text-xl text-rose-400">{mistakes}</p>
+                </div>
+              </div>
+
+              <div className="mt-7 flex flex-col gap-2.5">
+                <button
+                  type="button"
+                  disabled={!hasNextLine}
+                  title={!hasNextLine ? nextLineLockReason : undefined}
+                  onClick={() => {
+                    setShowCompletion(false);
+                    onNextLine?.();
+                  }}
+                  className={cn(
+                    "inline-flex h-12 items-center justify-center gap-2 rounded-xl border px-6 text-sm font-heading font-bold uppercase tracking-widest transition focus:outline-none focus:ring-2 focus:ring-primary",
+                    hasNextLine
+                      ? "border-primary/40 bg-primary/10 text-primary hover:bg-primary/20"
+                      : "border-white/10 bg-white/5 text-white/30 cursor-not-allowed"
+                  )}
+                >
+                  Next Line
+                  <ArrowRight className="size-4" />
+                </button>
+                <div className="flex gap-2.5">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setShowCompletion(false);
+                      resetLesson();
+                      onReplay?.();
+                    }}
+                    className="flex-1 inline-flex h-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-xs font-heading font-bold uppercase tracking-widest text-white/70 transition hover:border-primary/40 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    Replay
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setShowCompletion(false);
+                      onBackToLevels?.();
+                    }}
+                    className="flex-1 inline-flex h-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-xs font-heading font-bold uppercase tracking-widest text-white/70 transition hover:border-primary/40 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+                  >
+                    Back to Levels
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
+  );
+}
+
+/** Renders a subtle coordinate label on every square, respecting board orientation. */
+function FullBoardNotationOverlay({ orientation }: { orientation: "white" | "black" }) {
+  const files = ["a", "b", "c", "d", "e", "f", "g", "h"];
+  const ranks = ["1", "2", "3", "4", "5", "6", "7", "8"];
+
+  const rankOrder = orientation === "white" ? [...ranks].reverse() : [...ranks];
+  const fileOrder = orientation === "white" ? files : [...files].reverse();
+
+  const cells: string[] = [];
+  for (const rank of rankOrder) {
+    for (const file of fileOrder) {
+      cells.push(`${file}${rank}`);
+    }
+  }
+
+  return (
+    <div className="pointer-events-none absolute inset-0 z-10 grid grid-cols-8 grid-rows-8">
+      {cells.map((coord) => (
+        <div key={coord} className="relative">
+          <span className="absolute left-1 top-0.5 text-[9px] font-mono leading-none text-white/30 select-none">
+            {coord}
+          </span>
+        </div>
+      ))}
+    </div>
   );
 }
 

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "@/features/auth/AuthContext";
 import { useRouter } from "next/navigation";
-import { Mail, Lock, User, Sparkles, AlertCircle, Cpu, Shield, Activity, Hexagon } from "lucide-react";
+import { Mail, Lock, User, Sparkles, AlertCircle, Cpu, Shield, Activity, Hexagon, RefreshCw } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -33,8 +33,7 @@ export default function AuthPage() {
     }
   }, [user, loading, router]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const runAuthAction = async () => {
     setLocalError(null);
     setSubmitLoading(true);
 
@@ -51,9 +50,23 @@ export default function AuthPage() {
         signInAsGuest(guestName);
       }
     } catch (err: any) {
-      setLocalError(err.message || "An authentication error occurred.");
+      setLocalError(err?.message || "An authentication error occurred.");
     } finally {
       setSubmitLoading(false);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    await runAuthAction();
+  };
+
+  const handleGoogleSignIn = async () => {
+    setLocalError(null);
+    try {
+      await signInWithGoogle();
+    } catch {
+      // Error surfaced via AuthContext `error`; nothing else to do here.
     }
   };
 
@@ -206,13 +219,24 @@ export default function AuthPage() {
                   )}
 
                   {activeError && (
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="flex items-start gap-3 text-rose-400 text-[10px] font-mono font-bold bg-rose-400/5 border border-rose-400/20 p-4 rounded-xl"
+                      className="flex flex-col gap-3 text-rose-400 text-[10px] font-mono font-bold bg-rose-400/5 border border-rose-400/20 p-4 rounded-xl"
                     >
-                      <AlertCircle className="size-4 shrink-0 mt-0.5" />
-                      <span className="leading-relaxed tracking-wider uppercase">{activeError}</span>
+                      <div className="flex items-start gap-3">
+                        <AlertCircle className="size-4 shrink-0 mt-0.5" />
+                        <span className="leading-relaxed tracking-wider uppercase">{activeError}</span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={runAuthAction}
+                        disabled={submitLoading}
+                        className="self-start flex items-center gap-2 rounded-lg border border-rose-400/30 bg-rose-400/10 px-3 py-2 text-[9px] uppercase tracking-widest text-rose-200 hover:bg-rose-400/20 transition-all disabled:opacity-50"
+                      >
+                        <RefreshCw className={cn("size-3", submitLoading && "animate-spin")} />
+                        Retry
+                      </button>
                     </motion.div>
                   )}
 
@@ -251,7 +275,7 @@ export default function AuthPage() {
                 </div>
 
                 <button
-                  onClick={signInWithGoogle}
+                  onClick={handleGoogleSignIn}
                   className="w-full py-4 rounded-xl border border-white/5 bg-white/[0.01] hover:bg-white/[0.04] text-[9px] font-mono font-bold tracking-[0.2em] flex items-center justify-center gap-3 transition-all group text-white/50 hover:text-white/80"
                 >
                   <svg className="size-4 opacity-70 group-hover:opacity-100 transition-opacity" viewBox="0 0 24 24">

@@ -1,0 +1,166 @@
+{
+  "openingId": "italian-game",
+  "tier": "Intermediate",
+  "lines": [
+    {
+      "id": "italian-intermediate-pianissimo-d4-break",
+      "parentVariation": "Giuoco Pianissimo",
+      "openingFamily": "Italian Game",
+      "variationName": "Giuoco Pianissimo d4 Central Break",
+      "aliases": [],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.d3 Nf6 5.O-O O-O 6.c3 d6 7.Re1 a6 8.Bb3 Ba7 9.d4",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "d3", "Nf6", "O-O", "O-O", "c3", "d6", "Re1", "a6", "Bb3", "Ba7", "d4"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "d2d3", "g8f6", "e1g1", "e8g8", "c2c3", "d7d6", "f1e1", "a7a6", "c4b3", "c5a7", "d3d4"],
+      "startingFen": "r1bq1rk1/bpp2ppp/p1np1n2/4p3/3PP3/1BP2N2/PP3PPP/RNBQR1K1 b - - 0 9",
+      "moveDepth": 17,
+      "difficulty": 3,
+      "popularity": 5,
+      "prerequisites": ["italian-novice-pianissimo-c3"],
+      "continuationIds": [],
+      "conceptIds": ["central-control", "pawn-structure", "initiative", "space-advantage"],
+      "strategicIdeas": [
+        "The d4 break is the culmination of the Giuoco Pianissimo preparation.",
+        "White achieves the ideal e4+d4 centre with full piece support.",
+        "The bishop on b3 maintains its powerful diagonal despite Black's ...a6 expansion."
+      ],
+      "tacticalMotifs": ["discovered-attack"],
+      "commonMistakes": [
+        "Playing d4 without Bb3, leaving the bishop exposed to ...Na5",
+        "Delaying d4 too long, allowing Black to equalise with ...d5"
+      ],
+      "explanation": "This line shows the full Giuoco Pianissimo plan from start to finish. After patient preparation with c3, Re1, and Bb3, White finally strikes with d4. The resulting position with e4+d4 gives White a classical space advantage. This teaches the principle of preparing a central break thoroughly before executing it.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 40
+    },
+    {
+      "id": "italian-intermediate-giuoco-piano-bb4",
+      "parentVariation": "Giuoco Piano",
+      "openingFamily": "Italian Game",
+      "variationName": "Giuoco Piano Bb4+ Bd2 Main Line",
+      "aliases": ["Giuoco Piano Centre Attack"],
+      "eco": "C53",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.c3 Nf6 5.d4 exd4 6.cxd4 Bb4+ 7.Bd2 Bxd2+ 8.Nbxd2 d5 9.exd5 Nxd5 10.O-O",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "cxd4", "Bb4+", "Bd2", "Bxd2+", "Nbxd2", "d5", "exd5", "Nxd5", "O-O"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "c2c3", "g8f6", "d2d4", "e5d4", "c3d4", "c5b4", "c1d2", "b4d2", "b1d2", "d7d5", "e4d5", "f6d5", "e1g1"],
+      "startingFen": "r1bqk2r/ppp2ppp/2n5/3n4/2BP4/5N2/PP1N1PPP/R2Q1RK1 b kq - 1 10",
+      "moveDepth": 19,
+      "difficulty": 3,
+      "popularity": 5,
+      "prerequisites": ["italian-novice-giuoco-piano-d5-counter"],
+      "continuationIds": [],
+      "conceptIds": ["isolated-queens-pawn", "central-control", "piece-activity", "initiative"],
+      "strategicIdeas": [
+        "After the bishop exchange, White has an IQP (isolated d4 pawn).",
+        "The IQP gives White active piece play and control of the e5 outpost.",
+        "White should play actively before the endgame, where the IQP can become a weakness."
+      ],
+      "tacticalMotifs": ["fork", "pin"],
+      "commonMistakes": [
+        "White playing passively with the IQP instead of using piece activity",
+        "Black failing to challenge the d4 pawn and allowing White free attacking chances"
+      ],
+      "explanation": "This is the main line of the Giuoco Piano, leading to an isolated queen's pawn position. White has active piece play and attacking chances, while Black aims to blockade the d4 pawn and transition to a favourable endgame. Understanding IQP positions is crucial for chess improvement — this line provides an excellent laboratory.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 3.5,
+      "masteryXp": 40
+    },
+    {
+      "id": "italian-intermediate-two-knights-nxd4",
+      "parentVariation": "Two Knights Defence",
+      "openingFamily": "Italian Game",
+      "variationName": "Two Knights d4 Nxd4 Recapture",
+      "aliases": [],
+      "eco": "C55",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.d4 exd4 5.O-O Nxe4 6.Re1 d5 7.Bxd5 Qxd5 8.Nc3",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "d4", "exd4", "O-O", "Nxe4", "Re1", "d5", "Bxd5", "Qxd5", "Nc3"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "g8f6", "d2d4", "e5d4", "e1g1", "f6e4", "f1e1", "d7d5", "c4d5", "d8d5", "b1c3"],
+      "startingFen": "r1b1kb1r/ppp2ppp/2n5/3q4/3pn3/2N2N2/PPP2PPP/R1BQR1K1 b kq - 2 8",
+      "moveDepth": 15,
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": ["italian-novice-two-knights-d4"],
+      "continuationIds": [],
+      "conceptIds": ["initiative", "development", "tempo", "piece-activity"],
+      "strategicIdeas": [
+        "White sacrifices the e4 pawn to gain rapid development with Re1 and Nc3.",
+        "Black's queen on d5 will be harassed by Nc3, gaining another tempo.",
+        "White has a significant development lead that must be converted into concrete threats."
+      ],
+      "tacticalMotifs": ["fork", "discovered-attack", "tempo"],
+      "commonMistakes": [
+        "Black holding onto the e4 pawn with ...d5 too late",
+        "White failing to play Re1 to exploit the pin on the e-file"
+      ],
+      "explanation": "This sharp gambit line shows how a development advantage can compensate for material. White's lead in development after Nc3 harassing the queen is enormous. Black must play precisely to survive. This teaches the critical concept that time (tempi) can outweigh material in open positions.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 40
+    },
+    {
+      "id": "italian-intermediate-four-knights",
+      "parentVariation": "Italian Four Knights",
+      "openingFamily": "Italian Game",
+      "variationName": "Italian Four Knights Variation",
+      "aliases": ["Italian Four Knights Game"],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.Nc3 Nf6 5.d3 d6 6.O-O O-O",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "Nc3", "Nf6", "d3", "d6", "O-O", "O-O"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "b1c3", "g8f6", "d2d3", "d7d6", "e1g1", "e8g8"],
+      "startingFen": "r1bq1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 w - - 0 7",
+      "moveDepth": 12,
+      "difficulty": 3,
+      "popularity": 3,
+      "prerequisites": ["italian-beginner-giuoco-pianissimo-nc3"],
+      "continuationIds": [],
+      "conceptIds": ["development", "central-control", "piece-activity", "pawn-structure"],
+      "strategicIdeas": [
+        "A symmetrical position where both sides have developed all minor pieces.",
+        "White's advantage lies in having the first move — the initiative to create threats.",
+        "Plans include Bg5 (pinning the knight), Na4 (targeting Bc5), or Be3 (challenging the bishop)."
+      ],
+      "tacticalMotifs": ["pin"],
+      "commonMistakes": [
+        "Playing Nc3 early blocks the c-pawn, making c3+d4 impossible",
+        "Treating the symmetrical position as drawn — White has real winning chances"
+      ],
+      "explanation": "The Italian Four Knights is a natural but committal setup. By playing Nc3 early, White blocks the c-pawn and must find other plans. The symmetry is deceptive — White can still create problems with Bg5, Na4, or a well-timed d4 break. This teaches that symmetrical positions are not necessarily equal.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 2.5,
+      "masteryXp": 40
+    },
+    {
+      "id": "italian-intermediate-giuoco-piano-d5-equaliser",
+      "parentVariation": "Giuoco Piano",
+      "openingFamily": "Italian Game",
+      "variationName": "Giuoco Piano Black's ...d5 Equaliser",
+      "aliases": [],
+      "eco": "C53",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.c3 Nf6 5.d4 exd4 6.cxd4 Bb4+ 7.Bd2 Nxe4 8.Bxb4 Nxb4 9.Bxf7+ Kxf7 10.Qb3+ d5 11.Qxb4 Re8",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "cxd4", "Bb4+", "Bd2", "Nxe4", "Bxb4", "Nxb4", "Bxf7+", "Kxf7", "Qb3+", "d5", "Qxb4", "Re8"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "c2c3", "g8f6", "d2d4", "e5d4", "c3d4", "c5b4", "c1d2", "f6e4", "d2b4", "b8b4", "c4f7", "e8f7", "d1b3", "d7d5", "b3b4", "h8e8"],
+      "startingFen": "r1bqr3/ppp2kpp/8/3p4/1Q1Pn3/5N2/PP3PPP/RN2K2R w KQ - 1 12",
+      "moveDepth": 19,
+      "difficulty": 3,
+      "popularity": 3,
+      "prerequisites": ["italian-novice-giuoco-piano-d5-counter"],
+      "continuationIds": [],
+      "conceptIds": ["initiative", "king-safety", "tempo", "piece-activity"],
+      "strategicIdeas": [
+        "Black plays the aggressive 7...Nxe4 instead of the safe 7...Bxd2+.",
+        "White sacrifices the bishop on f7 to expose Black's king.",
+        "Qb3+ creates a double attack on b4 and forces Black's king to a vulnerable square."
+      ],
+      "tacticalMotifs": ["fork", "discovered-attack", "pin"],
+      "commonMistakes": [
+        "Black capturing on e4 without being prepared for the Bxf7+ sacrifice",
+        "White missing the Bxf7+ tactic and allowing Black to consolidate"
+      ],
+      "explanation": "This sharp tactical sequence demonstrates the dangers of the Giuoco Piano for Black if the timing of ...Nxe4 is wrong. The Bxf7+ sacrifice exposes Black's king and Qb3+ creates a devastating double attack. This line teaches pattern recognition — the bishop sacrifice on f7 is one of the most important tactical themes in chess.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 40
+    }
+  ]
+}

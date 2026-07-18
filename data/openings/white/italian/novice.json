@@ -1,0 +1,259 @@
+{
+  "openingId": "italian-game",
+  "tier": "Novice",
+  "lines": [
+    {
+      "id": "italian-novice-pianissimo-c3",
+      "parentVariation": "Giuoco Pianissimo",
+      "openingFamily": "Italian Game",
+      "variationName": "Giuoco Pianissimo c3 Preparation",
+      "aliases": [],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.d3 Nf6 5.O-O O-O 6.c3 d6 7.Re1",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "d3", "Nf6", "O-O", "O-O", "c3", "d6", "Re1"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "d2d3", "g8f6", "e1g1", "e8g8", "c2c3", "d7d6", "f1e1"],
+      "startingFen": "r1bq1rk1/ppp2ppp/2np1n2/2b1p3/2B1P3/2PP1N2/PP3PPP/RNBQR1K1 b - - 1 7",
+      "moveDepth": 13,
+      "difficulty": 2,
+      "popularity": 5,
+      "prerequisites": ["italian-beginner-pianissimo-o-o-o-o"],
+      "continuationIds": ["italian-intermediate-pianissimo-d4-break"],
+      "conceptIds": ["central-control", "development", "rook-activity", "pawn-structure"],
+      "strategicIdeas": [
+        "c3 prepares the d3-d4 central break, the key idea in the Giuoco Pianissimo.",
+        "Re1 supports the e4 pawn before advancing in the centre.",
+        "White builds a solid foundation before committing to d4."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Playing d4 before Re1, leaving the e4 pawn undefended after exchanges",
+        "Forgetting to play c3 and trying d4 directly, which loses a tempo after cxd4"
+      ],
+      "explanation": "The c3 + Re1 setup is the classic way to prepare d3-d4 in the Giuoco Pianissimo. By supporting e4 with the rook and preparing the d-pawn advance with c3, White ensures the centre opens under favourable conditions. This patient approach teaches the value of preparation before action.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 2.5,
+      "masteryXp": 20
+    },
+    {
+      "id": "italian-novice-two-knights-d4",
+      "parentVariation": "Two Knights Defence",
+      "openingFamily": "Italian Game",
+      "variationName": "Two Knights with d4",
+      "aliases": [],
+      "eco": "C55",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.d4 exd4 5.O-O",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "d4", "exd4", "O-O"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "g8f6", "d2d4", "e5d4", "e1g1"],
+      "startingFen": "r1bqkb1r/pppp1ppp/2n2n2/8/2BpP3/5N2/PPP2PPP/RNBQ1RK1 b kq - 1 5",
+      "moveDepth": 9,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": ["italian-beginner-two-knights-intro"],
+      "continuationIds": ["italian-intermediate-two-knights-nxd4"],
+      "conceptIds": ["central-control", "initiative", "development", "tempo"],
+      "strategicIdeas": [
+        "White sacrifices the d4 pawn temporarily to gain rapid development.",
+        "O-O before recapturing gives White a lead in development.",
+        "White aims to exploit the open centre with active piece play."
+      ],
+      "tacticalMotifs": ["discovered-attack"],
+      "commonMistakes": [
+        "Recapturing on d4 immediately with Nxd4 instead of castling first",
+        "Allowing Black to consolidate with ...d5 without creating counterplay"
+      ],
+      "explanation": "After 3...Nf6 4.d4, White opens the centre immediately. The key idea is to castle first (5.O-O) rather than recapture on d4 — this gambit approach leads to dynamic, active play where White's lead in development compensates for the pawn. This is an important attacking concept for developing players.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 20
+    },
+    {
+      "id": "italian-novice-giuoco-piano-c3-nf6",
+      "parentVariation": "Giuoco Piano",
+      "openingFamily": "Italian Game",
+      "variationName": "Giuoco Piano 4.c3 Nf6",
+      "aliases": [],
+      "eco": "C53",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.c3 Nf6 5.d4 exd4 6.cxd4",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "cxd4"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "c2c3", "g8f6", "d2d4", "e5d4", "c3d4"],
+      "startingFen": "r1bqk2r/pppp1ppp/2n2n2/2b5/2BPP3/5N2/PP3PPP/RNBQK2R b KQkq - 0 6",
+      "moveDepth": 11,
+      "difficulty": 2,
+      "popularity": 5,
+      "prerequisites": ["italian-beginner-giuoco-pianissimo-main"],
+      "continuationIds": ["italian-intermediate-giuoco-piano-bb4"],
+      "conceptIds": ["central-control", "pawn-structure", "initiative", "space-advantage"],
+      "strategicIdeas": [
+        "White plays c3 to prepare d4 with a strong centre.",
+        "After d4 exd4 cxd4, White has a powerful pawn duo on d4 and e4.",
+        "The open c-file and central majority give White active play."
+      ],
+      "tacticalMotifs": ["pin", "fork"],
+      "commonMistakes": [
+        "Black capturing cxd4 without considering the strong centre White obtains",
+        "White playing d4 without c3 preparation"
+      ],
+      "explanation": "The Giuoco Piano with 4.c3 is the classical approach to gaining a strong centre. After 4.c3 Nf6 5.d4 exd4 6.cxd4, White has an ideal pawn centre on d4+e4 and active pieces. This central dominance is a key concept in chess — Black must find a way to challenge it or face a space disadvantage.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 2.5,
+      "masteryXp": 20
+    },
+    {
+      "id": "italian-novice-bc5-d6-simple",
+      "parentVariation": "Giuoco Pianissimo",
+      "openingFamily": "Italian Game",
+      "variationName": "Giuoco Pianissimo with ...a6",
+      "aliases": [],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.d3 Nf6 5.O-O d6 6.Re1 a6",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "d3", "Nf6", "O-O", "d6", "Re1", "a6"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "d2d3", "g8f6", "e1g1", "d7d6", "f1e1", "a7a6"],
+      "startingFen": "r1bqk2r/1pp2ppp/p1np1n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQR1K1 w kq - 0 7",
+      "moveDepth": 12,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": ["italian-beginner-giuoco-pianissimo-main"],
+      "continuationIds": [],
+      "conceptIds": ["development", "pawn-structure", "king-safety"],
+      "strategicIdeas": [
+        "Black prepares ...b5 to challenge the c4 bishop.",
+        "White should respond with a4 or Bb3 to maintain the bishop's diagonal.",
+        "Understanding prophylaxis — Black's a6 prepares a future plan."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "White ignoring ...a6 and ...b5, losing the strong c4 diagonal",
+        "Black playing ...b5 too early before completing development"
+      ],
+      "explanation": "Black's ...a6 is a common prophylactic move preparing ...b5 to drive White's bishop from c4. White should understand this plan and either retreat the bishop to b3 (keeping the diagonal) or play a4 to prevent the expansion. This teaches the concept of prophylaxis — anticipating and preventing the opponent's plans.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 20
+    },
+    {
+      "id": "italian-novice-two-knights-d3-quiet",
+      "parentVariation": "Two Knights Defence",
+      "openingFamily": "Italian Game",
+      "variationName": "Two Knights Quiet with d3",
+      "aliases": [],
+      "eco": "C55",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Nf6 4.d3 Be7 5.O-O O-O 6.Re1",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "d3", "Be7", "O-O", "O-O", "Re1"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "g8f6", "d2d3", "f8e7", "e1g1", "e8g8", "f1e1"],
+      "startingFen": "r1bq1rk1/ppppbppp/2n2n2/4p3/2B1P3/3P1N2/PPP2PPP/RNBQR1K1 b - - 3 6",
+      "moveDepth": 11,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": ["italian-beginner-two-knights-intro"],
+      "continuationIds": [],
+      "conceptIds": ["development", "castling", "king-safety", "rook-activity"],
+      "strategicIdeas": [
+        "White chooses the quiet d3 approach against the Two Knights.",
+        "This avoids the sharp complications of 4.d4 or 4.Ng5.",
+        "The resulting position is similar to the Giuoco Pianissimo but with Be7 instead of Bc5."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Playing d3 against every Two Knights position without understanding when d4 is better"
+      ],
+      "explanation": "Against 3...Nf6, White can choose the calm 4.d3 approach, which mirrors the Giuoco Pianissimo strategy. Black typically plays ...Be7 (since ...Bc5 transposes) and both sides castle. This quiet approach is excellent for beginners who want a reliable, low-theory system against the Two Knights Defence.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 20
+    },
+    {
+      "id": "italian-novice-pianissimo-bg5",
+      "parentVariation": "Giuoco Pianissimo",
+      "openingFamily": "Italian Game",
+      "variationName": "Giuoco Pianissimo with Bg5 Pin",
+      "aliases": [],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.d3 Nf6 5.O-O d6 6.Bg5",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "d3", "Nf6", "O-O", "d6", "Bg5"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "d2d3", "g8f6", "e1g1", "d7d6", "c1g5"],
+      "startingFen": "r1bqk2r/ppp2ppp/2np1n2/2b1p1B1/2B1P3/3P1N2/PPP2PPP/RN1Q1RK1 b kq - 1 6",
+      "moveDepth": 11,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": ["italian-beginner-giuoco-pianissimo-main"],
+      "continuationIds": [],
+      "conceptIds": ["pin", "piece-activity", "development"],
+      "strategicIdeas": [
+        "Bg5 pins the f6 knight against the queen, potentially doubling Black's pawns after Bxf6.",
+        "This is an alternative to the c3 plan — White creates immediate tension.",
+        "Black must decide how to break the pin: h6, Be7, or O-O."
+      ],
+      "tacticalMotifs": ["pin"],
+      "commonMistakes": [
+        "Black ignoring the pin and playing h6 too hastily without considering Bh4"
+      ],
+      "explanation": "The Bg5 pin is a common theme in e4 openings. By pinning the f6 knight, White creates the threat of doubling Black's pawns with Bxf6. Black can respond with ...h6 (asking the bishop to declare its intentions), ...Be7, or simply castling. This line teaches the fundamental tactical concept of the pin.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 20
+    },
+    {
+      "id": "italian-novice-giuoco-piano-d5-counter",
+      "parentVariation": "Giuoco Piano",
+      "openingFamily": "Italian Game",
+      "variationName": "Giuoco Piano Black's ...d5 Counter",
+      "aliases": [],
+      "eco": "C53",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.c3 Nf6 5.d4 exd4 6.cxd4 Bb4+ 7.Bd2",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "c3", "Nf6", "d4", "exd4", "cxd4", "Bb4+", "Bd2"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "c2c3", "g8f6", "d2d4", "e5d4", "c3d4", "c5b4", "c1d2"],
+      "startingFen": "r1bqk2r/pppp1ppp/2n2n2/8/1bBPP3/5N2/PP1B1PPP/RN1QK2R b KQkq - 2 7",
+      "moveDepth": 13,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": ["italian-novice-giuoco-piano-c3-nf6"],
+      "continuationIds": ["italian-intermediate-giuoco-piano-bb4"],
+      "conceptIds": ["central-control", "initiative", "development", "tempo"],
+      "strategicIdeas": [
+        "After 6...Bb4+, Black disrupts White's development with a check.",
+        "7.Bd2 is the main reply, blocking the check and developing the bishop.",
+        "White maintains the strong d4+e4 centre despite the temporary inconvenience."
+      ],
+      "tacticalMotifs": ["pin"],
+      "commonMistakes": [
+        "White blocking with 7.Nc3 which allows ...Nxe4 tactics",
+        "White playing 7.Kf1 losing castling rights unnecessarily"
+      ],
+      "explanation": "Black's 6...Bb4+ is the most testing reply to the Giuoco Piano d4 centre. White's best response is 7.Bd2, after which Black must decide whether to trade bishops or retreat. This line teaches how to handle checks pragmatically — developing a piece while blocking.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 2.5,
+      "masteryXp": 20
+    },
+    {
+      "id": "italian-novice-pianissimo-nbd2",
+      "parentVariation": "Giuoco Pianissimo",
+      "openingFamily": "Italian Game",
+      "variationName": "Giuoco Pianissimo Nbd2 Manoeuvre",
+      "aliases": [],
+      "eco": "C50",
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bc4 Bc5 4.d3 Nf6 5.O-O O-O 6.Nbd2",
+      "sanMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4", "Bc5", "d3", "Nf6", "O-O", "O-O", "Nbd2"],
+      "uciMoves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1c4", "f8c5", "d2d3", "g8f6", "e1g1", "e8g8", "b1d2"],
+      "startingFen": "r1bq1rk1/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPPN1PPP/R1BQ1RK1 b - - 5 6",
+      "moveDepth": 11,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": ["italian-beginner-pianissimo-o-o-o-o"],
+      "continuationIds": [],
+      "conceptIds": ["development", "piece-activity", "central-control"],
+      "strategicIdeas": [
+        "Nbd2 prepares the knight manoeuvre Nf1-Ng3 (or Ne3), improving the knight.",
+        "This keeps the c-pawn free for a future c3 + d4 plan.",
+        "The knight route Nbd2-Nf1-Ng3 is a classic theme in the Italian."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Not understanding the purpose of Nbd2 — it appears passive but prepares a strong knight transfer"
+      ],
+      "explanation": "The Nbd2 manoeuvre is a hallmark of the modern Giuoco Pianissimo. The knight travels Nb1-d2-f1-g3 (or e3), reaching a powerful square where it eyes f5 and h5. This patient approach is used by top grandmasters and teaches the concept of piece improvement through multi-move plans.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 20
+    }
+  ]
+}

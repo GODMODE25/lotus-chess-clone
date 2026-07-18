@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "trap.schema.json",
+  "title": "Chess Traps Database",
+  "description": "Schema for the shared traps database (traps.json).",
+  "type": "object",
+  "required": ["traps"],
+  "properties": {
+    "traps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "openingId", "description", "sanMoves", "uciMoves", "resultingFen", "refutation", "warningLabel"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$",
+            "description": "Unique kebab-case trap identifier."
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Human-readable trap name."
+          },
+          "openingId": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$",
+            "description": "The opening this trap belongs to."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 20,
+            "description": "Teaching description of the trap and why it works."
+          },
+          "sanMoves": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1,
+            "description": "SAN moves leading into the trap."
+          },
+          "uciMoves": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-h][1-8][a-h][1-8][qrbn]?$"
+            },
+            "minItems": 1,
+            "description": "UCI moves leading into the trap."
+          },
+          "resultingFen": {
+            "type": "string",
+            "description": "FEN after the trap sequence is played."
+          },
+          "refutation": {
+            "type": "string",
+            "minLength": 10,
+            "description": "How to punish or avoid the trap."
+          },
+          "warningLabel": {
+            "type": "string",
+            "enum": ["beginner-trap", "common-mistake", "tactical-refutation", "positional-trap"],
+            "description": "Category label for the trap."
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["minor", "moderate", "critical"],
+            "default": "moderate",
+            "description": "How damaging this trap is if fallen into."
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "default": [],
+            "description": "Searchable tags."
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

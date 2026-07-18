@@ -1,0 +1,140 @@
+{
+  "id": "italian-game",
+  "name": "Italian Game",
+  "slug": "italian-game",
+  "ecoRange": "C50–C59",
+  "family": "King Pawn",
+  "colour": "white",
+  "popularity": 5,
+  "difficulty": 2,
+  "description": "The Italian Game begins with 1.e4 e5 2.Nf3 Nc6 3.Bc4, developing the bishop to an active diagonal targeting f7. It is one of the oldest and most natural openings in chess, emphasising rapid development and early tactical pressure.",
+  "strategicOverview": "White's strategy revolves around quick kingside development, control of the centre with d2-d4 or d2-d3 depending on the variation, and pressure on the f7 pawn — the weakest point in Black's initial position. The Italian Game leads to both quiet positional play (Giuoco Pianissimo with d3) and sharp tactical battles (Giuoco Piano with d4, Evans Gambit, and the Fried Liver Attack against the Two Knights). Understanding the transition from the Italian setup to a favourable middlegame requires mastery of central pawn breaks, bishop activity along the a2–g8 diagonal, and proper timing of castling. The opening teaches fundamentals that transfer to many other e4 openings.",
+  "typicalPawnStructures": [
+    "Open Italian (e4 vs e5 with d4 exchange)",
+    "Giuoco Pianissimo (e4 d3 vs e5 d6)",
+    "Italian Four Knights (symmetrical centre)",
+    "Evans Gambit accepted (b4 sacrifice structure)",
+    "Isolated queen's pawn after d4 exchanges"
+  ],
+  "commonTacticalThemes": [
+    "f7 pressure (Bc4 + Qb3 battery)",
+    "Central pawn break with d2-d4",
+    "Pin on the f-file after castling",
+    "Knight sacrifice on f7 (Fried Liver)",
+    "Discovered attacks after pawn exchanges in the centre",
+    "Bishop pair advantage in open positions"
+  ],
+  "modelPlayers": [
+    "Giuoco Piano: Anish Giri, Wesley So",
+    "Evans Gambit: Garry Kasparov, Mikhail Chigorin",
+    "Fried Liver: Paul Morphy (historical)",
+    "Modern Italian: Fabiano Caruana, Maxime Vachier-Lagrave"
+  ],
+  "recommendedStudyOrder": [
+    "italian-game",
+    "ruy-lopez",
+    "scotch-game",
+    "vienna-game"
+  ],
+  "baseMoves": ["e4", "e5", "Nf3", "Nc6", "Bc4"],
+  "masteryLevels": [
+    {
+      "level": 1,
+      "tier": "Beginner",
+      "objectives": [
+        "Learn the opening moves 1.e4 e5 2.Nf3 Nc6 3.Bc4",
+        "Understand why Bc4 targets f7",
+        "Learn the Giuoco Pianissimo (d3) setup"
+      ],
+      "expectedKnowledge": "Knows the starting moves and the basic idea of developing the bishop to c4. Can play a Giuoco Pianissimo setup with d3, O-O, and natural piece development.",
+      "averageMoveDepth": 8,
+      "averageLineCount": 5,
+      "xpReward": 50,
+      "graduationRequirements": "Complete all beginner lines with fewer than 2 mistakes on average."
+    },
+    {
+      "level": 2,
+      "tier": "Novice",
+      "objectives": [
+        "Learn Black's main replies: 3...Bc5 and 3...Nf6",
+        "Understand the difference between Giuoco Piano and Two Knights Defence",
+        "Learn basic responses to 3...Bc5 4.d3"
+      ],
+      "expectedKnowledge": "Recognises whether Black plays Bc5 or Nf6 and understands the strategic difference. Can navigate the quiet Giuoco Pianissimo through move 10.",
+      "averageMoveDepth": 10,
+      "averageLineCount": 8,
+      "xpReward": 100,
+      "graduationRequirements": "Complete all novice lines with an accuracy rate of 70% or higher."
+    },
+    {
+      "level": 3,
+      "tier": "Intermediate",
+      "objectives": [
+        "Learn the main line Giuoco Piano with 4.c3 and 5.d4",
+        "Understand central pawn tension and when to capture",
+        "Study the Italian Four Knights variation"
+      ],
+      "expectedKnowledge": "Can play the Giuoco Piano main line through the critical d4 break. Understands piece placement in the resulting open positions and recognises key pawn structures.",
+      "averageMoveDepth": 12,
+      "averageLineCount": 10,
+      "xpReward": 200,
+      "graduationRequirements": "Complete all intermediate lines with an accuracy rate of 75% or higher."
+    },
+    {
+      "level": 4,
+      "tier": "Advanced",
+      "objectives": [
+        "Study the Fried Liver Attack (Nxf7 sacrifice)",
+        "Learn the Polerio Defence and Traxler Counterattack",
+        "Understand sharp tactical themes in the Two Knights"
+      ],
+      "expectedKnowledge": "Can execute the Fried Liver Attack and knows Black's best defences. Understands the Traxler Counterattack and how to handle it. Comfortable with sharp tactical positions.",
+      "averageMoveDepth": 14,
+      "averageLineCount": 12,
+      "xpReward": 350,
+      "graduationRequirements": "Complete all advanced lines with an accuracy rate of 80% or higher."
+    },
+    {
+      "level": 5,
+      "tier": "Expert",
+      "objectives": [
+        "Study the Evans Gambit (4.b4) — accepted and declined",
+        "Learn the Möller Attack",
+        "Understand pawn sacrifice compensation"
+      ],
+      "expectedKnowledge": "Can play the Evans Gambit in both accepted and declined lines. Understands the strategic compensation for the sacrificed pawn and knows the key attacking plans.",
+      "averageMoveDepth": 16,
+      "averageLineCount": 12,
+      "xpReward": 500,
+      "graduationRequirements": "Complete all expert lines with an accuracy rate of 80% or higher."
+    },
+    {
+      "level": 6,
+      "tier": "Master",
+      "objectives": [
+        "Study deep Giuoco Piano theory with early a4 and Re1 plans",
+        "Learn modern grandmaster treatments",
+        "Study the Hungarian Defence and unusual Black tries"
+      ],
+      "expectedKnowledge": "Knows the modern grandmaster approach to the Italian with slow a2-a4 plans. Can handle unusual Black defences and understands subtle move-order nuances in the main lines.",
+      "averageMoveDepth": 18,
+      "averageLineCount": 10,
+      "xpReward": 750,
+      "graduationRequirements": "Complete all master lines with an accuracy rate of 85% or higher."
+    },
+    {
+      "level": 7,
+      "tier": "Legend",
+      "objectives": [
+        "Study transpositions between Italian and related openings",
+        "Master rare sidelines and move-order subtleties",
+        "Study deep theoretical endgame positions arising from the Italian"
+      ],
+      "expectedKnowledge": "Has comprehensive knowledge of the Italian Game at the highest level. Can handle any deviation, knows transposition possibilities, and understands the resulting endgames from main line theory.",
+      "averageMoveDepth": 22,
+      "averageLineCount": 10,
+      "xpReward": 1000,
+      "graduationRequirements": "Complete all legend lines with an accuracy rate of 90% or higher."
+    }
+  ]
+}

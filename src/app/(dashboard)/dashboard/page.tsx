@@ -74,9 +74,9 @@ export default function DashboardPage() {
       </section>
 
       {/* Main Grid: Metrics & Ranks */}
-      <div className="grid gap-8 lg:grid-cols-3">
-        {/* Left Column: Progress Metrics (spans 2 cols on lg) */}
-        <div className="lg:col-span-2 space-y-6">
+      <div className="grid gap-8">
+        {/* Single Column: Progress Metrics, Account Rank, Review Queue */}
+        <div className="space-y-6">
           <div className="rounded-xl border border-white/5 bg-[#0b1713]/40 p-6 md:p-8 backdrop-blur-sm shadow-md">
             <div className="mb-6">
               <h2 className="text-xs font-bold text-emerald-400/90 uppercase tracking-[0.15em]">
@@ -86,66 +86,66 @@ export default function DashboardPage() {
             </div>
             <ProgressDashboard snapshot={snapshot} />
           </div>
-          
+
+          {/* Account Rank (vertical panel above Adaptive Review Queue) */}
+          <aside className="rounded-xl border border-white/5 bg-[#101416]/40 p-6 md:p-8 backdrop-blur-sm shadow-md flex flex-col justify-between">
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-xs font-bold text-amber-400 uppercase tracking-[0.15em]">
+                  Account Rank
+                </h2>
+                <div className="mt-3 flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-3xl font-extrabold text-white tracking-tight">
+                      {snapshot.currentRank}
+                    </p>
+                    <p className="mt-1 text-sm text-slate-400 font-medium">
+                      {snapshot.accuracy}% Accuracy Rate
+                    </p>
+                  </div>
+                  <div className="flex size-14 items-center justify-center rounded-xl border border-amber-300/20 bg-amber-300/10 text-amber-300 shadow-md">
+                    <Crown className="size-7 animate-bounce" style={{ animationDuration: "3s" }} />
+                  </div>
+                </div>
+              </div>
+
+              <div className="divide-y divide-white/5 border-t border-b border-white/5">
+                <div className="flex justify-between py-4 text-sm font-medium">
+                  <span className="text-slate-400 flex items-center gap-2">
+                    <BookOpen className="size-4 text-slate-500" />
+                    Lessons Completed
+                  </span>
+                  <span className="text-white font-semibold">{snapshot.lessonsCompleted}</span>
+                </div>
+                <div className="flex justify-between py-4 text-sm font-medium">
+                  <span className="text-slate-400 flex items-center gap-2">
+                    <Clock className="size-4 text-slate-500" />
+                    Openings Mastered
+                  </span>
+                  <span className="text-white font-semibold">{snapshot.openingsMastered}</span>
+                </div>
+                <div className="flex justify-between py-4 text-sm font-medium">
+                  <span className="text-slate-400 flex items-center gap-2">
+                    <Flame className="size-4 text-slate-500" />
+                    Endgames Mastered
+                  </span>
+                  <span className="text-white font-semibold">{snapshot.endgamesMastered}</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <Link
+                href="/practice/openings"
+                className="flex w-full items-center justify-center gap-2 rounded-lg border border-white/10 hover:border-white/20 px-4 py-2.5 text-xs font-bold text-slate-300 hover:text-white hover:bg-white/5 transition-all"
+              >
+                Browse Openings
+              </Link>
+            </div>
+          </aside>
+
           <ReviewQueuePanel />
         </div>
-
-        {/* Right Column: Account Rank & Stats */}
-        <aside className="rounded-xl border border-white/5 bg-[#101416]/40 p-6 md:p-8 backdrop-blur-sm shadow-md flex flex-col justify-between h-full">
-          <div className="space-y-6">
-            <div>
-              <h2 className="text-xs font-bold text-amber-400 uppercase tracking-[0.15em]">
-                Account Rank
-              </h2>
-              <div className="mt-3 flex items-center justify-between gap-4">
-                <div>
-                  <p className="text-3xl font-extrabold text-white tracking-tight">
-                    {snapshot.currentRank}
-                  </p>
-                  <p className="mt-1 text-sm text-slate-400 font-medium">
-                    {snapshot.accuracy}% Accuracy Rate
-                  </p>
-                </div>
-                <div className="flex size-14 items-center justify-center rounded-xl border border-amber-300/20 bg-amber-300/10 text-amber-300 shadow-md">
-                  <Crown className="size-7 animate-bounce" style={{ animationDuration: "3s" }} />
-                </div>
-              </div>
-            </div>
-
-            <div className="divide-y divide-white/5 border-t border-b border-white/5">
-              <div className="flex justify-between py-4 text-sm font-medium">
-                <span className="text-slate-400 flex items-center gap-2">
-                  <BookOpen className="size-4 text-slate-500" />
-                  Lessons Completed
-                </span>
-                <span className="text-white font-semibold">{snapshot.lessonsCompleted}</span>
-              </div>
-              <div className="flex justify-between py-4 text-sm font-medium">
-                <span className="text-slate-400 flex items-center gap-2">
-                  <Clock className="size-4 text-slate-500" />
-                  Openings Mastered
-                </span>
-                <span className="text-white font-semibold">{snapshot.openingsMastered}</span>
-              </div>
-              <div className="flex justify-between py-4 text-sm font-medium">
-                <span className="text-slate-400 flex items-center gap-2">
-                  <Flame className="size-4 text-slate-500" />
-                  Endgames Mastered
-                </span>
-                <span className="text-white font-semibold">{snapshot.endgamesMastered}</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8">
-            <Link
-              href="/library"
-              className="flex w-full items-center justify-center gap-2 rounded-lg border border-white/10 hover:border-white/20 px-4 py-2.5 text-xs font-bold text-slate-300 hover:text-white hover:bg-white/5 transition-all"
-            >
-              Browse Openings Library
-            </Link>
-          </div>
-        </aside>
       </div>
     </div>
   );
