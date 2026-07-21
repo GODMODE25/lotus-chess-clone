@@ -1,0 +1,525 @@
+{
+  "openingId": "ruy-lopez",
+  "tier": "Intermediate",
+  "lines": [
+    {
+      "id": "ruy-lopez-intermediate-berlin-lasker",
+      "parentVariation": "Berlin Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Berlin Wall Lasker Variation",
+      "aliases": [
+        "Berlin Wall Endgame"
+      ],
+      "eco": "C67",
+      "difficulty": 3,
+      "popularity": 5,
+      "prerequisites": [
+        "ruy-lopez-beginner-berlin-main"
+      ],
+      "continuationIds": [
+        "ruy-lopez-legend-berlin-lasker-deep"
+      ],
+      "conceptIds": [
+        "endgame-transition",
+        "king-safety",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White exchanges queens to exploit Black's uncasted king.",
+        "Black retains the bishop pair as compensation for a compromised structure.",
+        "White's kingside pawn majority is easier to create than Black's double c-pawns."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black's light-squared bishop to dominate open lines",
+        "Advancing kingside pawns too early, exposing White's own king"
+      ],
+      "explanation": "This is the classic Berlin Wall endgame. White trades queens on d8 to disable Black's castling rights. White has a long-term pawn majority structure, while Black relies on the defensive power of the bishop pair.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 Nf6 4.O-O Nxe4 5.d4 Nd6 6.Bxc6 dxc6 7.dxe5 Nf5 8.Qxd8+ Kxd8",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "Nf6",
+        "O-O",
+        "Nxe4",
+        "d4",
+        "Nd6",
+        "Bxc6",
+        "dxc6",
+        "dxe5",
+        "Nf5",
+        "Qxd8+",
+        "Kxd8"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "g8f6",
+        "e1g1",
+        "f6e4",
+        "d2d4",
+        "e4d6",
+        "b5c6",
+        "d7c6",
+        "d4e5",
+        "d6f5",
+        "d1d8",
+        "e8d8"
+      ],
+      "startingFen": "r1bk1b1r/ppp2ppp/2p5/4Pn2/8/5N2/PPP2PPP/RNB2RK1 w - - 0 9",
+      "moveDepth": 16
+    },
+    {
+      "id": "ruy-lopez-intermediate-berlin-active",
+      "parentVariation": "Berlin Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Berlin Defense Active 5...Be7",
+      "aliases": [
+        "Rio de Janeiro Variation"
+      ],
+      "eco": "C67",
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": [
+        "ruy-lopez-beginner-berlin-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "piece-activity",
+        "development",
+        "central-control"
+      ],
+      "strategicIdeas": [
+        "Black develops actively with Be7, avoiding the queenless endgame.",
+        "White targets the e5 extension with Qe2 and d4.",
+        "Black retreats the knight to b7 to support the c5 central break."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Failing to put pressure on the e5 square with the queen",
+        "Overlooking the b7 knight maneuver"
+      ],
+      "explanation": "The 5...Be7 variation avoids the endgame, keeping queens on the board. White regains the pawn with Qe2 and maintains central control. Black relocates the knight to b7 to target a counterattack on the queenside.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 30,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 Nf6 4.O-O Nxe4 5.d4 Be7 6.Qe2 Nd6 7.Bxc6 bxc6 8.dxe5 Nb7",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "Nf6",
+        "O-O",
+        "Nxe4",
+        "d4",
+        "Be7",
+        "Qe2",
+        "Nd6",
+        "Bxc6",
+        "bxc6",
+        "dxe5",
+        "Nb7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "g8f6",
+        "e1g1",
+        "f6e4",
+        "d2d4",
+        "f8e7",
+        "d1e2",
+        "e4d6",
+        "b5c6",
+        "b7c6",
+        "d4e5",
+        "d6b7"
+      ],
+      "startingFen": "r1bqk2r/pnppbppp/2p5/4P3/8/5N2/PPP1QPPP/RNB2RK1 w kq - 1 9",
+      "moveDepth": 16
+    },
+    {
+      "id": "ruy-lopez-intermediate-berlin-4-d3",
+      "parentVariation": "Berlin Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Anti-Berlin with 4.d3",
+      "aliases": [],
+      "eco": "C65",
+      "difficulty": 2,
+      "popularity": 5,
+      "prerequisites": [
+        "ruy-lopez-beginner-berlin-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White plays 4.d3 to bypass the sharp Berlin Wall endgame entirely.",
+        "White exchanges on c6 to damage Black's queenside pawns.",
+        "Black relocates the knight to d7 to defend the e5 pawn."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Failing to secure the e4 pawn when Black attacks it",
+        "Overlooking the Nd7 defense maneuver"
+      ],
+      "explanation": "The 4.d3 variation is a highly popular Anti-Berlin weapon. White keeps the game positional, bypassing deep endgame theory. By exchanging on c6 and castling, White targets a steady, risk-free advantage.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 30,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 Nf6 4.d3 Bc5 5.Bxc6 dxc6 6.O-O Nd7",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "Nf6",
+        "d3",
+        "Bc5",
+        "Bxc6",
+        "dxc6",
+        "O-O",
+        "Nd7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "g8f6",
+        "d2d3",
+        "f8c5",
+        "b5c6",
+        "d7c6",
+        "e1g1",
+        "f6d7"
+      ],
+      "startingFen": "r1bqk2r/pppn1ppp/2p5/2b1p3/4P3/3P1N2/PPP2PPP/RNBQ1RK1 w kq - 2 7",
+      "moveDepth": 12
+    },
+    {
+      "id": "ruy-lopez-intermediate-arkhangelsk-main",
+      "parentVariation": "Arkhangelsk Variation",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Arkhangelsk Defense Main Line",
+      "aliases": [],
+      "eco": "C78",
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": [
+        "ruy-lopez-beginner-morphy-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "fianchetto",
+        "piece-activity",
+        "central-control"
+      ],
+      "strategicIdeas": [
+        "Black fianchettos the bishop to b7, putting strong pressure on White's e4 pawn.",
+        "White uses c3 and d4 to build a pawn center and block the b7 bishop.",
+        "Black develops Bc5 actively to target the f2 square."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Failing to play c3 to neutralize Black's double bishops",
+        "Overlooking the tactical pressure on e4"
+      ],
+      "explanation": "In the Arkhangelsk Variation, Black develops both bishops actively (Bb7 and Bc5) to pressure White's center. White builds a solid c3-d4 pawn shield to counter Black's active piece play.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O b5 6.Bb3 Bb7 7.Re1 Bc5 8.c3 d6 9.d4 Bb6",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Ba4",
+        "Nf6",
+        "O-O",
+        "b5",
+        "Bb3",
+        "Bb7",
+        "Re1",
+        "Bc5",
+        "c3",
+        "d6",
+        "d4",
+        "Bb6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5a4",
+        "g8f6",
+        "e1g1",
+        "b7b5",
+        "a4b3",
+        "c8b7",
+        "f1e1",
+        "f8c5",
+        "c2c3",
+        "d7d6",
+        "d2d4",
+        "c5b6"
+      ],
+      "startingFen": "r2qk2r/1bp2ppp/pbnp1n2/1p2p3/3PP3/1BP2N2/PP3PPP/RNBQR1K1 w kq - 1 10",
+      "moveDepth": 18
+    },
+    {
+      "id": "ruy-lopez-intermediate-neo-arkhangelsk",
+      "parentVariation": "Neo-Arkhangelsk Variation",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Neo-Arkhangelsk Defense",
+      "aliases": [],
+      "eco": "C78",
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": [
+        "ruy-lopez-beginner-morphy-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "piece-activity",
+        "central-control",
+        "open-files"
+      ],
+      "strategicIdeas": [
+        "Black develops Bc5 immediately before Bb7 to keep options flexible.",
+        "White counters with 7.a4 to challenge Black's queenside pawns.",
+        "Black plays Rb8 to secure the b-pawn and keep the file."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to establish a strong knight outpost on d5",
+        "Allowing the a-file structure to dissolve poorly"
+      ],
+      "explanation": "The Neo-Arkhangelsk delays Bb7, preferring immediate Bc5. White challenges Black's structure early with 7.a4. Black uses the b-file to maintain queenside balance.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O b5 6.Bb3 Bc5 7.a4 Rb8 8.c3 d6 9.d4 Bb6",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Ba4",
+        "Nf6",
+        "O-O",
+        "b5",
+        "Bb3",
+        "Bc5",
+        "a4",
+        "Rb8",
+        "c3",
+        "d6",
+        "d4",
+        "Bb6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5a4",
+        "g8f6",
+        "e1g1",
+        "b7b5",
+        "a4b3",
+        "f8c5",
+        "a2a4",
+        "a8b8",
+        "c2c3",
+        "d7d6",
+        "d2d4",
+        "c5b6"
+      ],
+      "startingFen": "1rbqk2r/2p2ppp/pbnp1n2/1p2p3/P2PP3/1BP2N2/1P3PPP/RNBQ1RK1 w k - 1 10",
+      "moveDepth": 18
+    },
+    {
+      "id": "ruy-lopez-intermediate-open-main",
+      "parentVariation": "Open Spanish",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Open Spanish Main Line",
+      "aliases": [
+        "Tarrasch Variation"
+      ],
+      "eco": "C80",
+      "difficulty": 3,
+      "popularity": 5,
+      "prerequisites": [
+        "ruy-lopez-beginner-morphy-main"
+      ],
+      "continuationIds": [
+        "ruy-lopez-advanced-open-dilworth",
+        "ruy-lopez-advanced-open-9-c3"
+      ],
+      "conceptIds": [
+        "piece-activity",
+        "central-control",
+        "development"
+      ],
+      "strategicIdeas": [
+        "Black captures the e4 pawn to open lines and get active piece play.",
+        "White plays d4 to break open the center and target the e4 knight.",
+        "Black supports their center with b5 and d5, anchoring the knight."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Playing too passively as White, allowing Black to consolidate their extra space",
+        "Failing to support the d4 pawn break"
+      ],
+      "explanation": "The Open Spanish is dynamic. Black accepts a slightly loose pawn structure to activate their pieces. White must challenge Black's center immediately, aiming to exploit the e4 knight's position.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Nxe4 6.d4 b5 7.Bb3 d5 8.dxe5 Be6 9.c3 Be7",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Ba4",
+        "Nf6",
+        "O-O",
+        "Nxe4",
+        "d4",
+        "b5",
+        "Bb3",
+        "d5",
+        "dxe5",
+        "Be6",
+        "c3",
+        "Be7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5a4",
+        "g8f6",
+        "e1g1",
+        "f6e4",
+        "d2d4",
+        "b7b5",
+        "a4b3",
+        "d7d5",
+        "d4e5",
+        "c8e6",
+        "c2c3",
+        "f8e7"
+      ],
+      "startingFen": "r2qk2r/2p1bppp/p1n1b3/1p1pP3/4n3/1BP2N2/PP3PPP/RNBQ1RK1 w kq - 1 10",
+      "moveDepth": 18
+    },
+    {
+      "id": "ruy-lopez-intermediate-closed-early-d3",
+      "parentVariation": "Closed Spanish",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Closed Spanish Early 6.d3",
+      "aliases": [],
+      "eco": "C77",
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [
+        "ruy-lopez-beginner-morphy-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White plays 6.d3 to keep the center solid and avoid deep closed theory.",
+        "White uses a4 to challenge Black's queenside space.",
+        "Black develops Bd7 to secure their b5 pawn and prepare castling."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Playing too quickly on the queenside, weakening White's own pawns",
+        "Overlooking the light-squared bishop's safety"
+      ],
+      "explanation": "The 6.d3 variation is a solid, positional approach. White bypasses the sharpest main lines of the Closed Spanish. White focuses on slow development and queenside pressure using the a4 pawn push.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 30,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.d3 b5 7.Bb3 d6 8.a4 Bd7",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Ba4",
+        "Nf6",
+        "O-O",
+        "Be7",
+        "d3",
+        "b5",
+        "Bb3",
+        "d6",
+        "a4",
+        "Bd7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5a4",
+        "g8f6",
+        "e1g1",
+        "f8e7",
+        "d2d3",
+        "b7b5",
+        "a4b3",
+        "d7d6",
+        "a2a4",
+        "c8d7"
+      ],
+      "startingFen": "r2qk2r/2pbbppp/p1np1n2/1p2p3/P3P3/1B1P1N2/1PP2PPP/RNBQ1RK1 w kq - 1 9",
+      "moveDepth": 16
+    }
+  ]
+}

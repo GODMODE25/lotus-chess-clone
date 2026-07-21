@@ -1,0 +1,260 @@
+{
+  "openingId": "caro-kann-defense",
+  "lines": [
+    {
+      "id": "caro-beginner-exchange",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Exchange Variation",
+      "aliases": [
+        "Caro-Kann Exchange"
+      ],
+      "eco": "B13",
+      "pgn": "1. e4 c6 2. d4 d5 3. exd5 cxd5",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "exd5",
+        "cxd5"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "e4d5",
+        "c6d5"
+      ],
+      "startingFen": "rnbqkbnr/pp2pppp/8/3p4/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4",
+      "moveDepth": 6,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White trades in the centre with 3.exd5.",
+        "Black recaptures 3...cxd5, reaching a symmetric pawn structure."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Underestimating White's lead in development",
+        "Allowing an isolated queen pawn after later exchanges"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.exd5 cxd5 the centre is symmetric and both sides develop quickly in the Caro-Kann Exchange.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 100
+    },
+    {
+      "id": "caro-beginner-advance",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Advance Variation",
+      "aliases": [
+        "Caro-Kann Advance"
+      ],
+      "eco": "B12",
+      "pgn": "1. e4 c6 2. d4 d5 3. e5",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "e5"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "e4e5"
+      ],
+      "startingFen": "rnbqkbnr/pp2pppp/2p5/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+      "moveDepth": 5,
+      "difficulty": 2,
+      "popularity": 5,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "space-advantage",
+        "central-control"
+      ],
+      "strategicIdeas": [
+        "White grabs space with 3.e5.",
+        "Black prepares the ...c5 break to challenge the centre."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Letting White build a crushing pawn chain",
+        "Releasing the central tension too early"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.e5 White builds a space-gaining pawn chain in the Advance Caro-Kann.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 100
+    },
+    {
+      "id": "caro-beginner-classical",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Classical Variation",
+      "aliases": [
+        "Caro-Kann Classical"
+      ],
+      "eco": "B18",
+      "pgn": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "Nc3",
+        "dxe4",
+        "Nxe4"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "b1c3",
+        "d5e4",
+        "c3e4"
+      ],
+      "startingFen": "rnbqkbnr/pp2pppp/2p5/8/3PN3/8/PPP2PPP/R1BQKBNR b KQkq - 0 4",
+      "moveDepth": 7,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White develops 3.Nc3.",
+        "Black captures 3...dxe4 and White recaptures 4.Nxe4."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black a comfortable ...Bf5 development",
+        "Neglecting the e4 outpost square"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.Nc3 dxe4 4.Nxe4 Black has freed the centre in the Classical Caro-Kann.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 100
+    },
+    {
+      "id": "caro-beginner-panov",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Panov-Botvinnik Setup",
+      "aliases": [
+        "Panov Attack"
+      ],
+      "eco": "B14",
+      "pgn": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "exd5",
+        "cxd5",
+        "c4"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "e4d5",
+        "c6d5",
+        "c2c4"
+      ],
+      "startingFen": "rnbqkbnr/pp2pppp/8/3p4/2PP4/8/PP3PPP/RNBQKBNR b KQkq - 0 4",
+      "moveDepth": 7,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "isolated-queens-pawn"
+      ],
+      "strategicIdeas": [
+        "White plays 3.exd5 cxd5 4.c4, building an IQP centre.",
+        "Black must develop pieces actively against the isolated pawn."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a strong pawn-centre bind",
+        "Passive piece placement around the IQP"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.exd5 cxd5 4.c4 White sets up the Panov-Botvinnik isolated queen pawn centre.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 100
+    },
+    {
+      "id": "caro-beginner-fantasy",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Fantasy Variation",
+      "aliases": [
+        "Caro-Kann Fantasy"
+      ],
+      "eco": "B12",
+      "pgn": "1. e4 c6 2. d4 d5 3. f3",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "f3"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "f2f3"
+      ],
+      "startingFen": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/5P2/PPP3PP/RNBQKBNR b KQkq - 0 3",
+      "moveDepth": 5,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White supports e4 with 3.f3, keeping a broad centre.",
+        "Black can strike with 3...dxe4 to open lines."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Weakening the king position with premature f-pawn pushes",
+        "Allowing Black to win the e4 pawn cleanly"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.f3 White shores up e4 in the aggressive Fantasy Variation.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 100
+    }
+  ]
+}

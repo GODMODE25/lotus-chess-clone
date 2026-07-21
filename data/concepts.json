@@ -199,6 +199,38 @@
       "description": "Controlling more territory on the board by advancing pawns beyond the fourth rank. A space advantage gives pieces more room to manoeuvre and restricts the opponent's options.",
       "relatedConceptIds": ["central-control", "pawn-structure"],
       "tags": ["positional", "strategy", "pawns"]
+    },
+    {
+      "id": "endgame-transition",
+      "name": "Endgame Transition",
+      "category": "strategic",
+      "description": "Voluntarily trading active pieces to steer the game into a simplified endgame structure. This is especially strong when possessing structural advantages or material majorities.",
+      "relatedConceptIds": ["pawn-structure", "rook-activity"],
+      "tags": ["middlegame", "endgame", "simplification"]
+    },
+    {
+      "id": "tactics",
+      "name": "Tactical Play",
+      "category": "tactical",
+      "description": "Short-term calculation sequences involving forcing moves like checks, captures, and direct threats. Tactical awareness prevents blunders and exploits opponent weaknesses.",
+      "relatedConceptIds": ["fork", "pin", "discovered-attack"],
+      "tags": ["tactics", "calculation", "forcing-moves"]
+    },
+    {
+      "id": "gambit",
+      "name": "Gambit",
+      "category": "strategic",
+      "description": "Sacrificing material (usually a pawn) in the opening to gain an advantage in time (tempo), space, or development, or to damage the opponent's king safety.",
+      "relatedConceptIds": ["tempo", "initiative", "development"],
+      "tags": ["gambit", "sacrifice", "opening"]
+    },
+    {
+      "id": "pawn-chain",
+      "name": "Pawn Chain",
+      "category": "structural",
+      "description": "A diagonal row of pawns that protect each other. Attacks on a pawn chain are typically directed at its base, which is the only pawn not protected by another.",
+      "relatedConceptIds": ["pawn-structure", "space-advantage"],
+      "tags": ["structure", "pawns", "closed-positions"]
     }
   ]
 }

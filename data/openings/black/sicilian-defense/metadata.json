@@ -1,0 +1,112 @@
+{
+  "id": "sicilian-defense",
+  "name": "Sicilian Defense",
+  "slug": "sicilian-defense",
+  "family": "Sicilian Defense",
+  "colour": "black",
+  "ecoRange": "B20-B99",
+  "description": "The Sicilian Defense (1.e4 c5) is Black's most popular and combative reply to 1.e4, immediately fighting for the centre and avoiding the symmetry of 1...e5. It leads to sharp, unbalanced positions where Black accepts a slightly weakened king position in exchange for active counterplay. The Sicilian includes the Najdorf, Dragon, Sveshnikov, Classical, Kan, Scheveningen, Accelerated Dragon, Rossolimo, Alapin, and Closed variations.",
+  "typicalPawnStructures": [
+    "Open Sicilian (pawns on d4/d6, e4/e5)",
+    "Sveshnikov (pawns on e5, d6 vs d4)",
+    "Dragon (pawns on d6, g6 vs d4)",
+    "Kan / Paulsen (pawns on e6, a6 vs d4)",
+    "Alapin IQP (pawns on d4 vs c5, d6)"
+  ],
+  "commonTacticalThemes": [
+    "Central break with d4 / d5",
+    "Knight outposts on d5 / e5",
+    "Bishop pair after ...Bxc3",
+    "Counterplay with ...b5 and ...e5",
+    "Piece activity in the centre"
+  ],
+  "modelPlayers": [
+    "Garry Kasparov",
+    "Bobby Fischer",
+    "Anatoly Karpov",
+    "Magnus Carlsen",
+    "Veselin Topalov",
+    "Maxime Vachier-Lagrave"
+  ],
+  "recommendedStudyOrder": [
+    "Beginner: meet the main replies (Open, Closed, Alapin, Rossolimo, Bowdler)",
+    "Novice: learn the Najdorf, Dragon, Sveshnikov, Classical, Kan, Rossolimo, Alapin, Closed",
+    "Intermediate: deepen the main systems and add Scheveningen + Accelerated Dragon",
+    "Advanced: master the Najdorf, Dragon, Sveshnikov, Classical, Kan, Scheveningen, Rossolimo, Alapin, Closed, Accelerated Dragon, Hyperaccelerated, Four Knights",
+    "Expert: handle the sharpest theoretical battles in each variation",
+    "Master: reach model middlegame positions with active counterplay",
+    "Legend: demonstrate deep theoretical and practical mastery"
+  ],
+  "masteryLevels": [
+    {
+      "tier": "Beginner",
+      "xpReward": 100,
+      "accuracyTarget": 0.7,
+      "objectives": [
+        "Recognise 1.e4 c5 as the Sicilian Defense",
+        "Understand Black fights for the centre asymmetrically",
+        "Meet the five main White replies"
+      ]
+    },
+    {
+      "tier": "Novice",
+      "xpReward": 160,
+      "accuracyTarget": 0.72,
+      "objectives": [
+        "Learn the Najdorf, Dragon, Sveshnikov, Classical, Kan",
+        "Handle the Rossolimo, Alapin, and Closed",
+        "Develop pieces actively for counterplay"
+      ]
+    },
+    {
+      "tier": "Intermediate",
+      "xpReward": 240,
+      "accuracyTarget": 0.75,
+      "objectives": [
+        "Deepen the main systems",
+        "Add the Scheveningen and Accelerated Dragon",
+        "Use the ...d5 and ...e5 central breaks"
+      ]
+    },
+    {
+      "tier": "Advanced",
+      "xpReward": 340,
+      "accuracyTarget": 0.78,
+      "objectives": [
+        "Master all twelve advanced variations",
+        "Exploit the bishop pair after ...Bxc3",
+        "Generate queenside counterplay with ...b5"
+      ]
+    },
+    {
+      "tier": "Expert",
+      "xpReward": 460,
+      "accuracyTarget": 0.8,
+      "objectives": [
+        "Handle the sharpest theoretical battles",
+        "Find knight outposts on d5 / e5",
+        "Convert the unbalanced positions"
+      ]
+    },
+    {
+      "tier": "Master",
+      "xpReward": 600,
+      "accuracyTarget": 0.82,
+      "objectives": [
+        "Reach model middlegame positions",
+        "Use the ...b5 and ...e5 counterplay",
+        "Demonstrate piece activity in the centre"
+      ]
+    },
+    {
+      "tier": "Legend",
+      "xpReward": 800,
+      "accuracyTarget": 0.85,
+      "objectives": [
+        "Demonstrate deep theoretical mastery",
+        "Handle all of White's main setups",
+        "Convert the Sicilian to a winning advantage"
+      ]
+    }
+  ]
+}

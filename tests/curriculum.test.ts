@@ -54,41 +54,55 @@ describe('Curriculum Integrity Tests', () => {
     });
   });
 
-  it('should validate all Italian Game curriculum tier files', () => {
-    const openingDir = path.join(DATA_DIR, 'openings/white/italian');
-    const metadata = JSON.parse(fs.readFileSync(path.join(openingDir, 'metadata.json'), 'utf8'));
-    expect(metadata.id).toBe('italian-game');
-
+  it('should validate all curriculum openings and tier files dynamically', () => {
     const conceptData = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'concepts.json'), 'utf8'));
     const conceptIds = new Set(conceptData.concepts.map((c: any) => c.id));
 
-    const tiers = ['beginner', 'novice', 'intermediate', 'advanced', 'expert', 'master', 'legend'];
+    const colors = ['white', 'black'];
     const lineIds = new Set();
 
-    tiers.forEach(tier => {
-      const filePath = path.join(openingDir, `${tier}.json`);
-      expect(fs.existsSync(filePath)).toBe(true);
+    colors.forEach(color => {
+      const colorDir = path.join(DATA_DIR, 'openings', color);
+      if (!fs.existsSync(colorDir)) return;
 
-      const tierData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-      expect(tierData.openingId).toBe(metadata.id);
-      expect(tierData.tier.toLowerCase()).toBe(tier);
+      const openings = fs.readdirSync(colorDir);
+      openings.forEach(openingSlug => {
+        const openingDir = path.join(colorDir, openingSlug);
+        if (!fs.statSync(openingDir).isDirectory()) return;
 
-      tierData.lines.forEach((line: any) => {
-        expect(lineIds.has(line.id)).toBe(false);
-        lineIds.add(line.id);
+        const metadataPath = path.join(openingDir, 'metadata.json');
+        expect(fs.existsSync(metadataPath)).toBe(true);
 
-        const chess = new Chess();
-        line.sanMoves.forEach((move: string) => {
-          expect(() => chess.move(move)).not.toThrow();
-        });
+        const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
+        expect(metadata.slug).toBeDefined();
 
-        const finalFen = chess.fen();
-        if (line.startingFen) {
-          expect(line.startingFen.split(' ')[0]).toBe(finalFen.split(' ')[0]);
-        }
+        const tiers = ['beginner', 'novice', 'intermediate', 'advanced', 'expert', 'master', 'legend'];
+        tiers.forEach(tier => {
+          const filePath = path.join(openingDir, `${tier}.json`);
+          expect(fs.existsSync(filePath)).toBe(true);
 
-        line.conceptIds.forEach((cid: string) => {
-          expect(conceptIds.has(cid)).toBe(true);
+          const tierData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+          expect(tierData.openingId).toBe(metadata.id);
+          expect(tierData.tier.toLowerCase()).toBe(tier);
+
+          tierData.lines.forEach((line: any) => {
+            expect(lineIds.has(line.id)).toBe(false);
+            lineIds.add(line.id);
+
+            const chess = new Chess();
+            line.sanMoves.forEach((move: string) => {
+              expect(() => chess.move(move)).not.toThrow();
+            });
+
+            const finalFen = chess.fen();
+            if (line.startingFen) {
+              expect(line.startingFen.split(' ')[0]).toBe(finalFen.split(' ')[0]);
+            }
+
+            line.conceptIds.forEach((cid: string) => {
+              expect(conceptIds.has(cid)).toBe(true);
+            });
+          });
         });
       });
     });

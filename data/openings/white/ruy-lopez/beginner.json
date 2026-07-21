@@ -1,0 +1,309 @@
+{
+  "openingId": "ruy-lopez",
+  "tier": "Beginner",
+  "lines": [
+    {
+      "id": "ruy-lopez-beginner-morphy-main",
+      "parentVariation": "Morphy Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Morphy Defense Main Setup",
+      "aliases": [
+        "Closed Spanish Setup"
+      ],
+      "eco": "C70",
+      "difficulty": 2,
+      "popularity": 5,
+      "prerequisites": [],
+      "continuationIds": [
+        "ruy-lopez-intermediate-closed-early-d3",
+        "ruy-lopez-advanced-closed-chigorin"
+      ],
+      "conceptIds": [
+        "development",
+        "king-safety",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White plays Bb5 to target the c6 knight which defends the e5 pawn.",
+        "By playing a6, Black challenges the bishop, forcing it to decide whether to capture (Exchange) or retreat (a4).",
+        "Retreating to a4 keeps the tension while preparing to settle the bishop on b3 or c2."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Capturing on c6 immediately without positional purpose",
+        "Allowing Black to trap the bishop on a4 with b5"
+      ],
+      "explanation": "The Morphy Defense with 3...a6 is Black's most popular response. White retreats the bishop to a4, maintaining tension and development. Black follows up with Nf6 and Be7, preparing their own castling. This is the cornerstone layout for learning Closed Ruy Lopez systems.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 10,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Ba4",
+        "Nf6",
+        "O-O",
+        "Be7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5a4",
+        "g8f6",
+        "e1g1",
+        "f8e7"
+      ],
+      "startingFen": "r1bqk2r/1pppbppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 4 6",
+      "moveDepth": 10
+    },
+    {
+      "id": "ruy-lopez-beginner-exchange-main",
+      "parentVariation": "Exchange Variation",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Exchange Variation Base",
+      "aliases": [
+        "Ruy Lopez Exchange"
+      ],
+      "eco": "C68",
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [
+        "ruy-lopez-novice-exchange-d4",
+        "ruy-lopez-novice-exchange-o-o"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "endgame-transition",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White exchanges the bishop for the knight to ruin Black's pawn structure.",
+        "Black gets the bishop pair in return for doubled c-pawns.",
+        "White aims to transition into a winning king and pawn endgame."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Believing the e5 pawn can be captured immediately (which is refuted by Qd4)",
+        "Trading pieces blindly and letting Black's bishop pair dominate"
+      ],
+      "explanation": "The Exchange Variation (4.Bxc6) immediately alters the pawn structure. White damages Black's queenside pawns in exchange for giving up the light-squared bishop. This leads to unique endgames where White's kingside pawn majority is a key asset.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 10,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Bxc6 dxc6",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Bxc6",
+        "dxc6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5c6",
+        "d7c6"
+      ],
+      "startingFen": "r1bqkbnr/1pp2ppp/p1p5/4p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 5",
+      "moveDepth": 8
+    },
+    {
+      "id": "ruy-lopez-beginner-berlin-main",
+      "parentVariation": "Berlin Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Berlin Defense Base",
+      "aliases": [
+        "The Berlin Wall"
+      ],
+      "eco": "C67",
+      "difficulty": 2,
+      "popularity": 5,
+      "prerequisites": [],
+      "continuationIds": [
+        "ruy-lopez-intermediate-berlin-lasker",
+        "ruy-lopez-intermediate-berlin-active"
+      ],
+      "conceptIds": [
+        "king-safety",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black challenges White's e4 pawn directly, opting for solid piece development.",
+        "White castles immediately, leaving the e4 pawn to create tactical center open files.",
+        "The Berlin is notoriously solid and was used by Vladimir Kramnik to defeat Garry Kasparov."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Panicking over the loss of the e4 pawn and playing passive defense",
+        "Failing to break Black's defense in the center with d4"
+      ],
+      "explanation": "The Berlin Defense (3...Nf6) is a highly robust response. By targeting e4 immediately, Black forces White to make a choice. The main line proceeds with 4.O-O Nxe4 5.d4, leading to the famous Berlin Wall endgame.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 10,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 Nf6 4.O-O Nxe4",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "Nf6",
+        "O-O",
+        "Nxe4"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "g8f6",
+        "e1g1",
+        "f6e4"
+      ],
+      "startingFen": "r1bqkb1r/pppp1ppp/2n5/1B2p3/4n3/5N2/PPPP1PPP/RNBQ1RK1 w kq - 0 5",
+      "moveDepth": 8
+    },
+    {
+      "id": "ruy-lopez-beginner-steinitz-main",
+      "parentVariation": "Steinitz Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Steinitz Defense Base",
+      "aliases": [
+        "Old Steinitz"
+      ],
+      "eco": "C62",
+      "difficulty": 1,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [
+        "ruy-lopez-novice-steinitz-d4"
+      ],
+      "conceptIds": [
+        "central-control",
+        "piece-activity",
+        "development"
+      ],
+      "strategicIdeas": [
+        "Black defends the e5 pawn directly with d6, creating a solid but passive shield.",
+        "White strikes in the center immediately with d4, taking space.",
+        "Black develops the bishop to d7 to break the pin on the c6 knight."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Failing to play d4 immediately, allowing Black to consolidate",
+        "Blocking White's own f-pawn and bishop development paths"
+      ],
+      "explanation": "The Steinitz Defense (3...d6) is solid but passive. Black prioritizes keeping the e5 strong-point at the cost of bishop activity. White gains space and development by playing an immediate 4.d4.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 10,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 d6 4.d4 Bd7",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "d6",
+        "d4",
+        "Bd7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "d7d6",
+        "d2d4",
+        "c8d7"
+      ],
+      "startingFen": "r2qkbnr/pppb1ppp/2np4/1B2p3/3PP3/5N2/PPP2PPP/RNBQK2R w KQkq - 1 5",
+      "moveDepth": 8
+    },
+    {
+      "id": "ruy-lopez-beginner-schliemann-main",
+      "parentVariation": "Schliemann Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Schliemann Defense Base",
+      "aliases": [
+        "Jaenisch Gambit"
+      ],
+      "eco": "C63",
+      "difficulty": 3,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [
+        "ruy-lopez-novice-schliemann-d3"
+      ],
+      "conceptIds": [
+        "king-safety",
+        "tactics",
+        "gambit"
+      ],
+      "strategicIdeas": [
+        "Black plays f5 to challenge White's e4 pawn directly, aiming for open f-file play.",
+        "White develops Nc3 to support e4 and control the center.",
+        "Black exchanges on e4 to clear lines for potential kingside attacks."
+      ],
+      "tacticalMotifs": [
+        "double-attack"
+      ],
+      "commonMistakes": [
+        "Accepting the f5 gambit carelessly, giving Black rapid kingside play",
+        "Misplaying the knight recapture on e4"
+      ],
+      "explanation": "The Schliemann Defense (3...f5) is a sharp, aggressive gambit. Black seeks immediate counterplay on the kingside by sacrificing structure. White must play accurately to neutralize Black's early initiative.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 10,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 f5 4.Nc3 fxe4 5.Nxe4 Nf6",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "f5",
+        "Nc3",
+        "fxe4",
+        "Nxe4",
+        "Nf6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "f7f5",
+        "b1c3",
+        "f5e4",
+        "c3e4",
+        "g8f6"
+      ],
+      "startingFen": "r1bqkb1r/pppp2pp/2n2n2/1B2p3/4N3/5N2/PPPP1PPP/R1BQK2R w KQkq - 1 6",
+      "moveDepth": 10
+    }
+  ]
+}

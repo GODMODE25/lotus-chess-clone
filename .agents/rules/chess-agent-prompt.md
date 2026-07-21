@@ -1,5 +1,5 @@
 ---
-trigger: always_on
+trigger: manual
 ---
 
 # System Instruction / Agent Prompt: Lotus Chess Study Web App

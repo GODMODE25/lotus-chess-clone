@@ -15,15 +15,17 @@
   /* Cyber-Grandmaster Palette */
   --color-background: #050507;
   --color-foreground: #e2e8f0;
-  
+
   --color-cyber-void: #050507;
   --color-cyber-glass: rgba(30, 31, 40, 0.75);
-  
-  --color-primary: #00f0ff; /* Neon Cyan */
-  --color-accent: #bd00ff;  /* Pulse Purple */
+
+  --color-primary: #00f0ff;
+  /* Neon Cyan */
+  --color-accent: #bd00ff;
+  /* Pulse Purple */
   --color-success: #39ff14;
   --color-danger: #ff007f;
-  
+
   --font-heading: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
@@ -31,7 +33,7 @@
   --radius-xl: 12px;
   --radius-2xl: 20px;
   --radius-3xl: 32px;
-  
+
   --shadow-neon: 0 0 20px rgba(0, 240, 255, 0.15);
   --shadow-neon-strong: 0 0 30px rgba(0, 240, 255, 0.3);
   --shadow-purple: 0 0 20px rgba(189, 0, 255, 0.15);
@@ -48,12 +50,17 @@
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: 
+    background-image:
       radial-gradient(at 0% 0%, rgba(0, 240, 255, 0.05) 0px, transparent 50%),
       radial-gradient(at 100% 100%, rgba(189, 0, 255, 0.05) 0px, transparent 50%);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     @apply tracking-tight font-bold leading-tight;
   }
@@ -63,7 +70,7 @@
   .glass-panel {
     @apply bg-cyber-glass backdrop-blur-xl border border-white/20 relative;
   }
-  
+
   .glass-panel::before {
     content: '';
     @apply absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/25 to-transparent pointer-events-none;
@@ -73,22 +80,36 @@
     @apply relative;
   }
 
-  .corner-accent::before, .corner-accent::after {
+  .corner-accent::before,
+  .corner-accent::after {
     content: '';
     @apply absolute w-2.5 h-2.5 border-cyan-500/30 pointer-events-none;
   }
-  
-  .corner-tl::before { @apply top-0 left-0 border-t border-l rounded-tl-xl; }
-  .corner-tr::after { @apply top-0 right-0 border-t border-r rounded-tr-xl; }
-  .corner-bl::before { @apply bottom-0 left-0 border-b border-l rounded-bl-xl; }
-  .corner-br::after { @apply bottom-0 right-0 border-b border-r rounded-br-xl; }
+
+  .corner-tl::before {
+    @apply top-0 left-0 border-t border-l rounded-tl-xl;
+  }
+
+  .corner-tr::after {
+    @apply top-0 right-0 border-t border-r rounded-tr-xl;
+  }
+
+  .corner-bl::before {
+    @apply bottom-0 left-0 border-b border-l rounded-bl-xl;
+  }
+
+  .corner-br::after {
+    @apply bottom-0 right-0 border-b border-r rounded-br-xl;
+  }
 
   .neon-text-cyan {
-    @apply text-primary drop-shadow-[0_0_8px_rgba(0,240,255,0.3)];
+    @apply text-primary;
+    filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.3));
   }
-  
+
   .neon-text-purple {
-    @apply text-accent drop-shadow-[0_0_8px_rgba(189,0,255,0.3)];
+    @apply text-accent;
+    filter: drop-shadow(0 0 8px rgba(189, 0, 255, 0.3));
   }
 
   .bento-grid {
@@ -104,6 +125,7 @@
 @utility scanline {
   position: relative;
   overflow: hidden;
+
   &::after {
     content: "";
     @apply absolute inset-0 pointer-events-none;
@@ -115,17 +137,39 @@
 }
 
 @keyframes scanline {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
 }
 
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: rgba(0, 240, 255, 0.2);
   border-radius: 10px;
+}
+
+/* Opening repertoire card snapshot board.
+   Scoped to .opening-snapshot-board so the trainer boards are unaffected.
+   - Send board notation (a–h / 1–8) BEHIND the pieces by lifting the
+     piece layer above the absolutely-positioned notation spans.
+   - Reduce notation opacity to 70%. */
+.opening-snapshot-board [data-piece] {
+  position: relative;
+  z-index: 1;
+}
+
+.opening-snapshot-board [data-square]>span {
+  z-index: 0;
+  opacity: 0.7;
 }

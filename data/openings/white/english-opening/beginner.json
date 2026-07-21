@@ -1,0 +1,266 @@
+{
+  "openingId": "english-opening",
+  "tier": "Beginner",
+  "lines": [
+    {
+      "id": "english-beginner-e5",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...e5 (Reversed Sicilian)",
+      "aliases": [
+        "English e5 Nc3"
+      ],
+      "eco": "A21",
+      "pgn": "1. c4 e5 2. Nc3 Nf6 3. Nf3",
+      "sanMoves": [
+        "c4",
+        "e5",
+        "Nc3",
+        "Nf6",
+        "Nf3"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "e7e5",
+        "b1c3",
+        "g8f6",
+        "g1f3"
+      ],
+      "startingFen": "rnbqkb1r/pppp1ppp/5n2/4p3/2P5/2N2N2/PP1PPPPP/R1BQKB1R b KQkq - 3 3",
+      "moveDepth": 5,
+      "difficulty": 1,
+      "popularity": 5,
+      "prerequisites": [],
+      "continuationIds": [
+        "english-novice-e5-fourknights"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White controls d5 with the c-pawn.",
+        "The setup mirrors a Sicilian reversed.",
+        "Knights develop before committing the centre."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Rushing d4 before developing pieces",
+        "Neglecting the d5 square"
+      ],
+      "explanation": "After 1.c4 e5 2.Nc3 Nf6 3.Nf3 White has a flexible reversed-Sicilian setup. The English is about controlling the centre from the flank.",
+      "reviewPriority": 1,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "english-beginner-c5",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...c5 (Symmetric English)",
+      "aliases": [
+        "English c5 Nc3"
+      ],
+      "eco": "A30",
+      "pgn": "1. c4 c5 2. Nc3 Nc6 3. Nf3",
+      "sanMoves": [
+        "c4",
+        "c5",
+        "Nc3",
+        "Nc6",
+        "Nf3"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "c7c5",
+        "b1c3",
+        "b8c6",
+        "g1f3"
+      ],
+      "startingFen": "r1bqkbnr/pp1ppppp/2n5/2p5/2P5/2N2N2/PP1PPPPP/R1BQKB1R b KQkq - 3 3",
+      "moveDepth": 5,
+      "difficulty": 1,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [
+        "english-novice-c5-symmetric"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "Both sides mirror with ...c5.",
+        "White keeps a small space edge.",
+        "The position is balanced and calm."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Premature pawn breaks",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 c5 2.Nc3 Nc6 3.Nf3 White enters the symmetric English. Themes of piece activity and small advantages dominate.",
+      "reviewPriority": 1,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "english-beginner-Nf6",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...Nf6 (Anglo-Indian)",
+      "aliases": [
+        "English Nf6 Nc3"
+      ],
+      "eco": "A11",
+      "pgn": "1. c4 Nf6 2. Nc3 e6 3. Nf3",
+      "sanMoves": [
+        "c4",
+        "Nf6",
+        "Nc3",
+        "e6",
+        "Nf3"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "g8f6",
+        "b1c3",
+        "e7e6",
+        "g1f3"
+      ],
+      "startingFen": "rnbqkb1r/pppp1ppp/4pn2/8/2P5/2N2N2/PP1PPPPP/R1BQKB1R b KQkq - 1 3",
+      "moveDepth": 5,
+      "difficulty": 1,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [
+        "english-novice-Nf6-e6"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "Black prepares ...d5 with a solid setup.",
+        "White keeps the d5 square under control.",
+        "The position is flexible."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...d5 to equalise too easily",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 Nf6 2.Nc3 e6 3.Nf3 White meets the Anglo-Indian with natural development. The English rewards patience.",
+      "reviewPriority": 1,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "english-beginner-e6",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...e6 (Queen's Indian Reversed)",
+      "aliases": [
+        "English e6 Nc3"
+      ],
+      "eco": "A30",
+      "pgn": "1. c4 e6 2. Nc3 Nf6 3. Nf3",
+      "sanMoves": [
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Nf3"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "g1f3"
+      ],
+      "startingFen": "rnbqkb1r/pppp1ppp/4pn2/8/2P5/2N2N2/PP1PPPPP/R1BQKB1R b KQkq - 3 3",
+      "moveDepth": 5,
+      "difficulty": 1,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [
+        "english-novice-e6"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "Black sets up a Queen's-Indian-style structure.",
+        "White can later play e4 for a big centre.",
+        "The position is solid."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Rushing e4 without preparation",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 e6 2.Nc3 Nf6 3.Nf3 White meets the Queen's-Indian-reversed setup. A central strike with e4 is a key idea.",
+      "reviewPriority": 1,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "english-beginner-f5",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...f5 (Anglo-Dutch)",
+      "aliases": [
+        "English f5 Nc3"
+      ],
+      "eco": "A10",
+      "pgn": "1. c4 f5 2. Nc3 Nf6 3. Nf3",
+      "sanMoves": [
+        "c4",
+        "f5",
+        "Nc3",
+        "Nf6",
+        "Nf3"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "f7f5",
+        "b1c3",
+        "g8f6",
+        "g1f3"
+      ],
+      "startingFen": "rnbqkb1r/ppppp1pp/5n2/5p2/2P5/2N2N2/PP1PPPPP/R1BQKB1R b KQkq - 3 3",
+      "moveDepth": 5,
+      "difficulty": 1,
+      "popularity": 2,
+      "prerequisites": [],
+      "continuationIds": [
+        "english-novice-f5"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "Black plays a Dutch-style fianchetto plan.",
+        "White keeps a healthy structure.",
+        "The position is solid."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...e5 to gain central space",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 f5 2.Nc3 Nf6 3.Nf3 White meets the Anglo-Dutch. The English structure is robust against the Dutch pawn front.",
+      "reviewPriority": 1,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    }
+  ]
+}

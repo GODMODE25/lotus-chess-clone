@@ -1,0 +1,894 @@
+{
+  "openingId": "london-system",
+  "tier": "Expert",
+  "lines": [
+    {
+      "id": "london-expert-c5",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London Main vs 3...c5 (Ne5 plan)",
+      "aliases": [
+        "London c5 Ne5"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. Bd3 Bg4 6. Nbd2 e6 7. O-O Bd6 8. Ne5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "c5",
+        "e3",
+        "Nc6",
+        "Bd3",
+        "Bg4",
+        "Nbd2",
+        "e6",
+        "O-O",
+        "Bd6",
+        "Ne5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "c7c5",
+        "e2e3",
+        "b8c6",
+        "f1d3",
+        "c8g4",
+        "b1d2",
+        "e7e6",
+        "e1g1",
+        "f8d6",
+        "f3e5"
+      ],
+      "startingFen": "r2qk2r/pp3ppp/2nbpn2/2ppN3/3P1Bb1/3BP3/PPPN1PPP/R2Q1RK1 b kq - 3 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 5,
+      "prerequisites": [
+        "london-advanced-c5-main"
+      ],
+      "continuationIds": [
+        "london-master-c5"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "outpost"
+      ],
+      "strategicIdeas": [
+        "White plants a knight on the e5 outpost.",
+        "The knight is hard to dislodge.",
+        "White has a pleasant space edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...Nxe5 to relieve the outpost",
+        "Trading the good bishop unnecessarily"
+      ],
+      "explanation": "After 8...Bd6 9.Ne5 White seizes the e5 outpost. This is a key London plan giving White a small but lasting edge.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 40
+    },
+    {
+      "id": "london-expert-e6",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...e6 (c5 / c3 plan)",
+      "aliases": [
+        "London e6 c5 c3"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 e6 4. e3 Bd6 5. Bxd6 Qxd6 6. Bd3 O-O 7. Nbd2 Nbd7 8. O-O c5 9. c3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "e6",
+        "e3",
+        "Bd6",
+        "Bxd6",
+        "Qxd6",
+        "Bd3",
+        "O-O",
+        "Nbd2",
+        "Nbd7",
+        "O-O",
+        "c5",
+        "c3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "e7e6",
+        "e2e3",
+        "f8d6",
+        "f4d6",
+        "d8d6",
+        "f1d3",
+        "e8g8",
+        "b1d2",
+        "b8d7",
+        "e1g1",
+        "c7c5",
+        "c2c3"
+      ],
+      "startingFen": "r1b2rk1/pp1n1ppp/3qpn2/2pp4/3P4/2PBPN2/PP1N1PPP/R2Q1RK1 b - - 0 9",
+      "moveDepth": 17,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "london-advanced-e6-main"
+      ],
+      "continuationIds": [
+        "london-master-e6"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "space-advantage"
+      ],
+      "strategicIdeas": [
+        "White supports the centre with c3.",
+        "The structure is solid and flexible.",
+        "White keeps a small space edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Rushing the c4 break",
+        "Underestimating Black's central control"
+      ],
+      "explanation": "After 8.O-O c5 9.c3 White supports d4 and keeps a flexible structure. The London vs the ...e6 setup rewards patient play.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 40
+    },
+    {
+      "id": "london-expert-c6",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...c6 (Ne5 plan)",
+      "aliases": [
+        "London c6 Ne5"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 c6 4. e3 Bf5 5. Bd3 Bxd3 6. Qxd3 Nbd7 7. O-O h6 8. Ne5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "c6",
+        "e3",
+        "Bf5",
+        "Bd3",
+        "Bxd3",
+        "Qxd3",
+        "Nbd7",
+        "O-O",
+        "h6",
+        "Ne5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "c7c6",
+        "e2e3",
+        "c8f5",
+        "f1d3",
+        "f5d3",
+        "d1d3",
+        "b8d7",
+        "e1g1",
+        "h7h6",
+        "f3e5"
+      ],
+      "startingFen": "r2qkb1r/pp1nppp1/2p2n1p/3pN3/3P1B2/3QP3/PPP2PPP/RN3RK1 b kq - 1 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "london-advanced-c6-main"
+      ],
+      "continuationIds": [
+        "london-master-c6"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "outpost"
+      ],
+      "strategicIdeas": [
+        "White plants a knight on e5.",
+        "The knight is supported and active.",
+        "White has a pleasant edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...Nxe5 to relieve the outpost",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 8...h6 9.Ne5 White seizes the e5 outpost. The London vs the Slav setup is comfortable with this plan.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 40
+    },
+    {
+      "id": "london-expert-g6",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...g6 (Qb6 / Qb3 plan)",
+      "aliases": [
+        "London g6 Qb3"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 g6 4. e3 Bg7 5. Bd3 O-O 6. O-O c5 7. c3 Qb6 8. Qb3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "g6",
+        "e3",
+        "Bg7",
+        "Bd3",
+        "O-O",
+        "O-O",
+        "c5",
+        "c3",
+        "Qb6",
+        "Qb3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "g7g6",
+        "e2e3",
+        "f8g7",
+        "f1d3",
+        "e8g8",
+        "e1g1",
+        "c7c5",
+        "c2c3",
+        "d8b6",
+        "d1b3"
+      ],
+      "startingFen": "rnb2rk1/pp2ppbp/1q3np1/2pp4/3P1B2/1QPBPN2/PP3PPP/RN3RK1 b - - 2 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "london-advanced-g6-main"
+      ],
+      "continuationIds": [
+        "london-master-g6"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "space-advantage"
+      ],
+      "strategicIdeas": [
+        "White's queen goes to b3, eyeing b7 and d5.",
+        "The structure is solid and flexible.",
+        "White keeps a small initiative."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Launching a premature kingside attack",
+        "Neglecting the queenside"
+      ],
+      "explanation": "After 7.c3 Qb6 8.Qb3 White targets b7 and d5. The London vs the King's-Indian-style setup is reliable with this plan.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 40
+    },
+    {
+      "id": "london-expert-Bf5",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...Bf5 (Ne5 plan)",
+      "aliases": [
+        "London Bf5 Ne5"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 Bf5 4. e3 e6 5. Bd3 Bxd3 6. Qxd3 Bd6 7. O-O O-O 8. Ne5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "Bf5",
+        "e3",
+        "e6",
+        "Bd3",
+        "Bxd3",
+        "Qxd3",
+        "Bd6",
+        "O-O",
+        "O-O",
+        "Ne5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "c8f5",
+        "e2e3",
+        "e7e6",
+        "f1d3",
+        "f5d3",
+        "d1d3",
+        "f8d6",
+        "e1g1",
+        "e8g8",
+        "f3e5"
+      ],
+      "startingFen": "rn1q1rk1/ppp2ppp/3bpn2/3pN3/3P1B2/3QP3/PPP2PPP/RN3RK1 b - - 4 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "london-advanced-Bf5-main"
+      ],
+      "continuationIds": [
+        "london-master-Bf5"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "outpost"
+      ],
+      "strategicIdeas": [
+        "White plants a knight on e5.",
+        "The knight is hard to dislodge.",
+        "White has a pleasant space edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...Nxe5 to relieve the outpost",
+        "Trading the good bishop unnecessarily"
+      ],
+      "explanation": "After 8...Bd6 9.Ne5 White seizes the e5 outpost. The London vs the early ...Bf5 is simple and gives White a small edge.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 40
+    },
+    {
+      "id": "london-expert-Nc6",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...Nc6 (Ne5 plan)",
+      "aliases": [
+        "London Nc6 Ne5"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 Nc6 4. e3 Bf5 5. Bd3 e6 6. O-O Bd6 7. Nbd2 O-O 8. Ne5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "Nc6",
+        "e3",
+        "Bf5",
+        "Bd3",
+        "e6",
+        "O-O",
+        "Bd6",
+        "Nbd2",
+        "O-O",
+        "Ne5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "b8c6",
+        "e2e3",
+        "c8f5",
+        "f1d3",
+        "e7e6",
+        "e1g1",
+        "f8d6",
+        "b1d2",
+        "e8g8",
+        "f3e5"
+      ],
+      "startingFen": "r2q1rk1/ppp2ppp/2nbpn2/3pNb2/3P1B2/3BP3/PPPN1PPP/R2Q1RK1 b - - 5 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "london-advanced-Nc6-main"
+      ],
+      "continuationIds": [
+        "london-master-Nc6"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "outpost"
+      ],
+      "strategicIdeas": [
+        "White plants a knight on e5.",
+        "The knight is supported and active.",
+        "White has a pleasant edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...Nxe5 to relieve the outpost",
+        "Delaying castling"
+      ],
+      "explanation": "After 8...Bd6 9.Ne5 White seizes the e5 outpost. The London vs 3...Nc6 is robust with this plan.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 40
+    },
+    {
+      "id": "london-expert-Be7",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...e6 (Be7, Nxd7)",
+      "aliases": [
+        "London e6 Be7 Nxd7"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 e6 4. e3 Be7 5. Bd3 O-O 6. O-O Nbd7 7. Ne5 Bd6 8. Nxd7",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "e6",
+        "e3",
+        "Be7",
+        "Bd3",
+        "O-O",
+        "O-O",
+        "Nbd7",
+        "Ne5",
+        "Bd6",
+        "Nxd7"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "e7e6",
+        "e2e3",
+        "f8e7",
+        "f1d3",
+        "e8g8",
+        "e1g1",
+        "b8d7",
+        "f3e5",
+        "e7d6",
+        "e5d7"
+      ],
+      "startingFen": "r1bq1rk1/pppN1ppp/3bpn2/3p4/3P1B2/3BP3/PPP2PPP/RN1Q1RK1 b - - 0 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "london-advanced-Be7-main"
+      ],
+      "continuationIds": [
+        "london-master-Be7"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White trades the e5 knight for the d7 knight.",
+        "This relieves Black's only active piece.",
+        "White keeps a small edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...Nxe5 to relieve the outpost first",
+        "Trading the good bishop unnecessarily"
+      ],
+      "explanation": "After 8...Bd6 9.Nxd7 White trades off Black's well-placed knight. This is a typical London simplification giving White a tiny edge.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 40
+    },
+    {
+      "id": "london-expert-c5-Qb6",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...c5 (Qb6, Bg7 line)",
+      "aliases": [
+        "London c5 Qb6 Bg7"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Qb6 5. Nc3 Nc6 6. Bd3 c4 7. Bf5 g6 8. Bg3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "c5",
+        "e3",
+        "Qb6",
+        "Nc3",
+        "Nc6",
+        "Bd3",
+        "c4",
+        "Bf5",
+        "g6",
+        "Bg3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "c7c5",
+        "e2e3",
+        "d8b6",
+        "b1c3",
+        "b8c6",
+        "f1d3",
+        "c5c4",
+        "d3f5",
+        "g7g6",
+        "f4g3"
+      ],
+      "startingFen": "r1b1kb1r/pp2pp1p/1qn2np1/3p1B2/2pP4/2N1PNB1/PPP2PPP/R2QK2R b KQkq - 1 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "london-advanced-c5-Qb6"
+      ],
+      "continuationIds": [
+        "london-master-c5-Qb6"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "bishop-pair"
+      ],
+      "strategicIdeas": [
+        "White's bishop retreats to g3.",
+        "The position is balanced.",
+        "White keeps a flexible structure."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...c4 to cramp the position",
+        "Developing the bishop to a passive square"
+      ],
+      "explanation": "After 8...g6 9.Bg3 White keeps the bishop. The London vs the space-gaining ...c4 is comfortable.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 40
+    },
+    {
+      "id": "london-expert-c5-e6",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...c5 (e6, Ne5 plan)",
+      "aliases": [
+        "London c5 e6 Ne5"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 e6 5. Bd3 Nc6 6. Nbd2 Bd6 7. O-O O-O 8. Ne5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "c5",
+        "e3",
+        "e6",
+        "Bd3",
+        "Nc6",
+        "Nbd2",
+        "Bd6",
+        "O-O",
+        "O-O",
+        "Ne5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "c7c5",
+        "e2e3",
+        "e7e6",
+        "f1d3",
+        "b8c6",
+        "b1d2",
+        "f8d6",
+        "e1g1",
+        "e8g8",
+        "f3e5"
+      ],
+      "startingFen": "r1bq1rk1/pp3ppp/2nbpn2/2ppN3/3P1B2/3BP3/PPPN1PPP/R2Q1RK1 b - - 7 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "london-advanced-c5-e6"
+      ],
+      "continuationIds": [
+        "london-master-c5-e6"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "outpost"
+      ],
+      "strategicIdeas": [
+        "White plants a knight on e5.",
+        "The knight is hard to dislodge.",
+        "White has a pleasant space edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...Nxe5 to relieve the outpost",
+        "Rushing the c4 break"
+      ],
+      "explanation": "After 8...Bd6 9.Ne5 White seizes the e5 outpost. The London vs the ...c5/...e6 complex is a model of solid play.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 40
+    },
+    {
+      "id": "london-expert-b6",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...b6 (Ne5 plan)",
+      "aliases": [
+        "London b6 Ne5"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 b6 4. e3 Bb7 5. Bd3 c5 6. c3 Nc6 7. Nbd2 e6 8. Ne5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "b6",
+        "e3",
+        "Bb7",
+        "Bd3",
+        "c5",
+        "c3",
+        "Nc6",
+        "Nbd2",
+        "e6",
+        "Ne5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "b7b6",
+        "e2e3",
+        "c8b7",
+        "f1d3",
+        "c7c5",
+        "c2c3",
+        "b8c6",
+        "b1d2",
+        "e7e6",
+        "f3e5"
+      ],
+      "startingFen": "r2qkb1r/pb3ppp/1pn1pn2/2ppN3/3P1B2/2PBP3/PP1N1PPP/R2QK2R b KQkq - 1 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "london-advanced-b6"
+      ],
+      "continuationIds": [
+        "london-master-b6"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "outpost"
+      ],
+      "strategicIdeas": [
+        "White plants a knight on e5.",
+        "The knight is supported and active.",
+        "White has a pleasant edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...Nxe5 to relieve the outpost",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 7...e6 8.Ne5 White seizes the e5 outpost. The London vs the queenside fianchetto is reliable with this plan.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 40
+    },
+    {
+      "id": "london-expert-vs-Bg4",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...Bg4 (Ne5 plan)",
+      "aliases": [
+        "London Bg4 Ne5"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 Bg4 4. e3 e6 5. Bd3 Bd6 6. Nbd2 O-O 7. O-O Nbd7 8. Ne5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "Bg4",
+        "e3",
+        "e6",
+        "Bd3",
+        "Bd6",
+        "Nbd2",
+        "O-O",
+        "O-O",
+        "Nbd7",
+        "Ne5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "c8g4",
+        "e2e3",
+        "e7e6",
+        "f1d3",
+        "f8d6",
+        "b1d2",
+        "e8g8",
+        "e1g1",
+        "b8d7",
+        "f3e5"
+      ],
+      "startingFen": "r2q1rk1/pppn1ppp/3bpn2/3pN3/3P1Bb1/3BP3/PPPN1PPP/R2Q1RK1 b - - 7 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "london-advanced-vs-Bg4"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "outpost"
+      ],
+      "strategicIdeas": [
+        "White plants a knight on e5.",
+        "The knight is hard to dislodge.",
+        "White has a pleasant space edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...Nxe5 to relieve the outpost",
+        "Breaking the pin with h3 too early"
+      ],
+      "explanation": "After 8...Nbd7 9.Ne5 White seizes the e5 outpost. The London vs the early ...Bg4 is straightforward with this plan.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 40
+    },
+    {
+      "id": "london-expert-vs-Ne4",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...c5 (Ne4, Bxf3 line)",
+      "aliases": [
+        "London c5 Ne4 Bxf3"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. Bd3 Bg4 6. Nbd2 Ne4 7. O-O Bxf3 8. Qxf3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "c5",
+        "e3",
+        "Nc6",
+        "Bd3",
+        "Bg4",
+        "Nbd2",
+        "Ne4",
+        "O-O",
+        "Bxf3",
+        "Qxf3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "c7c5",
+        "e2e3",
+        "b8c6",
+        "f1d3",
+        "c8g4",
+        "b1d2",
+        "f6e4",
+        "e1g1",
+        "g4f3",
+        "d1f3"
+      ],
+      "startingFen": "r2qkb1r/pp2pppp/2n5/2pp4/3PnB2/3BPQ2/PPPN1PPP/R4RK1 b kq - 0 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "london-advanced-vs-Ne4"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black trades the bishop for the f3 knight.",
+        "White recaptures with the queen.",
+        "The position is balanced."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...Nxd2 to relieve the tension prematurely",
+        "Breaking the pin awkwardly"
+      ],
+      "explanation": "After 8...Bxf3 9.Qxf3 White recaptures with the queen. The London vs the ...Ne4 line is safe after the trade.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 40
+    }
+  ]
+}

@@ -20,18 +20,17 @@ interface RepertoireCarouselProps {
 export function RepertoireCarousel({ items, dueIds = new Set(), title, side, onSelect }: RepertoireCarouselProps) {
   const [centerIndex, setCenterIndex] = useState(0);
 
-  const next = () => setCenterIndex((prev) => (prev + 1) % items.length);
-  const prev = () => setCenterIndex((prev) => (prev - 1 + items.length) % items.length);
+  // Non-infinite navigation: clamp to bounds [0, items.length - 1]
+  const next = () => setCenterIndex((prev) => Math.min(prev + 1, items.length - 1));
+  const prev = () => setCenterIndex((prev) => Math.max(prev - 1, 0));
 
-  // Helper to determine relative position in the focal loop
+  // Disable buttons at bounds
+  const isFirst = centerIndex === 0;
+  const isLast = centerIndex === items.length - 1;
+
+  // Helper to determine relative position (no wrap-around)
   const getRelativePosition = (index: number) => {
-    let diff = index - centerIndex;
-    
-    // Handle wrap-around for infinite feeling
-    if (diff > items.length / 2) diff -= items.length;
-    if (diff < -items.length / 2) diff += items.length;
-    
-    return diff;
+    return index - centerIndex;
   };
 
   const accentColor = side === "white" ? "text-cyan-400" : "text-purple-400";
@@ -40,7 +39,7 @@ export function RepertoireCarousel({ items, dueIds = new Set(), title, side, onS
   if (items.length === 0) return null;
 
   return (
-    <div className="space-y-8 py-10 relative overflow-hidden">
+    <div className="flex flex-row items-center">
       {/* Background Ambience */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(0,240,255,0.03),transparent_70%)] pointer-events-none" />
 
@@ -48,8 +47,8 @@ export function RepertoireCarousel({ items, dueIds = new Set(), title, side, onS
       <div className="flex items-center justify-between px-6 relative z-10">
         <div className="flex items-center gap-4">
           <div className={`p-2.5 rounded-xl bg-white/5 border ${accentBorder} shadow-inner group overflow-hidden relative`}>
-             <LayoutGrid className={`size-5 ${accentColor}`} />
-             <div className="absolute inset-0 scanline opacity-20" />
+            <LayoutGrid className={`size-5 ${accentColor}`} />
+            <div className="absolute inset-0 scanline opacity-20" />
           </div>
           <div>
             <h2 className="text-2xl font-space font-bold uppercase tracking-[0.2em] text-white">
@@ -63,32 +62,22 @@ export function RepertoireCarousel({ items, dueIds = new Set(), title, side, onS
             </div>
           </div>
         </div>
-        
-        <div className="flex gap-3">
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={prev}
-            className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white/40 hover:text-cyan-400 hover:border-cyan-500/50 transition-all backdrop-blur-md"
-            aria-label="Previous opening"
-          >
-            <ChevronLeft className="size-6" />
-          </motion.button>
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={next}
-            className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white/40 hover:text-cyan-400 hover:border-cyan-500/50 transition-all backdrop-blur-md"
-            aria-label="Next opening"
-          >
-            <ChevronRight className="size-6" />
-          </motion.button>
-        </div>
       </div>
 
-      {/* Animated Carousel Track */}
-      <div className="relative h-[580px] w-full flex items-center justify-center">
-        <motion.div 
+      {/* Animated Carousel Track with navigation buttons */}
+      <div className="relative h-[580px] w-full flex items-center">
+        {/* Left navigation button */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={prev}
+          className="absolute left-0 top-1/2 -translate-y-1/2 p-3 rounded-2xl bg-white/5 border border-white/10 text-white/40 hover:text-cyan-400 hover:border-cyan-500/50 transition-all backdrop-blur-md z-20"
+          aria-label="Previous opening"
+        >
+          <ChevronLeft className="size-6" />
+        </motion.button>
+
+        <motion.div
           className="relative w-full h-full flex items-center justify-center"
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
@@ -108,8 +97,8 @@ export function RepertoireCarousel({ items, dueIds = new Set(), title, side, onS
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, scale: 0.8, x: relPos * 400 }}
-                  animate={{ 
-                    opacity: Math.abs(relPos) === 0 ? 1 : 0.4 / Math.abs(relPos), 
+                  animate={{
+                    opacity: Math.abs(relPos) === 0 ? 1 : 0.4 / Math.abs(relPos),
                     scale: Math.abs(relPos) === 0 ? 1 : 0.9,
                     x: relPos * 360,
                     zIndex: 20 - Math.abs(relPos),
@@ -135,6 +124,17 @@ export function RepertoireCarousel({ items, dueIds = new Set(), title, side, onS
             })}
           </AnimatePresence>
         </motion.div>
+
+        {/* Right navigation button */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={next}
+          className="absolute right-0 top-1/2 -translate-y-1/2 p-3 rounded-2xl bg-white/5 border border-white/10 text-white/40 hover:text-cyan-400 hover:border-cyan-500/50 transition-all backdrop-blur-md z-20"
+          aria-label="Next opening"
+        >
+          <ChevronRight className="size-6" />
+        </motion.button>
       </div>
 
       {/* Tactical Coordinate Markers for atmosphere */}

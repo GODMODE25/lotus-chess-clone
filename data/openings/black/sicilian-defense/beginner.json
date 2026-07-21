@@ -1,0 +1,274 @@
+{
+  "openingId": "sicilian-defense",
+  "lines": [
+    {
+      "id": "sicilian-beginner-open",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Open Sicilian (start)",
+      "aliases": [
+        "Open Sicilian"
+      ],
+      "eco": "B27",
+      "pgn": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "d6",
+        "d4",
+        "cxd4",
+        "Nxd4"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "d7d6",
+        "d2d4",
+        "c5d4",
+        "f3d4"
+      ],
+      "startingFen": "rnbqkbnr/pp2pppp/3p4/8/3NP3/8/PPP2PPP/RNBQKB1R b KQkq - 0 4",
+      "moveDepth": 7,
+      "difficulty": 2,
+      "popularity": 5,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White strikes the centre with 1.e4 and 3.d4.",
+        "Black answers with 1...c5, the most popular reply to 1.e4.",
+        "The Open Sicilian is the critical test of the defence."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a free central pawn on d4",
+        "Developing pieces too slowly"
+      ],
+      "explanation": "After 1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 we reach the Open Sicilian, the sharpest and most theoretical battleground of the Sicilian.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 100
+    },
+    {
+      "id": "sicilian-beginner-closed",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Closed Sicilian",
+      "aliases": [
+        "Closed Sicilian"
+      ],
+      "eco": "B23",
+      "pgn": "1. e4 c5 2. Nc3 Nc6 3. Nf3 g6",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nc3",
+        "Nc6",
+        "Nf3",
+        "g6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "b1c3",
+        "b8c6",
+        "g1f3",
+        "g7g6"
+      ],
+      "startingFen": "r1bqkbnr/pp1ppp1p/2n3p1/2p5/4P3/2N2N2/PPPP1PPP/R1BQKB1R w KQkq - 0 4",
+      "moveDepth": 6,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [
+        "sicilian-novice-closed"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White avoids the Open Sicilian with 2.Nc3.",
+        "Black fianchettoes with ...g6 and ...Bg7.",
+        "The play is slow and manoeuvring."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Rushing central breaks before development",
+        "Neglecting the kingside fianchetto"
+      ],
+      "explanation": "After 1.e4 c5 2.Nc3 Nc6 3.Nf3 g6 the Closed Sicilian steers the game into a quiet, manoeuvring battle rather than the razor-sharp Open Sicilian.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 100
+    },
+    {
+      "id": "sicilian-beginner-alapin",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Alapin (2.c3)",
+      "aliases": [
+        "Alapin Sicilian",
+        "2.c3 Sicilian"
+      ],
+      "eco": "B22",
+      "pgn": "1. e4 c5 2. c3 Nf6 3. e5 Nd5",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "c3",
+        "Nf6",
+        "e5",
+        "Nd5"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "c2c3",
+        "g8f6",
+        "e4e5",
+        "f6d5"
+      ],
+      "startingFen": "rnbqkb1r/pp1ppppp/8/2pnP3/8/2P5/PP1P1PPP/RNBQKBNR w KQkq - 1 4",
+      "moveDepth": 6,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [
+        "sicilian-novice-alapin"
+      ],
+      "conceptIds": [
+        "central-control",
+        "space-advantage",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White supports d4 with 2.c3, seeking a small centre.",
+        "Black plants a knight on d5 after 3.e5 Nd5.",
+        "The structure resembles an IQP for White."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to trade and equalise",
+        "Overextending the e5 pawn"
+      ],
+      "explanation": "After 1.e4 c5 2.c3 Nf6 3.e5 Nd5 the Alapin (2.c3) aims for a modest central edge with a pawn on e5 and a knight on d5 for Black.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 100
+    },
+    {
+      "id": "sicilian-beginner-rossolimo",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Rossolimo (3.Bb5)",
+      "aliases": [
+        "Rossolimo Attack"
+      ],
+      "eco": "B30",
+      "pgn": "1. e4 c5 2. Nf3 Nc6 3. Bb5 g6",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "g6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "g7g6"
+      ],
+      "startingFen": "r1bqkbnr/pp1ppp1p/2n3p1/1Bp5/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4",
+      "moveDepth": 6,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [
+        "sicilian-novice-rossolimo"
+      ],
+      "conceptIds": [
+        "development",
+        "piece-activity",
+        "bishop-pair"
+      ],
+      "strategicIdeas": [
+        "White pins the c6 knight with 3.Bb5.",
+        "Black fianchettoes with 3...g6.",
+        "White often trades on c6 to damage Black's structure."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Letting Black untangle with ...g6 and ...Bg7",
+        "Losing time with the bishop"
+      ],
+      "explanation": "After 1.e4 c5 2.Nf3 Nc6 3.Bb5 g6 the Rossolimo pins the knight and discourages ...e5, often followed by Bxc6 to inflict doubled pawns.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 100
+    },
+    {
+      "id": "sicilian-beginner-bowdler",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Bowdler Attack (2.Bc4)",
+      "aliases": [
+        "Bowdler Attack"
+      ],
+      "eco": "B20",
+      "pgn": "1. e4 c5 2. Bc4 Nc6 3. Nf3 e6",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Bc4",
+        "Nc6",
+        "Nf3",
+        "e6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "f1c4",
+        "b8c6",
+        "g1f3",
+        "e7e6"
+      ],
+      "startingFen": "r1bqkbnr/pp1p1ppp/2n1p3/2p5/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4",
+      "moveDepth": 6,
+      "difficulty": 1,
+      "popularity": 2,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "development",
+        "piece-activity",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White develops the bishop early with 2.Bc4.",
+        "Black completes development with ...Nc6 and ...e6.",
+        "A simple, less critical system."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Wasting the bishop with early sorties",
+        "Falling behind in development"
+      ],
+      "explanation": "After 1.e4 c5 2.Bc4 Nc6 3.Nf3 e6 the Bowdler Attack is a gentle sideline where White develops the bishop to c4 before committing in the centre.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 100
+    }
+  ]
+}

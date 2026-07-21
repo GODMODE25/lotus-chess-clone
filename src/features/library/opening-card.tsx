@@ -23,11 +23,10 @@ export function OpeningCard({ opening, isActive, isDue, curated, onClick, style 
       layout
       onClick={onClick}
       style={style}
-      className={`relative w-[320px] shrink-0 glass-panel rounded-2xl p-5 cursor-pointer transition-all duration-700 overflow-hidden group corner-accent corner-tl corner-br ${
-        isActive 
-          ? "neon-border-cyan z-20 shadow-[0_0_30px_rgba(0,240,255,0.15)] ring-1 ring-cyan-500/30" 
+      className={`relative w-[320px] shrink-0 glass-panel rounded-2xl p-5 cursor-pointer transition-all duration-700 overflow-hidden group corner-accent corner-tl corner-br ${isActive
+          ? "neon-border-cyan z-20 shadow-[0_0_30px_rgba(0,240,255,0.15)] ring-1 ring-cyan-500/30"
           : "opacity-40 grayscale-[0.3] scale-90 blur-[0.5px]"
-      }`}
+        }`}
     >
       {/* Review Due Badge */}
       {isDue && (
@@ -70,8 +69,8 @@ export function OpeningCard({ opening, isActive, isDue, curated, onClick, style 
 
           {/* Tactical Motif Chips */}
           <div className="flex flex-wrap gap-1.5 min-h-[44px]">
-            {opening.tacticalMotifs && opening.tacticalMotifs.length > 0 ? (
-              opening.tacticalMotifs.slice(0, 3).map((motif) => (
+            {opening.tacticalMotifs && opening.tacticalMotifs.length > 0
+              ? opening.tacticalMotifs.slice(0, 3).map((motif) => (
                 <span
                   key={motif}
                   className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[9px] font-mono text-white/50 uppercase tracking-widest"
@@ -79,11 +78,7 @@ export function OpeningCard({ opening, isActive, isDue, curated, onClick, style 
                   {motif}
                 </span>
               ))
-            ) : (
-              <span className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[9px] font-mono text-white/20 uppercase tracking-widest italic">
-                Scanning_Motifs...
-              </span>
-            )}
+              : null}
           </div>
 
           {/* Data Footer */}
@@ -94,16 +89,15 @@ export function OpeningCard({ opening, isActive, isDue, curated, onClick, style 
                 {Array.from({ length: 5 }).map((_, i) => (
                   <div
                     key={i}
-                    className={`w-1.5 h-1.5 rounded-full ${
-                      i < opening.difficulty ? "bg-cyan-400 shadow-[0_0_4px_#00f0ff]" : "bg-white/5"
-                    }`}
+                    className={`w-1.5 h-1.5 rounded-full ${i < opening.difficulty ? "bg-cyan-400 shadow-[0_0_4px_#00f0ff]" : "bg-white/5"
+                      }`}
                   />
                 ))}
               </div>
             </div>
-            
+
             {isActive && (
-              <motion.div 
+              <motion.div
                 initial={{ x: -5, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 className="flex items-center gap-1.5 text-cyan-400 text-[10px] font-mono font-bold uppercase tracking-widest"

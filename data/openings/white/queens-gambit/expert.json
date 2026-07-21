@@ -1,0 +1,893 @@
+{
+  "openingId": "queens-gambit",
+  "tier": "Expert",
+  "lines": [
+    {
+      "id": "queens-gambit-expert-qgd-orthodox-lasker",
+      "parentVariation": "Queen's Gambit Declined",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGD Orthodox Lasker Defence",
+      "aliases": [
+        "Lasker QGD"
+      ],
+      "eco": "D30",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.Bg5 Be7 5.e3 O-O 6.Nf3 h6 7.Bh4 Ne4 8.Bxe7 Qxe7 9.cxd5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Bg5",
+        "Be7",
+        "e3",
+        "O-O",
+        "Nf3",
+        "h6",
+        "Bh4",
+        "Ne4",
+        "Bxe7",
+        "Qxe7",
+        "cxd5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c1g5",
+        "f8e7",
+        "e2e3",
+        "e8g8",
+        "g1f3",
+        "h7h6",
+        "g5h4",
+        "f6e4",
+        "h4e7",
+        "d8e7",
+        "c4d5"
+      ],
+      "startingFen": "rnb2rk1/ppp1qpp1/4p2p/3P4/3Pn3/2N1PN2/PP3PPP/R2QKB1R b KQ - 0 9",
+      "moveDepth": 17,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-advanced-qgd-orthodox-lasker"
+      ],
+      "continuationIds": [
+        "queens-gambit-master-qgd-orthodox-lasker"
+      ],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White trades on e7 and captures on d5, releasing tension.",
+        "The Lasker leads to simplified, balanced positions.",
+        "Both sides aim for piece activity and central control."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to trade the bishop pair too easily",
+        "Misjudging the ...Ne4 outpost"
+      ],
+      "explanation": "The Lasker Defence (17.cxd5) sees White trade on e7 and capture on d5, releasing the central tension. This leads to simplified positions where both sides fight for the initiative. The Lasker is a reliable, flexible defence.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "queens-gambit-expert-slav-main-line",
+      "parentVariation": "Slav Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Slav Main Line",
+      "aliases": [
+        "Slav Main Line"
+      ],
+      "eco": "D16",
+      "pgn": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 dxc4 5.a4 Bf5 6.e3 e6 7.Bxc4 Bb4 8.O-O",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "c6",
+        "Nf3",
+        "Nf6",
+        "Nc3",
+        "dxc4",
+        "a4",
+        "Bf5",
+        "e3",
+        "e6",
+        "Bxc4",
+        "Bb4",
+        "O-O"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "c7c6",
+        "g1f3",
+        "g8f6",
+        "b1c3",
+        "d5c4",
+        "a2a4",
+        "c8f5",
+        "e2e3",
+        "e7e6",
+        "f1c4",
+        "f8b4",
+        "e1g1"
+      ],
+      "startingFen": "rn1qk2r/pp3ppp/2p1pn2/5b2/PbBP4/2N1PN2/1P3PPP/R1BQ1RK1 b kq - 2 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-advanced-slav-main-line"
+      ],
+      "continuationIds": [
+        "queens-gambit-master-slav-main-line"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black pins the c3 knight with Bb4, increasing pressure.",
+        "The Slav Main Line leads to complex middlegame positions.",
+        "White must handle the pin carefully."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to win the bishop pair too easily",
+        "Developing pieces passively in the resulting positions"
+      ],
+      "explanation": "The Slav Main Line (15...Bb4) sees Black pin the c3 knight, increasing pressure. White must handle the pin carefully, often playing Bd2 or Nd2. This leads to complex middlegame positions requiring precise play.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "queens-gambit-expert-qga-main-line",
+      "parentVariation": "Queen's Gambit Accepted",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGA Main Line",
+      "aliases": [
+        "QGA Main Line"
+      ],
+      "eco": "D27",
+      "pgn": "1.d4 d5 2.c4 dxc4 3.Nf3 Nf6 4.e3 e6 5.Bxc4 c5 6.O-O a6 7.Qe2 b5 8.Bb3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "dxc4",
+        "Nf3",
+        "Nf6",
+        "e3",
+        "e6",
+        "Bxc4",
+        "c5",
+        "O-O",
+        "a6",
+        "Qe2",
+        "b5",
+        "Bb3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "d5c4",
+        "g1f3",
+        "g8f6",
+        "e2e3",
+        "e7e6",
+        "f1c4",
+        "c7c5",
+        "e1g1",
+        "a7a6",
+        "d1e2",
+        "b7b5",
+        "c4b3"
+      ],
+      "startingFen": "rnbqkb1r/5ppp/p3pn2/1pp5/3P4/1B2PN2/PP2QPPP/RNB2RK1 b kq - 1 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-advanced-qga-main-line"
+      ],
+      "continuationIds": [
+        "queens-gambit-master-qga-main-line"
+      ],
+      "conceptIds": [
+        "development",
+        "gambit",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White retreats the bishop to b3, keeping the diagonal.",
+        "The QGA Main Line leads to open, tactical positions.",
+        "Both sides aim for piece activity and central control."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to equalise the centre too easily",
+        "Developing pieces passively in open positions"
+      ],
+      "explanation": "The QGA Main Line (15.Bb3) sees White retreat the bishop, keeping the diagonal. This leads to open, tactical positions where both sides fight for the initiative. Good piece coordination is essential.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "queens-gambit-expert-tarrasch-haakert",
+      "parentVariation": "Tarrasch Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Tarrasch Haakert Variation",
+      "aliases": [
+        "Haakert Tarrasch"
+      ],
+      "eco": "D34",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 c5 4.cxd5 exd5 5.Nf3 Nc6 6.g3 Nf6 7.Bg2 cxd4 8.Nxd4",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "c5",
+        "cxd5",
+        "exd5",
+        "Nf3",
+        "Nc6",
+        "g3",
+        "Nf6",
+        "Bg2",
+        "cxd4",
+        "Nxd4"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "c7c5",
+        "c4d5",
+        "e6d5",
+        "g1f3",
+        "b8c6",
+        "g2g3",
+        "g8f6",
+        "f1g2",
+        "c5d4",
+        "f3d4"
+      ],
+      "startingFen": "r1bqkb1r/pp3ppp/2n2n2/3p4/3N4/2N3P1/PP2PPBP/R1BQK2R b KQkq - 0 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "queens-gambit-advanced-tarrasch-haakert"
+      ],
+      "continuationIds": [
+        "queens-gambit-master-tarrasch-haakert"
+      ],
+      "conceptIds": [
+        "isolated-queens-pawn",
+        "central-control",
+        "fianchetto"
+      ],
+      "strategicIdeas": [
+        "White recaptures on d4, maintaining the IQP structure.",
+        "The Haakert leads to complex middlegame positions.",
+        "Both sides aim for piece activity and central control."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to trade pieces and relieve the IQP pressure",
+        "Passive play that lets Black's IQP become strong"
+      ],
+      "explanation": "The Haakert Variation (15.Nxd4) sees White recapture on d4, maintaining the IQP structure. This leads to complex middlegame positions where both sides fight for the initiative. Understanding the IQP dynamics is key.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "queens-gambit-expert-cambridge-springs-main",
+      "parentVariation": "Cambridge Springs Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Cambridge Springs Main Line",
+      "aliases": [
+        "Cambridge Springs Main"
+      ],
+      "eco": "D52",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.Bg5 Nbd7 5.Nf3 c6 6.e3 Qa5 7.Bd3 Bb4 8.O-O",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Bg5",
+        "Nbd7",
+        "Nf3",
+        "c6",
+        "e3",
+        "Qa5",
+        "Bd3",
+        "Bb4",
+        "O-O"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c1g5",
+        "b8d7",
+        "g1f3",
+        "c7c6",
+        "e2e3",
+        "d8a5",
+        "f1d3",
+        "f8b4",
+        "e1g1"
+      ],
+      "startingFen": "r1b1k2r/pp1n1ppp/2p1pn2/q2p2B1/1bPP4/2NBPN2/PP3PPP/R2Q1RK1 b kq - 4 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "queens-gambit-advanced-cambridge-springs-main"
+      ],
+      "continuationIds": [
+        "queens-gambit-master-cambridge-springs-main"
+      ],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White castles, completing development in the Cambridge Springs.",
+        "The Cambridge Springs Main Line leads to sharp tactical play.",
+        "Both sides aim for piece activity and central control."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing the ...Qa5 pin to win material",
+        "Releasing the Bg5 pin prematurely"
+      ],
+      "explanation": "The Cambridge Springs Main Line (15.O-O) sees White complete development. This leads to sharp tactical play where both sides fight for the initiative. Precise calculation is required to navigate the complications.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "queens-gambit-expert-semi-slav-meran",
+      "parentVariation": "Semi-Slav Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Semi-Slav Meran Variation",
+      "aliases": [
+        "Meran Semi-Slav"
+      ],
+      "eco": "D47",
+      "pgn": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 e6 5.e3 Nbd7 6.Bd3 dxc4 7.Bxc4 b5 8.Bd3 a6 9.e4",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "c6",
+        "Nf3",
+        "Nf6",
+        "Nc3",
+        "e6",
+        "e3",
+        "Nbd7",
+        "Bd3",
+        "dxc4",
+        "Bxc4",
+        "b5",
+        "Bd3",
+        "a6",
+        "e4"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "c7c6",
+        "g1f3",
+        "g8f6",
+        "b1c3",
+        "e7e6",
+        "e2e3",
+        "b8d7",
+        "f1d3",
+        "d5c4",
+        "d3c4",
+        "b7b5",
+        "c4d3",
+        "a7a6",
+        "e3e4"
+      ],
+      "startingFen": "r1bqkb1r/3n1ppp/p1p1pn2/1p6/3PP3/2NB1N2/PP3PPP/R1BQK2R b KQkq - 0 9",
+      "moveDepth": 17,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-advanced-semi-slav-meran"
+      ],
+      "continuationIds": [
+        "queens-gambit-master-semi-slav-meran"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White plays e4, grabbing the centre and returning the pawn.",
+        "The Meran leads to complex middlegame positions.",
+        "Both sides aim for piece activity and central control."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to consolidate the extra pawn",
+        "Misjudging the tactical complications"
+      ],
+      "explanation": "The Meran Variation (17.e4) sees White grab the centre, returning the pawn for active piece play. This leads to complex middlegame positions where both sides fight for the initiative. Understanding the typical plans is essential.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "queens-gambit-expert-exchange-qgd-carlsbad",
+      "parentVariation": "Queen's Gambit Declined",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Exchange Variation Carlsbad",
+      "aliases": [
+        "Carlsbad Structure"
+      ],
+      "eco": "D35",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.cxd5 exd5 5.Bg5 c6 6.Qc2 Bf5 7.Bxf6 gxf6",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "cxd5",
+        "exd5",
+        "Bg5",
+        "c6",
+        "Qc2",
+        "Bf5",
+        "Bxf6",
+        "gxf6"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c4d5",
+        "e6d5",
+        "c1g5",
+        "c7c6",
+        "d1c2",
+        "c8f5",
+        "g5f6",
+        "g7f6"
+      ],
+      "startingFen": "rn1qkb1r/pp3p1p/2p2p2/3p1b2/3P4/2N5/PPQ1PPPP/R3KBNR w KQkq - 0 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-advanced-exchange-qgd-carlsbad"
+      ],
+      "continuationIds": [
+        "queens-gambit-master-exchange-qgd-carlsbad"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "isolated-queens-pawn",
+        "minority-attack"
+      ],
+      "strategicIdeas": [
+        "White trades the bishop on f6, damaging Black's kingside.",
+        "The Carlsbad structure is a classic positional battle.",
+        "White aims for piece activity and pressure on d5."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to free the position with ...c5",
+        "Misplacing pieces in the Carlsbad structure"
+      ],
+      "explanation": "The Exchange Variation Carlsbad (13.Bxf6 gxf6) sees White damage Black's pawn structure. This is a classic positional battle where White aims to exploit the weakened kingside. Understanding the Carlsbad structure is fundamental to QGD play.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "queens-gambit-expert-ragazin-main",
+      "parentVariation": "Ragazin Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Ragazin Main Line",
+      "aliases": [
+        "Ragazin Main Line"
+      ],
+      "eco": "D38",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.Bg5 Bb4 5.e3 h6 6.Bh4 g5 7.Bg3 Ne4",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Bg5",
+        "Bb4",
+        "e3",
+        "h6",
+        "Bh4",
+        "g5",
+        "Bg3",
+        "Ne4"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c1g5",
+        "f8b4",
+        "e2e3",
+        "h7h6",
+        "g5h4",
+        "g7g5",
+        "h4g3",
+        "f6e4"
+      ],
+      "startingFen": "rnbqk2r/ppp2p2/4p2p/3p2p1/1bPPn3/2N1P1B1/PP3PPP/R2QKBNR w KQkq - 2 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "queens-gambit-advanced-ragazin-main"
+      ],
+      "continuationIds": [
+        "queens-gambit-master-ragazin-main"
+      ],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black plays ...g5, gaining space on the kingside.",
+        "The Ragazin Main Line leads to sharp tactical play.",
+        "White must handle the ...Ne4 outpost carefully."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to win the bishop pair too easily",
+        "Releasing the Bg5 pin prematurely"
+      ],
+      "explanation": "The Ragazin Main Line (13...g5 14.Bg3 Ne4) sees Black gain space on the kingside. This leads to sharp tactical play where White must handle the ...Ne4 outpost carefully. The Ragazin is a flexible, active defence.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "queens-gambit-expert-slav-chebanenko",
+      "parentVariation": "Slav Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Slav Chebanenko Variation",
+      "aliases": [
+        "Chebanenko Slav",
+        "Schlechter Slav"
+      ],
+      "eco": "D15",
+      "pgn": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 a6 5.cxd5 cxd5 6.Bf4 Nc6 7.e3 Bf5 8.Qb3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "c6",
+        "Nf3",
+        "Nf6",
+        "Nc3",
+        "a6",
+        "cxd5",
+        "cxd5",
+        "Bf4",
+        "Nc6",
+        "e3",
+        "Bf5",
+        "Qb3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "c7c6",
+        "g1f3",
+        "g8f6",
+        "b1c3",
+        "a7a6",
+        "c4d5",
+        "c6d5",
+        "c1f4",
+        "b8c6",
+        "e2e3",
+        "c8f5",
+        "d1b3"
+      ],
+      "startingFen": "r2qkb1r/1p2pppp/p1n2n2/3p1b2/3P1B2/1QN1PN2/PP3PPP/R3KB1R b KQkq - 2 8",
+      "moveDepth": 15,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "queens-gambit-advanced-slav-chebanenko"
+      ],
+      "continuationIds": [
+        "queens-gambit-master-slav-chebanenko"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White exchanges on d5 to reach a flexible central structure.",
+        "The Chebanenko move order with a6 prepares piece development.",
+        "Both sides aim for piece activity and central control."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to equalise too easily",
+        "Developing pieces passively in the resulting positions"
+      ],
+      "explanation": "The Chebanenko Variation (8.Qb3) sees White develop with an early queen sortie, pressuring d5 and b7. This leads to complex middlegame positions where both sides fight for the initiative. Understanding the typical plans is essential for success in the Slav.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "queens-gambit-expert-qga-janowski",
+      "parentVariation": "Queen's Gambit Accepted",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGA Janowski Variation",
+      "aliases": [
+        "Janowski QGA"
+      ],
+      "eco": "D29",
+      "pgn": "1.d4 d5 2.c4 dxc4 3.Nf3 Nf6 4.Nc3 e6 5.e4 Bb4 6.Bd3 b5 7.e5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "dxc4",
+        "Nf3",
+        "Nf6",
+        "Nc3",
+        "e6",
+        "e4",
+        "Bb4",
+        "Bd3",
+        "b5",
+        "e5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "d5c4",
+        "g1f3",
+        "g8f6",
+        "b1c3",
+        "e7e6",
+        "e2e4",
+        "f8b4",
+        "f1d3",
+        "b7b5",
+        "e4e5"
+      ],
+      "startingFen": "rnbqk2r/p1p2ppp/4pn2/1p2P3/1bpP4/2NB1N2/PP3PPP/R1BQK2R b KQkq - 0 7",
+      "moveDepth": 13,
+      "difficulty": 5,
+      "popularity": 2,
+      "prerequisites": [
+        "queens-gambit-advanced-qga-janowski"
+      ],
+      "continuationIds": [
+        "queens-gambit-master-qga-janowski"
+      ],
+      "conceptIds": [
+        "gambit",
+        "central-control",
+        "initiative"
+      ],
+      "strategicIdeas": [
+        "White pushes e5, gaining space in the centre.",
+        "The Janowski leads to sharp, tactical positions.",
+        "Black must challenge the centre quickly."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White to consolidate the central pawns",
+        "Developing pieces passively against the central duo"
+      ],
+      "explanation": "The Janowski Variation (13.e5) sees White push the pawn, gaining space in the centre. This leads to sharp, tactical positions where Black must challenge the centre quickly. Precise play is required from both sides.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "queens-gambit-expert-tarrasch-symmetrical",
+      "parentVariation": "Tarrasch Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Tarrasch Symmetrical Variation",
+      "aliases": [
+        "Symmetrical Tarrasch"
+      ],
+      "eco": "D34",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 c5 4.cxd5 exd5 5.Nf3 Nc6 6.Bf4 Bf5 7.dxc5 Bxc5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "c5",
+        "cxd5",
+        "exd5",
+        "Nf3",
+        "Nc6",
+        "Bf4",
+        "Bf5",
+        "dxc5",
+        "Bxc5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "c7c5",
+        "c4d5",
+        "e6d5",
+        "g1f3",
+        "b8c6",
+        "c1f4",
+        "c8f5",
+        "d4c5",
+        "f8c5"
+      ],
+      "startingFen": "r2qk1nr/pp3ppp/2n5/2bp1b2/5B2/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "queens-gambit-advanced-tarrasch-symmetrical"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "isolated-queens-pawn",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White captures on c5, opening the position.",
+        "The Symmetrical Tarrasch leads to balanced positions.",
+        "Both sides aim for piece activity and central control."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to trade pieces and relieve the IQP pressure",
+        "Passive play that lets Black's IQP become strong"
+      ],
+      "explanation": "The Symmetrical Tarrasch (13.dxc5 Bxc5) sees White open the position, leading to balanced play. This is a flexible variation where both sides fight for the initiative. Understanding the IQP dynamics is key.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "queens-gambit-expert-qgd-orthodox-rubinstein",
+      "parentVariation": "Queen's Gambit Declined",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGD Orthodox Rubinstein Variation",
+      "aliases": [
+        "Rubinstein QGD"
+      ],
+      "eco": "D30",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.Bg5 Be7 5.e3 O-O 6.Nf3 Ne4 7.Bxe7 Qxe7 8.cxd5 exd5 9.Bd3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Bg5",
+        "Be7",
+        "e3",
+        "O-O",
+        "Nf3",
+        "Ne4",
+        "Bxe7",
+        "Qxe7",
+        "cxd5",
+        "exd5",
+        "Bd3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c1g5",
+        "f8e7",
+        "e2e3",
+        "e8g8",
+        "g1f3",
+        "f6e4",
+        "g5e7",
+        "d8e7",
+        "c4d5",
+        "e6d5",
+        "f1d3"
+      ],
+      "startingFen": "rnb2rk1/ppp1qppp/8/3p4/3Pn3/2NBPN2/PP3PPP/R2QK2R b KQ - 1 9",
+      "moveDepth": 17,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "queens-gambit-advanced-qgd-orthodox-rubinstein"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White develops the bishop to d3, completing development.",
+        "The Rubinstein leads to balanced, flexible positions.",
+        "Both sides aim for piece activity and central control."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to trade the bishop pair too easily",
+        "Misjudging the ...Ne4 outpost"
+      ],
+      "explanation": "The Rubinstein Variation (17.Bd3) sees White complete development. This leads to balanced, flexible positions where both sides fight for the initiative. The Rubinstein is a reliable, solid variation.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    }
+  ]
+}

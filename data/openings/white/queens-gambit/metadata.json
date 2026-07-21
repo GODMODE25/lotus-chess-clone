@@ -1,0 +1,146 @@
+{
+  "id": "queens-gambit",
+  "name": "Queen's Gambit",
+  "slug": "queens-gambit",
+  "ecoRange": "D06–D69",
+  "family": "Queen Pawn",
+  "colour": "white",
+  "popularity": 5,
+  "difficulty": 2,
+  "description": "The Queen's Gambit begins with 1.d4 d5 2.c4, where White offers a pawn to fight for the centre. It is one of the oldest and most respected openings in chess, emphasising central control, harmonious development, and strategic pawn structures. The Queen's Gambit leads to both solid positional play (Queen's Gambit Declined) and sharp tactical battles (Queen's Gambit Accepted, Semi-Slav, and Meran).",
+  "strategicOverview": "White's strategy revolves around central control with d4 and c4, rapid development, and piece activity. The Queen's Gambit can lead to a variety of pawn structures: the solid Queen's Gambit Declined (where Black supports d5 with e6), the resilient Slav (c6), the dynamic Tarrasch (c5), and the sharp Semi-Slav (c6+e6). Understanding the transition from the opening to a favourable middlegame requires mastery of central pawn breaks, minority attacks, isolated queen's pawn play, and proper piece coordination. The opening teaches fundamentals that transfer to many other d4 openings.",
+  "typicalPawnStructures": [
+    "Queen's Gambit Declined (pawns d5/e6 vs d4/c4)",
+    "Slav (pawns c6/d5 vs d4/c4)",
+    "Exchange Variation Carlsbad (c6/d5 vs d4/c4 with open c-file)",
+    "Tarrasch (isolated queen's pawn after cxd5 exd5)",
+    "Semi-Slav (c6/d5/e6 complex structure)"
+  ],
+  "commonTacticalThemes": [
+    "Pin on the f6 knight (Bg5 vs QGD)",
+    "Central pawn break with cxd5 or e3-e4",
+    "Minority attack on the queenside (b4-b5)",
+    "Isolated queen's pawn piece activity",
+    "Bishop pair advantage in open positions",
+    "Discovered attacks after pawn exchanges in the centre"
+  ],
+  "modelPlayers": [
+    "Queen's Gambit Declined: Anatoly Karpov, Garry Kasparov",
+    "Slav Defence: Vladimir Kramnik, Viswanathan Anand",
+    "Semi-Slav/Meran: Alexander Alekhine, Mikhail Botvinnik",
+    "Tarrasch: Siegbert Tarrasch (historical)",
+    "Modern Queen's Gambit: Magnus Carlsen, Ding Liren"
+  ],
+  "recommendedStudyOrder": [
+    "italian-game",
+    "ruy-lopez",
+    "queens-gambit",
+    "london-system",
+    "english-opening"
+  ],
+  "baseMoves": [
+    "d4",
+    "d5",
+    "c4"
+  ],
+  "masteryLevels": [
+    {
+      "level": 1,
+      "tier": "Beginner",
+      "objectives": [
+        "Learn the opening moves 1.d4 d5 2.c4",
+        "Understand why White offers the c4 pawn",
+        "Learn the basic QGD, Slav, and QGA setups"
+      ],
+      "expectedKnowledge": "Knows the starting moves and the basic idea of the Queen's Gambit. Can play the main defensive setups (QGD, Slav, QGA) with natural development.",
+      "averageMoveDepth": 7,
+      "averageLineCount": 5,
+      "xpReward": 50,
+      "graduationRequirements": "Complete all beginner lines with fewer than 2 mistakes on average."
+    },
+    {
+      "level": 2,
+      "tier": "Novice",
+      "objectives": [
+        "Learn Black's main replies: 2...e6 (QGD), 2...c6 (Slav), 2...dxc4 (QGA)",
+        "Understand the difference between declined and accepted gambits",
+        "Learn basic recovery of the c4 pawn"
+      ],
+      "expectedKnowledge": "Recognises whether Black declines or accepts the gambit and understands the strategic difference. Can navigate the main lines through move 10.",
+      "averageMoveDepth": 9,
+      "averageLineCount": 8,
+      "xpReward": 100,
+      "graduationRequirements": "Complete all novice lines with an accuracy rate of 70% or higher."
+    },
+    {
+      "level": 3,
+      "tier": "Intermediate",
+      "objectives": [
+        "Learn the main line QGD Orthodox with Bg5/Be7",
+        "Understand central pawn tension and when to capture",
+        "Study the Slav Main Line and Semi-Slav setup"
+      ],
+      "expectedKnowledge": "Can play the main lines of the QGD, Slav, and QGA through the critical development phase. Understands piece placement in the resulting positions and recognises key pawn structures.",
+      "averageMoveDepth": 11,
+      "averageLineCount": 10,
+      "xpReward": 200,
+      "graduationRequirements": "Complete all intermediate lines with an accuracy rate of 75% or higher."
+    },
+    {
+      "level": 4,
+      "tier": "Advanced",
+      "objectives": [
+        "Study the Lasker Defence and Orthodox main lines",
+        "Learn the Meran Variation of the Semi-Slav",
+        "Understand isolated queen's pawn dynamics in the Tarrasch"
+      ],
+      "expectedKnowledge": "Can execute the main theoretical lines of the Queen's Gambit and knows Black's best defences. Understands the typical middlegame plans and how to handle different pawn structures.",
+      "averageMoveDepth": 13,
+      "averageLineCount": 12,
+      "xpReward": 350,
+      "graduationRequirements": "Complete all advanced lines with an accuracy rate of 80% or higher."
+    },
+    {
+      "level": 5,
+      "tier": "Expert",
+      "objectives": [
+        "Study the Cambridge Springs and Ragazin variations",
+        "Learn the sharp Meran and Botvinnik lines",
+        "Understand pawn sacrifice compensation"
+      ],
+      "expectedKnowledge": "Can play the Queen's Gambit in both quiet and sharp lines. Understands the strategic compensation for structural concessions and knows the key attacking plans.",
+      "averageMoveDepth": 15,
+      "averageLineCount": 12,
+      "xpReward": 500,
+      "graduationRequirements": "Complete all expert lines with an accuracy rate of 80% or higher."
+    },
+    {
+      "level": 6,
+      "tier": "Master",
+      "objectives": [
+        "Study deep QGD theory with Rc1 and minority attack plans",
+        "Learn modern grandmaster treatments of the Slav and Semi-Slav",
+        "Study the Chebanenko and unusual Black tries"
+      ],
+      "expectedKnowledge": "Knows the modern grandmaster approach to the Queen's Gambit with slow positional plans. Can handle unusual Black defences and understands subtle move-order nuances in the main lines.",
+      "averageMoveDepth": 17,
+      "averageLineCount": 10,
+      "xpReward": 750,
+      "graduationRequirements": "Complete all master lines with an accuracy rate of 85% or higher."
+    },
+    {
+      "level": 7,
+      "tier": "Legend",
+      "objectives": [
+        "Study transpositions between Queen's Gambit and related openings",
+        "Master rare sidelines and move-order subtleties",
+        "Study deep theoretical endgame positions arising from the Queen's Gambit"
+      ],
+      "expectedKnowledge": "Has comprehensive knowledge of the Queen's Gambit at the highest level. Can handle any deviation, knows transposition possibilities, and understands the resulting endgames from main line theory.",
+      "averageMoveDepth": 21,
+      "averageLineCount": 10,
+      "xpReward": 1000,
+      "graduationRequirements": "Complete all legend lines with an accuracy rate of 90% or higher."
+    }
+  ]
+}

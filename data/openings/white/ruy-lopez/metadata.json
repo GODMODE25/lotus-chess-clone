@@ -1,0 +1,140 @@
+{
+  "id": "ruy-lopez",
+  "name": "Ruy Lopez",
+  "slug": "ruy-lopez",
+  "ecoRange": "C60–C99",
+  "family": "King Pawn",
+  "colour": "white",
+  "popularity": 5,
+  "difficulty": 3,
+  "description": "The Ruy Lopez (also known as the Spanish Opening) begins with 1.e4 e5 2.Nf3 Nc6 3.Bb5. By developing the bishop to b5, White immediately puts pressure on the knight that protects Black's e5 pawn, initiating one of the most theoretical and rich openings in chess.",
+  "strategicOverview": "White's strategy is centered on control of the board's center, typically prepared via c2-c3 and d2-d4. The Bb5 bishop indirectly targets Black's center by pressuring the c6 knight. The Ruy Lopez is famous for its long-term positional squeeze, maneuver-heavy middlegames, and structural decisions. It leads to many diverse setups including the Berlin Defense, the Exchange Variation, the Marshall Attack, and various closed main lines like the Chigorin and Breyer variations.",
+  "typicalPawnStructures": [
+    "Closed Spanish (e4 vs e5 with c3/d4 vs d6/e5)",
+    "Exchange Structure (symmetrical d-pawns, doubled c-pawns for Black)",
+    "Berlin Wall structure (no queens, kingside pawn majority for White)",
+    "Marshall Attack structure (White extra d-pawn, Black active space)"
+  ],
+  "commonTacticalThemes": [
+    "The e5 pawn trap (indirect defense via tactical refutations)",
+    "Pin on the c6 knight along the a4-e8 diagonal",
+    "Spanish Knight maneuver (Nb1-d2-f1-g3/e3)",
+    "Ruy Lopez bishop retreat (Bb5-a4-b3-c2)",
+    "Kingside pawn storm in closed variations",
+    "Tactical sacrifices on f7/h7 after kingside attacks"
+  ],
+  "modelPlayers": [
+    "Garry Kasparov",
+    "Bobby Fischer",
+    "Anatoly Karpov",
+    "Magnus Carlsen",
+    "Fabiano Caruana"
+  ],
+  "recommendedStudyOrder": [
+    "italian-game",
+    "ruy-lopez",
+    "scotch-game",
+    "vienna-game"
+  ],
+  "baseMoves": ["e4", "e5", "Nf3", "Nc6", "Bb5"],
+  "masteryLevels": [
+    {
+      "level": 1,
+      "tier": "Beginner",
+      "objectives": [
+        "Learn the opening moves 1.e4 e5 2.Nf3 Nc6 3.Bb5",
+        "Understand the target of Bb5",
+        "Learn the basics of Morphy's Defense (3...a6)"
+      ],
+      "expectedKnowledge": "Knows the starting moves of the Ruy Lopez and understands why White plays Bb5. Recognises Morphy's Defense (3...a6) and the basic bishop retreat to a4.",
+      "averageMoveDepth": 8,
+      "averageLineCount": 5,
+      "xpReward": 50,
+      "graduationRequirements": "Complete all beginner lines with fewer than 2 mistakes on average."
+    },
+    {
+      "level": 2,
+      "tier": "Novice",
+      "objectives": [
+        "Master the Exchange Variation (4.Bxc6)",
+        "Understand why White cannot immediately win the e5 pawn on move 5",
+        "Learn the Steinitz Defense (3...d6)"
+      ],
+      "expectedKnowledge": "Understands the Exchange Variation and resulting pawn endgame structures. Knows the tactical traps surrounding the e5 pawn and can play against the passive d6 Steinitz setup.",
+      "averageMoveDepth": 10,
+      "averageLineCount": 8,
+      "xpReward": 100,
+      "graduationRequirements": "Complete all novice lines with an accuracy rate of 70% or higher."
+    },
+    {
+      "level": 3,
+      "tier": "Intermediate",
+      "objectives": [
+        "Learn the Berlin Defense (3...Nf6) and its basic setups",
+        "Understand the Berlin Wall endgame structure",
+        "Learn the Arkhangelsk and Neo-Arkhangelsk variations"
+      ],
+      "expectedKnowledge": "Can navigate the Berlin Defense main structures and understands the queens-off endgame. Familiar with dynamic active bishop options like the Arkhangelsk.",
+      "averageMoveDepth": 12,
+      "averageLineCount": 10,
+      "xpReward": 200,
+      "graduationRequirements": "Complete all intermediate lines with an accuracy rate of 75% or higher."
+    },
+    {
+      "level": 4,
+      "tier": "Advanced",
+      "objectives": [
+        "Study the Closed Defense (3...a6 4.Ba4 Nf6 5.O-O Be7)",
+        "Learn the main reply 6.Re1 b5 7.Bb3 d6 8.c3 O-O 9.h3",
+        "Understand the typical Spanish knight maneuver (Nb1-d2-f1-g3)"
+      ],
+      "expectedKnowledge": "Comfortable playing the Closed Spanish setups through the critical tabiya. Understands the purpose of c3, h3, and Re1, as well as the standard knight relocation maneuvers.",
+      "averageMoveDepth": 14,
+      "averageLineCount": 12,
+      "xpReward": 350,
+      "graduationRequirements": "Complete all advanced lines with an accuracy rate of 80% or higher."
+    },
+    {
+      "level": 5,
+      "tier": "Expert",
+      "objectives": [
+        "Study the Marshall Attack (8.c3 d5) and White's Anti-Marshall options",
+        "Learn how to handle the Marshall pawn sacrifice",
+        "Understand active piece play and initiative compensation"
+      ],
+      "expectedKnowledge": "Can navigate the Marshall Attack theory and knows the key defensive tasks. Understands the Anti-Marshall options (8.a4, 8.h3) and their strategic differences.",
+      "averageMoveDepth": 16,
+      "averageLineCount": 12,
+      "xpReward": 500,
+      "graduationRequirements": "Complete all expert lines with an accuracy rate of 80% or higher."
+    },
+    {
+      "level": 6,
+      "tier": "Master",
+      "objectives": [
+        "Study the Chigorin Variation (9...Na5) and Breyer Variation (9...Nb8)",
+        "Learn the Zaitsev and Keres systems",
+        "Understand deep theoretical closed middlegame strategies"
+      ],
+      "expectedKnowledge": "Understands deep closed Ruy Lopez theory. Can coordinate positional maneuvering, plan central breaks, and react to Black's diverse setup choices (Na5, Nb8, Nd7).",
+      "averageMoveDepth": 18,
+      "averageLineCount": 10,
+      "xpReward": 750,
+      "graduationRequirements": "Complete all master lines with an accuracy rate of 85% or higher."
+    },
+    {
+      "level": 7,
+      "tier": "Legend",
+      "objectives": [
+        "Master rare sidelines (Schliemann Gambit, Cozio Defense, Smyslov System)",
+        "Understand deep tactical transpositions and endgame transitions",
+        "Analyze modern grandmaster novelties in the Ruy Lopez"
+      ],
+      "expectedKnowledge": "Has comprehensive knowledge of all Ruy Lopez sidelines. Can handle concrete gambits (Schliemann 3...f5) and possesses deep endgame competence in Spanish structures.",
+      "averageMoveDepth": 22,
+      "averageLineCount": 10,
+      "xpReward": 1000,
+      "graduationRequirements": "Complete all legend lines with an accuracy rate of 90% or higher."
+    }
+  ]
+}

@@ -63,8 +63,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     return (
       <div className="flex min-h-screen items-center justify-center bg-background text-primary grid-dots">
         <div className="flex flex-col items-center gap-6">
-          <motion.div 
-            animate={{ 
+          <motion.div
+            animate={{
               rotate: 360,
               scale: [1, 1.1, 1],
               borderColor: ["#00f0ff", "#bd00ff", "#00f0ff"]
@@ -119,16 +119,15 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`relative flex items-center gap-2.5 px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-[0.2em] transition-all group ${
-                      active
-                        ? "text-primary"
-                        : "text-slate-500 hover:text-slate-200"
-                    }`}
+                    className={`relative flex items-center gap-2.5 px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-[0.2em] transition-all group ${active
+                      ? "text-primary"
+                      : "text-slate-500 hover:text-slate-200"
+                      }`}
                   >
                     <Icon className={`size-3.5 transition-transform ${active ? "scale-110" : "group-hover:scale-110"}`} />
                     {item.name}
                     {active && (
-                      <motion.div 
+                      <motion.div
                         layoutId="navActive"
                         className="absolute -bottom-[20px] left-2 right-2 h-0.5 bg-primary shadow-neon"
                       />
@@ -161,8 +160,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                         <User className="size-6" />
                       </div>
                     )}
-                    <div className="absolute -bottom-0.5 -right-0.5 size-3.5 rounded-full bg-primary border-2 border-background shadow-neon" />
                   </button>
+                  {/* Green "online" status dot — kept outside the button so it is not clipped by overflow-hidden, and placed top-right so it stays visible at the top of the page */}
+                  <div className="absolute -bottom-0.5 -right-0.5 size-3.0 rounded-full bg-primary border-2 border-background shadow-neon z-10" />
 
                   <AnimatePresence>
                     {avatarMenuOpen && (
@@ -181,10 +181,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                           style={
                             avatarButtonRef.current
                               ? {
-                                  position: "fixed",
-                                  top: avatarButtonRef.current.getBoundingClientRect().bottom + 4,
-                                  right: window.innerWidth - avatarButtonRef.current.getBoundingClientRect().right,
-                                }
+                                position: "fixed",
+                                top: avatarButtonRef.current.getBoundingClientRect().bottom + 4,
+                                right: window.innerWidth - avatarButtonRef.current.getBoundingClientRect().right,
+                              }
                               : undefined
                           }
                           className="z-[101] w-48 rounded-xl border border-white/10 bg-cyber-glass p-2 shadow-2xl backdrop-blur-2xl"
@@ -232,14 +232,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <AnimatePresence>
         {mobileMenuOpen && (
           <>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
               className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm xl:hidden"
             />
-            <motion.div 
+            <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -266,11 +266,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                         key={item.name}
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className={`flex items-center justify-between p-4 rounded-xl transition-all border ${
-                          active
-                            ? "bg-primary text-background border-primary shadow-neon"
-                            : "text-slate-400 border-white/5 hover:bg-white/5 hover:text-white"
-                        }`}
+                        className={`flex items-center justify-between p-4 rounded-xl transition-all border ${active
+                          ? "bg-primary text-background border-primary shadow-neon"
+                          : "text-slate-400 border-white/5 hover:bg-white/5 hover:text-white"
+                          }`}
                       >
                         <div className="flex items-center gap-4">
                           <Icon className="size-5" />
@@ -362,7 +361,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               </p>
             </div>
           </div>
-          
+
           <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-6">
               <span className="text-[9px] font-mono text-white/20 uppercase tracking-[0.4em]">OE_LAB_v4.0.2</span>
@@ -372,13 +371,13 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <span className="text-[9px] font-mono uppercase tracking-widest animate-pulse font-bold">Neural_Sync_Active</span>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-8">
               <div className="flex items-center gap-2">
-                <motion.div 
+                <motion.div
                   animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="size-1.5 rounded-full bg-primary shadow-neon" 
+                  className="size-1.5 rounded-full bg-primary shadow-neon"
                 />
                 <span className="text-[9px] font-mono text-white/40 uppercase tracking-widest font-bold">
                   {user.isGuest ? "Local_Simulation" : "Verified_Cloud_Stream"}

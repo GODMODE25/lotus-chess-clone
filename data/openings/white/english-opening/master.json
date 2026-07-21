@@ -1,0 +1,768 @@
+{
+  "openingId": "english-opening",
+  "tier": "Master",
+  "lines": [
+    {
+      "id": "english-master-e5-botvinnik",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...e5 (Botvinnik Master)",
+      "aliases": [
+        "English e5 Botvinnik master"
+      ],
+      "eco": "A29",
+      "pgn": "1. c4 e5 2. Nc3 Nf6 3. Nf3 Nc6 4. g3 Bb4 5. Qc2 O-O 6. Bg2 d6 7. O-O Re8 8. d3 a5 9. a3",
+      "sanMoves": [
+        "c4",
+        "e5",
+        "Nc3",
+        "Nf6",
+        "Nf3",
+        "Nc6",
+        "g3",
+        "Bb4",
+        "Qc2",
+        "O-O",
+        "Bg2",
+        "d6",
+        "O-O",
+        "Re8",
+        "d3",
+        "a5",
+        "a3"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "e7e5",
+        "b1c3",
+        "g8f6",
+        "g1f3",
+        "b8c6",
+        "g2g3",
+        "f8b4",
+        "d1c2",
+        "e8g8",
+        "f1g2",
+        "d7d6",
+        "e1g1",
+        "f8e8",
+        "d2d3",
+        "a7a5",
+        "a2a3"
+      ],
+      "startingFen": "r1bqr1k1/1pp2ppp/2np1n2/p3p3/1bP5/P1NP1NP1/1PQ1PPBP/R1B2RK1 b - - 0 9",
+      "moveDepth": 17,
+      "difficulty": 6,
+      "popularity": 5,
+      "prerequisites": [
+        "english-expert-e5-botvinnik-deep"
+      ],
+      "continuationIds": [
+        "english-legend-e5-botvinnik"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White completes the Botvinnik setup with a3.",
+        "Black expands with ...a5.",
+        "The position is positional."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Breaking the pin awkwardly",
+        "Allowing ...Bxc3 to damage the pawn structure"
+      ],
+      "explanation": "After 4.g3 Bb4 5.Qc2 O-O 6.Bg2 d6 7.O-O Re8 8.d3 a5 9.a3 White has a model Botvinnik setup. The fianchettoed bishop controls the long diagonal.",
+      "reviewPriority": 6,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 70
+    },
+    {
+      "id": "english-master-e5-fourknights",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...e5 (Four Knights Master)",
+      "aliases": [
+        "English e5 Four Knights master"
+      ],
+      "eco": "A29",
+      "pgn": "1. c4 e5 2. Nc3 Nf6 3. Nf3 Nc6 4. d4 exd4 5. Nxd4 Bb4 6. Nxc6 bxc6 7. g3 O-O 8. Bg2 d6",
+      "sanMoves": [
+        "c4",
+        "e5",
+        "Nc3",
+        "Nf6",
+        "Nf3",
+        "Nc6",
+        "d4",
+        "exd4",
+        "Nxd4",
+        "Bb4",
+        "Nxc6",
+        "bxc6",
+        "g3",
+        "O-O",
+        "Bg2",
+        "d6"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "e7e5",
+        "b1c3",
+        "g8f6",
+        "g1f3",
+        "b8c6",
+        "d2d4",
+        "e5d4",
+        "f3d4",
+        "f8b4",
+        "d4c6",
+        "b7c6",
+        "g2g3",
+        "e8g8",
+        "f1g2",
+        "d7d6"
+      ],
+      "startingFen": "r1bq1rk1/p1p2ppp/2pp1n2/8/1bP5/2N3P1/PP2PPBP/R1BQK2R w KQ - 0 9",
+      "moveDepth": 16,
+      "difficulty": 6,
+      "popularity": 4,
+      "prerequisites": [
+        "english-expert-e5-fourknights-deep"
+      ],
+      "continuationIds": [
+        "english-legend-e5-fourknights"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White trades on c6 to damage Black's structure.",
+        "Black recaptures with the b-pawn.",
+        "White has a pleasant space edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...Bxc3 to win the bishop pair",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 4.d4 exd4 5.Nxd4 Bb4 6.Nxc6 bxc6 7.g3 O-O 8.Bg2 d6 White has a model Four Knights structure. The English rewards piece activity here.",
+      "reviewPriority": 6,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 70
+    },
+    {
+      "id": "english-master-c5-hedgehog",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...c5 (Hedgehog Master)",
+      "aliases": [
+        "English c5 hedgehog master"
+      ],
+      "eco": "A30",
+      "pgn": "1. c4 c5 2. Nf3 Nf6 3. Nc3 e6 4. g3 b6 5. Bg2 Bb7 6. O-O Be7 7. d4 cxd4 8. Nxd4 O-O 9. b3",
+      "sanMoves": [
+        "c4",
+        "c5",
+        "Nf3",
+        "Nf6",
+        "Nc3",
+        "e6",
+        "g3",
+        "b6",
+        "Bg2",
+        "Bb7",
+        "O-O",
+        "Be7",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "O-O",
+        "b3"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "c7c5",
+        "g1f3",
+        "g8f6",
+        "b1c3",
+        "e7e6",
+        "g2g3",
+        "b7b6",
+        "f1g2",
+        "c8b7",
+        "e1g1",
+        "f8e7",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "e8g8",
+        "b2b3"
+      ],
+      "startingFen": "rn1q1rk1/pb1pbppp/1p2pn2/8/2PN4/1PN3P1/P3PPBP/R1BQ1RK1 b - - 0 9",
+      "moveDepth": 17,
+      "difficulty": 6,
+      "popularity": 4,
+      "prerequisites": [
+        "english-expert-c5-hedgehog-deep"
+      ],
+      "continuationIds": [
+        "english-legend-c5-hedgehog"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White plays the thematic d4 break.",
+        "Black recaptures with ...cxd4.",
+        "White has a pleasant space edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Premature d4 without preparation",
+        "Allowing ...cxd4 to free Black's game"
+      ],
+      "explanation": "After 1.c4 c5 2.Nf3 Nf6 3.Nc3 e6 4.g3 b6 5.Bg2 Bb7 6.O-O Be7 7.d4 cxd4 8.Nxd4 O-O 9.b3 White strikes in the centre. The Hedgehog is a model of restraint.",
+      "reviewPriority": 6,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 70
+    },
+    {
+      "id": "english-master-c5-symmetric",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...c5 (Symmetric Master)",
+      "aliases": [
+        "English c5 symmetric master"
+      ],
+      "eco": "A30",
+      "pgn": "1. c4 c5 2. Nf3 Nf6 3. d4 cxd4 4. Nxd4 e5 5. Nf3 d6 6. Nc3 Nc6 7. g3 g6 8. Bg2",
+      "sanMoves": [
+        "c4",
+        "c5",
+        "Nf3",
+        "Nf6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "e5",
+        "Nf3",
+        "d6",
+        "Nc3",
+        "Nc6",
+        "g3",
+        "g6",
+        "Bg2"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "c7c5",
+        "g1f3",
+        "g8f6",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "e7e5",
+        "d4f3",
+        "d7d6",
+        "b1c3",
+        "b8c6",
+        "g2g3",
+        "g7g6",
+        "f1g2"
+      ],
+      "startingFen": "r1bqkb1r/pp3p1p/2np1np1/4p3/2P5/2N2NP1/PP2PPBP/R1BQK2R b KQkq - 1 8",
+      "moveDepth": 15,
+      "difficulty": 6,
+      "popularity": 3,
+      "prerequisites": [
+        "english-expert-c5-symmetric-deep"
+      ],
+      "continuationIds": [
+        "english-legend-c5-symmetric"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black replies ...e5 to challenge the centre.",
+        "White keeps a knight on c3.",
+        "The position is balanced."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...d5 to free Black's game",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 3.d4 cxd4 4.Nxd4 e5 5.Nf3 d6 6.Nc3 Nc6 7.g3 g6 8.Bg2 White keeps a flexible centre. The symmetric English with d4 is a model of restraint.",
+      "reviewPriority": 6,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 70
+    },
+    {
+      "id": "english-master-Nf6-grunfeld",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...Nf6 (Anglo-Grünfeld Master)",
+      "aliases": [
+        "English Nf6 Grünfeld master"
+      ],
+      "eco": "A11",
+      "pgn": "1. c4 Nf6 2. Nc3 d5 3. cxd5 Nxd5 4. Nf3 g6 5. g3 Bg7 6. Bg2 O-O 7. O-O Nb6 8. b3 c5 9. Bb2",
+      "sanMoves": [
+        "c4",
+        "Nf6",
+        "Nc3",
+        "d5",
+        "cxd5",
+        "Nxd5",
+        "Nf3",
+        "g6",
+        "g3",
+        "Bg7",
+        "Bg2",
+        "O-O",
+        "O-O",
+        "Nb6",
+        "b3",
+        "c5",
+        "Bb2"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "g8f6",
+        "b1c3",
+        "d7d5",
+        "c4d5",
+        "f6d5",
+        "g1f3",
+        "g7g6",
+        "g2g3",
+        "f8g7",
+        "f1g2",
+        "e8g8",
+        "e1g1",
+        "d5b6",
+        "b2b3",
+        "c7c5",
+        "c1b2"
+      ],
+      "startingFen": "rnbq1rk1/pp2ppbp/1n4p1/2p5/8/1PN2NP1/PB1PPPBP/R2Q1RK1 b - - 1 9",
+      "moveDepth": 17,
+      "difficulty": 6,
+      "popularity": 3,
+      "prerequisites": [
+        "english-expert-Nf6-grunfeld-deep"
+      ],
+      "continuationIds": [
+        "english-legend-Nf6-grunfeld"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "Black reroutes the knight to b6 and plays ...c5.",
+        "White fianchettoes the queen's bishop with Bb2.",
+        "The position is a reversed Grünfeld."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...c5 to free Black's game",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 Nf6 2.Nc3 d5 3.cxd5 Nxd5 4.Nf3 g6 5.g3 Bg7 6.Bg2 O-O 7.O-O Nb6 8.b3 c5 9.Bb2 White has a model Anglo-Grünfeld. The fianchetto keeps control.",
+      "reviewPriority": 6,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 70
+    },
+    {
+      "id": "english-master-Nf6-c5-kid",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...Nf6 2...c5 (King's Indian Reversed Master)",
+      "aliases": [
+        "English Nf6 c5 KID master"
+      ],
+      "eco": "A11",
+      "pgn": "1. c4 Nf6 2. Nc3 c5 3. Nf3 Nc6 4. g3 g6 5. Bg2 Bg7 6. O-O O-O 7. d4 cxd4 8. Nxd4 d6",
+      "sanMoves": [
+        "c4",
+        "Nf6",
+        "Nc3",
+        "c5",
+        "Nf3",
+        "Nc6",
+        "g3",
+        "g6",
+        "Bg2",
+        "Bg7",
+        "O-O",
+        "O-O",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "d6"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "g8f6",
+        "b1c3",
+        "c7c5",
+        "g1f3",
+        "b8c6",
+        "g2g3",
+        "g7g6",
+        "f1g2",
+        "f8g7",
+        "e1g1",
+        "e8g8",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "d7d6"
+      ],
+      "startingFen": "r1bq1rk1/pp2ppbp/2np1np1/8/2PN4/2N3P1/PP2PPBP/R1BQ1RK1 w - - 0 9",
+      "moveDepth": 16,
+      "difficulty": 6,
+      "popularity": 3,
+      "prerequisites": [
+        "english-expert-Nf6-c5-kid-deep"
+      ],
+      "continuationIds": [
+        "english-legend-Nf6-c5-kid"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White plays the thematic d4 break.",
+        "Black recaptures with ...cxd4 and plays ...d6.",
+        "The position is a reversed KID."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Premature d4 without preparation",
+        "Allowing ...cxd4 to free Black's game"
+      ],
+      "explanation": "After 1.c4 Nf6 2.Nc3 c5 3.Nf3 Nc6 4.g3 g6 5.Bg2 Bg7 6.O-O O-O 7.d4 cxd4 8.Nxd4 d6 White strikes in the centre. The KID-reversed is a model of restraint.",
+      "reviewPriority": 6,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 70
+    },
+    {
+      "id": "english-master-e6-qid",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...e6 (Queen's Indian Reversed Master)",
+      "aliases": [
+        "English e6 e4 master"
+      ],
+      "eco": "A30",
+      "pgn": "1. c4 e6 2. Nc3 Nf6 3. Nf3 b6 4. e4 Bb7 5. Bd3 d6 6. O-O Be7 7. Re1 Nbd7 8. e5",
+      "sanMoves": [
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Nf3",
+        "b6",
+        "e4",
+        "Bb7",
+        "Bd3",
+        "d6",
+        "O-O",
+        "Be7",
+        "Re1",
+        "Nbd7",
+        "e5"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "g1f3",
+        "b7b6",
+        "e2e4",
+        "c8b7",
+        "f1d3",
+        "d7d6",
+        "e1g1",
+        "f8e7",
+        "f1e1",
+        "b8d7",
+        "e4e5"
+      ],
+      "startingFen": "r2qk2r/pbpnbppp/1p1ppn2/4P3/2P5/2NB1N2/PP1P1PPP/R1BQR1K1 b kq - 0 8",
+      "moveDepth": 15,
+      "difficulty": 6,
+      "popularity": 3,
+      "prerequisites": [
+        "english-expert-e6-qid-deep"
+      ],
+      "continuationIds": [
+        "english-legend-e6-qid"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "space-advantage"
+      ],
+      "strategicIdeas": [
+        "White has a big central pawn mass.",
+        "The e5 break gains space.",
+        "White has a pleasant space edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Rushing e4 without piece development",
+        "Allowing ...Bb4 to pin the knight"
+      ],
+      "explanation": "After 1.c4 e6 2.Nc3 Nf6 3.Nf3 b6 4.e4 Bb7 5.Bd3 d6 6.O-O Be7 7.Re1 Nbd7 8.e5 White grabs a big centre. The Queen's-Indian-reversed setup rewards central control.",
+      "reviewPriority": 6,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 70
+    },
+    {
+      "id": "english-master-e6-d4",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...e6 (Carlsbad Master)",
+      "aliases": [
+        "English e6 Carlsbad master"
+      ],
+      "eco": "A30",
+      "pgn": "1. c4 e6 2. Nc3 Nf6 3. Nf3 d5 4. cxd5 exd5 5. d4 Bd6 6. Bg5 O-O 7. Qb3 Nc6 8. e3 Re8 9. Bd3 Rb8 10. O-O",
+      "sanMoves": [
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Nf3",
+        "d5",
+        "cxd5",
+        "exd5",
+        "d4",
+        "Bd6",
+        "Bg5",
+        "O-O",
+        "Qb3",
+        "Nc6",
+        "e3",
+        "Re8",
+        "Bd3",
+        "Rb8",
+        "O-O"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "g1f3",
+        "d7d5",
+        "c4d5",
+        "e6d5",
+        "d2d4",
+        "f8d6",
+        "c1g5",
+        "e8g8",
+        "d1b3",
+        "b8c6",
+        "e2e3",
+        "f8e8",
+        "f1d3",
+        "a8b8",
+        "e1g1"
+      ],
+      "startingFen": "1rbqr1k1/ppp2ppp/2nb1n2/3p2B1/3P4/1QNBPN2/PP3PPP/R4RK1 b - - 4 10",
+      "moveDepth": 19,
+      "difficulty": 6,
+      "popularity": 3,
+      "prerequisites": [
+        "english-expert-e6-d4-deep"
+      ],
+      "continuationIds": [
+        "english-legend-e6-d4"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White builds a Carlsbad-style pawn chain.",
+        "The queen develops to b3, eyeing d5 and b7.",
+        "The position is solid."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...c5 to free Black's game",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 e6 2.Nc3 Nf6 3.Nf3 d5 4.cxd5 exd5 5.d4 Bd6 6.Bg5 O-O 7.Qb3 Nc6 8.e3 Re8 9.Bd3 Rb8 10.O-O White builds a Carlsbad structure. The English rewards piece activity here.",
+      "reviewPriority": 6,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 70
+    },
+    {
+      "id": "english-master-f5-dutch",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...f5 (Anglo-Dutch Master)",
+      "aliases": [
+        "English f5 master"
+      ],
+      "eco": "A10",
+      "pgn": "1. c4 f5 2. Nc3 Nf6 3. Nf3 e6 4. g3 Be7 5. Bg2 O-O 6. O-O d6 7. d4 Qe8",
+      "sanMoves": [
+        "c4",
+        "f5",
+        "Nc3",
+        "Nf6",
+        "Nf3",
+        "e6",
+        "g3",
+        "Be7",
+        "Bg2",
+        "O-O",
+        "O-O",
+        "d6",
+        "d4",
+        "Qe8"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "f7f5",
+        "b1c3",
+        "g8f6",
+        "g1f3",
+        "e7e6",
+        "g2g3",
+        "f8e7",
+        "f1g2",
+        "e8g8",
+        "e1g1",
+        "d7d6",
+        "d2d4",
+        "d8e8"
+      ],
+      "startingFen": "rnb1qrk1/ppp1b1pp/3ppn2/5p2/2PP4/2N2NP1/PP2PPBP/R1BQ1RK1 w - - 1 8",
+      "moveDepth": 14,
+      "difficulty": 6,
+      "popularity": 2,
+      "prerequisites": [
+        "english-expert-f5-dutch-deep"
+      ],
+      "continuationIds": [
+        "english-legend-f5-dutch"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "Both sides fianchetto and castle.",
+        "White plays the thematic d4 break.",
+        "The position is solid."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...e5 to gain central space",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 f5 2.Nc3 Nf6 3.Nf3 e6 4.g3 Be7 5.Bg2 O-O 6.O-O d6 7.d4 Qe8 White strikes in the centre. The Anglo-Dutch is a model of restraint.",
+      "reviewPriority": 6,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 70
+    },
+    {
+      "id": "english-master-e5-e4",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...e5 (a3, e4 Master)",
+      "aliases": [
+        "English e5 a3 e4 master"
+      ],
+      "eco": "A21",
+      "pgn": "1. c4 e5 2. Nc3 Nf6 3. Nf3 Nc6 4. a3 g6 5. e4 Bg7 6. d3 O-O 7. Be2 d6 8. O-O",
+      "sanMoves": [
+        "c4",
+        "e5",
+        "Nc3",
+        "Nf6",
+        "Nf3",
+        "Nc6",
+        "a3",
+        "g6",
+        "e4",
+        "Bg7",
+        "d3",
+        "O-O",
+        "Be2",
+        "d6",
+        "O-O"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "e7e5",
+        "b1c3",
+        "g8f6",
+        "g1f3",
+        "b8c6",
+        "a2a3",
+        "g7g6",
+        "e2e4",
+        "f8g7",
+        "d2d3",
+        "e8g8",
+        "f1e2",
+        "d7d6",
+        "e1g1"
+      ],
+      "startingFen": "r1bq1rk1/ppp2pbp/2np1np1/4p3/2P1P3/P1NP1N2/1P2BPPP/R1BQ1RK1 b - - 1 8",
+      "moveDepth": 15,
+      "difficulty": 6,
+      "popularity": 2,
+      "prerequisites": [
+        "english-expert-e5-e4-deep"
+      ],
+      "continuationIds": [
+        "english-legend-e5-e4"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "space-advantage"
+      ],
+      "strategicIdeas": [
+        "White has a big central pawn mass.",
+        "The bishop develops to e2.",
+        "White has a pleasant space edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Delaying e4 too long",
+        "Allowing ...d5 to challenge the centre"
+      ],
+      "explanation": "After 1.c4 e5 2.Nc3 Nf6 3.Nf3 Nc6 4.a3 g6 5.e4 Bg7 6.d3 O-O 7.Be2 d6 8.O-O White grabs a big centre. The reversed Sicilian with e4 is a model of central control.",
+      "reviewPriority": 6,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 70
+    }
+  ]
+}

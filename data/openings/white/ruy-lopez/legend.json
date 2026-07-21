@@ -1,0 +1,254 @@
+{
+  "openingId": "ruy-lopez",
+  "tier": "Legend",
+  "lines": [
+    {
+      "id": "ruy-lopez-legend-schliemann-dyckhoff",
+      "parentVariation": "Schliemann Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Schliemann Defense Dyckhoff Variation",
+      "aliases": [],
+      "eco": "C63",
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "ruy-lopez-novice-schliemann-d3"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "gambit",
+        "tactics",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White captures on c6 to double Black's c-pawns.",
+        "White wins the e5 pawn, but Black gains the bishop pair and open files.",
+        "Black plays Bd4 to maintain a strong central presence."
+      ],
+      "tacticalMotifs": [
+        "double-attack"
+      ],
+      "commonMistakes": [
+        "Failing to defend against Black's active rook play on the f-file",
+        "Overlooking the tactical pressure on the e4 pawn"
+      ],
+      "explanation": "The Dyckhoff is a deep, concrete line in the Schliemann. White accepts the challenge, winning a pawn but giving up the bishop pair. Black coordinates Bd4 and Rf6 to build an aggressive kingside counter-strike.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 80,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 f5 4.d3 fxe4 5.dxe4 Nf6 6.O-O Bc5 7.Bxc6 bxc6 8.Nxe5 O-O 9.Bg5 Qe8 10.Bxf6 Rxf6 11.Nd3 Bd4",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "f5",
+        "d3",
+        "fxe4",
+        "dxe4",
+        "Nf6",
+        "O-O",
+        "Bc5",
+        "Bxc6",
+        "bxc6",
+        "Nxe5",
+        "O-O",
+        "Bg5",
+        "Qe8",
+        "Bxf6",
+        "Rxf6",
+        "Nd3",
+        "Bd4"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "f7f5",
+        "d2d3",
+        "f5e4",
+        "d3e4",
+        "g8f6",
+        "e1g1",
+        "f8c5",
+        "b5c6",
+        "b7c6",
+        "f3e5",
+        "e8g8",
+        "c1g5",
+        "d8e8",
+        "g5f6",
+        "f8f6",
+        "e5d3",
+        "c5d4"
+      ],
+      "startingFen": "r1b1q1k1/p1pp2pp/2p2r2/8/3bP3/3N4/PPP2PPP/RN1Q1RK1 w - - 2 12",
+      "moveDepth": 22
+    },
+    {
+      "id": "ruy-lopez-legend-berlin-lasker-deep",
+      "parentVariation": "Berlin Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Berlin Wall Deep Theoretical Main Line",
+      "aliases": [],
+      "eco": "C67",
+      "difficulty": 5,
+      "popularity": 5,
+      "prerequisites": [
+        "ruy-lopez-intermediate-berlin-lasker"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "endgame-transition",
+        "king-safety",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White coordinates Bf4 and Rad1 to build pressure on the d-file.",
+        "Black plays Be6 to support their pawn structure.",
+        "White uses h3 and g4 to gain space on the kingside."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black's bishop pair to coordinate on open diagonals",
+        "Advancing kingside pawns too aggressively, creating weaknesses"
+      ],
+      "explanation": "This is the absolute main line of the Berlin Wall endgame. White coordinates Nc3, Ke8, h3, h5, and Bf4. The position requires deep positional understanding of king safety, bishop pair mobility, and pawn endgames.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 6,
+      "masteryXp": 80,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 Nf6 4.O-O Nxe4 5.d4 Nd6 6.Bxc6 dxc6 7.dxe5 Nf5 8.Qxd8+ Kxd8 9.Nc3 Ke8 10.h3 h5 11.Bf4 Be7 12.Rad1 Be6",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "Nf6",
+        "O-O",
+        "Nxe4",
+        "d4",
+        "Nd6",
+        "Bxc6",
+        "dxc6",
+        "dxe5",
+        "Nf5",
+        "Qxd8+",
+        "Kxd8",
+        "Nc3",
+        "Ke8",
+        "h3",
+        "h5",
+        "Bf4",
+        "Be7",
+        "Rad1",
+        "Be6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "g8f6",
+        "e1g1",
+        "f6e4",
+        "d2d4",
+        "e4d6",
+        "b5c6",
+        "d7c6",
+        "d4e5",
+        "d6f5",
+        "d1d8",
+        "e8d8",
+        "b1c3",
+        "d8e8",
+        "h2h3",
+        "h7h5",
+        "c1f4",
+        "f8e7",
+        "a1d1",
+        "c8e6"
+      ],
+      "startingFen": "r3k2r/ppp1bpp1/2p1b3/4Pn1p/5B2/2N2N1P/PPP2PP1/3R1RK1 w - - 4 13",
+      "moveDepth": 24
+    },
+    {
+      "id": "ruy-lopez-legend-exchange-alapin",
+      "parentVariation": "Exchange Variation",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Exchange Variation Alapin Gambit",
+      "aliases": [],
+      "eco": "C69",
+      "difficulty": 4,
+      "popularity": 3,
+      "prerequisites": [
+        "ruy-lopez-beginner-exchange-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "gambit",
+        "pin",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black plays Qd6 to support the e5 pawn and prepare queenside castling.",
+        "White plays Na3 and c3 to challenge Black's queenside space.",
+        "Black pins the knight with Bg4."
+      ],
+      "tacticalMotifs": [
+        "pin"
+      ],
+      "commonMistakes": [
+        "Failing to support the center with c3",
+        "Overlooking the tactical counter-strikes on the d-file"
+      ],
+      "explanation": "In this Alapin line of the Exchange Variation, Black plays 5...Qd6. White responds with 6.Na3 to relocate the knight, and 7.c3 to build a center. Black coordinates Bg4 and f6 to pressure White's d4 pawn.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 80,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Bxc6 dxc6 5.O-O Qd6 6.Na3 b5 7.c3 f6 8.d4 Bg4",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Bxc6",
+        "dxc6",
+        "O-O",
+        "Qd6",
+        "Na3",
+        "b5",
+        "c3",
+        "f6",
+        "d4",
+        "Bg4"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5c6",
+        "d7c6",
+        "e1g1",
+        "d8d6",
+        "b1a3",
+        "b7b5",
+        "c2c3",
+        "f7f6",
+        "d2d4",
+        "c8g4"
+      ],
+      "startingFen": "r3kbnr/2p3pp/p1pq1p2/1p2p3/3PP1b1/N1P2N2/PP3PPP/R1BQ1RK1 w kq - 1 9",
+      "moveDepth": 16
+    }
+  ]
+}

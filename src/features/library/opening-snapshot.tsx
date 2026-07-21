@@ -16,7 +16,7 @@ export function OpeningSnapshot({ moves, side = "white" }: OpeningSnapshotProps)
   const finalFen = useMemo(() => getFinalFen(moves), [moves]);
 
   return (
-    <div className="relative aspect-square w-full overflow-hidden rounded-lg border border-white/5 bg-[#050507] group-hover:border-cyan-500/30 transition-all duration-500 shadow-inner">
+    <div className="opening-snapshot-board relative aspect-square w-full overflow-hidden rounded-lg border border-white/5 bg-[#050507] group-hover:border-cyan-500/30 transition-all duration-500 shadow-inner">
       <Chessboard
         options={{
           position: finalFen,

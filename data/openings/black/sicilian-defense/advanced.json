@@ -1,0 +1,861 @@
+{
+  "openingId": "sicilian-defense",
+  "lines": [
+    {
+      "id": "sicilian-advanced-najdorf",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Najdorf (7.Nf3 b5)",
+      "aliases": [
+        "Najdorf 7.Nf3 b5"
+      ],
+      "eco": "B90",
+      "pgn": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e5 7. Nf3 b5",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "d6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "Nf6",
+        "Nc3",
+        "a6",
+        "Be3",
+        "e5",
+        "Nf3",
+        "b5"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "d7d6",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "g8f6",
+        "b1c3",
+        "a7a6",
+        "c1e3",
+        "e7e5",
+        "d4f3",
+        "b7b5"
+      ],
+      "startingFen": "rnbqkb1r/5ppp/p2p1n2/1p2p3/4P3/2N1BN2/PPP2PPP/R2QKB1R w KQkq - 0 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 5,
+      "prerequisites": [
+        "sicilian-intermediate-najdorf"
+      ],
+      "continuationIds": [
+        "sicilian-expert-najdorf"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White reroutes 7.Nf3, avoiding ...e5 tactics.",
+        "Black expands with 7...b5 on the queenside.",
+        "A sharp, double-edged middlegame."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...b4 with a strong attack",
+        "Misplacing the knight on f3"
+      ],
+      "explanation": "After 1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 a6 6.Be3 e5 7.Nf3 b5 Black gains queenside space while White keeps pieces ready to strike the centre.",
+      "reviewPriority": 7,
+      "estimatedStudyMinutes": 9,
+      "masteryXp": 340
+    },
+    {
+      "id": "sicilian-advanced-dragon",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Dragon (Yugoslav Attack)",
+      "aliases": [
+        "Dragon Yugoslav Attack"
+      ],
+      "eco": "B70",
+      "pgn": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "d6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "Nf6",
+        "Nc3",
+        "g6",
+        "Be3",
+        "Bg7",
+        "f3",
+        "O-O"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "d7d6",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "g8f6",
+        "b1c3",
+        "g7g6",
+        "c1e3",
+        "f8g7",
+        "f2f3",
+        "e8g8"
+      ],
+      "startingFen": "rnbq1rk1/pp2ppbp/3p1np1/8/3NP3/2N1BP2/PPP3PP/R2QKB1R w KQ - 1 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 5,
+      "prerequisites": [
+        "sicilian-intermediate-dragon"
+      ],
+      "continuationIds": [
+        "sicilian-expert-dragon"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White builds the Yugoslav Attack with f3 and O-O-O.",
+        "Black castles short, accepting a kingside target.",
+        "A classic opposite-side attack race."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Weakening the kingside with premature ...h5",
+        "Allowing White a crushing attack"
+      ],
+      "explanation": "After 1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 g6 6.Be3 Bg7 7.f3 O-O the Dragon Yugoslav Attack begins — White storms the kingside while Black counters on the queenside.",
+      "reviewPriority": 7,
+      "estimatedStudyMinutes": 9,
+      "masteryXp": 340
+    },
+    {
+      "id": "sicilian-advanced-sveshnikov",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Sveshnikov (7.Bf4 Be6)",
+      "aliases": [
+        "Sveshnikov 7.Bf4"
+      ],
+      "eco": "B33",
+      "pgn": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Ndb5 d6 7. Bf4 Be6",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "Nc6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "Nf6",
+        "Nc3",
+        "e5",
+        "Ndb5",
+        "d6",
+        "Bf4",
+        "Be6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "b8c6",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "g8f6",
+        "b1c3",
+        "e7e5",
+        "d4b5",
+        "d7d6",
+        "c1f4",
+        "c8e6"
+      ],
+      "startingFen": "r2qkb1r/pp3ppp/2npbn2/1N2p3/4PB2/2N5/PPP2PPP/R2QKB1R w KQkq - 2 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "sicilian-intermediate-sveshnikov"
+      ],
+      "continuationIds": [
+        "sicilian-expert-sveshnikov"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White develops 7.Bf4, controlling d6 and e5.",
+        "Black supports with 7...e6.",
+        "The d5 outpost remains the key square."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a strong knight on d5",
+        "Underestimating White's piece activity"
+      ],
+      "explanation": "After 1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 e5 6.Ndb5 d6 7.Bf4 Be6 White develops actively, eyeing the d5 outpost and the e5 pawn.",
+      "reviewPriority": 7,
+      "estimatedStudyMinutes": 9,
+      "masteryXp": 340
+    },
+    {
+      "id": "sicilian-advanced-classical",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Classical (7.O-O Be7)",
+      "aliases": [
+        "Classical 7.O-O"
+      ],
+      "eco": "B58",
+      "pgn": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 d6 6. Be2 e6 7. O-O Be7",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "Nc6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "Nf6",
+        "Nc3",
+        "d6",
+        "Be2",
+        "e6",
+        "O-O",
+        "Be7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "b8c6",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "g8f6",
+        "b1c3",
+        "d7d6",
+        "f1e2",
+        "e7e6",
+        "e1g1",
+        "f8e7"
+      ],
+      "startingFen": "r1bqk2r/pp2bppp/2nppn2/8/3NP3/2N5/PPP1BPPP/R1BQ1RK1 w kq - 2 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "sicilian-intermediate-classical"
+      ],
+      "continuationIds": [
+        "sicilian-expert-classical"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White castles 7.O-O, king safe.",
+        "Black completes with 7...Be7.",
+        "A model Scheveningen structure."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a free central pawn on d4",
+        "Passive piece placement"
+      ],
+      "explanation": "After 1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 d6 6.Be2 e6 7.O-O Be7 both sides castle into a stable Scheveningen-type middlegame.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 340
+    },
+    {
+      "id": "sicilian-advanced-kan",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Kan (7.O-O Be7)",
+      "aliases": [
+        "Kan 7.O-O"
+      ],
+      "eco": "B41",
+      "pgn": "1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 a6 5. Nc3 Nc6 6. Be2 d6 7. O-O Be7",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "e6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "a6",
+        "Nc3",
+        "Nc6",
+        "Be2",
+        "d6",
+        "O-O",
+        "Be7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "e7e6",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "a7a6",
+        "b1c3",
+        "b8c6",
+        "f1e2",
+        "d7d6",
+        "e1g1",
+        "f8e7"
+      ],
+      "startingFen": "r1bqk1nr/1p2bppp/p1npp3/8/3NP3/2N5/PPP1BPPP/R1BQ1RK1 w kq - 2 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "sicilian-intermediate-kan"
+      ],
+      "continuationIds": [
+        "sicilian-expert-kan"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White castles 7.O-O.",
+        "Black completes with 7...Be7.",
+        "A Scheveningen-like structure results."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a strong central pawn on d4",
+        "Premature ...b5 weakening the queenside"
+      ],
+      "explanation": "After 1.e4 c5 2.Nf3 e6 3.d4 cxd4 4.Nxd4 a6 5.Nc3 Nc6 6.Be2 d6 7.O-O Be7 the Kan reaches a solid Scheveningen-style position with both sides castled.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 340
+    },
+    {
+      "id": "sicilian-advanced-scheveningen",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Scheveningen (7.O-O O-O)",
+      "aliases": [
+        "Scheveningen 7.O-O O-O"
+      ],
+      "eco": "B80",
+      "pgn": "1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e6 6. Be2 Be7 7. O-O O-O",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "d6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "Nf6",
+        "Nc3",
+        "e6",
+        "Be2",
+        "Be7",
+        "O-O",
+        "O-O"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "d7d6",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "g8f6",
+        "b1c3",
+        "e7e6",
+        "f1e2",
+        "f8e7",
+        "e1g1",
+        "e8g8"
+      ],
+      "startingFen": "rnbq1rk1/pp2bppp/3ppn2/8/3NP3/2N5/PPP1BPPP/R1BQ1RK1 w - - 4 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "sicilian-intermediate-scheveningen"
+      ],
+      "continuationIds": [
+        "sicilian-expert-scheveningen"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "Both sides castle kingside.",
+        "White prepares f4 with a central pawn storm.",
+        "A tense, balanced middlegame."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a free central pawn on d4",
+        "Passive piece placement"
+      ],
+      "explanation": "After 1.e4 c5 2.Nf3 d6 3.d4 cxd4 4.Nxd4 Nf6 5.Nc3 e6 6.Be2 Be7 7.O-O O-O the Scheveningen sees both kings safe; White often launches f4 while Black seeks counterplay.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 340
+    },
+    {
+      "id": "sicilian-advanced-rossolimo",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Rossolimo (development)",
+      "aliases": [
+        "Rossolimo advanced"
+      ],
+      "eco": "B31",
+      "pgn": "1. e4 c5 2. Nf3 Nc6 3. Bb5 g6 4. Bxc6 bxc6 5. d3 Bg7 6. Nfd2 Nf6",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "g6",
+        "Bxc6",
+        "bxc6",
+        "d3",
+        "Bg7",
+        "Nfd2",
+        "Nf6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "g7g6",
+        "b5c6",
+        "b7c6",
+        "d2d3",
+        "f8g7",
+        "f3d2",
+        "g8f6"
+      ],
+      "startingFen": "r1bqk2r/p2pppbp/2p2np1/2p5/4P3/3P4/PPPN1PPP/RNBQK2R w KQkq - 3 7",
+      "moveDepth": 12,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "sicilian-intermediate-rossolimo"
+      ],
+      "continuationIds": [
+        "sicilian-expert-rossolimo"
+      ],
+      "conceptIds": [
+        "bishop-pair",
+        "pawn-structure",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White plays 5.d3, a quiet setup.",
+        "Black develops 5...Bg7 and ...Nf6.",
+        "White keeps a small structural edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Letting Black consolidate the bishop pair",
+        "Underestimating Black's central pawns"
+      ],
+      "explanation": "After 1.e4 c5 2.Nf3 Nc6 3.Bb5 g6 4.Bxc6 bxc6 5.d3 Bg7 6.Nfd2 Nf6 White adopts a calm set-up, relying on the improved pawn structure and piece harmony.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 340
+    },
+    {
+      "id": "sicilian-advanced-alapin",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Alapin (7.Nxe5 Nd7)",
+      "aliases": [
+        "Alapin 7.Nxe5"
+      ],
+      "eco": "B22",
+      "pgn": "1. e4 c5 2. c3 Nf6 3. e5 Nd5 4. d4 cxd4 5. cxd4 d6 6. Nf3 dxe5 7. Nxe5 Nd7",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "c3",
+        "Nf6",
+        "e5",
+        "Nd5",
+        "d4",
+        "cxd4",
+        "cxd4",
+        "d6",
+        "Nf3",
+        "dxe5",
+        "Nxe5",
+        "Nd7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "c2c3",
+        "g8f6",
+        "e4e5",
+        "f6d5",
+        "d2d4",
+        "c5d4",
+        "c3d4",
+        "d7d6",
+        "g1f3",
+        "d6e5",
+        "f3e5",
+        "b8d7"
+      ],
+      "startingFen": "r1bqkb1r/pp1npppp/8/3nN3/3P4/8/PP3PPP/RNBQKB1R w KQkq - 1 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "sicilian-intermediate-alapin"
+      ],
+      "continuationIds": [
+        "sicilian-expert-alapin"
+      ],
+      "conceptIds": [
+        "central-control",
+        "space-advantage",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White wins the e5 pawn with 7.Nxe5.",
+        "Black regains it with 7...Nd7 and ...Nxe5.",
+        "An IQP-style structure can arise."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to trade and equalise",
+        "Overextending the e5 pawn"
+      ],
+      "explanation": "After 1.e4 c5 2.c3 Nf6 3.e5 Nd5 4.d4 cxd4 5.cxd4 d6 6.Nf3 dxe5 7.Nxe5 Nd7 White wins a pawn temporarily; Black recovers it with ...Nxe5, reaching a balanced game.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 340
+    },
+    {
+      "id": "sicilian-advanced-closed",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Closed Sicilian (7.g3 Nf6)",
+      "aliases": [
+        "Closed Sicilian 7.g3"
+      ],
+      "eco": "B23",
+      "pgn": "1. e4 c5 2. Nc3 Nc6 3. Nf3 g6 4. d4 cxd4 5. Nxd4 Bg7 6. Nxc6 bxc6 7. g3 Nf6",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nc3",
+        "Nc6",
+        "Nf3",
+        "g6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "Bg7",
+        "Nxc6",
+        "bxc6",
+        "g3",
+        "Nf6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "b1c3",
+        "b8c6",
+        "g1f3",
+        "g7g6",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "f8g7",
+        "d4c6",
+        "b7c6",
+        "g2g3",
+        "g8f6"
+      ],
+      "startingFen": "r1bqk2r/p2pppbp/2p2np1/8/4P3/2N3P1/PPP2P1P/R1BQKB1R w KQkq - 1 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [
+        "sicilian-intermediate-closed"
+      ],
+      "continuationIds": [
+        "sicilian-expert-closed"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "fianchetto"
+      ],
+      "strategicIdeas": [
+        "White fianchettoes with 7.g3.",
+        "Black develops 7...Nf6.",
+        "A slow, manoeuvring battle."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Rushing central breaks before development",
+        "Neglecting the kingside fianchetto"
+      ],
+      "explanation": "After 1.e4 c5 2.Nc3 Nc6 3.Nf3 g6 4.d4 cxd4 5.Nxd4 Bg7 6.Nxc6 bxc6 7.g3 Nf6 White fianchettoes the bishop, aiming for a quiet but pleasant position.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 340
+    },
+    {
+      "id": "sicilian-advanced-accelerated-dragon",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Accelerated Dragon (7.Bc4 O-O)",
+      "aliases": [
+        "Accelerated Dragon 7.Bc4"
+      ],
+      "eco": "B35",
+      "pgn": "1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 g6 5. Nc3 Bg7 6. Be3 Nf6 7. Bc4 O-O",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "Nc6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "g6",
+        "Nc3",
+        "Bg7",
+        "Be3",
+        "Nf6",
+        "Bc4",
+        "O-O"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "b8c6",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "g7g6",
+        "b1c3",
+        "f8g7",
+        "c1e3",
+        "g8f6",
+        "f1c4",
+        "e8g8"
+      ],
+      "startingFen": "r1bq1rk1/pp1pppbp/2n2np1/8/2BNP3/2N1B3/PPP2PPP/R2QK2R w KQ - 6 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 4,
+      "prerequisites": [
+        "sicilian-intermediate-accelerated-dragon"
+      ],
+      "continuationIds": [
+        "sicilian-expert-accelerated-dragon"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White plays 7.Bc4, preventing ...d6.",
+        "Black castles 7...O-O.",
+        "White may later push d5 for an edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a strong centre with d5",
+        "Weakening the kingside"
+      ],
+      "explanation": "After 1.e4 c5 2.Nf3 Nc6 3.d4 cxd4 4.Nxd4 g6 5.Nc3 Bg7 6.Be3 Nf6 7.Bc4 O-O White's bishop on c4 stops ...d6 and supports a possible d5 break.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 340
+    },
+    {
+      "id": "sicilian-advanced-hyperaccelerated",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Hyperaccelerated Dragon (7.Bc4 O-O)",
+      "aliases": [
+        "Hyperaccelerated Dragon"
+      ],
+      "eco": "B27",
+      "pgn": "1. e4 c5 2. Nf3 g6 3. d4 cxd4 4. Nxd4 Bg7 5. Nc3 Nc6 6. Be3 Nf6 7. Bc4 O-O",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "g6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "Bg7",
+        "Nc3",
+        "Nc6",
+        "Be3",
+        "Nf6",
+        "Bc4",
+        "O-O"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "g7g6",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "f8g7",
+        "b1c3",
+        "b8c6",
+        "c1e3",
+        "g8f6",
+        "f1c4",
+        "e8g8"
+      ],
+      "startingFen": "r1bq1rk1/pp1pppbp/2n2np1/8/2BNP3/2N1B3/PPP2PPP/R2QK2R w KQ - 7 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [
+        "sicilian-expert-hyperaccelerated"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "Black plays 2...g6 before developing the knight.",
+        "White develops 7.Bc4, preventing ...d6.",
+        "A flexible Dragon setup."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a strong centre with d5",
+        "Weakening the kingside"
+      ],
+      "explanation": "After 1.e4 c5 2.Nf3 g6 3.d4 cxd4 4.Nxd4 Bg7 5.Nc3 Nc6 6.Be3 Nf6 7.Bc4 O-O the Hyperaccelerated Dragon reaches a Dragon setup with the knight already on c6.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 340
+    },
+    {
+      "id": "sicilian-advanced-four-knights",
+      "parentVariation": "Sicilian Defense",
+      "openingFamily": "Sicilian Defense",
+      "variationName": "Four Knights (7.O-O Be7)",
+      "aliases": [
+        "Sicilian Four Knights"
+      ],
+      "eco": "B40",
+      "pgn": "1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 a6 6. Be2 Nf6 7. O-O Be7",
+      "sanMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "e6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "Nc6",
+        "Nc3",
+        "a6",
+        "Be2",
+        "Nf6",
+        "O-O",
+        "Be7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c5",
+        "g1f3",
+        "e7e6",
+        "d2d4",
+        "c5d4",
+        "f3d4",
+        "b8c6",
+        "b1c3",
+        "a7a6",
+        "f1e2",
+        "g8f6",
+        "e1g1",
+        "f8e7"
+      ],
+      "startingFen": "r1bqk2r/1p1pbppp/p1n1pn2/8/3NP3/2N5/PPP1BPPP/R1BQ1RK1 w kq - 4 8",
+      "moveDepth": 14,
+      "difficulty": 5,
+      "popularity": 2,
+      "prerequisites": [],
+      "continuationIds": [
+        "sicilian-expert-four-knights"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "Both sides develop knights naturally.",
+        "White castles 7.O-O.",
+        "A solid, symmetrical development."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a free central pawn on d4",
+        "Passive piece placement"
+      ],
+      "explanation": "After 1.e4 c5 2.Nf3 e6 3.d4 cxd4 4.Nxd4 Nc6 5.Nc3 a6 6.Be2 Nf6 7.O-O Be7 the Four Knights Sicilian is a calm, balanced setup with both sides castled.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 8,
+      "masteryXp": 340
+    }
+  ]
+}

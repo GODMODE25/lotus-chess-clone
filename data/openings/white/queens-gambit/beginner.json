@@ -1,0 +1,268 @@
+{
+  "openingId": "queens-gambit",
+  "tier": "Beginner",
+  "lines": [
+    {
+      "id": "queens-gambit-beginner-qgd-setup",
+      "parentVariation": "Queen's Gambit Declined",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGD Basic Setup",
+      "aliases": [
+        "QGD Main Line"
+      ],
+      "eco": "D30",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.Bf4",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Bf4"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c1f4"
+      ],
+      "startingFen": "rnbqkb1r/ppp2ppp/4pn2/3p4/2PP1B2/2N5/PP2PPPP/R2QKBNR b KQkq - 3 4",
+      "moveDepth": 7,
+      "difficulty": 1,
+      "popularity": 5,
+      "prerequisites": [],
+      "continuationIds": [
+        "queens-gambit-novice-qgd-exchange"
+      ],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White offers a pawn with c4 to fight for the centre.",
+        "Black declines with e6, keeping a solid pawn chain.",
+        "Bf4 develops the bishop actively before committing the e-pawn."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Capturing on d5 too early without preparation",
+        "Developing the queen bishop to g5 before completing development"
+      ],
+      "explanation": "The Queen's Gambit Declined is the most solid response to 1.d4 d5 2.c4. Black supports the d5 pawn with e6, creating a resilient pawn structure. White develops naturally with Nc3 and Bf4, preparing to castle and later strike in the centre with e3 or cxd5.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 10
+    },
+    {
+      "id": "queens-gambit-beginner-slav-setup",
+      "parentVariation": "Slav Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Slav Basic Setup",
+      "aliases": [
+        "Slav Main Line"
+      ],
+      "eco": "D10",
+      "pgn": "1.d4 d5 2.c4 c6 3.Nf3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "c6",
+        "Nf3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "c7c6",
+        "g1f3"
+      ],
+      "startingFen": "rnbqkbnr/pp2pppp/2p5/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3",
+      "moveDepth": 5,
+      "difficulty": 1,
+      "popularity": 5,
+      "prerequisites": [],
+      "continuationIds": [
+        "queens-gambit-novice-slav-exchange"
+      ],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "Black supports d5 with c6, keeping the bishop on c8 free.",
+        "The Slav is one of the most resilient defences to the Queen's Gambit.",
+        "White continues with Nf3, maintaining central tension."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Playing cxd5 too early, releasing central tension",
+        "Neglecting piece development for premature pawn pushes"
+      ],
+      "explanation": "The Slav Defence (2...c6) is a rock-solid response to the Queen's Gambit. By supporting d5 with the c-pawn, Black keeps the bishop on c8 active and avoids the passive positions sometimes seen in the QGD. White develops with Nf3, keeping options open for cxd5 or e3.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 10
+    },
+    {
+      "id": "queens-gambit-beginner-accepted-setup",
+      "parentVariation": "Queen's Gambit Accepted",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGA Basic Setup",
+      "aliases": [
+        "QGA Main Line"
+      ],
+      "eco": "D20",
+      "pgn": "1.d4 d5 2.c4 dxc4 3.Nf3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "dxc4",
+        "Nf3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "d5c4",
+        "g1f3"
+      ],
+      "startingFen": "rnbqkbnr/ppp1pppp/8/8/2pP4/5N2/PP2PPPP/RNBQKB1R b KQkq - 1 3",
+      "moveDepth": 5,
+      "difficulty": 1,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [
+        "queens-gambit-novice-qga-recovery"
+      ],
+      "conceptIds": [
+        "development",
+        "tempo",
+        "gambit"
+      ],
+      "strategicIdeas": [
+        "Black accepts the gambit, grabbing a pawn but giving up the centre.",
+        "White plays Nf3 to recover the pawn with e3 or e4.",
+        "The QGA leads to open, tactical positions."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Trying to hold the extra pawn too long as Black",
+        "Recovering the pawn with the wrong piece order"
+      ],
+      "explanation": "In the Queen's Gambit Accepted, Black captures the c4 pawn. White responds with Nf3, preparing to regain the pawn with e3 or e4. The resulting positions are open and require good piece activity. This is an excellent way for beginners to learn about gambit play and central control.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 10
+    },
+    {
+      "id": "queens-gambit-beginner-tarrasch-setup",
+      "parentVariation": "Tarrasch Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Tarrasch Basic Setup",
+      "aliases": [
+        "Tarrasch Main Line"
+      ],
+      "eco": "D32",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 c5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "c5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "c7c5"
+      ],
+      "startingFen": "rnbqkbnr/pp3ppp/4p3/2pp4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4",
+      "moveDepth": 6,
+      "difficulty": 1,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [
+        "queens-gambit-novice-tarrasch-main"
+      ],
+      "conceptIds": [
+        "central-control",
+        "pawn-structure",
+        "isolated-queens-pawn"
+      ],
+      "strategicIdeas": [
+        "Black challenges the centre immediately with c5.",
+        "This often leads to an isolated queen's pawn for one side.",
+        "White can choose between capturing or maintaining tension."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to equalise the centre too easily",
+        "Misplacing pieces in the resulting IQP positions"
+      ],
+      "explanation": "The Tarrasch Defence (3...c5) is a dynamic response where Black immediately challenges White's centre. This often leads to isolated queen's pawn structures, which require active piece play. Beginners should understand the central tension and the typical plans for both sides.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 10
+    },
+    {
+      "id": "queens-gambit-beginner-albin-counter",
+      "parentVariation": "Albin Counter-Gambit",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Albin Counter-Gambit Setup",
+      "aliases": [
+        "Albin Counter Gambit"
+      ],
+      "eco": "D08",
+      "pgn": "1.d4 d5 2.c4 e5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e5"
+      ],
+      "startingFen": "rnbqkbnr/ppp2ppp/8/3pp3/2PP4/8/PP2PPPP/RNBQKBNR w KQkq - 0 3",
+      "moveDepth": 4,
+      "difficulty": 1,
+      "popularity": 2,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "gambit",
+        "central-control",
+        "initiative"
+      ],
+      "strategicIdeas": [
+        "Black counter-gambits with e5, fighting for the centre immediately.",
+        "This is a sharp, aggressive try that can surprise opponents.",
+        "White should accept and consolidate the extra pawn."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Declining the gambit and allowing Black free development",
+        "Underestimating Black's central counterplay"
+      ],
+      "explanation": "The Albin Counter-Gambit (2...e5) is an aggressive response where Black sacrifices a pawn for rapid development and central control. While not theoretically sound at the highest level, it's a useful weapon to understand. White should accept the pawn and focus on consolidating.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 1.5,
+      "masteryXp": 10
+    }
+  ]
+}

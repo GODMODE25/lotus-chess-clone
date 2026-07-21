@@ -1,0 +1,476 @@
+{
+  "openingId": "english-opening",
+  "tier": "Novice",
+  "lines": [
+    {
+      "id": "english-novice-e5-fourknights",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...e5 (Four Knights, g3)",
+      "aliases": [
+        "English e5 Four Knights"
+      ],
+      "eco": "A29",
+      "pgn": "1. c4 e5 2. Nc3 Nf6 3. Nf3 Nc6 4. g3",
+      "sanMoves": [
+        "c4",
+        "e5",
+        "Nc3",
+        "Nf6",
+        "Nf3",
+        "Nc6",
+        "g3"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "e7e5",
+        "b1c3",
+        "g8f6",
+        "g1f3",
+        "b8c6",
+        "g2g3"
+      ],
+      "startingFen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2P5/2N2NP1/PP1PPP1P/R1BQKB1R b KQkq - 0 4",
+      "moveDepth": 7,
+      "difficulty": 2,
+      "popularity": 5,
+      "prerequisites": [
+        "english-beginner-e5"
+      ],
+      "continuationIds": [
+        "english-intermediate-e5-botvinnik"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White fianchettoes the king's bishop.",
+        "The Botvinnik setup is flexible and solid.",
+        "White keeps a small space edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Delaying the bishop fianchetto",
+        "Allowing ...d5 to free Black's game"
+      ],
+      "explanation": "After 1.c4 e5 2.Nc3 Nf6 3.Nf3 Nc6 4.g3 White adopts the Botvinnik setup. The fianchettoed bishop controls the long diagonal.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "english-novice-e5-botvinnik-bb4",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...e5 (Botvinnik, ...Bb4)",
+      "aliases": [
+        "English e5 Botvinnik Bb4"
+      ],
+      "eco": "A29",
+      "pgn": "1. c4 e5 2. Nc3 Nf6 3. Nf3 Nc6 4. g3 Bb4",
+      "sanMoves": [
+        "c4",
+        "e5",
+        "Nc3",
+        "Nf6",
+        "Nf3",
+        "Nc6",
+        "g3",
+        "Bb4"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "e7e5",
+        "b1c3",
+        "g8f6",
+        "g1f3",
+        "b8c6",
+        "g2g3",
+        "f8b4"
+      ],
+      "startingFen": "r1bqk2r/pppp1ppp/2n2n2/4p3/1bP5/2N2NP1/PP1PPP1P/R1BQKB1R w KQkq - 1 5",
+      "moveDepth": 8,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [
+        "english-beginner-e5"
+      ],
+      "continuationIds": [
+        "english-intermediate-e5-botvinnik"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "Black pins the c3 knight with ...Bb4.",
+        "White continues with Qc2 and Bg2.",
+        "The position is positional."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Breaking the pin awkwardly",
+        "Allowing ...Bxc3 to damage the pawn structure"
+      ],
+      "explanation": "After 4.g3 Bb4 Black pins the knight. White meets it with Qc2 and Bg2, keeping a harmonious Botvinnik setup.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "english-novice-c5-symmetric",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...c5 (Symmetric, Double Fianchetto)",
+      "aliases": [
+        "English c5 symmetric"
+      ],
+      "eco": "A30",
+      "pgn": "1. c4 c5 2. Nf3 Nf6 3. Nc3 Nc6 4. g3",
+      "sanMoves": [
+        "c4",
+        "c5",
+        "Nf3",
+        "Nf6",
+        "Nc3",
+        "Nc6",
+        "g3"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "c7c5",
+        "g1f3",
+        "g8f6",
+        "b1c3",
+        "b8c6",
+        "g2g3"
+      ],
+      "startingFen": "r1bqkb1r/pp1ppppp/2n2n2/2p5/2P5/2N2NP1/PP1PPP1P/R1BQKB1R b KQkq - 0 4",
+      "moveDepth": 7,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [
+        "english-beginner-c5"
+      ],
+      "continuationIds": [
+        "english-intermediate-c5-hedgehog"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "Both sides fianchetto the king's bishop.",
+        "The position is symmetric and balanced.",
+        "White keeps a small space edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Premature pawn breaks",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 c5 2.Nf3 Nf6 3.Nc3 Nc6 4.g3 White enters the symmetric English with a double fianchetto. Themes of piece activity dominate.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "english-novice-c5-d4",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...c5 (d4 Break)",
+      "aliases": [
+        "English c5 d4"
+      ],
+      "eco": "A30",
+      "pgn": "1. c4 c5 2. Nf3 Nf6 3. d4 cxd4 4. Nxd4",
+      "sanMoves": [
+        "c4",
+        "c5",
+        "Nf3",
+        "Nf6",
+        "d4",
+        "cxd4",
+        "Nxd4"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "c7c5",
+        "g1f3",
+        "g8f6",
+        "d2d4",
+        "c5d4",
+        "f3d4"
+      ],
+      "startingFen": "rnbqkb1r/pp1ppppp/5n2/8/2PN4/8/PP2PPPP/RNBQKB1R b KQkq - 0 4",
+      "moveDepth": 7,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [
+        "english-beginner-c5"
+      ],
+      "continuationIds": [
+        "english-intermediate-c5-d4-e5"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White strikes in the centre with d4.",
+        "This transposes to a reversed Sicilian.",
+        "White has a pleasant space edge."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...e5 to gain central space",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 c5 2.Nf3 Nf6 3.d4 cxd4 4.Nxd4 White grabs the centre. The d4 break is a key English idea against the symmetric.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "english-novice-Nf6-e6",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...Nf6 2...e6 (Anglo-Grünfeld-ish)",
+      "aliases": [
+        "English Nf6 e6 d5"
+      ],
+      "eco": "A12",
+      "pgn": "1. c4 Nf6 2. Nc3 e6 3. Nf3 d5 4. cxd5 exd5",
+      "sanMoves": [
+        "c4",
+        "Nf6",
+        "Nc3",
+        "e6",
+        "Nf3",
+        "d5",
+        "cxd5",
+        "exd5"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "g8f6",
+        "b1c3",
+        "e7e6",
+        "g1f3",
+        "d7d5",
+        "c4d5",
+        "e6d5"
+      ],
+      "startingFen": "rnbqkb1r/ppp2ppp/5n2/3p4/8/2N2N2/PP1PPPPP/R1BQKB1R w KQkq - 0 5",
+      "moveDepth": 8,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [
+        "english-beginner-Nf6"
+      ],
+      "continuationIds": [
+        "english-intermediate-Nf6-grunfeld"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "Black recaptures toward the centre with ...exd5.",
+        "White has an isolated queen's pawn structure.",
+        "The position is flexible."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...c5 to free Black's game",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 Nf6 2.Nc3 e6 3.Nf3 d5 4.cxd5 exd5 White gets an IQP-style structure. The English rewards piece activity here.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "english-novice-Nf6-c5",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...Nf6 2...c5 (Hedgehog Setup)",
+      "aliases": [
+        "English Nf6 c5 hedgehog"
+      ],
+      "eco": "A11",
+      "pgn": "1. c4 Nf6 2. Nc3 c5 3. Nf3 Nc6 4. g3",
+      "sanMoves": [
+        "c4",
+        "Nf6",
+        "Nc3",
+        "c5",
+        "Nf3",
+        "Nc6",
+        "g3"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "g8f6",
+        "b1c3",
+        "c7c5",
+        "g1f3",
+        "b8c6",
+        "g2g3"
+      ],
+      "startingFen": "r1bqkb1r/pp1ppppp/2n2n2/2p5/2P5/2N2NP1/PP1PPP1P/R1BQKB1R b KQkq - 0 4",
+      "moveDepth": 7,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [
+        "english-beginner-Nf6"
+      ],
+      "continuationIds": [
+        "english-intermediate-Nf6-c5-kid"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "Black sets up a Hedgehog / King's-Indian-reversed.",
+        "White fianchettoes the king's bishop.",
+        "The position is flexible."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Premature pawn breaks",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 Nf6 2.Nc3 c5 3.Nf3 Nc6 4.g3 White meets the Hedgehog setup. The fianchetto keeps the position under control.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "english-novice-e6",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...e6 (Queen's Indian Reversed, d5)",
+      "aliases": [
+        "English e6 d5"
+      ],
+      "eco": "A30",
+      "pgn": "1. c4 e6 2. Nc3 Nf6 3. Nf3 d5 4. cxd5 exd5",
+      "sanMoves": [
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Nf3",
+        "d5",
+        "cxd5",
+        "exd5"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "g1f3",
+        "d7d5",
+        "c4d5",
+        "e6d5"
+      ],
+      "startingFen": "rnbqkb1r/ppp2ppp/5n2/3p4/8/2N2N2/PP1PPPPP/R1BQKB1R w KQkq - 0 5",
+      "moveDepth": 8,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [
+        "english-beginner-e6"
+      ],
+      "continuationIds": [
+        "english-intermediate-e6-qid"
+      ],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "Black recaptures with ...exd5.",
+        "White can later play e4 for a big centre.",
+        "The position is solid."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Rushing e4 without preparation",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 e6 2.Nc3 Nf6 3.Nf3 d5 4.cxd5 exd5 White meets the Queen's-Indian-reversed setup. A central strike with e4 is a key idea.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    },
+    {
+      "id": "english-novice-f5",
+      "parentVariation": "English Opening",
+      "openingFamily": "English Opening",
+      "variationName": "English vs 1...f5 (Anglo-Dutch, Solid)",
+      "aliases": [
+        "English f5 solid"
+      ],
+      "eco": "A10",
+      "pgn": "1. c4 f5 2. Nc3 Nf6 3. Nf3 e6 4. g3",
+      "sanMoves": [
+        "c4",
+        "f5",
+        "Nc3",
+        "Nf6",
+        "Nf3",
+        "e6",
+        "g3"
+      ],
+      "uciMoves": [
+        "c2c4",
+        "f7f5",
+        "b1c3",
+        "g8f6",
+        "g1f3",
+        "e7e6",
+        "g2g3"
+      ],
+      "startingFen": "rnbqkb1r/pppp2pp/4pn2/5p2/2P5/2N2NP1/PP1PPP1P/R1BQKB1R b KQkq - 0 4",
+      "moveDepth": 7,
+      "difficulty": 2,
+      "popularity": 2,
+      "prerequisites": [
+        "english-beginner-f5"
+      ],
+      "continuationIds": [
+        "english-intermediate-f5-dutch"
+      ],
+      "conceptIds": [
+        "fianchetto",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "Black plays a Dutch-style fianchetto plan.",
+        "White fianchettoes and keeps a healthy structure.",
+        "The position is solid."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...e5 to gain central space",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.c4 f5 2.Nc3 Nf6 3.Nf3 e6 4.g3 White meets the Anglo-Dutch with a solid fianchetto. The English structure is robust.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 30
+    }
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "openingId": "french-defense",
+  "lines": [
+    {
+      "id": "french-novice-exchange",
+      "parentVariation": "French Defense",
+      "openingFamily": "French Defense",
+      "variationName": "Exchange (4.Nf3 Bd6 5.Bd3)",
+      "aliases": [
+        "French Exchange development"
+      ],
+      "eco": "C01",
+      "pgn": "1. e4 e6 2. d4 d5 3. exd5 exd5 4. Nf3 Bd6 5. Bd3",
+      "sanMoves": [
+        "e4",
+        "e6",
+        "d4",
+        "d5",
+        "exd5",
+        "exd5",
+        "Nf3",
+        "Bd6",
+        "Bd3"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e6",
+        "d2d4",
+        "d7d5",
+        "e4d5",
+        "e6d5",
+        "g1f3",
+        "f8d6",
+        "f1d3"
+      ],
+      "startingFen": "rnbqk1nr/ppp2ppp/3b4/3p4/3P4/3B1N2/PPP2PPP/RNBQK2R b KQkq - 3 5",
+      "moveDepth": 9,
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White develops 4.Nf3 and 5.Bd3.",
+        "Black develops 4...Bd6."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Delaying development of the c1 bishop",
+        "Allowing White a lead in development"
+      ],
+      "explanation": "After 1.e4 e6 2.d4 d5 3.exd5 exd5 4.Nf3 Bd6 5.Bd3 both sides develop smoothly in the Exchange French.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 6,
+      "masteryXp": 160
+    },
+    {
+      "id": "french-novice-advance",
+      "parentVariation": "French Defense",
+      "openingFamily": "French Defense",
+      "variationName": "Advance (4.c3 Nc6 5.Nf3)",
+      "aliases": [
+        "French Advance main"
+      ],
+      "eco": "C02",
+      "pgn": "1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Nc6 5. Nf3",
+      "sanMoves": [
+        "e4",
+        "e6",
+        "d4",
+        "d5",
+        "e5",
+        "c5",
+        "c3",
+        "Nc6",
+        "Nf3"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e6",
+        "d2d4",
+        "d7d5",
+        "e4e5",
+        "c7c5",
+        "c2c3",
+        "b8c6",
+        "g1f3"
+      ],
+      "startingFen": "r1bqkbnr/pp3ppp/2n1p3/2ppP3/3P4/2P2N2/PP3PPP/RNBQKB1R b KQkq - 2 5",
+      "moveDepth": 9,
+      "difficulty": 3,
+      "popularity": 5,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "space-advantage",
+        "central-control"
+      ],
+      "strategicIdeas": [
+        "White supports the centre with 4.c3.",
+        "Black develops 4...Nc6."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Letting White expand with f4",
+        "Releasing the tension with ...cxd4 too early"
+      ],
+      "explanation": "After 1.e4 e6 2.d4 d5 3.e5 c5 4.c3 Nc6 5.Nf3 White keeps a space advantage in the Advance French.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 6,
+      "masteryXp": 160
+    },
+    {
+      "id": "french-novice-advance-qb6",
+      "parentVariation": "French Defense",
+      "openingFamily": "French Defense",
+      "variationName": "Advance (4.c3 Qb6 5.Nf3)",
+      "aliases": [
+        "French Advance Qb6"
+      ],
+      "eco": "C02",
+      "pgn": "1. e4 e6 2. d4 d5 3. e5 c5 4. c3 Qb6 5. Nf3",
+      "sanMoves": [
+        "e4",
+        "e6",
+        "d4",
+        "d5",
+        "e5",
+        "c5",
+        "c3",
+        "Qb6",
+        "Nf3"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e6",
+        "d2d4",
+        "d7d5",
+        "e4e5",
+        "c7c5",
+        "c2c3",
+        "d8b6",
+        "g1f3"
+      ],
+      "startingFen": "rnb1kbnr/pp3ppp/1q2p3/2ppP3/3P4/2P2N2/PP3PPP/RNBQKB1R b KQkq - 2 5",
+      "moveDepth": 9,
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "space-advantage",
+        "pawn-chain"
+      ],
+      "strategicIdeas": [
+        "Black pressures d4 with 4...Qb6.",
+        "White develops 5.Nf3."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to win the d4 pawn",
+        "Underestimating the queen sortie"
+      ],
+      "explanation": "After 1.e4 e6 2.d4 d5 3.e5 c5 4.c3 Qb6 5.Nf3 Black pressures d4 while White completes development.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 6,
+      "masteryXp": 160
+    },
+    {
+      "id": "french-novice-tarrasch",
+      "parentVariation": "French Defense",
+      "openingFamily": "French Defense",
+      "variationName": "Tarrasch (4.e5 Nfd7 5.Bd3)",
+      "aliases": [
+        "French Tarrasch main"
+      ],
+      "eco": "C03",
+      "pgn": "1. e4 e6 2. d4 d5 3. Nd2 Nf6 4. e5 Nfd7 5. Bd3",
+      "sanMoves": [
+        "e4",
+        "e6",
+        "d4",
+        "d5",
+        "Nd2",
+        "Nf6",
+        "e5",
+        "Nfd7",
+        "Bd3"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e6",
+        "d2d4",
+        "d7d5",
+        "b1d2",
+        "g8f6",
+        "e4e5",
+        "f6d7",
+        "f1d3"
+      ],
+      "startingFen": "rnbqkb1r/pppn1ppp/4p3/3pP3/3P4/3B4/PPPN1PPP/R1BQK1NR b KQkq - 2 5",
+      "moveDepth": 9,
+      "difficulty": 3,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White gains space with 4.e5.",
+        "Black repositions 4...Nfd7."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Blocking the c1 bishop with the d2 knight",
+        "Allowing Black a comfortable ...c5 break"
+      ],
+      "explanation": "After 1.e4 e6 2.d4 d5 3.Nd2 Nf6 4.e5 Nfd7 5.Bd3 White builds a space advantage in the Tarrasch.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 6,
+      "masteryXp": 160
+    },
+    {
+      "id": "french-novice-winawer",
+      "parentVariation": "French Defense",
+      "openingFamily": "French Defense",
+      "variationName": "Winawer (4.e5 c5 5.a3)",
+      "aliases": [
+        "Winawer a3"
+      ],
+      "eco": "C15",
+      "pgn": "1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. e5 c5 5. a3",
+      "sanMoves": [
+        "e4",
+        "e6",
+        "d4",
+        "d5",
+        "Nc3",
+        "Bb4",
+        "e5",
+        "c5",
+        "a3"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e6",
+        "d2d4",
+        "d7d5",
+        "b1c3",
+        "f8b4",
+        "e4e5",
+        "c7c5",
+        "a2a3"
+      ],
+      "startingFen": "rnbqk1nr/pp3ppp/4p3/2ppP3/1b1P4/P1N5/1PP2PPP/R1BQKBNR b KQkq - 0 5",
+      "moveDepth": 9,
+      "difficulty": 3,
+      "popularity": 5,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "bishop-pair",
+        "weak-squares"
+      ],
+      "strategicIdeas": [
+        "White gains space with 4.e5.",
+        "Black strikes 4...c5; White challenges 5.a3."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to win the bishop pair",
+        "Ignoring the ...c5 pawn break"
+      ],
+      "explanation": "After 1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.e5 c5 5.a3 White questions the bishop in the Winawer.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 6,
+      "masteryXp": 160
+    },
+    {
+      "id": "french-novice-winawer-nge2",
+      "parentVariation": "French Defense",
+      "openingFamily": "French Defense",
+      "variationName": "Winawer (4.Nge2)",
+      "aliases": [
+        "Winawer Nge2"
+      ],
+      "eco": "C15",
+      "pgn": "1. e4 e6 2. d4 d5 3. Nc3 Bb4 4. Ne2 c5",
+      "sanMoves": [
+        "e4",
+        "e6",
+        "d4",
+        "d5",
+        "Nc3",
+        "Bb4",
+        "Nge2",
+        "c5"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e6",
+        "d2d4",
+        "d7d5",
+        "b1c3",
+        "f8b4",
+        "g1e2",
+        "c7c5"
+      ],
+      "startingFen": "rnbqk1nr/pp3ppp/4p3/2pp4/1b1PP3/2N5/PPP1NPPP/R1BQKB1R w KQkq - 0 5",
+      "moveDepth": 8,
+      "difficulty": 3,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White avoids doubling pawns with 4.Nge2.",
+        "Black plays 4...c5."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black a strong ...c5 break",
+        "Developing the knight passively"
+      ],
+      "explanation": "After 1.e4 e6 2.d4 d5 3.Nc3 Bb4 4.Nge2 c5 White keeps a flexible structure in the Winawer.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 6,
+      "masteryXp": 160
+    },
+    {
+      "id": "french-novice-classical",
+      "parentVariation": "French Defense",
+      "openingFamily": "French Defense",
+      "variationName": "Classical (4.Bg5)",
+      "aliases": [
+        "French Classical Bg5"
+      ],
+      "eco": "C11",
+      "pgn": "1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. Bg5",
+      "sanMoves": [
+        "e4",
+        "e6",
+        "d4",
+        "d5",
+        "Nc3",
+        "Nf6",
+        "Bg5"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e6",
+        "d2d4",
+        "d7d5",
+        "b1c3",
+        "g8f6",
+        "c1g5"
+      ],
+      "startingFen": "rnbqkb1r/ppp2ppp/4pn2/3p2B1/3PP3/2N5/PPP2PPP/R2QKBNR b KQkq - 3 4",
+      "moveDepth": 7,
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White pins with 4.Bg5.",
+        "Black must respond to the pin."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing the bishop to be trapped",
+        "Neglecting the e4 pawn"
+      ],
+      "explanation": "After 1.e4 e6 2.d4 d5 3.Nc3 Nf6 4.Bg5 White pins the f6 knight in the Classical French.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 6,
+      "masteryXp": 160
+    },
+    {
+      "id": "french-novice-classical-exd5",
+      "parentVariation": "French Defense",
+      "openingFamily": "French Defense",
+      "variationName": "Classical (4.exd5 exd5)",
+      "aliases": [
+        "Classical exchange"
+      ],
+      "eco": "C11",
+      "pgn": "1. e4 e6 2. d4 d5 3. Nc3 Nf6 4. exd5 exd5",
+      "sanMoves": [
+        "e4",
+        "e6",
+        "d4",
+        "d5",
+        "Nc3",
+        "Nf6",
+        "exd5",
+        "exd5"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e6",
+        "d2d4",
+        "d7d5",
+        "b1c3",
+        "g8f6",
+        "e4d5",
+        "e6d5"
+      ],
+      "startingFen": "rnbqkb1r/ppp2ppp/5n2/3p4/3P4/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 5",
+      "moveDepth": 8,
+      "difficulty": 3,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White trades 4.exd5.",
+        "Black recaptures 4...exd5."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Underestimating the open e-file",
+        "Allowing White a lead in development"
+      ],
+      "explanation": "After 1.e4 e6 2.d4 d5 3.Nc3 Nf6 4.exd5 exd5 the centre opens in the Classical French.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 6,
+      "masteryXp": 160
+    }
+  ]
+}

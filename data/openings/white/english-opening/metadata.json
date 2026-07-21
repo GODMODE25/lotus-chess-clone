@@ -1,0 +1,111 @@
+{
+  "id": "english-opening",
+  "name": "English Opening",
+  "slug": "english-opening",
+  "family": "English Opening",
+  "colour": "white",
+  "ecoRange": "A10-A39",
+  "description": "The English Opening is a flank opening beginning with 1.c4, controlling the d5 square from the wing. It leads to rich, flexible structures including the reversed Sicilian, symmetric English, Anglo-Indian, Queen's-Indian-reversed, and Anglo-Dutch setups. The English rewards piece activity, restraint, and a small but lasting space edge.",
+  "typicalPawnStructures": [
+    "Symmetric English (pawns on c4/c5, d3/d6)",
+    "Botvinnik setup (pawns on c4, d3, e3, g3)",
+    "Carlsbad (pawns on c4, d4 vs c6, d5)",
+    "IQP-style (pawns on c4, d4 vs c5, d5 after ...exd5)",
+    "Big centre (pawns on c4, d4, e4)"
+  ],
+  "commonTacticalThemes": [
+    "Fianchetto pressure on the long diagonal",
+    "Central breaks with d4",
+    "Knight outposts on d5/e5",
+    "Bishop pair after ...Bxc3",
+    "Queenside expansion with b3-b4"
+  ],
+  "modelPlayers": [
+    "Magnus Carlsen",
+    "Garry Kasparov",
+    "Vladimir Kramnik",
+    "Mikhail Botvinnik",
+    "Tigran Petrosian"
+  ],
+  "recommendedStudyOrder": [
+    "Beginner: meet each Black reply (1...e5, 1...c5, 1...Nf6, 1...e6, 1...f5)",
+    "Novice: adopt the Botvinnik / double-fianchetto setups",
+    "Intermediate: learn the d4 central break and e4 big centre",
+    "Advanced: complete development and castle in each structure",
+    "Expert: handle ...Bb4 pins, ...cxd4 recaptures, and ...Nb6 reroutes",
+    "Master: convert the small space edge with accurate piece play",
+    "Legend: reach model middlegame positions with a lasting advantage"
+  ],
+  "masteryLevels": [
+    {
+      "tier": "Beginner",
+      "xpReward": 100,
+      "accuracyTarget": 0.7,
+      "objectives": [
+        "Recognise the English move 1.c4",
+        "Understand the d5 control idea",
+        "Meet the five main Black replies"
+      ]
+    },
+    {
+      "tier": "Novice",
+      "xpReward": 160,
+      "accuracyTarget": 0.72,
+      "objectives": [
+        "Adopt the Botvinnik setup with g3 and Bg2",
+        "Play the symmetric double fianchetto",
+        "Strike with d4 against 1...c5"
+      ]
+    },
+    {
+      "tier": "Intermediate",
+      "xpReward": 240,
+      "accuracyTarget": 0.75,
+      "objectives": [
+        "Build the Botvinnik system with Qc2",
+        "Handle the Hedgehog and King's-Indian-reversed",
+        "Play e4 for a big centre vs 1...e6"
+      ]
+    },
+    {
+      "tier": "Advanced",
+      "xpReward": 340,
+      "accuracyTarget": 0.78,
+      "objectives": [
+        "Complete development and castle in each structure",
+        "Execute the thematic d4 break",
+        "Meet the Anglo-Grünfeld and Anglo-Dutch"
+      ]
+    },
+    {
+      "tier": "Expert",
+      "xpReward": 460,
+      "accuracyTarget": 0.8,
+      "objectives": [
+        "Handle ...Bb4 pins and ...cxd4 recaptures",
+        "Reroute pieces after ...Nb6 / ...Na5",
+        "Convert the small space edge"
+      ]
+    },
+    {
+      "tier": "Master",
+      "xpReward": 600,
+      "accuracyTarget": 0.82,
+      "objectives": [
+        "Reach model middlegame positions",
+        "Use the e5 break for space",
+        "Fianchetto the queen's bishop with Bb2"
+      ]
+    },
+    {
+      "tier": "Legend",
+      "xpReward": 800,
+      "accuracyTarget": 0.85,
+      "objectives": [
+        "Convert the English to a lasting advantage",
+        "Handle all of Black's main setups",
+        "Demonstrate deep structural understanding"
+      ]
+    }
+  ]
+}

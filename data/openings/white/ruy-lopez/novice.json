@@ -1,0 +1,455 @@
+{
+  "openingId": "ruy-lopez",
+  "tier": "Novice",
+  "lines": [
+    {
+      "id": "ruy-lopez-novice-exchange-d4",
+      "parentVariation": "Exchange Variation",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Exchange Variation with 5.d4",
+      "aliases": [],
+      "eco": "C68",
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [
+        "ruy-lopez-beginner-exchange-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "endgame-transition",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "White exchanges queens to reach a simplified endgame where Black's doubled c-pawns are easier to target.",
+        "White has a potential protected passed pawn on the kingside.",
+        "Black relies on the bishop pair to maintain equality."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Letting Black's bishops coordinate and seize control of open files",
+        "Pushing kingside pawns too quickly, creating weaknesses"
+      ],
+      "explanation": "The 5.d4 line in the Exchange Variation leads directly to a simplified endgame. By trading queens, White highlights Black's structural weaknesses. White wants to play a long-term strategic game, using their kingside majority.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Bxc6 dxc6 5.d4 exd4 6.Qxd4 Qxd4 7.Nxd4",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Bxc6",
+        "dxc6",
+        "d4",
+        "exd4",
+        "Qxd4",
+        "Qxd4",
+        "Nxd4"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5c6",
+        "d7c6",
+        "d2d4",
+        "e5d4",
+        "d1d4",
+        "d8d4",
+        "f3d4"
+      ],
+      "startingFen": "r1b1kbnr/1pp2ppp/p1p5/8/3NP3/8/PPP2PPP/RNB1K2R b KQkq - 0 7",
+      "moveDepth": 13
+    },
+    {
+      "id": "ruy-lopez-novice-exchange-o-o",
+      "parentVariation": "Exchange Variation",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Exchange Variation with 5.O-O",
+      "aliases": [],
+      "eco": "C69",
+      "difficulty": 2,
+      "popularity": 5,
+      "prerequisites": [
+        "ruy-lopez-beginner-exchange-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "king-safety",
+        "pawn-structure",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White castles first to keep more pieces on the board before playing d4.",
+        "Black plays f6 to secure the e5 pawn and block White's minor pieces.",
+        "White uses the knight on d4 to control central squares."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Failing to support the d4 pawn break correctly",
+        "Allowing Black's light-squared bishop to locate a strong diagonal on g4"
+      ],
+      "explanation": "5.O-O is the main line of the Exchange Variation. White delays d4 to complete king safety, prompting Black to defend e5 with 5...f6. The resulting positions are more complex than the immediate d4 queenless lines.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Bxc6 dxc6 5.O-O f6 6.d4 exd4 7.Nxd4 c5",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Bxc6",
+        "dxc6",
+        "O-O",
+        "f6",
+        "d4",
+        "exd4",
+        "Nxd4",
+        "c5"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5c6",
+        "d7c6",
+        "e1g1",
+        "f7f6",
+        "d2d4",
+        "e5d4",
+        "f3d4",
+        "c6c5"
+      ],
+      "startingFen": "r1bqkbnr/1pp3pp/p4p2/2p5/3NP3/8/PPP2PPP/RNBQ1RK1 w kq - 0 8",
+      "moveDepth": 14
+    },
+    {
+      "id": "ruy-lopez-novice-steinitz-d4",
+      "parentVariation": "Steinitz Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Steinitz Defense Main Line",
+      "aliases": [],
+      "eco": "C62",
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [
+        "ruy-lopez-beginner-steinitz-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White supports d4 with Nc3, establishing central space dominance.",
+        "Black defends solidly and prepares castling.",
+        "The position remains closed, favoring White's space advantage."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Exchanging on e5 too early, releasing tension",
+        "Letting Black break out of the passive setup via a clean d5 push"
+      ],
+      "explanation": "The Steinitz main line shows classic development. White coordinates Nc3 and O-O, maintaining central tension. Black develops quietly with Nf6 and Be7. White retains a persistent space advantage.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 d6 4.d4 Bd7 5.Nc3 Nf6 6.O-O Be7",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "d6",
+        "d4",
+        "Bd7",
+        "Nc3",
+        "Nf6",
+        "O-O",
+        "Be7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "d7d6",
+        "d2d4",
+        "c8d7",
+        "b1c3",
+        "g8f6",
+        "e1g1",
+        "f8e7"
+      ],
+      "startingFen": "r2qk2r/pppbbppp/2np1n2/1B2p3/3PP3/2N2N2/PPP2PPP/R1BQ1RK1 w kq - 5 7",
+      "moveDepth": 12
+    },
+    {
+      "id": "ruy-lopez-novice-schliemann-d3",
+      "parentVariation": "Schliemann Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Schliemann Defense Quiet 4.d3",
+      "aliases": [],
+      "eco": "C63",
+      "difficulty": 3,
+      "popularity": 3,
+      "prerequisites": [
+        "ruy-lopez-beginner-schliemann-main"
+      ],
+      "continuationIds": [
+        "ruy-lopez-legend-schliemann-dyckhoff"
+      ],
+      "conceptIds": [
+        "central-control",
+        "piece-activity",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White plays d3 to keep the center solid and quiet, avoiding sharp lines.",
+        "White castles and prepares to target Black's weak kingside structure.",
+        "Black plays d6 to consolidate their center pawn block."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Playing too aggressively on the kingside as White before securing development",
+        "Overlooking pins on the a4-e8 diagonal"
+      ],
+      "explanation": "By playing 4.d3, White declines the sharpest gambit lines, aiming for a solid positional advantage. The center remains stable, and White relies on superior pawn structure and development to create plans.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 f5 4.d3 fxe4 5.dxe4 Nf6 6.O-O d6",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "f5",
+        "d3",
+        "fxe4",
+        "dxe4",
+        "Nf6",
+        "O-O",
+        "d6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "f7f5",
+        "d2d3",
+        "f5e4",
+        "d3e4",
+        "g8f6",
+        "e1g1",
+        "d7d6"
+      ],
+      "startingFen": "r1bqkb1r/ppp3pp/2np1n2/1B2p3/4P3/5N2/PPP2PPP/RNBQ1RK1 w kq - 0 7",
+      "moveDepth": 12
+    },
+    {
+      "id": "ruy-lopez-novice-classical-main",
+      "parentVariation": "Classical Variation",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Classical Variation Base",
+      "aliases": [
+        "Cordel Defense"
+      ],
+      "eco": "C64",
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "central-control",
+        "piece-activity",
+        "development"
+      ],
+      "strategicIdeas": [
+        "Black develops the bishop actively to c5, mimicking Italian lines.",
+        "White uses c3 and d4 to build a strong pawn center.",
+        "Black retreats the bishop to b6 to maintain the diagonal's safety."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Failing to support the center with c3",
+        "Allowing Black to get a free d5 counter-strike"
+      ],
+      "explanation": "The Classical Variation (3...Bc5) is an active defense. White responds with the classic c3-d4 center expansion, seizing space. Black retreats to b6, keeping pressure on the e3 and d4 squares.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 Bc5 4.c3 Nf6 5.d4 Bb6",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "Bc5",
+        "c3",
+        "Nf6",
+        "d4",
+        "Bb6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "f8c5",
+        "c2c3",
+        "g8f6",
+        "d2d4",
+        "c5b6"
+      ],
+      "startingFen": "r1bqk2r/pppp1ppp/1bn2n2/1B2p3/3PP3/2P2N2/PP3PPP/RNBQK2R w KQkq - 1 6",
+      "moveDepth": 10
+    },
+    {
+      "id": "ruy-lopez-novice-cozio-main",
+      "parentVariation": "Cozio Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Cozio Defense Setup",
+      "aliases": [],
+      "eco": "C60",
+      "difficulty": 2,
+      "popularity": 2,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "development",
+        "fianchetto",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black plays Nge7 to support the c6 knight and prepare a g6-Bg7 fianchetto.",
+        "White coordinates Nc3 and d4 to seize central space.",
+        "Black's king bishop gets a strong diagonal on g7."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Playing too passively as White, allowing Black to equalize easily",
+        "Overlooking central knight exchanges"
+      ],
+      "explanation": "The Cozio Defense (3...Nge7) aims to avoid standard pins. Black accepts a slightly cramped position to develop the other knight. White gains early center activity by playing d4 and developing Nc3.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 Nge7 4.Nc3 g6 5.d4 exd4 6.Nxd4 Bg7",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "Nge7",
+        "Nc3",
+        "g6",
+        "d4",
+        "exd4",
+        "Nxd4",
+        "Bg7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "g8e7",
+        "b1c3",
+        "g7g6",
+        "d2d4",
+        "e5d4",
+        "f3d4",
+        "f8g7"
+      ],
+      "startingFen": "r1bqk2r/ppppnpbp/2n3p1/1B6/3NP3/2N5/PPP2PPP/R1BQK2R w KQkq - 1 7",
+      "moveDepth": 12
+    },
+    {
+      "id": "ruy-lopez-novice-smyslov-main",
+      "parentVariation": "Smyslov Defense",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Smyslov Variation Setup",
+      "aliases": [
+        "Fianchetto Defense"
+      ],
+      "eco": "C60",
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "fianchetto",
+        "gambit",
+        "central-control"
+      ],
+      "strategicIdeas": [
+        "Black plays g6 to fianchetto the bishop without moving the e7 knight.",
+        "White challenges the center immediately with d4 and c3.",
+        "Black secures the dark squares on the kingside."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Refusing the c3 gambit as White, allowing Black to consolidate their pawn",
+        "Misplacing the bishop on a4"
+      ],
+      "explanation": "The Smyslov Defense (3...g6) creates a solid kingside shield. White counters with 4.d4, aiming to open the center before Black develops. The c3 gambit offers White strong piece activity.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 g6 4.d4 exd4 5.c3 a6 6.Ba4 Bg7",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "g6",
+        "d4",
+        "exd4",
+        "c3",
+        "a6",
+        "Ba4",
+        "Bg7"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "g7g6",
+        "d2d4",
+        "e5d4",
+        "c2c3",
+        "a7a6",
+        "b5a4",
+        "f8g7"
+      ],
+      "startingFen": "r1bqk1nr/1ppp1pbp/p1n3p1/8/B2pP3/2P2N2/PP3PPP/RNBQK2R w KQkq - 2 7",
+      "moveDepth": 12
+    }
+  ]
+}

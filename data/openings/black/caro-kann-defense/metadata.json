@@ -1,0 +1,103 @@
+{
+  "id": "caro-kann-defense",
+  "name": "Caro-Kann Defense",
+  "slug": "caro-kann-defense",
+  "family": "Caro-Kann Defense",
+  "colour": "black",
+  "ecoRange": "B10-B19",
+  "description": "The Caro-Kann Defense is a solid, resilient response to 1.e4 built on the moves 1...c6 and 2...d5. It yields a healthy pawn structure and easy piece development, and is favoured by strategic players such as Karpov and Capablanca.",
+  "typicalPawnStructures": [
+    "Symmetric centre after ...cxd5",
+    "Pawn chain c6-d5 with ...e6",
+    "Isolated queen pawn in the Panov-Botvinnik Attack",
+    "Closed centre in the Advance Variation"
+  ],
+  "commonTacticalThemes": [
+    "Minor-piece activity on the light squares",
+    "The ...Bf5 / ...Bg6 bishop manoeuvre",
+    "Knight outposts on e4 / d5",
+    "The Bronstein-Larsen trap with Nxf7"
+  ],
+  "modelPlayers": [
+    "Anatoly Karpov",
+    "José Raúl Capablanca",
+    "Viktor Korchnoi",
+    "Peter Leko",
+    "Ding Liren"
+  ],
+  "recommendedStudyOrder": [
+    "Exchange Variation",
+    "Advance Variation",
+    "Classical Variation",
+    "Panov-Botvinnik Attack",
+    "Two Knights Variation",
+    "Karpov Variation",
+    "Fantasy Variation",
+    "Bronstein-Larsen Attack"
+  ],
+  "masteryLevels": [
+    {
+      "tier": "Beginner",
+      "xpReward": 100,
+      "accuracyTarget": 0.7,
+      "objectives": [
+        "Recognise the 1...c6 2...d5 setup",
+        "Play the Exchange and Advance main lines"
+      ]
+    },
+    {
+      "tier": "Novice",
+      "xpReward": 160,
+      "accuracyTarget": 0.72,
+      "objectives": [
+        "Develop pieces after 3.exd5 cxd5",
+        "Handle the Panov IQP centre"
+      ]
+    },
+    {
+      "tier": "Intermediate",
+      "xpReward": 240,
+      "accuracyTarget": 0.75,
+      "objectives": [
+        "Execute the Classical ...Bf5 plan",
+        "Avoid the Bronstein-Larsen trap"
+      ]
+    },
+    {
+      "tier": "Advanced",
+      "xpReward": 340,
+      "accuracyTarget": 0.78,
+      "objectives": [
+        "Navigate the Two Knights and Karpov setups",
+        "Trade into a comfortable endgame"
+      ]
+    },
+    {
+      "tier": "Expert",
+      "xpReward": 460,
+      "accuracyTarget": 0.8,
+      "objectives": [
+        "Castle and centralise rooks",
+        "Exploit the Panov isolated pawn"
+      ]
+    },
+    {
+      "tier": "Master",
+      "xpReward": 600,
+      "accuracyTarget": 0.82,
+      "objectives": [
+        "Convert the bishop-pair advantage",
+        "Handle the Advance space bind"
+      ]
+    },
+    {
+      "tier": "Legend",
+      "xpReward": 800,
+      "accuracyTarget": 0.85,
+      "objectives": [
+        "Master all Caro-Kann variations",
+        "Punish inaccurate White setups"
+      ]
+    }
+  ]
+}

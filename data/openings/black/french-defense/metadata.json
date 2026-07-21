@@ -1,0 +1,109 @@
+{
+  "id": "french-defense",
+  "name": "French Defense",
+  "slug": "french-defense",
+  "family": "French Defense",
+  "colour": "black",
+  "ecoRange": "C00-C19",
+  "description": "The French Defense is a solid, resilient reply to 1.e4 defined by 1...e6 and 2...d5, where Black accepts a somewhat cramped but structurally sound position. It leads to rich pawn structures (the Advance, Winawer and Tarrasch complexes) and rewards deep strategic understanding over early tactics.",
+  "typicalPawnStructures": [
+    "Advance: White pawns on d4/e5 with a pawn chain; Black on c5/d5.",
+    "Winawer: White often gets doubled c-pawns after ...Bxc3.",
+    "Exchange: symmetrical pawns after 3.exd5 exd5 with an open e-file.",
+    "Tarrasch: White keeps a space-gaining structure but the c1 bishop is blocked by the d2 knight."
+  ],
+  "commonTacticalThemes": [
+    "The ...c5 pawn break to challenge White's centre.",
+    "Sacrifices on the kingside in the Winawer (e.g. ...Bxc3+ followed by ...Qg5/Qh4 ideas).",
+    "The ...b6/...Ba6 maneuver to trade the light-squared bishop against White's bishop pair.",
+    "Kingside pawn storms in opposite-side castling lines."
+  ],
+  "modelPlayers": [
+    "Akiba Rubinstein",
+    "Aron Nimzowitsch",
+    "Viktor Korchnoi",
+    "Alexander Morozevich",
+    "Vassily Ivanchuk"
+  ],
+  "recommendedStudyOrder": [
+    "Exchange Variation (simplest, symmetrical)",
+    "Advance Variation (space and structure)",
+    "Tarrasch Variation (solid but passive)",
+    "Classical Variation (flexible development)",
+    "Winawer Variation (sharp, doubled pawns)",
+    "Burn / MacCutcheon / Steinitz (theoretical mainlines)",
+    "Deep master/legend mainlines with castling and central tension"
+  ],
+  "masteryLevels": [
+    {
+      "tier": "Beginner",
+      "xpReward": 100,
+      "accuracyTarget": 0.7,
+      "objectives": [
+        "Recognise 1...e6 2...d5",
+        "Know the main variations by name",
+        "Play the first 3 moves confidently"
+      ]
+    },
+    {
+      "tier": "Novice",
+      "xpReward": 160,
+      "accuracyTarget": 0.72,
+      "objectives": [
+        "Develop pieces after 1.e4 e6 2.d4 d5",
+        "Handle the Exchange and Advance",
+        "Avoid early blunders"
+      ]
+    },
+    {
+      "tier": "Intermediate",
+      "xpReward": 240,
+      "accuracyTarget": 0.75,
+      "objectives": [
+        "Play Winawer and Classical lines",
+        "Understand the ...c5 break",
+        "Recapture correctly"
+      ]
+    },
+    {
+      "tier": "Advanced",
+      "xpReward": 340,
+      "accuracyTarget": 0.78,
+      "objectives": [
+        "Castle safely in French structures",
+        "Handle doubled pawns in the Winawer",
+        "Trade pieces to relieve the cramp"
+      ]
+    },
+    {
+      "tier": "Expert",
+      "xpReward": 460,
+      "accuracyTarget": 0.8,
+      "objectives": [
+        "Execute the main theoretical lines",
+        "Manage the bishop pair",
+        "Convert small structural edges"
+      ]
+    },
+    {
+      "tier": "Master",
+      "xpReward": 600,
+      "accuracyTarget": 0.82,
+      "objectives": [
+        "Play master-tier mainlines with castling",
+        "Exploit White's space",
+        "Handle opposite-side castling attacks"
+      ]
+    },
+    {
+      "tier": "Legend",
+      "xpReward": 800,
+      "accuracyTarget": 0.85,
+      "objectives": [
+        "Master the deepest French theory",
+        "Navigate the most theoretical Winawer/Classical lines",
+        "Convert the French endgame"
+      ]
+    }
+  ]
+}

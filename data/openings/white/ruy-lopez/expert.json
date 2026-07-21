@@ -1,0 +1,420 @@
+{
+  "openingId": "ruy-lopez",
+  "tier": "Expert",
+  "lines": [
+    {
+      "id": "ruy-lopez-expert-marshall-main",
+      "parentVariation": "Marshall Attack",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Marshall Attack Main Setup",
+      "aliases": [
+        "Marshall Gambit"
+      ],
+      "eco": "C89",
+      "difficulty": 4,
+      "popularity": 5,
+      "prerequisites": [
+        "ruy-lopez-beginner-morphy-main"
+      ],
+      "continuationIds": [
+        "ruy-lopez-expert-marshall-d3"
+      ],
+      "conceptIds": [
+        "gambit",
+        "tactics",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black sacrifices a pawn with 8...d5 to gain a strong kingside initiative.",
+        "White must defend carefully against Black's active piece coordination.",
+        "White retains the extra pawn as long-term compensation if they survive the attack."
+      ],
+      "tacticalMotifs": [
+        "double-attack"
+      ],
+      "commonMistakes": [
+        "Failing to identify kingside mate threats",
+        "Returning the pawn at the wrong moment"
+      ],
+      "explanation": "The Marshall Attack is one of the most feared weapons against the Ruy Lopez. Black sacrifices a pawn for rapid development and attacking chances on the kingside. White must accept the challenge and play highly accurate defense.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 50,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.Re1 b5 7.Bb3 O-O 8.c3 d5 9.exd5 Nxd5 10.Nxe5 Nxe5 11.Rxe5 c6",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Ba4",
+        "Nf6",
+        "O-O",
+        "Be7",
+        "Re1",
+        "b5",
+        "Bb3",
+        "O-O",
+        "c3",
+        "d5",
+        "exd5",
+        "Nxd5",
+        "Nxe5",
+        "Nxe5",
+        "Rxe5",
+        "c6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5a4",
+        "g8f6",
+        "e1g1",
+        "f8e7",
+        "f1e1",
+        "b7b5",
+        "a4b3",
+        "e8g8",
+        "c2c3",
+        "d7d5",
+        "e4d5",
+        "f6d5",
+        "f3e5",
+        "c6e5",
+        "e1e5",
+        "c7c6"
+      ],
+      "startingFen": "r1bq1rk1/4bppp/p1p5/1p1nR3/8/1BP5/PP1P1PPP/RNBQ2K1 w - - 0 12",
+      "moveDepth": 22
+    },
+    {
+      "id": "ruy-lopez-expert-marshall-d3",
+      "parentVariation": "Marshall Attack",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Marshall Attack 12.d3 Line",
+      "aliases": [],
+      "eco": "C89",
+      "difficulty": 4,
+      "popularity": 5,
+      "prerequisites": [
+        "ruy-lopez-expert-marshall-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "gambit",
+        "tactics",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White plays d3 to keep the center solid and restrict Black's dark-squared bishop.",
+        "Black develops Bf5 actively to target the d3 pawn.",
+        "White must prepare to consolidate their kingside defense."
+      ],
+      "tacticalMotifs": [
+        "pin"
+      ],
+      "commonMistakes": [
+        "Failing to support the d3 pawn with Nd2",
+        "Overlooking the threat of Bf5-g4"
+      ],
+      "explanation": "The 12.d3 variation is a highly theoretical defensive line for White in the Marshall. White limits Black's bishop activity and seeks to develop minor pieces safely. Precise play is required to maintain the pawn advantage.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 5,
+      "masteryXp": 50,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.Re1 b5 7.Bb3 O-O 8.c3 d5 9.exd5 Nxd5 10.Nxe5 Nxe5 11.Rxe5 c6 12.d3 Bd6 13.Re1 Bf5",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Ba4",
+        "Nf6",
+        "O-O",
+        "Be7",
+        "Re1",
+        "b5",
+        "Bb3",
+        "O-O",
+        "c3",
+        "d5",
+        "exd5",
+        "Nxd5",
+        "Nxe5",
+        "Nxe5",
+        "Rxe5",
+        "c6",
+        "d3",
+        "Bd6",
+        "Re1",
+        "Bf5"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5a4",
+        "g8f6",
+        "e1g1",
+        "f8e7",
+        "f1e1",
+        "b7b5",
+        "a4b3",
+        "e8g8",
+        "c2c3",
+        "d7d5",
+        "e4d5",
+        "f6d5",
+        "f3e5",
+        "c6e5",
+        "e1e5",
+        "c7c6",
+        "d2d3",
+        "e7d6",
+        "e5e1",
+        "c8f5"
+      ],
+      "startingFen": "r2q1rk1/5ppp/p1pb4/1p1n1b2/8/1BPP4/PP3PPP/RNBQR1K1 w - - 3 14",
+      "moveDepth": 26
+    },
+    {
+      "id": "ruy-lopez-expert-anti-marshall-8-a4",
+      "parentVariation": "Anti-Marshall",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Anti-Marshall with 8.a4",
+      "aliases": [],
+      "eco": "C88",
+      "difficulty": 3,
+      "popularity": 5,
+      "prerequisites": [
+        "ruy-lopez-beginner-morphy-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "piece-activity",
+        "central-control",
+        "open-files"
+      ],
+      "strategicIdeas": [
+        "White plays 8.a4 to bypass the Marshall Attack completely.",
+        "White challenges Black's queenside pawns early.",
+        "Black plays Bb7 to maintain the active diagonal."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Failing to react to Black's b4 push",
+        "Allowing Black's light-squared bishop to dominate the long diagonal"
+      ],
+      "explanation": "The Anti-Marshall with 8.a4 is a highly popular positional choice. White bypasses the deep gambit lines of the Marshall, keeping the game in strategic territory. The focus shifts to queenside pawn tension and center control.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 50,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.Re1 b5 7.Bb3 O-O 8.a4 Bb7 9.d3 d6",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Ba4",
+        "Nf6",
+        "O-O",
+        "Be7",
+        "Re1",
+        "b5",
+        "Bb3",
+        "O-O",
+        "a4",
+        "Bb7",
+        "d3",
+        "d6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5a4",
+        "g8f6",
+        "e1g1",
+        "f8e7",
+        "f1e1",
+        "b7b5",
+        "a4b3",
+        "e8g8",
+        "a2a4",
+        "c8b7",
+        "d2d3",
+        "d7d6"
+      ],
+      "startingFen": "r2q1rk1/1bp1bppp/p1np1n2/1p2p3/P3P3/1B1P1N2/1PP2PPP/RNBQR1K1 w - - 0 10",
+      "moveDepth": 18
+    },
+    {
+      "id": "ruy-lopez-expert-anti-marshall-8-h3",
+      "parentVariation": "Anti-Marshall",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Anti-Marshall with 8.h3",
+      "aliases": [],
+      "eco": "C88",
+      "difficulty": 3,
+      "popularity": 5,
+      "prerequisites": [
+        "ruy-lopez-beginner-morphy-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "central-control",
+        "development",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White plays 8.h3 to prevent Bg4 pins and bypass the Marshall.",
+        "White keeps options open for central breaks.",
+        "Black develops Bb7 to target the e4 square."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Overlooking the tactical e4 pressure",
+        "Playing too passively, allowing Black to take the initiative"
+      ],
+      "explanation": "8.h3 is another solid Anti-Marshall weapon. White prevents kingside pins and bypasses the main Marshall gambits. The resulting positions are maneuvering battles where White retains a slight edge.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 50,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.Re1 b5 7.Bb3 O-O 8.h3 Bb7 9.d3 d6",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Ba4",
+        "Nf6",
+        "O-O",
+        "Be7",
+        "Re1",
+        "b5",
+        "Bb3",
+        "O-O",
+        "h3",
+        "Bb7",
+        "d3",
+        "d6"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5a4",
+        "g8f6",
+        "e1g1",
+        "f8e7",
+        "f1e1",
+        "b7b5",
+        "a4b3",
+        "e8g8",
+        "h2h3",
+        "c8b7",
+        "d2d3",
+        "d7d6"
+      ],
+      "startingFen": "r2q1rk1/1bp1bppp/p1np1n2/1p2p3/4P3/1B1P1N1P/PPP2PP1/RNBQR1K1 w - - 0 10",
+      "moveDepth": 18
+    },
+    {
+      "id": "ruy-lopez-expert-anti-marshall-8-d4",
+      "parentVariation": "Anti-Marshall",
+      "openingFamily": "Ruy Lopez",
+      "variationName": "Anti-Marshall with 8.d4",
+      "aliases": [],
+      "eco": "C88",
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": [
+        "ruy-lopez-beginner-morphy-main"
+      ],
+      "continuationIds": [],
+      "conceptIds": [
+        "central-control",
+        "piece-activity",
+        "development"
+      ],
+      "strategicIdeas": [
+        "White strikes immediately in the center with 8.d4.",
+        "Black plays Bg4 to pin the f3 knight and pressure the center.",
+        "White maintains the center with c3."
+      ],
+      "tacticalMotifs": [
+        "pin"
+      ],
+      "commonMistakes": [
+        "Exchanging on e5 at the wrong moment, releasing the pressure",
+        "Overlooking the pins on the d-file"
+      ],
+      "explanation": "The 8.d4 Anti-Marshall is direct. White challenges the center immediately. Black pin-attacks with Bg4 to target White's d4 pawn. This leads to heavy, strategic middlegames where White maintains a space advantage.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 50,
+      "pgn": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6 5.O-O Be7 6.Re1 b5 7.Bb3 O-O 8.d4 d6 9.c3 Bg4",
+      "sanMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bb5",
+        "a6",
+        "Ba4",
+        "Nf6",
+        "O-O",
+        "Be7",
+        "Re1",
+        "b5",
+        "Bb3",
+        "O-O",
+        "d4",
+        "d6",
+        "c3",
+        "Bg4"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "e7e5",
+        "g1f3",
+        "b8c6",
+        "f1b5",
+        "a7a6",
+        "b5a4",
+        "g8f6",
+        "e1g1",
+        "f8e7",
+        "f1e1",
+        "b7b5",
+        "a4b3",
+        "e8g8",
+        "d2d4",
+        "d7d6",
+        "c2c3",
+        "c8g4"
+      ],
+      "startingFen": "r2q1rk1/2p1bppp/p1np1n2/1p2p3/3PP1b1/1BP2N2/PP3PPP/RNBQR1K1 w - - 1 10",
+      "moveDepth": 18
+    }
+  ]
+}

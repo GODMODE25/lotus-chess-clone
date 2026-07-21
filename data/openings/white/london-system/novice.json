@@ -1,0 +1,500 @@
+{
+  "openingId": "london-system",
+  "tier": "Novice",
+  "lines": [
+    {
+      "id": "london-novice-classical",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London Classical vs 3...c5",
+      "aliases": [
+        "London c5"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Nc6 5. Bd3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "c5",
+        "e3",
+        "Nc6",
+        "Bd3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "c7c5",
+        "e2e3",
+        "b8c6",
+        "f1d3"
+      ],
+      "startingFen": "r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/3BPN2/PPP2PPP/RN1QK2R b KQkq - 2 5",
+      "moveDepth": 9,
+      "difficulty": 2,
+      "popularity": 5,
+      "prerequisites": [
+        "london-beginner-setup"
+      ],
+      "continuationIds": [
+        "london-intermediate-main-c5"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White completes the setup with Bd3.",
+        "The bishop on d3 supports a future e4 break.",
+        "Development proceeds smoothly."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Playing c4 too early and weakening d4",
+        "Blocking the f4 bishop with a premature e4"
+      ],
+      "explanation": "The Classical London vs 3...c5 continues 4.e3 Nc6 5.Bd3. White has a clear, repeatable development scheme.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 25
+    },
+    {
+      "id": "london-novice-vs-e6",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...e6 (Bd6 line)",
+      "aliases": [
+        "London e6 Bd6"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 e6 4. e3 Bd6 5. Bxd6",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "e6",
+        "e3",
+        "Bd6",
+        "Bxd6"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "e7e6",
+        "e2e3",
+        "f8d6",
+        "f4d6"
+      ],
+      "startingFen": "rnbqk2r/ppp2ppp/3Bpn2/3p4/3P4/4PN2/PPP2PPP/RN1QKB1R b KQkq - 0 5",
+      "moveDepth": 9,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [
+        "london-beginner-vs-e6"
+      ],
+      "continuationIds": [
+        "london-intermediate-vs-e6"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "bishop-pair"
+      ],
+      "strategicIdeas": [
+        "Black challenges the f4 bishop with ...Bd6.",
+        "White trades bishops, simplifying the position.",
+        "The bishop pair is conceded but the structure is solid."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Recapturing with the queen when the bishop is fine",
+        "Allowing ...Bxf4 to double White's pawns"
+      ],
+      "explanation": "After 4.e3 Bd6 White trades with 5.Bxd6. This is a common, harmless line where White keeps a small space edge.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 25
+    },
+    {
+      "id": "london-novice-vs-c6",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...c6 (Bf5 line)",
+      "aliases": [
+        "London c6 Bf5"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 c6 4. e3 Bf5 5. Bd3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "c6",
+        "e3",
+        "Bf5",
+        "Bd3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "c7c6",
+        "e2e3",
+        "c8f5",
+        "f1d3"
+      ],
+      "startingFen": "rn1qkb1r/pp2pppp/2p2n2/3p1b2/3P1B2/3BPN2/PPP2PPP/RN1QK2R b KQkq - 2 5",
+      "moveDepth": 9,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [
+        "london-beginner-vs-c6"
+      ],
+      "continuationIds": [
+        "london-intermediate-vs-c6"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "bishop-pair"
+      ],
+      "strategicIdeas": [
+        "Black develops the bishop to f5.",
+        "White challenges it with Bd3.",
+        "A trade on d3 is likely."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Developing the knight to a passive square",
+        "Missing the ...Bxd3 queen recapture"
+      ],
+      "explanation": "After 4.e3 Bf5 White plays 5.Bd3, offering a trade. The resulting positions are easy to play for White.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 25
+    },
+    {
+      "id": "london-novice-vs-g6",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...g6 (Bg7 line)",
+      "aliases": [
+        "London g6 Bg7"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 g6 4. e3 Bg7 5. Bd3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "g6",
+        "e3",
+        "Bg7",
+        "Bd3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "g7g6",
+        "e2e3",
+        "f8g7",
+        "f1d3"
+      ],
+      "startingFen": "rnbqk2r/ppp1ppbp/5np1/3p4/3P1B2/3BPN2/PPP2PPP/RN1QK2R b KQkq - 2 5",
+      "moveDepth": 9,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [
+        "london-beginner-vs-g6"
+      ],
+      "continuationIds": [
+        "london-intermediate-vs-g6"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "fianchetto"
+      ],
+      "strategicIdeas": [
+        "Black fianchettoes the bishop on g7.",
+        "White develops Bd3, controlling the b1-h7 diagonal.",
+        "The position is balanced."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...Ne4 to plant a knight in the centre",
+        "Castling kingside into a future pawn storm"
+      ],
+      "explanation": "After 4.e3 Bg7 White plays 5.Bd3. Both sides complete development calmly.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 25
+    },
+    {
+      "id": "london-novice-vs-Bf5",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...Bf5 (e6 line)",
+      "aliases": [
+        "London Bf5 e6"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 Bf5 4. e3 e6 5. Bd3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "Bf5",
+        "e3",
+        "e6",
+        "Bd3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "c8f5",
+        "e2e3",
+        "e7e6",
+        "f1d3"
+      ],
+      "startingFen": "rn1qkb1r/ppp2ppp/4pn2/3p1b2/3P1B2/3BPN2/PPP2PPP/RN1QK2R b KQkq - 1 5",
+      "moveDepth": 9,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [
+        "london-beginner-vs-Bf5"
+      ],
+      "continuationIds": [
+        "london-intermediate-vs-Bf5"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "bishop-pair"
+      ],
+      "strategicIdeas": [
+        "Black supports the centre with ...e6.",
+        "White challenges the f5 bishop with Bd3.",
+        "A trade on d3 simplifies."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Keeping bishops on when a trade favours Black",
+        "Developing pieces to passive squares"
+      ],
+      "explanation": "After 4.e3 e6 White plays 5.Bd3, offering to trade the light-squared bishops.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 25
+    },
+    {
+      "id": "london-novice-vs-Nc6",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...Nc6",
+      "aliases": [
+        "London Nc6"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 Nc6 4. e3 Bf5 5. Bd3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "Nc6",
+        "e3",
+        "Bf5",
+        "Bd3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "b8c6",
+        "e2e3",
+        "c8f5",
+        "f1d3"
+      ],
+      "startingFen": "r2qkb1r/ppp1pppp/2n2n2/3p1b2/3P1B2/3BPN2/PPP2PPP/RN1QK2R b KQkq - 2 5",
+      "moveDepth": 9,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [
+        "london-intermediate-vs-Nc6"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black develops the knight to c6.",
+        "White continues the standard setup.",
+        "The position is symmetrical and safe."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Rushing the c4 break",
+        "Developing the queen before minor pieces"
+      ],
+      "explanation": "After 3...Nc6 White plays 4.e3 Bf5 5.Bd3, reaching a typical London structure.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 25
+    },
+    {
+      "id": "london-novice-vs-Be7",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...e6 (Be7 line)",
+      "aliases": [
+        "London e6 Be7"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 e6 4. e3 Be7 5. Bd3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "e6",
+        "e3",
+        "Be7",
+        "Bd3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "e7e6",
+        "e2e3",
+        "f8e7",
+        "f1d3"
+      ],
+      "startingFen": "rnbqk2r/ppp1bppp/4pn2/3p4/3P1B2/3BPN2/PPP2PPP/RN1QK2R b KQkq - 2 5",
+      "moveDepth": 9,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [
+        "london-beginner-vs-e6"
+      ],
+      "continuationIds": [
+        "london-intermediate-vs-Be7"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black develops the bishop to e7.",
+        "White plays Bd3, keeping the bishop.",
+        "The setup is solid for both sides."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Trading the good f4 bishop unnecessarily",
+        "Delaying castling"
+      ],
+      "explanation": "After 4.e3 Be7 White plays 5.Bd3. This is a flexible, robust line for both colours.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 25
+    },
+    {
+      "id": "london-novice-vs-c5-Qb6",
+      "parentVariation": "London System",
+      "openingFamily": "London System",
+      "variationName": "London vs 3...c5 (Qb6 line)",
+      "aliases": [
+        "London c5 Qb6"
+      ],
+      "eco": "D02",
+      "pgn": "1. d4 d5 2. Nf3 Nf6 3. Bf4 c5 4. e3 Qb6 5. Nc3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "Nf3",
+        "Nf6",
+        "Bf4",
+        "c5",
+        "e3",
+        "Qb6",
+        "Nc3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "g1f3",
+        "g8f6",
+        "c1f4",
+        "c7c5",
+        "e2e3",
+        "d8b6",
+        "b1c3"
+      ],
+      "startingFen": "rnb1kb1r/pp2pppp/1q3n2/2pp4/3P1B2/2N1PN2/PPP2PPP/R2QKB1R b KQkq - 2 5",
+      "moveDepth": 9,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [
+        "london-beginner-setup"
+      ],
+      "continuationIds": [
+        "london-intermediate-vs-c5-Qb6"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "space-advantage"
+      ],
+      "strategicIdeas": [
+        "Black's queen eyes b2 and d4 from b6.",
+        "White develops the knight to c3, defending d5 and b5.",
+        "The queen sortie is easily met."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing ...Qxb2 to win a pawn",
+        "Developing the bishop to a square hit by the queen"
+      ],
+      "explanation": "After 4.e3 Qb6 White plays 5.Nc3, defending against ...Qxb2. The London handles the early queen sortie comfortably.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 4,
+      "masteryXp": 25
+    }
+  ]
+}

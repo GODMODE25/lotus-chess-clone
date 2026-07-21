@@ -1,0 +1,639 @@
+{
+  "openingId": "queens-gambit",
+  "tier": "Intermediate",
+  "lines": [
+    {
+      "id": "queens-gambit-intermediate-qgd-orthodox-main",
+      "parentVariation": "Queen's Gambit Declined",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGD Orthodox Main Line",
+      "aliases": [
+        "Orthodox Main Line"
+      ],
+      "eco": "D30",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.Bg5 Be7 5.e3 O-O 6.Nf3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Bg5",
+        "Be7",
+        "e3",
+        "O-O",
+        "Nf3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c1g5",
+        "f8e7",
+        "e2e3",
+        "e8g8",
+        "g1f3"
+      ],
+      "startingFen": "rnbq1rk1/ppp1bppp/4pn2/3p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R b KQ - 2 6",
+      "moveDepth": 11,
+      "difficulty": 3,
+      "popularity": 5,
+      "prerequisites": [
+        "queens-gambit-novice-qgd-orthodox"
+      ],
+      "continuationIds": [
+        "queens-gambit-advanced-qgd-orthodox-lasker"
+      ],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "castling",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White completes development with e3, O-O, and Nf3.",
+        "The position is a model of harmonious piece placement.",
+        "Both sides prepare for the middlegame battle."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Releasing the Bg5 pin before it's advantageous",
+        "Making premature pawn breaks that weaken the structure"
+      ],
+      "explanation": "The Orthodox Main Line sees both sides complete development. White plays e3, O-O, and Nf3, while Black castles. This is a textbook position where understanding piece coordination and pawn breaks (like ...c5 or ...e5 for Black, cxd5 or e4 for White) is crucial.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "queens-gambit-intermediate-slav-main",
+      "parentVariation": "Slav Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Slav Main Line",
+      "aliases": [
+        "Slav Main Line"
+      ],
+      "eco": "D15",
+      "pgn": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 dxc4",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "c6",
+        "Nf3",
+        "Nf6",
+        "Nc3",
+        "dxc4"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "c7c6",
+        "g1f3",
+        "g8f6",
+        "b1c3",
+        "d5c4"
+      ],
+      "startingFen": "rnbqkb1r/pp2pppp/2p2n2/8/2pP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5",
+      "moveDepth": 8,
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-novice-slav-exchange"
+      ],
+      "continuationIds": [
+        "queens-gambit-advanced-slav-main-line"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black captures on c4, leading to the main Slav battle.",
+        "White will recover the pawn with a4 and e3/Bxc4.",
+        "The Slav Main Line is a critical test of White's technique."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to keep the extra pawn with ...b5",
+        "Developing pieces passively in the resulting positions"
+      ],
+      "explanation": "The Slav Main Line (7...dxc4) is the most critical test. White recovers the pawn with a4 and e3/Bxc4, leading to complex middlegame positions. Understanding the typical plans (minority attack for White, central play for Black) is essential.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "queens-gambit-intermediate-qga-main",
+      "parentVariation": "Queen's Gambit Accepted",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGA Main Line",
+      "aliases": [
+        "QGA Main Line"
+      ],
+      "eco": "D27",
+      "pgn": "1.d4 d5 2.c4 dxc4 3.Nf3 Nf6 4.e3 Bg4",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "dxc4",
+        "Nf3",
+        "Nf6",
+        "e3",
+        "Bg4"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "d5c4",
+        "g1f3",
+        "g8f6",
+        "e2e3",
+        "c8g4"
+      ],
+      "startingFen": "rn1qkb1r/ppp1pppp/5n2/8/2pP2b1/4PN2/PP3PPP/RNBQKB1R w KQkq - 1 5",
+      "moveDepth": 8,
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-novice-qga-recovery"
+      ],
+      "continuationIds": [
+        "queens-gambit-advanced-qga-main-line"
+      ],
+      "conceptIds": [
+        "development",
+        "gambit",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black develops the bishop to g4, pinning the f3 knight.",
+        "White continues with e3 and Bxc4 to regain the pawn.",
+        "The QGA Main Line leads to open, tactical positions."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to win the bishop pair too easily",
+        "Recapturing the pawn with the wrong piece order"
+      ],
+      "explanation": "The QGA Main Line (5...Bg4) sees Black pin the f3 knight. White plays e3 and Bxc4 to regain the pawn, leading to open positions. The pin on f3 is temporary, and White must handle it correctly to maintain the initiative.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "queens-gambit-intermediate-tarrasch-rubinstein",
+      "parentVariation": "Tarrasch Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Tarrasch Rubinstein Variation",
+      "aliases": [
+        "Rubinstein Tarrasch"
+      ],
+      "eco": "D34",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 c5 4.cxd5 exd5 5.Nf3 Nc6",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "c5",
+        "cxd5",
+        "exd5",
+        "Nf3",
+        "Nc6"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "c7c5",
+        "c4d5",
+        "e6d5",
+        "g1f3",
+        "b8c6"
+      ],
+      "startingFen": "r1bqkbnr/pp3ppp/2n5/2pp4/3P4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 2 6",
+      "moveDepth": 10,
+      "difficulty": 3,
+      "popularity": 3,
+      "prerequisites": [
+        "queens-gambit-novice-tarrasch-main"
+      ],
+      "continuationIds": [
+        "queens-gambit-advanced-tarrasch-haakert"
+      ],
+      "conceptIds": [
+        "isolated-queens-pawn",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black develops the knight to c6, supporting the d5 pawn.",
+        "The Rubinstein is a solid way to handle the IQP.",
+        "White aims for piece activity and pressure on d5."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to trade pieces and relieve the IQP pressure",
+        "Passive play that lets Black's IQP become strong"
+      ],
+      "explanation": "The Rubinstein Variation (9...Nc6) is a solid way for Black to handle the isolated queen's pawn in the Tarrasch. The knight supports d5 and prepares ...Nf6. White must play actively to exploit the structural weakness.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "queens-gambit-intermediate-cambridge-springs-main",
+      "parentVariation": "Cambridge Springs Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Cambridge Springs Main Line",
+      "aliases": [
+        "Cambridge Springs Main"
+      ],
+      "eco": "D52",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.Bg5 Nbd7 5.Nf3 c6 6.e3 Qa5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Bg5",
+        "Nbd7",
+        "Nf3",
+        "c6",
+        "e3",
+        "Qa5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c1g5",
+        "b8d7",
+        "g1f3",
+        "c7c6",
+        "e2e3",
+        "d8a5"
+      ],
+      "startingFen": "r1b1kb1r/pp1n1ppp/2p1pn2/q2p2B1/2PP4/2N1PN2/PP3PPP/R2QKB1R w KQkq - 1 7",
+      "moveDepth": 12,
+      "difficulty": 3,
+      "popularity": 3,
+      "prerequisites": [
+        "queens-gambit-novice-cambridge-springs"
+      ],
+      "continuationIds": [
+        "queens-gambit-advanced-cambridge-springs-main"
+      ],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black plays ...Qa5, pinning the c3 knight against the rook on a1.",
+        "White must break the pin with Nd2 or Bd2.",
+        "The Cambridge Springs is a sharp, tactical variation."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing the ...Qa5 pin to win material",
+        "Releasing the Bg5 pin prematurely"
+      ],
+      "explanation": "The Cambridge Springs Main Line features the ...Qa5 pin on c3. White must break the pin with Nd2 or Bd2, leading to sharp tactical play. This variation requires precise calculation and understanding of the resulting positions.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "queens-gambit-intermediate-semi-slav-botvinnik",
+      "parentVariation": "Semi-Slav Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Semi-Slav Botvinnik System",
+      "aliases": [
+        "Botvinnik Semi-Slav"
+      ],
+      "eco": "D44",
+      "pgn": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 e6 5.Bg5 dxc4",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "c6",
+        "Nf3",
+        "Nf6",
+        "Nc3",
+        "e6",
+        "Bg5",
+        "dxc4"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "c7c6",
+        "g1f3",
+        "g8f6",
+        "b1c3",
+        "e7e6",
+        "c1g5",
+        "d5c4"
+      ],
+      "startingFen": "rnbqkb1r/pp3ppp/2p1pn2/6B1/2pP4/2N2N2/PP2PPPP/R2QKB1R w KQkq - 0 6",
+      "moveDepth": 10,
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-novice-semi-slav"
+      ],
+      "continuationIds": [
+        "queens-gambit-advanced-semi-slav-meran"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black captures on c4, leading to the sharp Botvinnik System.",
+        "White will recover the pawn with e3 or e4.",
+        "The Botvinnik is one of the most complex openings in chess."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to consolidate the extra pawn",
+        "Misjudging the tactical complications"
+      ],
+      "explanation": "The Botvinnik System (9...dxc4) is the sharpest line of the Semi-Slav. White recovers the pawn with e3 or e4, leading to extremely complex positions. This variation has been the subject of countless theoretical battles and requires deep preparation.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "queens-gambit-intermediate-exchange-qgd",
+      "parentVariation": "Queen's Gambit Declined",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Exchange Variation Carlsbad",
+      "aliases": [
+        "Carlsbad Structure"
+      ],
+      "eco": "D35",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.cxd5 exd5 5.Bg5 c6",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "cxd5",
+        "exd5",
+        "Bg5",
+        "c6"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c4d5",
+        "e6d5",
+        "c1g5",
+        "c7c6"
+      ],
+      "startingFen": "rnbqkb1r/pp3ppp/2p2n2/3p2B1/3P4/2N5/PP2PPPP/R2QKBNR w KQkq - 0 6",
+      "moveDepth": 10,
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-novice-qgd-exchange"
+      ],
+      "continuationIds": [
+        "queens-gambit-advanced-exchange-qgd-carlsbad"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "isolated-queens-pawn",
+        "minority-attack"
+      ],
+      "strategicIdeas": [
+        "The Carlsbad structure features pawns on c6 and d5 for Black.",
+        "White often plays a minority attack on the queenside.",
+        "This is a classic positional battle."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to free the position with ...c5",
+        "Misplacing pieces in the Carlsbad structure"
+      ],
+      "explanation": "The Exchange Variation Carlsbad structure (pawns c6/d5 for Black) is a classic positional battleground. White typically launches a minority attack with b4-b5, while Black seeks counterplay in the centre. Understanding this structure is fundamental to QGD play.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "queens-gambit-intermediate-ragazin",
+      "parentVariation": "Ragazin Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Ragazin Setup",
+      "aliases": [
+        "Ragazin Defence"
+      ],
+      "eco": "D38",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.Bg5 Bb4",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Bg5",
+        "Bb4"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c1g5",
+        "f8b4"
+      ],
+      "startingFen": "rnbqk2r/ppp2ppp/4pn2/3p2B1/1bPP4/2N5/PP2PPPP/R2QKBNR w KQkq - 4 5",
+      "moveDepth": 8,
+      "difficulty": 3,
+      "popularity": 3,
+      "prerequisites": [
+        "queens-gambit-novice-qgd-orthodox"
+      ],
+      "continuationIds": [
+        "queens-gambit-advanced-ragazin-main"
+      ],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black pins the c3 knight with Bb4, increasing pressure.",
+        "The Ragazin is a flexible, active defence.",
+        "White must decide how to handle the pin."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to win the bishop pair too easily",
+        "Releasing the Bg5 pin prematurely"
+      ],
+      "explanation": "The Ragazin Defence (7...Bb4) pins the c3 knight, creating immediate pressure. White must decide whether to maintain the pin with Bd2 or release it. This is a flexible, active defence that leads to complex middlegame positions.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "queens-gambit-intermediate-slav-marshall",
+      "parentVariation": "Slav Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Slav Marshall Gambit",
+      "aliases": [
+        "Marshall Slav"
+      ],
+      "eco": "D15",
+      "pgn": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 dxc4 5.a4 Bf5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "c6",
+        "Nf3",
+        "Nf6",
+        "Nc3",
+        "dxc4",
+        "a4",
+        "Bf5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "c7c6",
+        "g1f3",
+        "g8f6",
+        "b1c3",
+        "d5c4",
+        "a2a4",
+        "c8f5"
+      ],
+      "startingFen": "rn1qkb1r/pp2pppp/2p2n2/5b2/P1pP4/2N2N2/1P2PPPP/R1BQKB1R w KQkq - 1 6",
+      "moveDepth": 10,
+      "difficulty": 3,
+      "popularity": 3,
+      "prerequisites": [
+        "queens-gambit-novice-slav-exchange"
+      ],
+      "continuationIds": [
+        "queens-gambit-advanced-slav-main-line"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black develops the bishop to f5, preparing to hold the c4 pawn.",
+        "White plays a4 to prevent ...b5 and recover the pawn.",
+        "The Marshall Gambit is a sharp, tactical line."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to keep the extra pawn with ...b5",
+        "Developing pieces passively in the resulting positions"
+      ],
+      "explanation": "The Slav Marshall Gambit (9...Bf5) sees Black develop the bishop actively, preparing to hold the c4 pawn. White plays a4 to prevent ...b5 and recover the pawn. This is a sharp, tactical line that requires precise play from both sides.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    },
+    {
+      "id": "queens-gambit-intermediate-qga-classical",
+      "parentVariation": "Queen's Gambit Accepted",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGA Classical Line",
+      "aliases": [
+        "Classical QGA"
+      ],
+      "eco": "D28",
+      "pgn": "1.d4 d5 2.c4 dxc4 3.Nf3 Nf6 4.e3 e6 5.Bxc4",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "dxc4",
+        "Nf3",
+        "Nf6",
+        "e3",
+        "e6",
+        "Bxc4"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "d5c4",
+        "g1f3",
+        "g8f6",
+        "e2e3",
+        "e7e6",
+        "f1c4"
+      ],
+      "startingFen": "rnbqkb1r/ppp2ppp/4pn2/8/2BP4/4PN2/PP3PPP/RNBQK2R b KQkq - 0 5",
+      "moveDepth": 9,
+      "difficulty": 3,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-novice-qga-recovery"
+      ],
+      "continuationIds": [
+        "queens-gambit-advanced-qga-main-line"
+      ],
+      "conceptIds": [
+        "development",
+        "gambit",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White recovers the pawn with Bxc4, completing development.",
+        "The Classical QGA leads to balanced, open positions.",
+        "Both sides aim for piece activity and central control."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to equalise too easily",
+        "Developing pieces passively in open positions"
+      ],
+      "explanation": "The Classical QGA (9.Bxc4) sees White recover the pawn and complete development. The resulting positions are balanced and open, requiring good piece coordination. This is a solid, reliable way to handle the QGA.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 3,
+      "masteryXp": 20
+    }
+  ]
+}

@@ -1,0 +1,474 @@
+{
+  "openingId": "queens-gambit",
+  "tier": "Novice",
+  "lines": [
+    {
+      "id": "queens-gambit-novice-qgd-exchange",
+      "parentVariation": "Queen's Gambit Declined",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGD Exchange Variation",
+      "aliases": [
+        "Exchange QGD"
+      ],
+      "eco": "D35",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.cxd5 exd5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "cxd5",
+        "exd5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c4d5",
+        "e6d5"
+      ],
+      "startingFen": "rnbqkb1r/ppp2ppp/5n2/3p4/3P4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 5",
+      "moveDepth": 8,
+      "difficulty": 2,
+      "popularity": 5,
+      "prerequisites": [
+        "queens-gambit-beginner-qgd-setup"
+      ],
+      "continuationIds": [
+        "queens-gambit-intermediate-exchange-qgd"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "isolated-queens-pawn",
+        "central-control"
+      ],
+      "strategicIdeas": [
+        "White releases tension with cxd5, leading to a symmetrical pawn structure.",
+        "Black's isolated d5 pawn can become a target or a strength.",
+        "The position is a classic example of IQP play."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to easily blockade the d5 pawn",
+        "Trading off the wrong pieces in IQP positions"
+      ],
+      "explanation": "The Exchange Variation (cxd5 exd5) leads to a symmetrical pawn structure where Black has an isolated queen's pawn. White aims to pressure the d5 pawn and use piece activity, while Black seeks dynamic play. This is a fundamental structure every Queen's Gambit player must understand.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 15
+    },
+    {
+      "id": "queens-gambit-novice-slav-exchange",
+      "parentVariation": "Slav Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Slav Exchange Variation",
+      "aliases": [
+        "Exchange Slav"
+      ],
+      "eco": "D13",
+      "pgn": "1.d4 d5 2.c4 c6 3.cxd5 cxd5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "c6",
+        "cxd5",
+        "cxd5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "c7c6",
+        "c4d5",
+        "c6d5"
+      ],
+      "startingFen": "rnbqkbnr/pp2pppp/8/3p4/3P4/8/PP2PPPP/RNBQKBNR w KQkq - 0 4",
+      "moveDepth": 6,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-beginner-slav-setup"
+      ],
+      "continuationIds": [
+        "queens-gambit-intermediate-slav-main"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White trades on d5, leading to a symmetrical pawn structure.",
+        "Black's bishop pair can become a factor in open positions.",
+        "Both sides aim for piece activity and minority attacks."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Passive play that allows Black's bishop pair to dominate",
+        "Premature pawn advances that weaken the structure"
+      ],
+      "explanation": "The Slav Exchange Variation (cxd5 cxd5) creates a symmetrical pawn structure. Black often develops the bishop to f5 or g4, while White aims for piece activity and a minority attack on the queenside. Understanding this structure is key to mastering the Slav.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 15
+    },
+    {
+      "id": "queens-gambit-novice-qga-recovery",
+      "parentVariation": "Queen's Gambit Accepted",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGA Recovery with e3",
+      "aliases": [
+        "QGA e3 Line"
+      ],
+      "eco": "D24",
+      "pgn": "1.d4 d5 2.c4 dxc4 3.Nf3 Nf6 4.e3",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "dxc4",
+        "Nf3",
+        "Nf6",
+        "e3"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "d5c4",
+        "g1f3",
+        "g8f6",
+        "e2e3"
+      ],
+      "startingFen": "rnbqkb1r/ppp1pppp/5n2/8/2pP4/4PN2/PP3PPP/RNBQKB1R b KQkq - 0 4",
+      "moveDepth": 7,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-beginner-accepted-setup"
+      ],
+      "continuationIds": [
+        "queens-gambit-intermediate-qga-main"
+      ],
+      "conceptIds": [
+        "development",
+        "gambit",
+        "tempo"
+      ],
+      "strategicIdeas": [
+        "White prepares to recapture the c4 pawn with Bxc4.",
+        "The e3 move supports the centre and opens the bishop.",
+        "Black develops naturally with Nf6."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Recapturing the pawn too slowly, allowing Black to consolidate",
+        "Developing pieces passively in open positions"
+      ],
+      "explanation": "After 2...dxc4, White plays 3.Nf3 and 4.e3 to regain the pawn with Bxc4. This is the most natural way to handle the QGA. The resulting positions are open and require good piece coordination. White should aim for quick development and central control.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 15
+    },
+    {
+      "id": "queens-gambit-novice-qgd-orthodox",
+      "parentVariation": "Queen's Gambit Declined",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGD Orthodox Defence",
+      "aliases": [
+        "Orthodox QGD"
+      ],
+      "eco": "D30",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.Bg5 Be7",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Bg5",
+        "Be7"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c1g5",
+        "f8e7"
+      ],
+      "startingFen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq - 4 5",
+      "moveDepth": 8,
+      "difficulty": 2,
+      "popularity": 5,
+      "prerequisites": [
+        "queens-gambit-beginner-qgd-setup"
+      ],
+      "continuationIds": [
+        "queens-gambit-intermediate-qgd-orthodox-main"
+      ],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White pins the f6 knight with Bg5, pressuring the d5 pawn.",
+        "Black develops solidly with Be7, preparing to castle.",
+        "This is the most classical QGD setup."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Releasing the pin too early without reason",
+        "Allowing Black to break with ...c5 or ...e5 too easily"
+      ],
+      "explanation": "The Orthodox Defence (Bg5 Be7) is the most traditional QGD setup. White pins the f6 knight to increase pressure on d5, while Black develops solidly. This position is the starting point for deep theoretical battles and is essential study for Queen's Gambit players.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 15
+    },
+    {
+      "id": "queens-gambit-novice-tarrasch-main",
+      "parentVariation": "Tarrasch Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Tarrasch Main Line",
+      "aliases": [
+        "Tarrasch Accepted"
+      ],
+      "eco": "D34",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 c5 4.cxd5 exd5",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "c5",
+        "cxd5",
+        "exd5"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "c7c5",
+        "c4d5",
+        "e6d5"
+      ],
+      "startingFen": "rnbqkbnr/pp3ppp/8/2pp4/3P4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 5",
+      "moveDepth": 8,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [
+        "queens-gambit-beginner-tarrasch-setup"
+      ],
+      "continuationIds": [
+        "queens-gambit-intermediate-tarrasch-rubinstein"
+      ],
+      "conceptIds": [
+        "central-control",
+        "isolated-queens-pawn",
+        "pawn-structure"
+      ],
+      "strategicIdeas": [
+        "After cxd5 exd5, Black has an isolated queen's pawn.",
+        "White can target the d5 pawn or use piece activity.",
+        "The Tarrasch leads to dynamic, unbalanced positions."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Passive play that lets Black's IQP become strong",
+        "Trading pieces that help Black's structure"
+      ],
+      "explanation": "The Tarrasch Main Line (cxd5 exd5) gives Black an isolated queen's pawn. White should play actively, targeting d5 and using piece activity. The Tarrasch is a double-edged weapon that requires understanding of IQP dynamics.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 15
+    },
+    {
+      "id": "queens-gambit-novice-cambridge-springs",
+      "parentVariation": "Cambridge Springs Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Cambridge Springs Setup",
+      "aliases": [
+        "Cambridge Springs"
+      ],
+      "eco": "D52",
+      "pgn": "1.d4 d5 2.c4 e6 3.Nc3 Nf6 4.Bg5 Nbd7",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "e6",
+        "Nc3",
+        "Nf6",
+        "Bg5",
+        "Nbd7"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "e7e6",
+        "b1c3",
+        "g8f6",
+        "c1g5",
+        "b8d7"
+      ],
+      "startingFen": "r1bqkb1r/pppn1ppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq - 4 5",
+      "moveDepth": 8,
+      "difficulty": 2,
+      "popularity": 3,
+      "prerequisites": [
+        "queens-gambit-beginner-qgd-setup"
+      ],
+      "continuationIds": [
+        "queens-gambit-intermediate-cambridge-springs-main"
+      ],
+      "conceptIds": [
+        "development",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black develops the knight to d7, preparing ...c6 and ...Qa5.",
+        "This is a flexible setup that can transpose to many lines.",
+        "White must be careful about the ...Qa5 pin on c3."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing the ...Qa5 pin to win material",
+        "Releasing the Bg5 pin prematurely"
+      ],
+      "explanation": "The Cambridge Springs Defence (Nbd7) is a flexible QGD setup. Black prepares ...c6 and ...Qa5, creating pressure on c3. White must handle the potential pin carefully. This variation is named after the 1904 tournament where it was popularised.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 15
+    },
+    {
+      "id": "queens-gambit-novice-semi-slav",
+      "parentVariation": "Semi-Slav Defence",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "Semi-Slav Setup",
+      "aliases": [
+        "Semi-Slav Main Line"
+      ],
+      "eco": "D43",
+      "pgn": "1.d4 d5 2.c4 c6 3.Nf3 Nf6 4.Nc3 e6",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "c6",
+        "Nf3",
+        "Nf6",
+        "Nc3",
+        "e6"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "c7c6",
+        "g1f3",
+        "g8f6",
+        "b1c3",
+        "e7e6"
+      ],
+      "startingFen": "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5",
+      "moveDepth": 8,
+      "difficulty": 2,
+      "popularity": 4,
+      "prerequisites": [
+        "queens-gambit-beginner-slav-setup"
+      ],
+      "continuationIds": [
+        "queens-gambit-intermediate-semi-slav-botvinnik"
+      ],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "Black combines ...c6 and ...e6, creating a solid but flexible structure.",
+        "The Semi-Slav can lead to both quiet and sharp positions.",
+        "White develops naturally with Nf3 and Nc3."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to free the position with ...dxc4",
+        "Premature central breaks that backfire"
+      ],
+      "explanation": "The Semi-Slav Defence (...c6 and ...e6) is one of the most popular modern defences. It combines the solidity of the Slav with the flexibility of the QGD. White develops with Nf3 and Nc3, preparing to meet Black's central breaks. This is a critical opening for any serious Queen's Gambit player.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 2,
+      "masteryXp": 15
+    },
+    {
+      "id": "queens-gambit-novice-chicago",
+      "parentVariation": "Queen's Gambit Accepted",
+      "openingFamily": "Queen's Gambit",
+      "variationName": "QGA Central Defence",
+      "aliases": [
+        "Central QGA"
+      ],
+      "eco": "D21",
+      "pgn": "1.d4 d5 2.c4 dxc4 3.e4",
+      "sanMoves": [
+        "d4",
+        "d5",
+        "c4",
+        "dxc4",
+        "e4"
+      ],
+      "uciMoves": [
+        "d2d4",
+        "d7d5",
+        "c2c4",
+        "d5c4",
+        "e2e4"
+      ],
+      "startingFen": "rnbqkbnr/ppp1pppp/8/8/2pPP3/8/PP3PPP/RNBQKBNR b KQkq - 0 3",
+      "moveDepth": 5,
+      "difficulty": 2,
+      "popularity": 2,
+      "prerequisites": [
+        "queens-gambit-beginner-accepted-setup"
+      ],
+      "continuationIds": [
+        "queens-gambit-intermediate-qga-classical"
+      ],
+      "conceptIds": [
+        "gambit",
+        "central-control",
+        "initiative"
+      ],
+      "strategicIdeas": [
+        "White grabs the centre immediately with e4, ignoring the c4 pawn.",
+        "This leads to a massive central pawn duo (d4+e4).",
+        "Black must find a way to challenge the centre."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White to consolidate the central pawns",
+        "Developing pieces passively against the central duo"
+      ],
+      "explanation": "The Central Defence (3.e4) is a bold try in the QGA where White ignores the c4 pawn and grabs the centre with e4. This leads to a huge central pawn mass but leaves the c4 pawn weak. Black must challenge the centre quickly with ...Nf6 and ...e5 or ...c5.",
+      "reviewPriority": 2,
+      "estimatedStudyMinutes": 1.5,
+      "masteryXp": 15
+    }
+  ]
+}

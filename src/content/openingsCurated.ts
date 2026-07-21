@@ -7,6 +7,15 @@ import masterData from "@/data/openings/white/italian/master.json";
 import legendData from "@/data/openings/white/italian/legend.json";
 import metadata from "@/data/openings/white/italian/metadata.json";
 
+import rlBeginnerData from "@/data/openings/white/ruy-lopez/beginner.json";
+import rlNoviceData from "@/data/openings/white/ruy-lopez/novice.json";
+import rlIntermediateData from "@/data/openings/white/ruy-lopez/intermediate.json";
+import rlAdvancedData from "@/data/openings/white/ruy-lopez/advanced.json";
+import rlExpertData from "@/data/openings/white/ruy-lopez/expert.json";
+import rlMasterData from "@/data/openings/white/ruy-lopez/master.json";
+import rlLegendData from "@/data/openings/white/ruy-lopez/legend.json";
+import rlMetadata from "@/data/openings/white/ruy-lopez/metadata.json";
+
 export interface CuratedLine {
   id: string;
   parentVariation: string;
@@ -83,4 +92,17 @@ export const curatedOpenings: Record<string, CuratedOpening> = {
       ...legendData.lines.map((l: any) => ({ ...l, masteryLevel: "Legend", tierIndex: 6 })),
     ],
   },
+  "ruy-lopez": {
+    metadata: rlMetadata as OpeningCuratedMetadata,
+    lines: [
+      ...rlBeginnerData.lines.map((l: any) => ({ ...l, masteryLevel: "Beginner", tierIndex: 0 })),
+      ...rlNoviceData.lines.map((l: any) => ({ ...l, masteryLevel: "Novice", tierIndex: 1 })),
+      ...rlIntermediateData.lines.map((l: any) => ({ ...l, masteryLevel: "Intermediate", tierIndex: 2 })),
+      ...rlAdvancedData.lines.map((l: any) => ({ ...l, masteryLevel: "Advanced", tierIndex: 3 })),
+      ...rlExpertData.lines.map((l: any) => ({ ...l, masteryLevel: "Expert", tierIndex: 4 })),
+      ...rlMasterData.lines.map((l: any) => ({ ...l, masteryLevel: "Master", tierIndex: 5 })),
+      ...rlLegendData.lines.map((l: any) => ({ ...l, masteryLevel: "Legend", tierIndex: 6 })),
+    ],
+  },
 };
+

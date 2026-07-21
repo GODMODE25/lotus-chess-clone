@@ -1,0 +1,139 @@
+{
+  "id": "london-system",
+  "name": "London System",
+  "slug": "london-system",
+  "ecoRange": "D02",
+  "family": "London System",
+  "colour": "white",
+  "popularity": 4,
+  "difficulty": 2,
+  "description": "The London System is a solid, low-risk opening for White built on the moves 1.d4, 2.Nf3, 3.Bf4, followed by e3, Bd3, Nbd2 and castling. It can be played against almost any Black setup, making it an ideal repertoire choice for systematic, memorisation-first training.",
+  "strategicOverview": "White aims for a stable pawn structure (pawns on d4 and e3) with the bishop on f4 and the bishop on d3. The setup is flexible: White can later choose between the c4 break, the e4 break, or planting a knight on the e5 outpost. Because the same moves work against many Black replies, the London is easy to learn and hard to punish.",
+  "typicalPawnStructures": [
+    "d4 + e3 pawn chain with c3 support",
+    "Symmetrical Slav-style structures after ...c6",
+    "IQP-style tension after the c4 break",
+    "Closed centre with a knight on e5"
+  ],
+  "commonTacticalThemes": [
+    "Knight outpost on e5",
+    "Bishop pair after early light-squared trades",
+    "The c4 central break",
+    "The f4 kingside space gain"
+  ],
+  "modelPlayers": [
+    "Magnus Carlsen",
+    "Gata Kamsky",
+    "Nigel Short",
+    "David Howell"
+  ],
+  "recommendedStudyOrder": [
+    "Beginner: learn the core setup (Bf4, e3, Bd3).",
+    "Novice: meet the common Black replies (...c5, ...e6, ...c6, ...g6, ...Bf5).",
+    "Intermediate: complete development and castle.",
+    "Advanced: introduce the e5 outpost and c4 break.",
+    "Expert: handle the early queen sortie ...Qb6 and the ...Ne4 ideas.",
+    "Master: execute the c4 break and win the bishop pair.",
+    "Legend: navigate the deep middlegame with rook activity and space."
+  ],
+  "baseMoves": [
+    "d4",
+    "d5",
+    "Nf3",
+    "Nf6",
+    "Bf4"
+  ],
+  "masteryLevels": [
+    {
+      "level": 1,
+      "tier": "Beginner",
+      "objectives": [
+        "Memorise the core London setup (d4, Nf3, Bf4, e3).",
+        "Recognise the main Black replies."
+      ],
+      "expectedKnowledge": "Basic piece development and the purpose of the London bishop on f4.",
+      "averageMoveDepth": 7,
+      "averageLineCount": 5,
+      "xpReward": 100,
+      "graduationRequirements": "75% accuracy across all Beginner lines in review."
+    },
+    {
+      "level": 2,
+      "tier": "Novice",
+      "objectives": [
+        "Develop Bd3 against each Black setup.",
+        "Handle the early ...Qb6 sortie."
+      ],
+      "expectedKnowledge": "The role of Bd3 and the bishop trade on d3.",
+      "averageMoveDepth": 9,
+      "averageLineCount": 8,
+      "xpReward": 160,
+      "graduationRequirements": "78% accuracy across all Novice lines in review."
+    },
+    {
+      "level": 3,
+      "tier": "Intermediate",
+      "objectives": [
+        "Complete development and castle in every line.",
+        "Support the centre with c3."
+      ],
+      "expectedKnowledge": "Castling safety and the c3/d4 support structure.",
+      "averageMoveDepth": 11,
+      "averageLineCount": 10,
+      "xpReward": 240,
+      "graduationRequirements": "80% accuracy across all Intermediate lines in review."
+    },
+    {
+      "level": 4,
+      "tier": "Advanced",
+      "objectives": [
+        "Introduce the e5 outpost and c4 break ideas.",
+        "Handle ...Bg4 pins and ...Ne4."
+      ],
+      "expectedKnowledge": "Outpost play on e5 and the c4 central break.",
+      "averageMoveDepth": 13,
+      "averageLineCount": 12,
+      "xpReward": 340,
+      "graduationRequirements": "82% accuracy across all Advanced lines in review."
+    },
+    {
+      "level": 5,
+      "tier": "Expert",
+      "objectives": [
+        "Seize the e5 outpost consistently.",
+        "Meet the ...Qb6 and ...Ne4 lines accurately."
+      ],
+      "expectedKnowledge": "Deep understanding of the e5 outpost and piece trades.",
+      "averageMoveDepth": 15,
+      "averageLineCount": 12,
+      "xpReward": 460,
+      "graduationRequirements": "84% accuracy across all Expert lines in review."
+    },
+    {
+      "level": 6,
+      "tier": "Master",
+      "objectives": [
+        "Execute the c4 break and win the bishop pair.",
+        "Convert the small space edge."
+      ],
+      "expectedKnowledge": "The c4 break timing and bishop-pair conversion.",
+      "averageMoveDepth": 17,
+      "averageLineCount": 10,
+      "xpReward": 600,
+      "graduationRequirements": "86% accuracy across all Master lines in review."
+    },
+    {
+      "level": 7,
+      "tier": "Legend",
+      "objectives": [
+        "Navigate the deep middlegame with rook activity and space.",
+        "Consolidate extra pawns accurately."
+      ],
+      "expectedKnowledge": "Full mastery of London plans across all Black setups.",
+      "averageMoveDepth": 19,
+      "averageLineCount": 10,
+      "xpReward": 800,
+      "graduationRequirements": "88% accuracy across all Legend lines in review."
+    }
+  ]
+}

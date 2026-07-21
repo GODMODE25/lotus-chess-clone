@@ -1,0 +1,849 @@
+{
+  "openingId": "caro-kann-defense",
+  "lines": [
+    {
+      "id": "caro-exp-exchange",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Exchange (4.Bd3 Nc6 5.c3 Nf6 6.Bf4 Bd6 7.Bxd6 Qxd6 8.Nd2)",
+      "aliases": [
+        "Exchange trade"
+      ],
+      "eco": "B13",
+      "pgn": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. Bd3 Nc6 5. c3 Nf6 6. Bf4 e6 7. Nf3 Bd6 8. Bxd6 Qxd6 9. Nbd2",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "exd5",
+        "cxd5",
+        "Bd3",
+        "Nc6",
+        "c3",
+        "Nf6",
+        "Bf4",
+        "e6",
+        "Nf3",
+        "Bd6",
+        "Bxd6",
+        "Qxd6",
+        "Nbd2"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "e4d5",
+        "c6d5",
+        "f1d3",
+        "b8c6",
+        "c2c3",
+        "g8f6",
+        "c1f4",
+        "e7e6",
+        "g1f3",
+        "f8d6",
+        "f4d6",
+        "d8d6",
+        "b1d2"
+      ],
+      "startingFen": "r1b1k2r/pp3ppp/2nqpn2/3p4/3P4/2PB1N2/PP1N1PPP/R2QK2R b KQkq - 1 9",
+      "moveDepth": 17,
+      "difficulty": 6,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "piece-activity"
+      ],
+      "strategicIdeas": [
+        "White develops 8.Nd2, completing the setup.",
+        "Black recaptures 7...Qxd6 after the bishop trade."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Delaying development of the c1 bishop",
+        "Allowing White a lead in development"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.exd5 cxd5 4.Bd3 Nc6 5.c3 Nf6 6.Bf4 Bd6 7.Bxd6 Qxd6 8.Nd2 White completes development in the Exchange Caro-Kann.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 12,
+      "masteryXp": 460
+    },
+    {
+      "id": "caro-exp-advance",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Advance (4.Nf3 e6 5.Be2 c5 6.O-O Nc6 7.c3 cxd4 8.cxd4)",
+      "aliases": [
+        "Advance main"
+      ],
+      "eco": "B12",
+      "pgn": "1. e4 c6 2. d4 d5 3. e5 Bf5 4. Nf3 e6 5. Be2 c5 6. O-O Nc6 7. c3 cxd4 8. cxd4",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "e5",
+        "Bf5",
+        "Nf3",
+        "e6",
+        "Be2",
+        "c5",
+        "O-O",
+        "Nc6",
+        "c3",
+        "cxd4",
+        "cxd4"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "e4e5",
+        "c8f5",
+        "g1f3",
+        "e7e6",
+        "f1e2",
+        "c6c5",
+        "e1g1",
+        "b8c6",
+        "c2c3",
+        "c5d4",
+        "c3d4"
+      ],
+      "startingFen": "r2qkbnr/pp3ppp/2n1p3/3pPb2/3P4/5N2/PP2BPPP/RNBQ1RK1 b kq - 0 8",
+      "moveDepth": 15,
+      "difficulty": 6,
+      "popularity": 5,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "space-advantage",
+        "castling"
+      ],
+      "strategicIdeas": [
+        "White recaptures 8.cxd4, keeping a pawn chain.",
+        "Black releases tension with 7...cxd4."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Blocking the c1 bishop behind the e-pawn",
+        "Allowing White a space advantage on the kingside"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.e5 Bf5 4.Nf3 e6 5.Be2 c5 6.O-O Nc6 7.c3 cxd4 8.cxd4 White keeps a pawn chain in the Advance Caro-Kann.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 12,
+      "masteryXp": 460
+    },
+    {
+      "id": "caro-exp-classical",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Classical (5.Ng3 Bg6 6.Nf3 Nd7 7.h4 h6 8.Bd3 Bxd3 9.Qxd3)",
+      "aliases": [
+        "Classical h4"
+      ],
+      "eco": "B18",
+      "pgn": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. Nf3 Nd7 7. h4 h6 8. Bd3 Bxd3 9. Qxd3",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "Nc3",
+        "dxe4",
+        "Nxe4",
+        "Bf5",
+        "Ng3",
+        "Bg6",
+        "Nf3",
+        "Nd7",
+        "h4",
+        "h6",
+        "Bd3",
+        "Bxd3",
+        "Qxd3"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "b1c3",
+        "d5e4",
+        "c3e4",
+        "c8f5",
+        "e4g3",
+        "f5g6",
+        "g1f3",
+        "b8d7",
+        "h2h4",
+        "h7h6",
+        "f1d3",
+        "g6d3",
+        "d1d3"
+      ],
+      "startingFen": "r2qkbnr/pp1nppp1/2p4p/8/3P3P/3Q1NN1/PPP2PP1/R1B1K2R b KQkq - 0 9",
+      "moveDepth": 17,
+      "difficulty": 6,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "development",
+        "piece-activity",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White recaptures 9.Qxd3, keeping the queen central.",
+        "Black trades 8...Bxd3 to relieve the pressure."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing Black to trade off the light-squared bishop",
+        "Misplacing the knight after ...Bf5"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.Nc3 dxe4 4.Nxe4 Bf5 5.Ng3 Bg6 6.Nf3 Nd7 7.h4 h6 8.Bd3 Bxd3 9.Qxd3 White recaptures in the Classical Caro-Kann.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 12,
+      "masteryXp": 460
+    },
+    {
+      "id": "caro-exp-panov",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Panov (4.c4 Nf6 5.Nc3 g6 6.cxd5 Nxd5 7.Bc4 Nb6 8.Bb3)",
+      "aliases": [
+        "Panov development"
+      ],
+      "eco": "B14",
+      "pgn": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 g6 6. cxd5 Nxd5 7. Bc4 Nb6 8. Bb3",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "exd5",
+        "cxd5",
+        "c4",
+        "Nf6",
+        "Nc3",
+        "g6",
+        "cxd5",
+        "Nxd5",
+        "Bc4",
+        "Nb6",
+        "Bb3"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "e4d5",
+        "c6d5",
+        "c2c4",
+        "g8f6",
+        "b1c3",
+        "g7g6",
+        "c4d5",
+        "f6d5",
+        "f1c4",
+        "d5b6",
+        "c4b3"
+      ],
+      "startingFen": "rnbqkb1r/pp2pp1p/1n4p1/8/3P4/1BN5/PP3PPP/R1BQK1NR b KQkq - 3 8",
+      "moveDepth": 15,
+      "difficulty": 6,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "isolated-queens-pawn",
+        "central-control"
+      ],
+      "strategicIdeas": [
+        "White retreats 8.Bb3, keeping the bishop.",
+        "Black plays 7...Nb6, hitting the bishop."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a strong pawn-centre bind",
+        "Passive piece placement around the IQP"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.exd5 cxd5 4.c4 Nf6 5.Nc3 g6 6.cxd5 Nxd5 7.Bc4 Nb6 8.Bb3 White keeps the bishop in the Panov Caro-Kann.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 12,
+      "masteryXp": 460
+    },
+    {
+      "id": "caro-exp-fantasy",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Fantasy (3.f3 dxe4 4.fxe4 e5 5.Nf3 exd4 6.Qxd4 Nf6 7.Bd3 Nc6 8.Qd2)",
+      "aliases": [
+        "Fantasy main"
+      ],
+      "eco": "B12",
+      "pgn": "1. e4 c6 2. d4 d5 3. f3 dxe4 4. fxe4 e5 5. Nf3 exd4 6. Qxd4 Nf6 7. Bd3 Nbd7 8. O-O",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "f3",
+        "dxe4",
+        "fxe4",
+        "e5",
+        "Nf3",
+        "exd4",
+        "Qxd4",
+        "Nf6",
+        "Bd3",
+        "Nbd7",
+        "O-O"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "f2f3",
+        "d5e4",
+        "f3e4",
+        "e7e5",
+        "g1f3",
+        "e5d4",
+        "d1d4",
+        "g8f6",
+        "f1d3",
+        "b8d7",
+        "e1g1"
+      ],
+      "startingFen": "r1bqkb1r/pp1n1ppp/2p2n2/8/3QP3/3B1N2/PPP3PP/RNB2RK1 b kq - 4 8",
+      "moveDepth": 15,
+      "difficulty": 6,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "central-control",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White retreats 8.Qd2, keeping the queen safe.",
+        "Black develops 7...Nc6, hitting the queen."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Weakening the king position with premature f-pawn pushes",
+        "Allowing Black to win the e4 pawn cleanly"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.f3 dxe4 4.fxe4 e5 5.Nf3 exd4 6.Qxd4 Nf6 7.Bd3 Nc6 8.Qd2 White retreats the queen in the Fantasy Variation.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 12,
+      "masteryXp": 460
+    },
+    {
+      "id": "caro-exp-two-knights",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Two Knights (5.Ng5 Ngf6 6.Bc4 e6 7.Qe2 Be7 8.O-O)",
+      "aliases": [
+        "Two Knights main"
+      ],
+      "eco": "B12",
+      "pgn": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nd7 5. Ng5 Ngf6 6. Bc4 e6 7. Qe2 Be7 8. Bd3 O-O",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "Nc3",
+        "dxe4",
+        "Nxe4",
+        "Nd7",
+        "Ng5",
+        "Ngf6",
+        "Bc4",
+        "e6",
+        "Qe2",
+        "Be7",
+        "Bd3",
+        "O-O"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "b1c3",
+        "d5e4",
+        "c3e4",
+        "b8d7",
+        "e4g5",
+        "g8f6",
+        "f1c4",
+        "e7e6",
+        "d1e2",
+        "f8e7",
+        "c4d3",
+        "e8g8"
+      ],
+      "startingFen": "r1bq1rk1/pp1nbppp/2p1pn2/6N1/3P4/3B4/PPP1QPPP/R1B1K1NR w KQ - 4 9",
+      "moveDepth": 16,
+      "difficulty": 6,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "development",
+        "piece-activity",
+        "castling"
+      ],
+      "strategicIdeas": [
+        "White castles 8.O-O, completing development.",
+        "Black develops 7...Be7, preparing to castle."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a strong knight on e4",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.Nc3 dxe4 4.Nxe4 Nd7 5.Ng5 Ngf6 6.Bc4 e6 7.Qe2 Be7 8.O-O White castles in the Two Knights Variation.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 12,
+      "masteryXp": 460
+    },
+    {
+      "id": "caro-exp-karpov",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Karpov (5.Ng5 Ngf6 6.Bd3 e6 7.N1f3 Bd6 8.O-O)",
+      "aliases": [
+        "Karpov main"
+      ],
+      "eco": "B17",
+      "pgn": "1. e4 c6 2. d4 d5 3. Nd2 dxe4 4. Nxe4 Nd7 5. Ng5 Ngf6 6. Bd3 e6 7. N1f3 Bd6 8. O-O",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "Nd2",
+        "dxe4",
+        "Nxe4",
+        "Nd7",
+        "Ng5",
+        "Ngf6",
+        "Bd3",
+        "e6",
+        "N1f3",
+        "Bd6",
+        "O-O"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "b1d2",
+        "d5e4",
+        "d2e4",
+        "b8d7",
+        "e4g5",
+        "g8f6",
+        "f1d3",
+        "e7e6",
+        "g1f3",
+        "f8d6",
+        "e1g1"
+      ],
+      "startingFen": "r1bqk2r/pp1n1ppp/2pbpn2/6N1/3P4/3B1N2/PPP2PPP/R1BQ1RK1 b kq - 3 8",
+      "moveDepth": 15,
+      "difficulty": 6,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "development",
+        "castling"
+      ],
+      "strategicIdeas": [
+        "White castles 8.O-O, completing development.",
+        "Black develops 7...Bd6, preparing to castle."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Blocking the c1 bishop with the d2 knight",
+        "Allowing Black a comfortable ...Bf5 development"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.Nd2 dxe4 4.Nxe4 Nd7 5.Ng5 Ngf6 6.Bd3 e6 7.N1f3 Bd6 8.O-O White castles in the Karpov Variation.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 12,
+      "masteryXp": 460
+    },
+    {
+      "id": "caro-exp-advance-main",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Advance (3.e5 c5 4.dxc5 Bxc5 5.Nf3 Nf6 6.b4 Bb6 7.c4 Be2 O-O 8.Nc3)",
+      "aliases": [
+        "Advance main line"
+      ],
+      "eco": "B12",
+      "pgn": "1. e4 c6 2. d4 d5 3. e5 c5 4. dxc5 e6 5. Nf3 Bxc5 6. b4 Bb6 7. c4 Nf6 8. Be2 O-O 9. Nc3",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "e5",
+        "c5",
+        "dxc5",
+        "e6",
+        "Nf3",
+        "Bxc5",
+        "b4",
+        "Bb6",
+        "c4",
+        "Nf6",
+        "Be2",
+        "O-O",
+        "Nc3"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "e4e5",
+        "c6c5",
+        "d4c5",
+        "e7e6",
+        "g1f3",
+        "f8c5",
+        "b2b4",
+        "c5b6",
+        "c2c4",
+        "g8f6",
+        "f1e2",
+        "e8g8",
+        "b1c3"
+      ],
+      "startingFen": "rnbq1rk1/pp3ppp/1b2pn2/3pP3/1PP5/2N2N2/P3BPPP/R1BQK2R b KQ - 4 9",
+      "moveDepth": 17,
+      "difficulty": 6,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "space-advantage",
+        "castling"
+      ],
+      "strategicIdeas": [
+        "White develops 8.Nc3, completing the setup.",
+        "Black castles 7...O-O, king safe on g8."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Letting White build a crushing pawn chain",
+        "Releasing the central tension too early"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.e5 c5 4.dxc5 Bxc5 5.Nf3 Nf6 6.b4 Bb6 7.c4 Be2 O-O 8.Nc3 White castles in the Advance Caro-Kann main line.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 12,
+      "masteryXp": 460
+    },
+    {
+      "id": "caro-exp-bronstein",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Bronstein-Larsen (6.Nxf7 Kxf7 7.Ne2 e5 8.dxe5)",
+      "aliases": [
+        "Bronstein-Larsen trap"
+      ],
+      "eco": "B12",
+      "pgn": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nd7 5. Ng5 Ngf6 6. Nxf7 Kxf7 7. Ne2 e5 8. dxe5",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "Nc3",
+        "dxe4",
+        "Nxe4",
+        "Nd7",
+        "Ng5",
+        "Ngf6",
+        "Nxf7",
+        "Kxf7",
+        "Ne2",
+        "e5",
+        "dxe5"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "b1c3",
+        "d5e4",
+        "c3e4",
+        "b8d7",
+        "e4g5",
+        "g8f6",
+        "g5f7",
+        "e8f7",
+        "g1e2",
+        "e7e5",
+        "d4e5"
+      ],
+      "startingFen": "r1bq1b1r/pp1n1kpp/2p2n2/4P3/8/8/PPP1NPPP/R1BQKB1R b KQ - 0 8",
+      "moveDepth": 15,
+      "difficulty": 6,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "tactics",
+        "pawn-structure",
+        "king-safety"
+      ],
+      "strategicIdeas": [
+        "White captures 8.dxe5, opening the centre.",
+        "Black king is exposed after 6...Kxf7."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Accepting the sacrifice without counting the compensation",
+        "Allowing White a strong attack after ...Kxf7"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.Nc3 dxe4 4.Nxe4 Nd7 5.Ng5 Ngf6 6.Nxf7 Kxf7 7.Ne2 e5 8.dxe5 White opens the centre in the Bronstein-Larsen trap.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 12,
+      "masteryXp": 460
+    },
+    {
+      "id": "caro-exp-botvinnik",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Panov (4.c4 Nf6 5.Nc3 Nc6 6.Nf3 Bg4 7.cxd5 Nxd5 8.Qa4)",
+      "aliases": [
+        "Botvinnik setup"
+      ],
+      "eco": "B14",
+      "pgn": "1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 Nc6 6. Nf3 Bg4 7. cxd5 Nxd5 8. Qa4",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "exd5",
+        "cxd5",
+        "c4",
+        "Nf6",
+        "Nc3",
+        "Nc6",
+        "Nf3",
+        "Bg4",
+        "cxd5",
+        "Nxd5",
+        "Qa4"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "e4d5",
+        "c6d5",
+        "c2c4",
+        "g8f6",
+        "b1c3",
+        "b8c6",
+        "g1f3",
+        "c8g4",
+        "c4d5",
+        "f6d5",
+        "d1a4"
+      ],
+      "startingFen": "r2qkb1r/pp2pppp/2n5/3n4/Q2P2b1/2N2N2/PP3PPP/R1B1KB1R b KQkq - 1 8",
+      "moveDepth": 15,
+      "difficulty": 6,
+      "popularity": 4,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "isolated-queens-pawn",
+        "central-control"
+      ],
+      "strategicIdeas": [
+        "White plays 8.Qa4, pinning the knight on d5.",
+        "Black recaptures 7...Nxd5 after the pawn trade."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a strong pawn-centre bind",
+        "Passive piece placement around the IQP"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.exd5 cxd5 4.c4 Nf6 5.Nc3 Nc6 6.Nf3 Bg4 7.cxd5 Nxd5 8.Qa4 White pins the d5 knight in the Botvinnik Panov setup.",
+      "reviewPriority": 5,
+      "estimatedStudyMinutes": 12,
+      "masteryXp": 460
+    },
+    {
+      "id": "caro-exp-short",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Advance (4.Nf3 e6 5.Be2 c5 6.O-O Nc6 7.c3 Qc7 8.Re1)",
+      "aliases": [
+        "Advance Short"
+      ],
+      "eco": "B12",
+      "pgn": "1. e4 c6 2. d4 d5 3. e5 Bf5 4. Nf3 e6 5. Be2 c5 6. O-O Nc6 7. c3 Qc7 8. Re1",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "e5",
+        "Bf5",
+        "Nf3",
+        "e6",
+        "Be2",
+        "c5",
+        "O-O",
+        "Nc6",
+        "c3",
+        "Qc7",
+        "Re1"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "e4e5",
+        "c8f5",
+        "g1f3",
+        "e7e6",
+        "f1e2",
+        "c6c5",
+        "e1g1",
+        "b8c6",
+        "c2c3",
+        "d8c7",
+        "f1e1"
+      ],
+      "startingFen": "r3kbnr/ppq2ppp/2n1p3/2ppPb2/3P4/2P2N2/PP2BPPP/RNBQR1K1 b kq - 2 8",
+      "moveDepth": 15,
+      "difficulty": 6,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "pawn-structure",
+        "space-advantage",
+        "rook-activity"
+      ],
+      "strategicIdeas": [
+        "White plays 8.Re1, activating the rook.",
+        "Black develops 6...Nc6 and 7...Qc7."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Blocking the c1 bishop behind the e-pawn",
+        "Allowing White a space advantage on the kingside"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.e5 Bf5 4.Nf3 e6 5.Be2 c5 6.O-O Nc6 7.c3 Qc7 8.Re1 White activates the rook in the Advance Caro-Kann.",
+      "reviewPriority": 3,
+      "estimatedStudyMinutes": 12,
+      "masteryXp": 460
+    },
+    {
+      "id": "caro-exp-nimzo",
+      "parentVariation": "Caro-Kann Defense",
+      "openingFamily": "Caro-Kann Defense",
+      "variationName": "Two Knights (5.Ng5 Ngf6 6.Bd3 e6 7.N1f3 Bd6 8.O-O O-O)",
+      "aliases": [
+        "Two Knights Bd3"
+      ],
+      "eco": "B12",
+      "pgn": "1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Nd7 5. Ng5 Ngf6 6. Bd3 e6 7. N1f3 Bd6 8. O-O O-O",
+      "sanMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "Nc3",
+        "dxe4",
+        "Nxe4",
+        "Nd7",
+        "Ng5",
+        "Ngf6",
+        "Bd3",
+        "e6",
+        "N1f3",
+        "Bd6",
+        "O-O",
+        "O-O"
+      ],
+      "uciMoves": [
+        "e2e4",
+        "c7c6",
+        "d2d4",
+        "d7d5",
+        "b1c3",
+        "d5e4",
+        "c3e4",
+        "b8d7",
+        "e4g5",
+        "g8f6",
+        "f1d3",
+        "e7e6",
+        "g1f3",
+        "f8d6",
+        "e1g1",
+        "e8g8"
+      ],
+      "startingFen": "r1bq1rk1/pp1n1ppp/2pbpn2/6N1/3P4/3B1N2/PPP2PPP/R1BQ1RK1 w - - 4 9",
+      "moveDepth": 16,
+      "difficulty": 6,
+      "popularity": 3,
+      "prerequisites": [],
+      "continuationIds": [],
+      "conceptIds": [
+        "development",
+        "piece-activity",
+        "castling"
+      ],
+      "strategicIdeas": [
+        "White castles 8.O-O, then Black castles 8...O-O.",
+        "Both sides complete development in the Two Knights Variation."
+      ],
+      "tacticalMotifs": [],
+      "commonMistakes": [
+        "Allowing White a strong knight on e4",
+        "Developing pieces passively"
+      ],
+      "explanation": "After 1.e4 c6 2.d4 d5 3.Nc3 dxe4 4.Nxe4 Nd7 5.Ng5 Ngf6 6.Bd3 e6 7.N1f3 Bd6 8.O-O O-O both sides castle in the Two Knights Variation.",
+      "reviewPriority": 4,
+      "estimatedStudyMinutes": 12,
+      "masteryXp": 460
+    }
+  ]
+}
